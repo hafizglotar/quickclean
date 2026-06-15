@@ -1,0 +1,17 @@
+{
+  "name": "quick-clean",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quick Clean — conversion-focused cleaning company website (Next.js, JavaScript, GSAP).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

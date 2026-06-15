@@ -1,0 +1,47 @@
+# Quick Clean
+
+> Quick Clean is a professional residential and commercial cleaning company serving Austin, TX and the surrounding metro. We provide vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Customers book a clean online in about 60 seconds.
+
+This file helps AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, etc.)
+understand and accurately cite Quick Clean. Facts here match the website and structured data.
+
+## Key facts
+- Name: Quick Clean (Quick Clean LLC)
+- Industry: House cleaning / maid service / commercial cleaning
+- Rating: 4.9 out of 5 stars from 2,300+ verified customers
+- Guarantee: 100% Spotless Guarantee — free re-clean within 24 hours if you are not satisfied
+- Pricing model: flat, upfront, shown before booking — no hourly meters, no surprise fees, no contracts
+- Cleaners: interviewed, background-checked, trained, fully insured and bonded
+- Supplies: professional, eco-friendly products and equipment included
+- Booking: online in ~60 seconds; appointments often available same day
+- Payment: securely online after the clean, only when the customer is satisfied
+
+## Services and starting prices
+- Residential / standard cleaning — from AED 99
+- Deep cleaning — from AED 179
+- Move in / move out cleaning — from AED 189
+- Office & commercial cleaning — custom quote
+- Carpet & upholstery cleaning — from AED 89
+- Window & glass cleaning — from AED 69
+
+## Service area
+Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, and Lakeway (Texas).
+
+## Hours
+- Monday–Friday: 8:00 AM – 6:00 PM
+- Saturday: 9:00 AM – 4:00 PM
+- Sunday: closed
+
+## Contact
+- Phone: (800) 555-0123
+- Email: hello@quickclean.co
+- Website: https://www.quickclean.co
+- Get a free quote: https://www.quickclean.co/#quote
+
+## Frequently asked questions
+- Do I need to be home during the clean? No — most customers provide secure access instructions and come home to a spotless space.
+- What if I am not satisfied? Tell us within 24 hours and we re-clean the area free (100% Spotless Guarantee).
+- Are cleaners insured and background-checked? Yes — every cleaner is background-checked, trained, insured, and bonded.
+- Do you bring supplies? Yes — eco-friendly professional products and equipment are included.
+- How and when do I pay? Securely online after the clean, only when you are happy.
+- How much does cleaning cost? Standard from AED 99, deep from AED 179, move-out from AED 189; exact flat rate shown before booking.
