@@ -260,4 +260,52 @@ export const faqs = [
     q: 'Which areas do you serve?',
     a: `Quick Clean serves ${business.areaServed.slice(0, -1).join(', ')}, and ${business.areaServed[business.areaServed.length - 1]}.`,
   },
+  {
+    q: 'How long does a house cleaning take?',
+    a: 'A standard clean usually takes about 1.5 to 3 hours, depending on the size and condition of your home. Deep cleans and move-in/move-out cleans take longer. You will get an estimated time when you book.',
+  },
+  {
+    q: 'Can I book a same-day or next-day cleaning?',
+    a: 'Yes. Same-day and next-day appointments are often available. You can book online in about 60 seconds and choose the earliest time slot that works for you.',
+  },
+  {
+    q: 'What types of properties do you clean?',
+    a: 'We clean apartments, villas, townhouses, and studios, as well as offices and commercial spaces. The same 100% Spotless Guarantee applies to every property type and size.',
+  },
+  {
+    q: 'What is included in a standard cleaning?',
+    a: 'A standard clean covers your kitchen, bathrooms, bedrooms, and living areas — dusting, vacuuming, mopping, wiping surfaces and counters, emptying bins, and tidying. Extras like inside the oven or baseboards can be added as a deep clean.',
+  },
+  {
+    q: 'What is the difference between a standard clean and a deep clean?',
+    a: 'A standard clean maintains an already-tidy home. A deep clean is more thorough and adds baseboards, grout, vents, and inside or behind appliances. Many customers start with a deep clean, then switch to recurring standard cleans.',
+  },
+  {
+    q: 'How often should I schedule a cleaning?',
+    a: 'Most households choose bi-weekly cleaning. Homes with kids or pets often prefer weekly, while lighter homes do well with monthly visits. Recurring plans save up to 20% per visit.',
+  },
+  {
+    q: 'Are your cleaning products safe for children and pets?',
+    a: 'Yes. We use professional, eco-friendly, non-toxic products that are safe around children and pets. If you prefer specific products, just leave them out and let us know.',
+  },
+  {
+    q: 'Can I request the same cleaner every time?',
+    a: 'Yes. On recurring plans we send the same vetted cleaner who already knows your home and your preferences.',
+  },
+  {
+    q: 'What payment methods do you accept?',
+    a: 'You pay securely online by credit or debit card after the clean is finished and you are happy with it. No cash is needed and no payment is taken up front.',
+  },
+  {
+    q: 'Can I reschedule or cancel my cleaning?',
+    a: 'Yes. You can reschedule or cancel anytime from your booking confirmation. There are no contracts and no cancellation fees — we just appreciate a little notice when possible.',
+  },
+  {
+    q: 'What happens if something is damaged during the clean?',
+    a: 'Quick Clean is fully insured and bonded. In the rare event something is damaged, let us know within 24 hours and we will make it right.',
+  },
+  {
+    q: 'Do you offer office or commercial cleaning?',
+    a: 'Yes. We provide after-hours office and commercial cleaning on a custom recurring schedule. Request a free walkthrough and we will send you a flat quote.',
+  },
 ];
