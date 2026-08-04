@@ -6,14 +6,70 @@
 
 import { business } from './business';
 
-const CITY = business.address.city; // "Austin"
+const CITY = business.address.city; // "Dubai"
 
 export const serviceContent = {
-  'residential-cleaning': {
+  'deep-cleaning': {
+    serviceType: 'Deep Cleaning',
+    subhead:
+      'Our flagship service. A detailed, top-to-bottom reset of your Dubai apartment, villa, or office that reaches everything a routine clean skips — inside appliances, grout, skirting boards, AC grilles, and behind the furniture.',
+    intro: `Deep cleaning is what Quick Clean does best, and Dubai properties need it more than most. Constant air conditioning pulls dust through every room, shamal winds push fine sand onto balconies and window tracks, and the hard water here leaves limescale on every tap and shower screen. Our crews are trained and equipped specifically for that: we move what can be moved, strip out built-up grease and limescale, scrub grout line by line, and detail the parts of a property a weekly clean never touches. It is the right choice before you move in, after a fit-out or renovation, ahead of hosting, or simply as the reset that makes recurring cleaning easy to maintain afterwards.`,
+    turnaround: 'Book 1–2 days ahead · 4–8 hours on site',
+    includes: [
+      'Everything in a standard clean, in far greater detail',
+      'Inside the oven, fridge, and microwave',
+      'Behind and under movable appliances and furniture',
+      'Tile and grout scrubbed line by line',
+      'Limescale, soap scum, and hard-water buildup removed',
+      'Skirting boards, door frames, and trim hand-wiped',
+      'AC vents and grilles wiped free of dust',
+      'Cabinet and wardrobe interiors emptied and wiped',
+      'Window interiors, sills, and tracks detailed',
+      'Balconies swept clear of sand and construction dust',
+    ],
+    idealFor: [
+      'Apartments, villas & townhouses',
+      'Pre-move-in & post-handover',
+      'Offices and clinics',
+      'Properties not deep cleaned in 6+ months',
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between a standard and deep clean?',
+        a: 'A standard clean maintains an already-tidy space — surfaces, floors, kitchen, and bathrooms. A deep clean is far more thorough and time-intensive: it targets built-up grime inside appliances, in grout, on skirting boards, in vents, and behind furniture.',
+      },
+      {
+        q: `How much does deep cleaning cost in ${CITY}?`,
+        a: 'Deep cleans start at AED 179, with the exact flat rate in AED shown before you book based on property size and condition. A studio or 1-bedroom apartment sits at the lower end; villas are quoted on bedrooms and built-up area.',
+      },
+      {
+        q: 'How long does a deep clean take?',
+        a: 'Usually 4 to 8 hours depending on the size and condition of the property. A studio or 1-bedroom apartment is typically half a day; larger villas and offices need a full team or a full day. You will get an estimated duration when you book.',
+      },
+      {
+        q: `Which areas of ${CITY} do you deep clean?`,
+        a: `We cover all of ${CITY}, including ${business.areaServed.slice(0, 6).join(', ')}, and every other community across the emirate.`,
+      },
+      {
+        q: 'Do you deep clean villas as well as apartments?',
+        a: 'Yes. Studios, apartments, townhouses, and villas. Villas usually need a team of two to four cleaners for a full day, and we quote on bedrooms and built-up area.',
+      },
+      {
+        q: 'Do you deep clean offices as well as homes?',
+        a: 'Yes. We deep clean offices, clinics, retail units, studios, and gyms, either as a one-off reset or as the first visit of a recurring after-hours contract.',
+      },
+      {
+        q: 'How often do I need a deep clean?',
+        a: 'Most properties benefit from a deep clean 2–4 times a year, or as the first visit before switching to a recurring domestic clean.',
+      },
+    ],
+  },
+
+  'domestic-cleaning': {
     serviceType: 'House Cleaning',
     subhead:
-      'Recurring or one-time house cleaning that keeps your whole home fresh, healthy, and guest-ready — without you lifting a finger.',
-    intro: `Quick Clean's residential cleaning service covers every room of your home with a consistent, top-to-bottom checklist. Choose weekly, bi-weekly, or monthly visits and we send the same vetted, insured cleaner each time, or book a one-time clean whenever you need a reset.`,
+      'Recurring or one-time domestic cleaning that keeps your whole home fresh, healthy, and guest-ready — without you lifting a finger.',
+    intro: `Quick Clean's domestic cleaning service covers every room of your home with a consistent, top-to-bottom checklist. Choose weekly, bi-weekly, or monthly visits and we send the same vetted, insured cleaner each time, or book a one-time clean whenever you need a reset. Many customers start with a deep clean and then keep the result with recurring domestic visits.`,
     turnaround: 'Same-day & next-day slots',
     includes: [
       'Kitchen: counters, sink, stovetop, exterior of appliances',
@@ -28,8 +84,16 @@ export const serviceContent = {
     idealFor: ['Busy households & families', 'Working professionals', 'Anyone who wants a reliable recurring clean'],
     faqs: [
       {
-        q: `How much does residential cleaning cost in ${CITY}?`,
-        a: 'Standard residential cleans start at AED 99. Recurring plans save up to 20% per visit. You see your exact flat rate before you book, based on home size.',
+        q: `How much does domestic cleaning cost in ${CITY}?`,
+        a: 'Domestic cleans start at AED 99. Recurring plans save up to 20% per visit. You see your exact flat rate before you book, based on home size.',
+      },
+      {
+        q: 'Is domestic cleaning the same as residential cleaning?',
+        a: 'Yes — domestic cleaning, residential cleaning, house cleaning, and maid service all describe the same thing: regular cleaning of a private home. We use "domestic cleaning" for our recurring and one-time home visits.',
+      },
+      {
+        q: 'Should I book a deep clean first?',
+        a: 'We usually recommend it. A deep clean resets the property properly, and recurring domestic visits then keep it that way for less per visit.',
       },
       {
         q: 'Can I get the same cleaner every time?',
@@ -42,60 +106,28 @@ export const serviceContent = {
     ],
   },
 
-  'deep-cleaning': {
-    serviceType: 'Deep Cleaning',
-    subhead:
-      'A detailed, top-to-bottom reset that reaches the spots a standard clean skips — baseboards, behind appliances, grout, vents, and more.',
-    intro: `A deep cleaning from Quick Clean is the thorough reset your home gets a few times a year. We go beyond the surface to tackle built-up grime, hard-to-reach areas, and detail work — perfect before guests arrive, after a renovation, or as the first clean before starting a recurring plan.`,
-    turnaround: 'Recommended 1–2 days ahead',
-    includes: [
-      'Everything in a standard clean, in greater detail',
-      'Baseboards, door frames, and trim hand-wiped',
-      'Inside microwave and around (behind) appliances',
-      'Cabinet fronts and backsplash degreased',
-      'Tile and grout scrubbed in kitchen and baths',
-      'Vents, fans, and light fixtures dusted',
-      'Window sills, tracks, and ledges detailed',
-      'Buildup removed from showers and faucets',
-    ],
-    idealFor: ['First-time cleans', 'Spring cleaning & pre-holiday', 'Homes that haven’t been cleaned in a while'],
-    faqs: [
-      {
-        q: 'What is the difference between a standard and deep clean?',
-        a: 'A standard clean maintains an already-tidy home. A deep clean is more thorough and time-intensive — it targets built-up grime, baseboards, grout, vents, and behind/inside appliances.',
-      },
-      {
-        q: `How much does a deep cleaning cost in ${CITY}?`,
-        a: 'Deep cleans start at AED 179, with the exact flat rate shown before you book based on home size and condition.',
-      },
-      {
-        q: 'How often do I need a deep clean?',
-        a: 'Most homes benefit from a deep clean 2–4 times a year, or as the first visit before switching to a recurring standard clean.',
-      },
-    ],
-  },
-
   'move-in-move-out-cleaning': {
     serviceType: 'Move Out Cleaning',
     subhead:
-      'Hand back the keys spotless. A detailed, inspection-ready clean of the entire empty home so you protect your deposit or welcome new tenants.',
-    intro: `Quick Clean's move in / move out cleaning gets an empty home truly inspection-ready. We clean inside cabinets, drawers, appliances, and closets — the areas landlords and property managers check first — so renters protect their deposit and owners hand over a flawless space.`,
-    turnaround: 'Book around your move date',
+      'Hand back the keys spotless. A full deep clean of the entire empty property so you protect your deposit or welcome new tenants.',
+    intro: `Quick Clean's move in / move out cleaning is a full deep clean of an empty property, and it gets the place truly handover-ready. We clean inside cabinets, drawers, appliances, and wardrobes — the areas Dubai landlords, agents, and property managers check first — so tenants protect their security deposit and owners hand over a flawless unit.`,
+    turnaround: 'Book around your handover date',
     includes: [
-      'Inside all cabinets, drawers, and closets',
+      'Inside all cabinets, drawers, and wardrobes',
       'Inside oven, refrigerator, and microwave',
       'All appliance exteriors and behind where accessible',
-      'Baseboards, doors, and trim wiped down',
-      'Bathrooms fully detailed and sanitized',
+      'Skirting boards, doors, and trim wiped down',
+      'Bathrooms fully detailed and sanitised',
+      'AC vents and grilles dusted',
+      'Balconies swept and washed down',
       'Floors vacuumed and mopped throughout',
-      'Window sills, tracks, and ledges',
-      'Cobweb removal and high-touch points',
+      'Window interiors, sills, and tracks',
     ],
-    idealFor: ['Renters protecting a deposit', 'Landlords & property managers', 'Realtors prepping a listing'],
+    idealFor: ['Tenants protecting a deposit', 'Landlords & property managers', 'Agents prepping a listing'],
     faqs: [
       {
-        q: 'Will a move-out clean help me get my deposit back?',
-        a: 'Yes — our move-out clean targets exactly what landlords inspect (inside appliances, cabinets, baseboards, and bathrooms). It is backed by our 100% Spotless Guarantee.',
+        q: 'Will a move-out clean help me get my security deposit back?',
+        a: 'Yes — our move-out clean targets exactly what Dubai landlords and agents inspect at handover: inside appliances and cabinets, AC grilles, bathrooms, skirting, and balconies. It is backed by our 100% Spotless Guarantee.',
       },
       {
         q: 'Should the home be empty for a move-out clean?',
@@ -111,8 +143,8 @@ export const serviceContent = {
   'office-commercial-cleaning': {
     serviceType: 'Commercial Cleaning',
     subhead:
-      'Reliable after-hours office and commercial cleaning that keeps your workspace sharp, healthy, and ready for business.',
-    intro: `Quick Clean keeps your workplace spotless with flexible, after-hours commercial cleaning. From offices and clinics to studios and retail, we build a recurring plan around your schedule with vetted, insured pros — so your team walks into a fresh space every morning and never deals with a no-show.`,
+      'Reliable after-hours office and commercial cleaning — plus full office deep cleans — that keep your workspace sharp, healthy, and ready for business.',
+    intro: `Quick Clean keeps your workplace spotless with flexible, after-hours commercial cleaning. From offices and clinics to studios and retail, we build a recurring plan around your schedule with vetted, insured pros — so your team walks into a fresh space every morning and never deals with a no-show. Most clients start with a one-off office deep clean, then move onto a recurring contract to hold that standard.`,
     turnaround: 'Custom recurring schedule',
     includes: [
       'Workstations, desks, and common areas',
@@ -122,6 +154,7 @@ export const serviceContent = {
       'Trash and recycling collected and relined',
       'Glass doors, partitions, and high-touch points',
       'Reception and meeting rooms reset',
+      'Optional deep clean: vents, grout, and inside appliances',
       'Custom checklist tailored to your space',
     ],
     idealFor: ['Offices & co-working spaces', 'Medical & dental practices', 'Retail, studios & gyms'],
@@ -129,6 +162,10 @@ export const serviceContent = {
       {
         q: 'Do you clean offices after business hours?',
         a: 'Yes. We schedule commercial cleaning around your hours — evenings, early mornings, or weekends — so we never disrupt your team.',
+      },
+      {
+        q: 'Can you deep clean our office?',
+        a: 'Yes. An office deep clean covers everything in a routine visit plus AC vents, inside kitchen appliances, grout, skirting boards, and behind furniture. It is usually done over a weekend or evening so nobody loses working time.',
       },
       {
         q: 'How is commercial cleaning priced?',
@@ -144,17 +181,18 @@ export const serviceContent = {
   'carpet-upholstery-cleaning': {
     serviceType: 'Carpet Cleaning',
     subhead:
-      'Deep-extraction carpet and upholstery cleaning that lifts stains, odors, allergens, and years of wear.',
-    intro: `Quick Clean's carpet and upholstery cleaning uses hot-water extraction to pull out trapped dirt, allergens, and odors that vacuuming leaves behind. Carpets, rugs, sofas, and chairs come back fresher, brighter, and faster-drying — a healthier home without the rental-machine hassle.`,
+      'Deep-extraction carpet cleaning, sofa shampooing, and mattress cleaning that lift stains, odours, allergens, and years of wear.',
+    intro: `Quick Clean's carpet and upholstery cleaning uses hot-water extraction — what most people in Dubai call sofa shampooing — to pull out trapped dirt, dust, allergens, and odours that vacuuming leaves behind. Carpets, rugs, sofas, majlis seating, and mattresses come back fresher, brighter, and faster-drying.`,
     turnaround: 'Dries in a few hours',
     includes: [
       'Pre-treatment of stains and high-traffic lanes',
       'Hot-water extraction (steam) deep clean',
-      'Upholstered sofas, chairs, and ottomans',
+      'Sofa shampooing — sofas, chairs, and ottomans',
+      'Majlis seating and floor cushions',
+      'Mattress deep cleaning and sanitising',
       'Area rugs and runners',
-      'Odor and allergen neutralizing',
+      'Odour and allergen neutralising',
       'Spot treatment for pet accidents',
-      'Fast-dry process and grooming',
       'Safe, eco-friendly solutions',
     ],
     idealFor: ['Homes with pets & kids', 'Stained or high-traffic carpets', 'Pre-sale or post-party refresh'],

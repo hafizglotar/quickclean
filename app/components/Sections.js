@@ -42,10 +42,11 @@ export function Services() {
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">What we clean</span>
-          <h2>One team for every clean.</h2>
+          <h2>Deep cleaning first — and everything around it.</h2>
           <p className="section-lead">
-            Pick what you need today — switch or add anytime. Every service is backed by the
-            same satisfaction guarantee.
+            Deep cleans are our specialty, and we also handle regular domestic cleaning,
+            office and commercial contracts, and move-out handovers across Dubai. One
+            vetted team, one satisfaction guarantee.
           </p>
         </div>
 
@@ -72,8 +73,8 @@ export function WhyUs() {
           <span className="kicker">Why Quick Clean</span>
           <h2>You get results, not excuses.</h2>
           <p className="section-lead">
-            We built Quick Clean to fix everything people hate about hiring a cleaner — the
-            no-shows, the surprise fees, the rushed jobs.
+            We built Quick Clean to fix everything people in Dubai hate about hiring a
+            cleaning company — the no-shows, the surprise fees, the rushed jobs.
           </p>
           <ul className="why-list">
             {whyPoints.map((p) => (
@@ -150,11 +151,17 @@ export function Pricing() {
         <div className="pricing-grid">
           {plans.map((plan) => (
             <article className={`plan${plan.featured ? ' plan-featured' : ''}`} key={plan.name}>
-              {plan.featured && <span className="plan-tag">Most popular</span>}
+              {plan.featured && <span className="plan-tag">Most booked</span>}
               <h3>{plan.name}</h3>
-              <div className="plan-price">
-                <span>{currency.symbol}</span>
-                {plan.price}
+              <div className={`plan-price${plan.price ? '' : ' is-custom'}`}>
+                {plan.price ? (
+                  <>
+                    <span>{currency.symbol}</span>
+                    {plan.price}
+                  </>
+                ) : (
+                  plan.priceLabel
+                )}
                 <small>{plan.period}</small>
               </div>
               <p className="plan-desc">{plan.desc}</p>

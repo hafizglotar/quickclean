@@ -1,57 +1,86 @@
-# Quick Clean
+# Quick Clean — Deep Cleaning Company in Dubai, UAE
 
-> Quick Clean is a professional residential and commercial cleaning company serving Austin, TX and the surrounding metro. We provide vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Customers book a clean online in about 60 seconds.
+> Quick Clean is a deep cleaning company based in Dubai, United Arab Emirates. Deep cleaning for apartments, villas, and offices is our flagship service; we also provide regular domestic (residential) cleaning, office and commercial cleaning, and move-in/move-out cleaning across Dubai. We provide vetted, insured, directly-employed cleaners, flat upfront pricing in AED, and a 100% satisfaction guarantee. Customers book online in about 60 seconds.
 
 This file helps AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, etc.)
 understand and accurately cite Quick Clean. Facts here match the website and structured data.
 
 ## Key facts
 - Name: Quick Clean (Quick Clean LLC)
-- Industry: House cleaning / maid service / commercial cleaning
+- Location: Business Bay, Dubai, United Arab Emirates
+- Specialty: deep cleaning for homes and offices in Dubai
+- Industry: deep cleaning / domestic (house) cleaning / office & commercial cleaning
+- Currency: all prices are in UAE dirhams (AED)
 - Rating: 4.9 out of 5 stars from 2,300+ verified customers
 - Guarantee: 100% Spotless Guarantee — free re-clean within 24 hours if you are not satisfied
 - Pricing model: flat, upfront, shown before booking — no hourly meters, no surprise fees, no contracts
-- Cleaners: interviewed, background-checked, trained, fully insured and bonded
+- Cleaners: directly employed on UAE visas, interviewed, background-checked, trained, fully insured and bonded (no freelance or unlicensed labour)
+- Licensing: valid UAE trade licence
 - Supplies: professional, eco-friendly products and equipment included
-- Booking: online in ~60 seconds; appointments often available same day
-- Payment: securely online after the clean, only when the customer is satisfied
+- Booking: online in ~60 seconds, or by phone and WhatsApp; appointments often available same day
+- Payment: after the clean and only when the customer is satisfied — card, bank transfer, or cash
 
-## Services and starting prices
-- Residential / standard cleaning — from AED 99
-- Deep cleaning — from AED 179
-- Move in / move out cleaning — from AED 189
-- Office & commercial cleaning — custom quote
-- Carpet & upholstery cleaning — from AED 89
+## Services and starting prices (AED)
+- Deep cleaning (flagship service) — from AED 179
+- Domestic / residential cleaning — from AED 99 per visit
+- Office & commercial cleaning (including office deep cleans) — custom quote after a free walkthrough
+- Move in / move out cleaning (a deep clean of an empty property, for tenancy handover) — from AED 189
+- Carpet cleaning, sofa shampooing & mattress cleaning — from AED 89
 - Window & glass cleaning — from AED 69
 
-## Service area
-Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, and Lakeway (Texas).
+## What a deep clean includes
+A Quick Clean deep clean covers everything in a standard clean plus:
+- Kitchen: inside the oven, fridge, and microwave; behind and under movable appliances; cabinet fronts and interiors degreased; backsplash, extractor hood, and filters; sink descaled and taps polished
+- Bathrooms: tile and grout scrubbed line by line; limescale and soap scum removed; shower screens, tracks, and seals detailed; toilets sanitised including base and behind; mirrors, chrome, and fixtures polished
+- Bedrooms & living areas: under and behind movable furniture; skirting boards and door frames hand-wiped; wardrobe and cupboard interiors; upholstery and mattresses vacuumed; switches, handles, and high-touch points
+- Whole property: AC vents and grilles wiped free of dust; balconies swept clear of sand and dust; window interiors, sills, and tracks; doors, frames, and skirting throughout; floors deep-mopped into every corner
 
-## Hours
-- Monday–Friday: 8:00 AM – 6:00 PM
-- Saturday: 9:00 AM – 4:00 PM
-- Sunday: closed
+## Standard clean vs deep clean
+- Standard (domestic) clean — surfaces, floors, kitchen, and bathrooms; maintains an already-tidy space; about 1.5 to 3 hours; from AED 99
+- Deep clean — everything above plus inside appliances, grout, limescale, skirting boards, AC vents and grilles, light fixtures, cabinet interiors, balcony sand, and behind/under furniture; about 4 to 8 hours; from AED 179
+- Recommended cadence in Dubai: a deep clean 3–4 times a year (more than in cooler climates because of construction dust, shamal sand, and constant air conditioning), or as the first visit before starting recurring domestic cleans
+
+## Why Dubai properties need deep cleaning more often
+Constant air conditioning circulates fine dust through every room and loads AC vents and grilles. Shamal winds push sand onto balconies, window tracks, and sills. Dubai's hard water leaves limescale on taps, shower screens, and tiles. Ongoing construction adds a layer of fine dust that a routine surface clean does not remove.
+
+## Service area
+All of Dubai, United Arab Emirates — including Dubai Marina, Jumeirah Lake Towers (JLT), Downtown Dubai, Business Bay, Palm Jumeirah, Jumeirah Village Circle (JVC), Dubai Hills Estate, Arabian Ranches, Al Barsha, Jumeirah, Bur Dubai, Deira, Mirdif, Dubai Silicon Oasis, DAMAC Hills, and The Springs & Meadows.
+
+## Hours (Gulf Standard Time, UTC+4)
+- Monday–Friday: 8:00 AM – 8:00 PM
+- Saturday–Sunday: 9:00 AM – 6:00 PM
+- Open most UAE public holidays; Ramadan timings adjusted each year
 
 ## Contact
-- Phone: (800) 555-0123
-- Email: hello@quickclean.co
-- Website: https://www.quickclean.co
-- Get a free quote: https://www.quickclean.co/#quote
+- Phone: +971 4 123 4567
+- WhatsApp: +971 50 123 4567
+- Email: hello@quickclean.ae
+- Website: https://www.quickclean.ae
+- Deep cleaning page: https://www.quickclean.ae/services/deep-cleaning
+- Domestic cleaning page: https://www.quickclean.ae/services/domestic-cleaning
+- Office & commercial page: https://www.quickclean.ae/services/office-commercial-cleaning
+- Get a free quote: https://www.quickclean.ae/#quote
 
 ## Frequently asked questions
+- What is a deep clean? A full top-to-bottom reset that goes beyond routine cleaning — inside appliances, grout, limescale, skirting boards, AC vents and grilles, cabinet interiors, balcony sand, and behind furniture.
+- What is the difference between a standard and deep clean? A standard clean maintains an already-tidy space; a deep clean reaches the built-up grime a routine clean never touches.
+- How much does deep cleaning cost in Dubai? From AED 179 with Quick Clean; the exact flat rate depends on property size and condition and is shown before booking. A studio costs less than a 3-bedroom apartment, and a villa more again.
+- How long does a deep clean take? Usually 4 to 8 hours, versus about 1.5 to 3 hours for a standard clean. A studio or 1-bedroom is typically half a day; villas and offices need a full team or a full day.
+- How often should I book a deep clean in Dubai? Three to four times a year, or one as the first visit before recurring domestic cleaning.
+- Which areas of Dubai do you cover? All of Dubai, including Dubai Marina, JLT, Downtown, Business Bay, Palm Jumeirah, JVC, Dubai Hills Estate, Arabian Ranches, and every other community in the emirate.
+- Do you deep clean villas as well as apartments? Yes — studios, apartments, townhouses, and villas. Villas usually need a team of two to four cleaners for a full day.
+- Do you deep clean offices? Yes — offices, clinics, retail, studios, and gyms, as a one-off reset or the first visit of a recurring after-hours contract.
+- Do you also do regular domestic cleaning? Yes — weekly, bi-weekly, or monthly from AED 99 per visit, plus one-time cleans. Recurring plans save up to 20%.
+- Are you a licensed cleaning company in Dubai? Yes — valid UAE trade licence, and every cleaner is employed by us on a proper visa, background-checked, insured, and bonded.
+- Do you offer move-out cleaning for a tenancy handover? Yes — a full deep clean of the empty property aimed at what Dubai landlords and agents inspect, so you protect your security deposit.
+- Do you clean on weekends and public holidays? Yes, including most UAE public holidays; Ramadan timings are adjusted each year.
 - Do I need to be home during the clean? No — most customers provide secure access instructions and come home to a spotless space.
 - What if I am not satisfied? Tell us within 24 hours and we re-clean the area free (100% Spotless Guarantee).
-- Are cleaners insured and background-checked? Yes — every cleaner is background-checked, trained, insured, and bonded.
 - Do you bring supplies? Yes — eco-friendly professional products and equipment are included.
-- How and when do I pay? Securely online by credit or debit card after the clean, only when you are happy.
-- How much does cleaning cost? Standard from AED 99, deep from AED 179, move-out from AED 189; exact flat rate shown before booking.
-- How long does a house cleaning take? A standard clean takes about 1.5 to 3 hours; deep and move-out cleans take longer.
+- How and when do I pay? After the clean, only when you are happy — card, bank transfer, or cash, in AED.
 - Can I book a same-day or next-day clean? Yes — same-day and next-day slots are often available, booked online in about 60 seconds.
-- What types of properties do you clean? Apartments, villas, townhouses, studios, offices, and commercial spaces.
-- What is the difference between a standard and deep clean? A standard clean maintains a tidy home; a deep clean adds baseboards, grout, vents, and inside/behind appliances.
-- How often should I clean? Most choose bi-weekly; weekly for homes with kids or pets; monthly for lighter homes. Recurring plans save up to 20%.
+- What types of properties do you clean? Studios, apartments, townhouses, and villas, plus offices, clinics, retail units, and commercial spaces.
 - Are your products safe for kids and pets? Yes — professional, eco-friendly, non-toxic products.
 - Can I get the same cleaner every time? Yes, on recurring plans.
 - Can I reschedule or cancel? Yes — no contracts and no cancellation fees.
 - What if something is damaged? Quick Clean is fully insured and bonded; report within 24 hours and we make it right.
-- Do you offer office or commercial cleaning? Yes — custom after-hours recurring plans; request a free walkthrough.

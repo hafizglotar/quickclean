@@ -50,6 +50,7 @@ export default function Animations() {
           stagger: 0.09,
         });
       };
+      stagger('.dc-rooms', '.dc-room');
       stagger('.services-grid', '.service-card');
       stagger('.steps', '.step');
       stagger('.pricing-grid', '.plan');

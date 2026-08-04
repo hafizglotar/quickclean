@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { business } from '../lib/business';
 
 const SERVICES = [
-  'Standard clean',
   'Deep clean',
-  'Move in / out',
-  'Office / commercial',
+  'Domestic (regular) clean',
+  'Office / commercial clean',
+  'Move in / out clean',
   'Carpet & upholstery',
+  'Window & glass',
 ];
 
 export default function QuoteForm() {
@@ -16,7 +18,7 @@ export default function QuoteForm() {
     email: '',
     phone: '',
     service: SERVICES[0],
-    zip: '',
+    area: '',
     notes: '',
   });
   const [errors, setErrors] = useState({});
@@ -51,7 +53,7 @@ export default function QuoteForm() {
           id="name"
           name="name"
           type="text"
-          placeholder="Jamie Rivera"
+          placeholder="Your full name"
           value={values.name}
           onChange={update('name')}
           className={errors.name ? 'invalid' : ''}
@@ -77,7 +79,7 @@ export default function QuoteForm() {
             id="phone"
             name="phone"
             type="tel"
-            placeholder="(555) 123-4567"
+            placeholder="+971 50 123 4567"
             value={values.phone}
             onChange={update('phone')}
             className={errors.phone ? 'invalid' : ''}
@@ -95,16 +97,14 @@ export default function QuoteForm() {
           </select>
         </div>
         <div className="field">
-          <label htmlFor="zip">Zip code</label>
-          <input
-            id="zip"
-            name="zip"
-            type="text"
-            inputMode="numeric"
-            placeholder="00000"
-            value={values.zip}
-            onChange={update('zip')}
-          />
+          <label htmlFor="area">Area in Dubai</label>
+          <select id="area" name="area" value={values.area} onChange={update('area')}>
+            <option value="">Select your community…</option>
+            {business.areaServed.map((a) => (
+              <option key={a}>{a}</option>
+            ))}
+            <option>Other / not listed</option>
+          </select>
         </div>
       </div>
 

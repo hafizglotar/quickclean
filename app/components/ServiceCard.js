@@ -3,7 +3,12 @@ import { fromLabel } from '../lib/business';
 
 export default function ServiceCard({ s }) {
   return (
-    <Link href={`/services/${s.slug}`} className="service-card" aria-label={`${s.title} — learn more`}>
+    <Link
+      href={`/services/${s.slug}`}
+      className={`service-card${s.featured ? ' is-featured' : ''}`}
+      aria-label={`${s.title} — learn more`}
+    >
+      {s.featured && <span className="service-flag">Our specialty</span>}
       <div className="service-icon" aria-hidden="true">
         {s.icon}
       </div>

@@ -47,11 +47,11 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ fontSize: 78, fontWeight: 800, lineHeight: 1.05, letterSpacing: -2, maxWidth: 1000 }}>
-            A spotless home, without lifting a finger.
+          <div style={{ fontSize: 74, fontWeight: 800, lineHeight: 1.05, letterSpacing: -2, maxWidth: 1000 }}>
+            Deep cleaning in Dubai that reaches what others miss.
           </div>
           <div style={{ fontSize: 34, color: '#c4ddd9', fontWeight: 500, marginTop: 22 }}>
-            Vetted pros · Flat pricing · 100% satisfaction guarantee
+            Deep cleans · Domestic cleaning · Office &amp; commercial
           </div>
         </div>
 

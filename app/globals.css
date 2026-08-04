@@ -273,6 +273,65 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .service-card:hover .service-more { transform: translateX(3px); }
 .services-cta { text-align: center; margin-top: 36px; }
 
+/* Flagship service (deep cleaning) — stands out in every services grid */
+.service-card.is-featured { border-color: var(--teal-300); background: linear-gradient(180deg, var(--teal-50), #fff 55%); }
+.service-card.is-featured::before { transform: scaleX(1); }
+.service-flag {
+  position: absolute; top: 18px; right: -34px; transform: rotate(38deg);
+  background: var(--amber); color: #3a2606; font-weight: 800; font-size: .68rem;
+  letter-spacing: .06em; text-transform: uppercase; padding: 5px 40px;
+}
+
+/* ---------- Deep clean (flagship section) ---------- */
+.deepclean { background: #fff; }
+.dc-rooms { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.dc-room { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; }
+.dc-room-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.dc-ic { width: 44px; height: 44px; border-radius: 12px; background: var(--bg-mint); display: grid; place-items: center; font-size: 1.3rem; flex-shrink: 0; }
+.dc-room h3 { font-size: 1.06rem; letter-spacing: -.02em; }
+.dc-tasks { display: grid; gap: 11px; }
+.dc-tasks li { display: flex; align-items: flex-start; gap: 10px; color: var(--slate); font-size: .93rem; line-height: 1.45; }
+.dc-tasks svg { color: var(--teal-600); flex-shrink: 0; margin-top: 3px; }
+
+/* Standard vs deep comparison table */
+.dc-compare { margin-top: 56px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 38px 34px; }
+.dc-compare h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); letter-spacing: -.02em; }
+.dc-compare-sub { color: var(--slate); margin-top: 8px; margin-bottom: 26px; }
+.dc-table-wrap { overflow-x: auto; }
+.compare-table { width: 100%; min-width: 520px; border-collapse: collapse; text-align: left; }
+.compare-table th, .compare-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.compare-table thead th { font-size: .95rem; font-weight: 800; letter-spacing: -.01em; vertical-align: bottom; }
+.compare-table thead th small { display: block; font-weight: 600; font-size: .8rem; color: var(--muted); margin-top: 3px; }
+.compare-table thead th:not(:first-child), .compare-table tbody td { text-align: center; width: 130px; }
+.compare-table .col-deep { background: var(--bg-mint); border-radius: 12px 12px 0 0; color: var(--teal-700); }
+.compare-table tbody td.is-on { color: var(--teal-600); }
+.compare-table tbody td.is-off { color: #b9c7c6; }
+.compare-table tbody td svg { margin-inline: auto; }
+.compare-table tbody td:last-child { background: var(--bg-mint); }
+.compare-table tbody tr:last-child td:last-child { border-radius: 0 0 12px 12px; }
+.compare-table tbody th { font-weight: 600; color: var(--slate); font-size: .95rem; }
+.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
+.dc-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 30px; }
+.dc-cta-note { color: var(--muted); font-size: .92rem; }
+
+/* ---------- Service areas (geographic coverage) ---------- */
+.areas { background: #fff; }
+.areas-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.area-chip {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px;
+  padding: 11px 20px; font-weight: 600; font-size: .95rem; color: var(--slate);
+  transition: border-color .2s, color .2s, box-shadow .2s;
+}
+.area-chip:hover { border-color: var(--teal-300); color: var(--teal-700); box-shadow: var(--shadow-sm); }
+.areas-note { margin-top: 28px; color: var(--muted); font-size: .95rem; }
+.areas-note a { color: var(--teal-600); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Visually hidden but readable by screen readers */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
 /* ---------- Why ---------- */
 .why-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; align-items: center; }
 .why-list { margin: 26px 0 32px; display: grid; gap: 20px; }
@@ -327,6 +386,7 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .plan-price span { font-size: 1.15rem; font-weight: 700; vertical-align: baseline; color: var(--muted); margin-right: 7px; letter-spacing: -.01em; }
 .plan-price small { font-size: .95rem; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 4px; }
 .plan-featured .plan-price span { color: #b8d6d2; }
+.plan-price.is-custom { font-size: 2.3rem; }
 .plan-desc { color: var(--slate); font-size: .96rem; margin-bottom: 22px; }
 .plan-feats { display: grid; gap: 12px; margin-bottom: 26px; flex: 1; }
 .plan-feats li { position: relative; padding-left: 28px; color: var(--slate); font-size: .96rem; }
@@ -495,6 +555,7 @@ p, blockquote, .section-lead { text-wrap: pretty; }
   .svc-hero-card { max-width: 460px; }
   .why-visual { min-height: 320px; }
   .services-grid, .steps, .pricing-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .dc-rooms { grid-template-columns: repeat(2, 1fr); }
   .plan-featured { transform: none; }
   .plan-featured:hover { transform: translateY(-5px); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -509,6 +570,8 @@ p, blockquote, .section-lead { text-wrap: pretty; }
   .section { padding: 70px 0; }
   .section-head { margin-bottom: 38px; }
   .services-grid, .steps, .pricing-grid, .reviews-grid { grid-template-columns: 1fr; }
+  .dc-rooms { grid-template-columns: 1fr; }
+  .dc-compare { padding: 26px 20px; margin-top: 40px; }
   .includes-grid { grid-template-columns: 1fr; }
   .svc-hero { padding: 120px 0 50px; }
   .subpage-hero { padding: 120px 0 40px; }

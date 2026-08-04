@@ -15,10 +15,11 @@ function clamp(v, min, max) {
 export default function PriceCalculator() {
   const [beds, setBeds] = useState(2);
   const [baths, setBaths] = useState(1);
-  const [type, setType] = useState(1);
+  // Deep clean is the flagship service, so it is the default selection.
+  const [type, setType] = useState(1.5);
 
   const priceEl = useRef(null);
-  const prev = useRef(120);
+  const prev = useRef(150);
 
   const raw = (BASE + beds * PER_BED + baths * PER_BATH) * type;
   const price = Math.round(raw / 5) * 5; // round to nearest 5
@@ -49,7 +50,7 @@ export default function PriceCalculator() {
 
   return (
     <div className="quote-card">
-      <h3>Instant price check</h3>
+      <h3>Instant deep clean price</h3>
       <p className="quote-card-sub">See your flat rate — no surprises.</p>
 
       <div className="qc-row">
@@ -81,9 +82,9 @@ export default function PriceCalculator() {
       <div className="qc-row">
         <label htmlFor="qcType">Clean type</label>
         <select id="qcType" value={type} onChange={(e) => setType(parseFloat(e.target.value))}>
-          <option value={1}>Standard clean</option>
-          <option value={1.5}>Deep clean</option>
-          <option value={1.35}>Move in / out</option>
+          <option value={1.5}>Deep clean — most booked</option>
+          <option value={1}>Domestic (standard) clean</option>
+          <option value={1.35}>Move in / out deep clean</option>
         </select>
       </div>
 
@@ -95,7 +96,11 @@ export default function PriceCalculator() {
       <a href="#quote" className="btn btn-primary btn-block">
         Book this clean →
       </a>
-      <p className="qc-note">Final price confirmed before you pay. Cancel free anytime.</p>
+      <p className="qc-note">
+        Final price confirmed before you pay. Cancel free anytime.
+        <br />
+        Office or commercial space? <a href="#quote">Request a free walkthrough →</a>
+      </p>
     </div>
   );
 }

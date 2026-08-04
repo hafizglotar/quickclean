@@ -1,4 +1,4 @@
-import { business } from './lib/business';
+import { LOCALE, business } from './lib/business';
 
 // Generates /manifest.webmanifest (PWA + installability + richer mobile presence)
 export default function manifest() {
@@ -10,7 +10,7 @@ export default function manifest() {
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#0d9488',
-    lang: 'en-US',
+    lang: LOCALE.lang,
     categories: ['business', 'lifestyle', 'productivity'],
     icons: [
       { src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },

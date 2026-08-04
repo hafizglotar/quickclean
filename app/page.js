@@ -10,6 +10,8 @@ import {
   Reviews,
   Faq,
 } from './components/Sections';
+import DeepClean from './components/DeepClean';
+import ServiceAreas from './components/ServiceAreas';
 import QuoteSection from './components/QuoteSection';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
@@ -28,11 +30,13 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <Stats />
+        <DeepClean />
         <Services />
         <WhyUs />
         <HowItWorks />
         <Pricing />
         <Reviews />
+        <ServiceAreas />
         <QuoteSection />
         <Faq />
       </main>

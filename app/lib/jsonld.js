@@ -8,7 +8,17 @@
    We emit ONE @graph so every node is cross-linked by @id.
    ============================================================ */
 
-import { SITE_URL, business, sameAs, services, reviews, faqs, getService } from './business';
+import {
+  SITE_URL,
+  LOCALE,
+  business,
+  sameAs,
+  services,
+  reviews,
+  faqs,
+  getService,
+  placeLabel,
+} from './business';
 import { getServiceContent } from './services-content';
 
 const ORG_ID = `${SITE_URL}/#organization`;
@@ -26,14 +36,29 @@ function openingHoursSpec() {
 }
 
 function postalAddress() {
+  // The UAE has no postal codes, so `postalCode` is deliberately omitted —
+  // emitting an empty or invented one is worse than leaving it out.
   return {
     '@type': 'PostalAddress',
     streetAddress: business.address.street,
     addressLocality: business.address.city,
-    addressRegion: business.address.region,
-    postalCode: business.address.postalCode,
+    addressRegion: business.address.regionName,
     addressCountry: business.address.country,
   };
+}
+
+/* Geographic targeting (the "GEO" in SEO/AEO/GEO): the emirate as a City node,
+   then every community we serve as its own Place. This is what lets Google and
+   AI engines answer "deep cleaning in Dubai Marina" with us. */
+function areaServedNodes() {
+  return [
+    { '@type': 'City', name: business.address.city, '@id': `${SITE_URL}/#city` },
+    ...business.areaServed.map((c) => ({
+      '@type': 'Place',
+      name: c,
+      containedInPlace: { '@id': `${SITE_URL}/#city` },
+    })),
+  ];
 }
 
 export function organizationNode() {
@@ -65,7 +90,7 @@ export function websiteNode() {
     name: business.name,
     description: business.description,
     publisher: { '@id': ORG_ID },
-    inLanguage: 'en-US',
+    inLanguage: LOCALE.lang,
   };
 }
 
@@ -79,11 +104,27 @@ export function localBusinessNode() {
     image: OG_IMAGE,
     logo: `${SITE_URL}/icon.svg`,
     description: business.description,
+    slogan: business.tagline,
+    // Explicit topical entities — tells search + AI engines what we specialise in.
+    knowsAbout: [
+      'Deep cleaning',
+      'Villa deep cleaning',
+      'Apartment deep cleaning',
+      'Office deep cleaning',
+      'Domestic cleaning',
+      'Residential cleaning',
+      'Office cleaning',
+      'Commercial cleaning',
+      'Move out cleaning',
+      'End of tenancy cleaning',
+      'Sofa shampooing',
+      'Mattress cleaning',
+    ],
     telephone: business.telephone,
     email: business.email,
     priceRange: business.priceRange,
     currenciesAccepted: 'AED',
-    paymentAccepted: 'Credit Card, Debit Card',
+    paymentAccepted: 'Credit Card, Debit Card, Bank Transfer, Cash',
     foundingDate: String(business.foundingYear),
     parentOrganization: { '@id': ORG_ID },
     address: postalAddress(),
@@ -92,7 +133,7 @@ export function localBusinessNode() {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
-    areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
+    areaServed: areaServedNodes(),
     hasMap: business.social.google,
     openingHoursSpecification: openingHoursSpec(),
     sameAs,
@@ -127,7 +168,7 @@ export function localBusinessNode() {
           description: s.desc,
           serviceType: s.title,
           provider: { '@id': LOCAL_ID },
-          areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
+          areaServed: areaServedNodes(),
         },
       })),
     },
@@ -172,7 +213,7 @@ export function webPageNode() {
     isPartOf: { '@id': SITE_ID },
     about: { '@id': LOCAL_ID },
     breadcrumb: { '@id': `${SITE_URL}/#breadcrumb` },
-    inLanguage: 'en-US',
+    inLanguage: LOCALE.lang,
     // Lets voice assistants read the headline answer aloud (AEO).
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -184,8 +225,6 @@ export function webPageNode() {
 /* ------------------------------------------------------------
    Service pages
    ------------------------------------------------------------ */
-
-const cityList = () => business.areaServed.map((c) => ({ '@type': 'City', name: c }));
 
 // Compact, self-contained provider so each service page resolves on its own.
 function compactProvider() {
@@ -243,7 +282,7 @@ export function servicePageGraph(slug) {
   const content = getServiceContent(slug);
   if (!svc || !content) return null;
   const url = `${SITE_URL}/services/${slug}`;
-  const name = `${svc.title} in ${business.address.city}, ${business.address.region}`;
+  const name = `${svc.title} in ${placeLabel}`;
 
   const serviceNode = {
     '@type': 'Service',
@@ -253,7 +292,7 @@ export function servicePageGraph(slug) {
     description: content.subhead,
     url,
     provider: compactProvider(),
-    areaServed: cityList(),
+    areaServed: areaServedNodes(),
     category: 'Cleaning service',
     ...(svc.price
       ? {
@@ -286,7 +325,7 @@ export function servicePageGraph(slug) {
         isPartOf: { '@id': SITE_ID },
         about: { '@id': `${url}/#service` },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: LOCALE.lang,
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
@@ -308,11 +347,11 @@ export function servicesIndexGraph() {
         '@type': 'CollectionPage',
         '@id': `${url}/#webpage`,
         url,
-        name: `Cleaning Services in ${business.address.city}, ${business.address.region}`,
-        description: `Explore every cleaning service Quick Clean offers in ${business.address.city} — residential, deep, move-out, office, carpet, and window cleaning.`,
+        name: `Deep Cleaning, Domestic & Office Cleaning in ${business.address.city}`,
+        description: `Every cleaning service Quick Clean offers in ${business.address.city} — deep cleaning, domestic cleaning, office and commercial cleaning, move-out, carpet, and window cleaning.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: LOCALE.lang,
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },

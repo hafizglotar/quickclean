@@ -5,12 +5,13 @@ import Animations from '../components/Animations';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ServiceCard from '../components/ServiceCard';
 import QuoteSection from '../components/QuoteSection';
+import ServiceAreas from '../components/ServiceAreas';
 import { WhyUs } from '../components/Sections';
 import { business, services, SITE_URL } from '../lib/business';
 import { servicesIndexGraph } from '../lib/jsonld';
 
-const title = `Cleaning Services in ${business.address.city}, ${business.address.region}`;
-const description = `Explore every cleaning service from Quick Clean in ${business.address.city} — residential, deep, move-out, office, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
+const title = `Deep Cleaning, Domestic & Office Cleaning in ${business.address.city}`;
+const description = `Every cleaning service from Quick Clean in ${business.address.city} — deep cleaning (our specialty), domestic cleaning, office and commercial cleaning, move-out, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
 
 export const metadata = {
   title,
@@ -40,8 +41,10 @@ export default function ServicesIndex() {
             <span className="kicker">Our services</span>
             <h1>{title}</h1>
             <p className="section-lead">
-              One vetted team for every clean. Pick a service below — each is backed by our
-              100% Spotless Guarantee, flat upfront pricing, and no contracts.
+              Deep cleaning is our specialty, and we cover everything around it — regular
+              domestic cleaning, office and commercial contracts, and end-of-tenancy work.
+              Every service is backed by our 100% Spotless Guarantee, flat upfront pricing,
+              and no contracts.
             </p>
             <div className="subpage-hero-cta">
               <a href="#quote" className="btn btn-primary btn-lg">
@@ -65,6 +68,7 @@ export default function ServicesIndex() {
         </section>
 
         <WhyUs />
+        <ServiceAreas />
         <QuoteSection />
       </main>
       <Footer />

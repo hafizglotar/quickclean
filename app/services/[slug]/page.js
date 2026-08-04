@@ -8,7 +8,7 @@ import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
 import { Check } from '../../components/icons';
-import { business, services, getService, currency, SITE_URL } from '../../lib/business';
+import { business, services, getService, currency, placeLabel, SITE_URL } from '../../lib/business';
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   const content = getServiceContent(slug);
   if (!svc || !content) return {};
 
-  const place = `${business.address.city}, ${business.address.region}`;
+  const place = placeLabel;
   const title = `${svc.title} in ${place}${svc.price ? ` — From ${currency.format(svc.price)}` : ''}`;
   return {
     title,
@@ -44,7 +44,7 @@ export default async function ServicePage({ params }) {
   const content = getServiceContent(slug);
   if (!svc || !content) notFound();
 
-  const place = `${business.address.city}, ${business.address.region}`;
+  const place = placeLabel;
   const related = services.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (

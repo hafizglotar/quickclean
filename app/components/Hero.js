@@ -10,26 +10,28 @@ export default function Hero() {
         <div className="hero-copy">
           <span className="eyebrow reveal-hero">★★★★★ Rated {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers</span>
           <h1 className="hero-title">
-            <span className="reveal-hero-line">A spotless home,</span>
+            <span className="reveal-hero-line">Deep cleaning in Dubai</span>
             <span className="reveal-hero-line">
-              without lifting <em>a finger.</em>
+              that reaches what others <em>miss.</em>
             </span>
           </h1>
           <p className="hero-sub reveal-hero">
-            Vetted, insured cleaners. Flat upfront pricing. And a 100% satisfaction
-            guarantee — if it&apos;s not perfect, we re-clean it free. Book in 60 seconds.
+            Apartments, villas, and offices across Dubai — deep cleaned by trained,
+            insured crews. Inside the appliances, into the grout, behind the furniture.
+            We also handle regular domestic and office cleaning. Flat prices in AED,
+            booked in 60 seconds.
           </p>
           <div className="hero-cta reveal-hero">
             <a href="#quote" className="btn btn-primary btn-lg">
               Get My Free Quote →
             </a>
-            <a href="#how" className="btn btn-ghost btn-lg">
-              See how it works
+            <a href="#deep-clean" className="btn btn-ghost btn-lg">
+              See what a deep clean covers
             </a>
           </div>
           <ul className="hero-trust reveal-hero">
             <li>
-              <Check /> No contracts
+              <Check /> Homes &amp; offices
             </li>
             <li>
               <Check /> Insured &amp; bonded

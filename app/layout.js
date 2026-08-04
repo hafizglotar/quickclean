@@ -1,6 +1,6 @@
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
-import { SITE_URL, business } from './lib/business';
+import { SITE_URL, LOCALE, business, placeLabel } from './lib/business';
 import { fullGraph } from './lib/jsonld';
 
 // Self-hosted Google fonts via next/font — zero layout shift, faster LCP (a ranking signal).
@@ -17,7 +17,9 @@ const inter = Inter({
   display: 'swap',
 });
 
-const title = `${business.name} — ${business.tagline} | Book in 60 Seconds`;
+// Leads with the flagship service AND the city — the two things every local
+// query contains — and still fits Google's ~60-character title display.
+const title = `Deep Cleaning Dubai | Home & Office Cleaning | ${business.name}`;
 
 // ---- SEO metadata (Next.js Metadata API) ----
 export const metadata = {
@@ -30,17 +32,34 @@ export const metadata = {
   applicationName: business.name,
   generator: 'Next.js',
   keywords: [
-    'house cleaning',
-    'cleaning service',
-    'maid service',
-    'deep cleaning',
-    'move out cleaning',
-    'office cleaning',
-    'commercial cleaning',
-    'residential cleaning',
-    `cleaning service ${business.address.city}`,
-    `house cleaners ${business.address.city}`,
-    'cleaning company near me',
+    // Flagship service + city (the highest-intent local queries)
+    'deep cleaning Dubai',
+    'deep cleaning services Dubai',
+    'deep cleaning company Dubai',
+    'villa deep cleaning Dubai',
+    'apartment deep cleaning Dubai',
+    'office deep cleaning Dubai',
+    'home deep cleaning Dubai',
+    // The other two pillars
+    'domestic cleaning Dubai',
+    'residential cleaning Dubai',
+    'house cleaning Dubai',
+    'home cleaning services Dubai',
+    'maid service Dubai',
+    'office cleaning Dubai',
+    'commercial cleaning Dubai',
+    'cleaning company in Dubai',
+    'cleaning services Dubai',
+    // Supporting services
+    'move in move out cleaning Dubai',
+    'move out cleaning Dubai',
+    'sofa cleaning Dubai',
+    'mattress cleaning Dubai',
+    'carpet cleaning Dubai',
+    // Community-level "near me" intent
+    ...business.areaServed.slice(0, 6).map((c) => `deep cleaning ${c}`),
+    'deep cleaning near me',
+    'cleaning company near me Dubai',
   ],
   authors: [{ name: business.name, url: SITE_URL }],
   creator: business.name,
@@ -51,7 +70,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: LOCALE.ogLocale,
     url: SITE_URL,
     siteName: business.name,
     title,
@@ -89,6 +108,14 @@ export const metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
   },
+  // Classic geo meta tags. Google no longer uses them, but Bing and several
+  // AI crawlers still read them — cheap, unambiguous geographic targeting.
+  other: {
+    'geo.region': `${business.address.country}-DU`,
+    'geo.placename': placeLabel,
+    'geo.position': `${business.geo.latitude};${business.geo.longitude}`,
+    ICBM: `${business.geo.latitude}, ${business.geo.longitude}`,
+  },
 };
 
 export const viewport = {
@@ -100,7 +127,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+    <html lang={LOCALE.lang} className={`${jakarta.variable} ${inter.variable}`}>
       <body>
         {/* JSON-LD: Organization + WebSite + LocalBusiness + WebPage + Breadcrumb + FAQ.
             Documented Next.js pattern — rendered in the tree, hoisted by the framework. */}
