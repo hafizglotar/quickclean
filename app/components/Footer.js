@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { business } from '../lib/business';
 import { Logo } from './icons';
 
-export default function Footer() {
+// See Header — pages without a #quote section pass an absolute "/#quote".
+export default function Footer({ quoteHref = '#quote' }) {
   const year = new Date().getFullYear();
   return (
     <footer className="site-footer">
@@ -56,7 +57,7 @@ export default function Footer() {
             WhatsApp us
           </a>
           <a href={`mailto:${business.email}`}>{business.email}</a>
-          <a href="#quote" className="btn btn-primary btn-sm">
+          <a href={quoteHref} className="btn btn-primary btn-sm">
             Get a free quote
           </a>
         </div>
@@ -67,9 +68,9 @@ export default function Footer() {
           © {year} {business.legalName}. All rights reserved.
         </span>
         <div className="footer-legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Service areas</a>
+          <Link href="/terms">Terms &amp; Conditions</Link>
+          <Link href="/terms#your-information">Privacy</Link>
+          <Link href="/#areas">Service areas</Link>
         </div>
       </div>
     </footer>

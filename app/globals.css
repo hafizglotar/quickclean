@@ -540,6 +540,60 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .related { background: var(--bg-soft); }
 
 /* ============================================================
+   Legal pages (/terms)
+   ============================================================ */
+.legal-updated { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+.legal { padding-top: 56px; }
+.legal-grid { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start; }
+
+/* Sticky table of contents */
+.legal-toc { position: sticky; top: 96px; }
+.legal-toc-title {
+  font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--teal-600); margin-bottom: 14px;
+}
+.legal-toc ol { list-style: none; display: grid; gap: 2px; counter-reset: none; }
+.legal-toc a {
+  display: block; padding: 7px 12px; border-radius: 9px; font-size: .9rem;
+  color: var(--slate); line-height: 1.4; transition: background .18s, color .18s;
+}
+.legal-toc a:hover { background: var(--bg-mint); color: var(--teal-700); }
+.legal-toc a span { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Body copy — measured line length is the whole job on a legal page */
+.legal-body { max-width: 68ch; }
+.legal-section { scroll-margin-top: 100px; }
+.legal-section + .legal-section { margin-top: 44px; }
+.legal-section h2 {
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem); letter-spacing: -.02em; line-height: 1.25;
+  margin-bottom: 14px; display: flex; gap: 10px; align-items: baseline;
+}
+.legal-num { color: var(--teal-600); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.legal-body p { color: var(--slate); margin-bottom: 14px; }
+.legal-body p:last-child { margin-bottom: 0; }
+.legal-list { display: grid; gap: 10px; margin: 0 0 16px; padding-left: 4px; }
+.legal-list li { position: relative; padding-left: 26px; color: var(--slate); }
+.legal-list li::before {
+  content: ''; position: absolute; left: 6px; top: .62em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500);
+}
+.legal-list-ordered { counter-reset: legal-item; }
+.legal-list-ordered li::before {
+  counter-increment: legal-item; content: counter(legal-item) '.';
+  left: 0; top: 0; width: auto; height: auto; border-radius: 0;
+  background: none; color: var(--teal-600); font-weight: 700;
+}
+
+/* Closing contact card */
+.legal-contact {
+  margin-top: 56px; background: var(--bg-mint); border: 1px solid var(--teal-300);
+  border-radius: var(--radius); padding: 32px 30px;
+}
+.legal-contact h2 { font-size: 1.3rem; letter-spacing: -.02em; margin-bottom: 10px; }
+.legal-contact p { color: var(--slate); margin-bottom: 20px; }
+.legal-contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 980px) {
@@ -556,6 +610,11 @@ p, blockquote, .section-lead { text-wrap: pretty; }
   .why-visual { min-height: 320px; }
   .services-grid, .steps, .pricing-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .dc-rooms { grid-template-columns: repeat(2, 1fr); }
+  /* Below this width the sticky sidebar steals too much room — the TOC
+     becomes a plain block above the text. */
+  .legal-grid { grid-template-columns: 1fr; gap: 36px; }
+  .legal-toc { position: static; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+  .legal-toc ol { grid-template-columns: repeat(2, 1fr); }
   .plan-featured { transform: none; }
   .plan-featured:hover { transform: translateY(-5px); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -572,6 +631,9 @@ p, blockquote, .section-lead { text-wrap: pretty; }
   .services-grid, .steps, .pricing-grid, .reviews-grid { grid-template-columns: 1fr; }
   .dc-rooms { grid-template-columns: 1fr; }
   .dc-compare { padding: 26px 20px; margin-top: 40px; }
+  .legal-toc ol { grid-template-columns: 1fr; }
+  .legal-contact { padding: 26px 22px; }
+  .legal-contact-links .btn { width: 100%; justify-content: center; }
   .includes-grid { grid-template-columns: 1fr; }
   .svc-hero { padding: 120px 0 50px; }
   .subpage-hero { padding: 120px 0 40px; }

@@ -1,4 +1,5 @@
 import { SITE_URL, services } from './lib/business';
+import { termsUpdated } from './lib/legal';
 
 // Generates /sitemap.xml
 export default function sitemap() {
@@ -12,5 +13,13 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     })),
+    {
+      url: `${SITE_URL}/terms`,
+      // Use the real edit date, not the build date — legal pages should not
+      // look freshly changed every time the site is deployed.
+      lastModified: new Date(`${termsUpdated}T00:00:00Z`),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 }

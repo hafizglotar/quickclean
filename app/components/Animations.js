@@ -85,13 +85,21 @@ export default function Animations() {
         });
       });
 
-      /* ---- Hero parallax ---- */
+      /* ---- Hero parallax ----
+         Trigger off the backdrop's own parent rather than a hard-coded `.hero`
+         selector, so this works on the home page, the service pages, and the
+         legal pages — all of which use a different hero wrapper class. */
       const bg = document.querySelector('.hero-bg');
-      if (bg) {
+      if (bg?.parentElement) {
         gsap.to(bg, {
           yPercent: 12,
           ease: 'none',
-          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
+          scrollTrigger: {
+            trigger: bg.parentElement,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+          },
         });
       }
 

@@ -20,7 +20,9 @@ function Caret() {
   );
 }
 
-export default function Header() {
+// `quoteHref` defaults to the in-page anchor. Pages without a #quote section
+// (e.g. /terms) pass an absolute "/#quote" so the CTA still works.
+export default function Header({ quoteHref = '#quote' }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -80,7 +82,7 @@ export default function Header() {
             <Phone size={18} />
             <span>{business.telephoneDisplay}</span>
           </a>
-          <a href="#quote" className="btn btn-primary btn-sm">
+          <a href={quoteHref} className="btn btn-primary btn-sm">
             Get a Free Quote
           </a>
           <button
@@ -123,7 +125,7 @@ export default function Header() {
             {n.label}
           </Link>
         ))}
-        <a href="#quote" className="btn btn-primary" onClick={closeAll}>
+        <a href={quoteHref} className="btn btn-primary" onClick={closeAll}>
           Get a Free Quote
         </a>
       </div>

@@ -337,6 +337,38 @@ export function servicePageGraph(slug) {
   };
 }
 
+/**
+ * JSON-LD graph for the /terms page.
+ * Note: schema.org has no `TermsOfService` type and no `termsOfService`
+ * property on Organization — a plain WebPage plus a breadcrumb is the
+ * correct, valid markup here.
+ */
+export function termsPageGraph({ title, description, dateModified }) {
+  const url = `${SITE_URL}/terms`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: title,
+        description,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': LOCAL_ID },
+        publisher: { '@id': ORG_ID },
+        dateModified,
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: LOCALE.lang,
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Terms & Conditions', url },
+      ]),
+    ],
+  };
+}
+
 /** JSON-LD graph for the /services index page. */
 export function servicesIndexGraph() {
   const url = `${SITE_URL}/services`;
