@@ -384,10 +384,12 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--teal-500); box-shadow: 0 0 0 3px rgba(20,184,166,.15); background: #fff;
 }
-.field input.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.12); }
+.field input.invalid, .field select.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.12); }
+.field select { cursor: pointer; }
 .form-fineprint { font-size: .78rem; color: var(--muted); text-align: center; margin-top: 14px; }
 .form-success { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--bg-mint); color: var(--teal-700); font-weight: 700; padding: 14px; border-radius: 12px; text-align: center; margin-top: 14px; }
 .form-success svg { flex-shrink: 0; }
+.form-error { background: #fef2f2; color: #b91c1c; font-weight: 600; font-size: .9rem; line-height: 1.5; padding: 14px; border-radius: 12px; text-align: center; margin-top: 14px; }
 
 /* ---------- FAQ ---------- */
 .faq-list { max-width: 760px; margin-inline: auto; display: grid; gap: 14px; }
