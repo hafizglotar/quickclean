@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { business, services, fromLabel } from '../lib/business';
-import { Logo, Phone } from './icons';
+import { ArrowRight, ChevronDown, Logo, Phone, ServiceIcon } from './icons';
 
 const NAV = [
   { href: '/#how', label: 'How it works' },
@@ -11,14 +11,6 @@ const NAV = [
   { href: '/#reviews', label: 'Reviews' },
   { href: '/#faq', label: 'FAQ' },
 ];
-
-function Caret() {
-  return (
-    <svg className="nav-caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,13 +40,13 @@ export default function Header() {
           {/* Services mega-dropdown */}
           <div className="has-dropdown">
             <Link href="/services" className="nav-trigger" aria-haspopup="true">
-              Services <Caret />
+              Services <ChevronDown className="nav-caret" size={13} />
             </Link>
             <div className="mega" role="menu" aria-label="Services">
               {services.map((s) => (
                 <Link href={`/services/${s.slug}`} className="mega-item" role="menuitem" key={s.slug}>
                   <span className="mega-ic" aria-hidden="true">
-                    {s.icon}
+                    <ServiceIcon name={s.icon} size={20} />
                   </span>
                   <span>
                     <strong>{s.title}</strong>
@@ -63,7 +55,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link href="/services" className="mega-all" role="menuitem">
-                View all services →
+                View all services <ArrowRight size={15} />
               </Link>
             </div>
           </div>
@@ -104,16 +96,16 @@ export default function Header() {
             aria-expanded={servicesOpen}
             onClick={() => setServicesOpen((v) => !v)}
           >
-            Services <span className={`m-chev${servicesOpen ? ' up' : ''}`} aria-hidden="true" />
+            Services <ChevronDown className={`m-chev${servicesOpen ? ' up' : ''}`} size={18} />
           </button>
           <div className={`m-sublist${servicesOpen ? ' open' : ''}`}>
             {services.map((s) => (
               <Link href={`/services/${s.slug}`} key={s.slug} onClick={closeAll}>
-                {s.icon} {s.title}
+                <ServiceIcon name={s.icon} size={18} /> {s.title}
               </Link>
             ))}
             <Link href="/services" onClick={closeAll}>
-              View all services →
+              View all services <ArrowRight size={15} />
             </Link>
           </div>
         </div>

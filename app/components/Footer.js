@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { business } from '../lib/business';
-import { Logo } from './icons';
+import { Logo, Stars } from './icons';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,7 +13,8 @@ export default function Footer() {
           </Link>
           <p>Spotless homes and offices, guaranteed. Vetted pros, flat pricing, zero hassle.</p>
           <div className="footer-rating">
-            ★★★★★ {business.rating.value}/5 from {business.rating.count.toLocaleString()}+ customers
+            <Stars size={13} decorative />{' '}
+            {business.rating.value}/5 from {business.rating.count.toLocaleString()}+ customers
           </div>
           <address className="footer-address">
             {business.address.street}, {business.address.city}, {business.address.region}{' '}

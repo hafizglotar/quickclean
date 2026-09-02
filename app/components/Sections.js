@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { business, currency, stats, trustLogos, services, whyPoints, steps, plans, reviews, faqs } from '../lib/business';
-import { Check } from './icons';
+import { ArrowRight, Bolt, Check, ShieldCheck, Star, Stars } from './icons';
 import ServiceCard from './ServiceCard';
 
 export function TrustBar() {
@@ -56,7 +56,7 @@ export function Services() {
         </div>
         <div className="services-cta reveal">
           <Link href="/services" className="btn btn-ghost btn-lg">
-            View all cleaning services →
+            View all cleaning services <ArrowRight />
           </Link>
         </div>
       </div>
@@ -78,13 +78,16 @@ export function WhyUs() {
           <ul className="why-list">
             {whyPoints.map((p) => (
               <li key={p.title}>
+                <span className="why-ic" aria-hidden="true">
+                  <Check size={13} />
+                </span>
                 <strong>{p.title}</strong>
                 {p.body}
               </li>
             ))}
           </ul>
           <a href="#quote" className="btn btn-primary btn-lg">
-            Claim your guaranteed clean →
+            Claim your guaranteed clean <ArrowRight />
           </a>
         </div>
         <div className="why-visual reveal">
@@ -99,9 +102,15 @@ export function WhyUs() {
             </div>
           </div>
           <div className="why-floaters" aria-hidden="true">
-            <span className="floater f1">★ {business.rating.value} average rating</span>
-            <span className="floater f2">⚡ Booked in 60s</span>
-            <span className="floater f3">🛡️ Fully insured</span>
+            <span className="floater f1">
+              <Star size={14} /> {business.rating.value} average rating
+            </span>
+            <span className="floater f2">
+              <Bolt /> Booked in 60s
+            </span>
+            <span className="floater f3">
+              <ShieldCheck /> Fully insured
+            </span>
           </div>
         </div>
       </div>
@@ -160,7 +169,10 @@ export function Pricing() {
               <p className="plan-desc">{plan.desc}</p>
               <ul className="plan-feats">
                 {plan.feats.map((f) => (
-                  <li key={f}>{f}</li>
+                  <li key={f}>
+                    <Check size={15} />
+                    <span>{f}</span>
+                  </li>
                 ))}
               </ul>
               <a href="#quote" className={`btn ${plan.featured ? 'btn-primary' : 'btn-ghost'} btn-block`}>
@@ -189,9 +201,7 @@ export function Reviews() {
         <div className="reviews-grid">
           {reviews.map((r) => (
             <figure className="review" key={r.name}>
-              <div className="stars" aria-label="5 out of 5 stars">
-                ★★★★★
-              </div>
+              <Stars />
               <blockquote>{r.quote}</blockquote>
               <figcaption>
                 <span className="avatar" aria-hidden="true">

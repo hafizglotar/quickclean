@@ -7,7 +7,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
-import { Check } from '../../components/icons';
+import { ArrowRight, Check, ServiceIcon, Star } from '../../components/icons';
 import { business, services, getService, currency, SITE_URL } from '../../lib/business';
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
@@ -68,7 +68,7 @@ export default async function ServicePage({ params }) {
                 ]}
               />
               <span className="svc-badge">
-                <span aria-hidden="true">{svc.icon}</span> {content.serviceType}
+                <ServiceIcon name={svc.icon} size={16} /> {content.serviceType}
               </span>
               <h1>
                 {svc.title} in {place}
@@ -76,7 +76,7 @@ export default async function ServicePage({ params }) {
               <p className="section-lead">{content.subhead}</p>
               <div className="subpage-hero-cta">
                 <a href="#quote" className="btn btn-primary btn-lg">
-                  Get a free quote →
+                  Get a free quote <ArrowRight />
                 </a>
                 <a href={`tel:${business.telephone}`} className="btn btn-ghost btn-lg">
                   Call {business.telephoneDisplay}
@@ -107,8 +107,9 @@ export default async function ServicePage({ params }) {
                 </div>
                 <div className="svc-fact">
                   <span>Rating</span>
-                  <strong>
-                    ★ {business.rating.value}/5 ({business.rating.count.toLocaleString()}+)
+                  <strong className="fact-rating">
+                    <Star size={13} /> {business.rating.value}/5 (
+                    {business.rating.count.toLocaleString()}+)
                   </strong>
                 </div>
                 <div className="svc-fact">
@@ -117,7 +118,7 @@ export default async function ServicePage({ params }) {
                 </div>
               </div>
               <a href="#quote" className="btn btn-primary btn-block btn-lg">
-                Book this service →
+                Book this service <ArrowRight />
               </a>
               <p className="qc-note">Flat price confirmed before you pay. Cancel free anytime.</p>
             </aside>

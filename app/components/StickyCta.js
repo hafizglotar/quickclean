@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ArrowRight } from './icons';
 
 export default function StickyCta() {
   const [show, setShow] = useState(false);
@@ -23,7 +24,7 @@ export default function StickyCta() {
 
   return (
     <a href="#quote" className={`sticky-cta${show ? ' show' : ''}`}>
-      Get a Free Quote →
+      Get a Free Quote <ArrowRight />
     </a>
   );
 }

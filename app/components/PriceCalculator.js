@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { currency } from '../lib/business';
+import { ArrowRight, Minus, Plus } from './icons';
 
 const BASE = 79;
 const PER_BED = 18;
@@ -56,11 +57,11 @@ export default function PriceCalculator() {
         <label>Bedrooms</label>
         <div className="qc-stepper">
           <button type="button" aria-label="fewer bedrooms" onClick={() => setBeds((v) => clamp(v - 1, 1, 6))}>
-            −
+            <Minus />
           </button>
           <span>{beds}</span>
           <button type="button" aria-label="more bedrooms" onClick={() => setBeds((v) => clamp(v + 1, 1, 6))}>
-            +
+            <Plus />
           </button>
         </div>
       </div>
@@ -69,11 +70,11 @@ export default function PriceCalculator() {
         <label>Bathrooms</label>
         <div className="qc-stepper">
           <button type="button" aria-label="fewer bathrooms" onClick={() => setBaths((v) => clamp(v - 1, 1, 5))}>
-            −
+            <Minus />
           </button>
           <span>{baths}</span>
           <button type="button" aria-label="more bathrooms" onClick={() => setBaths((v) => clamp(v + 1, 1, 5))}>
-            +
+            <Plus />
           </button>
         </div>
       </div>
@@ -93,7 +94,7 @@ export default function PriceCalculator() {
       </div>
 
       <a href="#quote" className="btn btn-primary btn-block">
-        Book this clean →
+        Book this clean <ArrowRight />
       </a>
       <p className="qc-note">Final price confirmed before you pay. Cancel free anytime.</p>
     </div>

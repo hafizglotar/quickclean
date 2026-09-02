@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ArrowRight, Check, CircleCheck } from './icons';
 
 const SERVICES = [
   'Standard clean',
@@ -123,14 +124,23 @@ export default function QuoteForm() {
       </div>
 
       <button type="submit" className="btn btn-primary btn-block btn-lg" disabled={sent}>
-        {sent ? 'Sent ✓' : 'Send my free quote →'}
+        {sent ? (
+          <>
+            Sent <Check size={16} />
+          </>
+        ) : (
+          <>
+            Send my free quote <ArrowRight />
+          </>
+        )}
       </button>
       <p className="form-fineprint">
         By submitting you agree to be contacted about your quote. We never share your info.
       </p>
       {sent && (
         <p className="form-success">
-          ✅ Thanks! Your quote request is in — we&apos;ll text you within 15 minutes.
+          <CircleCheck size={19} />
+          <span>Thanks! Your quote request is in — we&apos;ll text you within 15 minutes.</span>
         </p>
       )}
     </form>

@@ -101,45 +101,46 @@ export const trustLogos = [
   'Lumen Studios',
 ];
 
+// `icon` is a key into SERVICE_ICONS in components/icons.js (real SVG icons, not emoji).
 export const services = [
   {
     slug: 'residential-cleaning',
-    icon: '🏠',
+    icon: 'home',
     title: 'Residential Cleaning',
     desc: 'Recurring or one-time cleans that keep your whole home fresh, top to bottom.',
     price: '99',
   },
   {
     slug: 'deep-cleaning',
-    icon: '✨',
+    icon: 'sparkle',
     title: 'Deep Cleaning',
     desc: 'The detailed reset — baseboards, behind appliances, grout, and the spots that get missed.',
     price: '179',
   },
   {
     slug: 'move-in-move-out-cleaning',
-    icon: '📦',
+    icon: 'box',
     title: 'Move In / Move Out',
     desc: 'Hand back the keys spotless. Landlord- and inspection-ready, every time.',
     price: '189',
   },
   {
     slug: 'office-commercial-cleaning',
-    icon: '🏢',
+    icon: 'building',
     title: 'Office & Commercial',
     desc: 'After-hours cleaning that keeps your workspace sharp and your team healthy.',
     price: null,
   },
   {
     slug: 'carpet-upholstery-cleaning',
-    icon: '🛋️',
+    icon: 'sofa',
     title: 'Carpet & Upholstery',
     desc: 'Deep-extraction cleaning that lifts stains, odors, and years of wear.',
     price: '89',
   },
   {
     slug: 'window-glass-cleaning',
-    icon: '🪟',
+    icon: 'window',
     title: 'Window & Glass',
     desc: 'Streak-free, inside and out, so the light pours back in.',
     price: '69',

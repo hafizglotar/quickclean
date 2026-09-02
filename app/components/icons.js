@@ -1,38 +1,108 @@
-// Small reusable inline SVG icons (no extra requests, crisp at any size).
+/* ============================================================
+   Quick Clean — central icon set
+   ------------------------------------------------------------
+   Every icon on the site comes from react-icons (Lucide for the
+   UI set, Font Awesome for the filled review stars). They render
+   as real inline SVG, inherit `currentColor`, and stay crisp at
+   any size — no emoji, no raster images.
+   ============================================================ */
 
-export function Check({ size = 18 }) {
-  return (
-    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" aria-hidden="true">
-      <path
-        d="M5 13l4 4L19 7"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+import {
+  LuArrowRight,
+  LuBuilding2,
+  LuCheck,
+  LuChevronDown,
+  LuCircleCheckBig,
+  LuGrid2X2,
+  LuHouse,
+  LuMinus,
+  LuPackage,
+  LuPhone,
+  LuPlus,
+  LuShieldCheck,
+  LuSofa,
+  LuSparkles,
+  LuZap,
+} from 'react-icons/lu';
+import { FaStar } from 'react-icons/fa6';
+
+/* ---------------- Primitives ---------------- */
+
+export function Check({ size = 18, strokeWidth = 3 }) {
+  return <LuCheck size={size} strokeWidth={strokeWidth} aria-hidden="true" />;
 }
 
 export function Phone({ size = 18 }) {
+  return <LuPhone size={size} aria-hidden="true" />;
+}
+
+export function ArrowRight({ size = 17 }) {
+  return <LuArrowRight size={size} strokeWidth={2.5} aria-hidden="true" />;
+}
+
+export function ChevronDown({ className = '', size = 14 }) {
+  return <LuChevronDown className={className} size={size} strokeWidth={2.5} aria-hidden="true" />;
+}
+
+export function Minus({ size = 17 }) {
+  return <LuMinus size={size} strokeWidth={3} aria-hidden="true" />;
+}
+
+export function Plus({ size = 17 }) {
+  return <LuPlus size={size} strokeWidth={3} aria-hidden="true" />;
+}
+
+export function Star({ size = 15 }) {
+  return <FaStar size={size} aria-hidden="true" />;
+}
+
+export function ShieldCheck({ size = 16 }) {
+  return <LuShieldCheck size={size} strokeWidth={2.25} aria-hidden="true" />;
+}
+
+export function Bolt({ size = 16 }) {
+  return <LuZap size={size} strokeWidth={2.25} aria-hidden="true" />;
+}
+
+export function CircleCheck({ size = 18 }) {
+  return <LuCircleCheckBig size={size} strokeWidth={2.5} aria-hidden="true" />;
+}
+
+/* A 5-star row. Use `decorative` where the adjacent text already states the rating. */
+export function Stars({ size = 15, label = '5 out of 5 stars', decorative = false }) {
+  const a11y = decorative ? { 'aria-hidden': 'true' } : { role: 'img', 'aria-label': label };
   return (
-    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" aria-hidden="true">
-      <path
-        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <span className="stars" {...a11y}>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <FaStar key={i} size={size} aria-hidden="true" />
+      ))}
+    </span>
   );
 }
+
+/* ---------------- Service icons ---------------- */
+// Keyed by the `icon` field on each service in lib/business.js.
+const SERVICE_ICONS = {
+  home: LuHouse,
+  sparkle: LuSparkles,
+  box: LuPackage,
+  building: LuBuilding2,
+  sofa: LuSofa,
+  window: LuGrid2X2,
+};
+
+export function ServiceIcon({ name, size = 26 }) {
+  const Icon = SERVICE_ICONS[name] || LuSparkles;
+  return <Icon size={size} strokeWidth={1.9} aria-hidden="true" />;
+}
+
+/* ---------------- Logo ---------------- */
 
 export function Logo({ light = false }) {
   return (
     <span className={`logo${light ? ' logo-light' : ''}`}>
       <span className="logo-mark" aria-hidden="true">
-        <Check size={22} />
+        <LuCheck size={21} strokeWidth={3} />
       </span>
       <span className="logo-text">
         Quick<strong>Clean</strong>

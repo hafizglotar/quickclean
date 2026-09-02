@@ -8,6 +8,7 @@ import QuoteSection from '../components/QuoteSection';
 import { WhyUs } from '../components/Sections';
 import { business, services, SITE_URL } from '../lib/business';
 import { servicesIndexGraph } from '../lib/jsonld';
+import { ArrowRight } from '../components/icons';
 
 const title = `Cleaning Services in ${business.address.city}, ${business.address.region}`;
 const description = `Explore every cleaning service from Quick Clean in ${business.address.city} — residential, deep, move-out, office, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
@@ -45,7 +46,7 @@ export default function ServicesIndex() {
             </p>
             <div className="subpage-hero-cta">
               <a href="#quote" className="btn btn-primary btn-lg">
-                Get a free quote →
+                Get a free quote <ArrowRight />
               </a>
               <a href={`tel:${business.telephone}`} className="btn btn-ghost btn-lg">
                 Call {business.telephoneDisplay}

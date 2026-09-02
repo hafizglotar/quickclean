@@ -1,5 +1,5 @@
 import { business } from '../lib/business';
-import { Check } from './icons';
+import { ArrowRight, Check, Stars } from './icons';
 import PriceCalculator from './PriceCalculator';
 
 export default function Hero() {
@@ -8,7 +8,10 @@ export default function Hero() {
       <div className="hero-bg" aria-hidden="true" />
       <div className="container hero-grid">
         <div className="hero-copy">
-          <span className="eyebrow reveal-hero">★★★★★ Rated {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers</span>
+          <span className="eyebrow reveal-hero">
+            <Stars size={13} decorative /> Rated{' '}
+            {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers
+          </span>
           <h1 className="hero-title">
             <span className="reveal-hero-line">A spotless home,</span>
             <span className="reveal-hero-line">
@@ -21,7 +24,7 @@ export default function Hero() {
           </p>
           <div className="hero-cta reveal-hero">
             <a href="#quote" className="btn btn-primary btn-lg">
-              Get My Free Quote →
+              Get My Free Quote <ArrowRight />
             </a>
             <a href="#how" className="btn btn-ghost btn-lg">
               See how it works
