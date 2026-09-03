@@ -40,6 +40,11 @@ export const business = {
   // ---- Contact / NAP (Name, Address, Phone — keep identical everywhere for local SEO) ----
   telephone: '+1-800-555-0123',
   telephoneDisplay: '(800) 555-0123',
+
+  // WhatsApp number that quote requests are sent to, in international format:
+  // country code first, DIGITS ONLY — no +, spaces, dashes or brackets.
+  // e.g. +971 50 123 4567  ->  '971501234567'
+  whatsapp: '18005550123',
   email: 'hello@quickclean.co',
 
   address: {

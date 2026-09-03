@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, business } from './lib/business';
@@ -16,6 +17,9 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 });
+
+// Google Analytics 4 measurement ID.
+const GA_ID = 'G-B8VTY7HQFH';
 
 const title = `${business.name} — ${business.tagline} | Book in 60 Seconds`;
 
@@ -109,6 +113,19 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(fullGraph()) }}
         />
         {children}
+
+        {/* Google tag (gtag.js) — next/script loads it exactly like the async
+            snippet, but keeps it out of the critical path on every route. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );

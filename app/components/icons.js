@@ -24,7 +24,7 @@ import {
   LuSparkles,
   LuZap,
 } from 'react-icons/lu';
-import { FaStar } from 'react-icons/fa6';
+import { FaStar, FaWhatsapp } from 'react-icons/fa6';
 
 /* ---------------- Primitives ---------------- */
 
@@ -54,6 +54,10 @@ export function Plus({ size = 17 }) {
 
 export function Star({ size = 15 }) {
   return <FaStar size={size} aria-hidden="true" />;
+}
+
+export function WhatsApp({ size = 18 }) {
+  return <FaWhatsapp size={size} aria-hidden="true" />;
 }
 
 export function ShieldCheck({ size = 16 }) {

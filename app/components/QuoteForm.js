@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Check, CircleCheck } from './icons';
+import { business } from '../lib/business';
+import { CircleCheck, WhatsApp } from './icons';
 
 /* ------------------------------------------------------------
-   CrewDesk form endpoint.
-   The `name` of every input must stay exactly as CrewDesk issued
-   it — the ids below are what map each answer to its column.
+   Quote requests go to WhatsApp, and are recorded in CrewDesk as
+   a backup so nothing is lost if the visitor never presses send
+   in WhatsApp. The `name` of every CrewDesk field must stay
+   exactly as issued — the ids map each answer to its column.
    ------------------------------------------------------------ */
 const ENDPOINT =
   'https://crewdesk-web.vercel.app/api/f/reporting/quote-form-quick-clean';
@@ -32,19 +34,62 @@ const SERVICES = [
 
 const EMPTY = { name: '', email: '', phone: '', service: '', zip: '', notes: '' };
 
+/* The pre-filled WhatsApp message. Plain newlines survive url-encoding. */
+function whatsappMessage(v) {
+  const lines = [
+    `Hi ${business.name}! I'd like a free quote.`,
+    '',
+    `Name: ${v.name.trim()}`,
+    `Email: ${v.email.trim()}`,
+  ];
+  if (v.phone.trim()) lines.push(`Phone: ${v.phone.trim()}`);
+  lines.push(`Service: ${v.service}`);
+  if (v.zip.trim()) lines.push(`Zip code: ${v.zip.trim()}`);
+  if (v.notes.trim()) lines.push(`Notes: ${v.notes.trim()}`);
+  return lines.join('\n');
+}
+
+// wa.me wants the number as digits only, so strip anything else defensively.
+function whatsappUrl(v) {
+  const number = String(business.whatsapp).replace(/\D/g, '');
+  return `https://wa.me/${number}?text=${encodeURIComponent(whatsappMessage(v))}`;
+}
+
+/* CrewDesk answers every post with a 303 redirect and sends no
+   Access-Control-Allow-Origin on it, so a cors-mode fetch would reject even on
+   success. We post the same url-encoded body a plain form would, in no-cors
+   mode: the request is delivered and the response stays opaque. */
+function recordInCrewDesk(v) {
+  const body = new URLSearchParams({
+    [FIELDS.name]: v.name.trim(),
+    [FIELDS.email]: v.email.trim(),
+    [FIELDS.phone]: v.phone.trim(),
+    [FIELDS.service]: v.service,
+    [FIELDS.zip]: v.zip.trim(),
+    [FIELDS.notes]: v.notes.trim(),
+    [FIELDS.honeypot]: '',
+  });
+
+  return fetch(ENDPOINT, {
+    method: 'POST',
+    mode: 'no-cors', // note: no-cors requires the default redirect mode
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+    body,
+  });
+}
+
 export default function QuoteForm() {
   const [values, setValues] = useState(EMPTY);
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [status, setStatus] = useState('idle'); // idle | sent | error
 
   const update = (field) => (e) => {
     setValues((v) => ({ ...v, [field]: e.target.value }));
     setErrors((er) => ({ ...er, [field]: false }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (status === 'sending' || status === 'sent') return;
 
     const next = {};
     if (!values.name.trim()) next.name = true;
@@ -53,58 +98,34 @@ export default function QuoteForm() {
     setErrors(next);
     if (Object.keys(next).length) return;
 
-    setStatus('sending');
-
-    // CrewDesk answers every post with a 303 redirect (?ok=1 or ?error=invalid)
-    // and sends no Access-Control-Allow-Origin on it, so a cors-mode fetch would
-    // reject even on success. We send the same url-encoded body a plain <form>
-    // would, in no-cors mode: the request is delivered and the response stays
-    // opaque, which keeps the user on the page with our own success state.
-    // A rejected promise therefore means the request never left the browser.
-    const body = new URLSearchParams({
-      [FIELDS.name]: values.name.trim(),
-      [FIELDS.email]: values.email.trim(),
-      [FIELDS.phone]: values.phone.trim(),
-      [FIELDS.service]: values.service,
-      [FIELDS.zip]: values.zip.trim(),
-      [FIELDS.notes]: values.notes.trim(),
-      [FIELDS.honeypot]: '',
-    });
-
+    // Open WhatsApp FIRST and synchronously. Anything awaited before this would
+    // put the call outside the click gesture and browsers would block the tab.
     try {
-      await fetch(ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors', // note: no-cors requires the default redirect mode
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-        body,
-      });
+      const url = whatsappUrl(values);
+      const opened = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!opened) window.location.href = url; // popup blocked — navigate instead
       setStatus('sent');
     } catch (err) {
       console.error(err);
       setStatus('error');
     }
+
+    // Backup record, fire-and-forget: WhatsApp is the path that matters, so a
+    // CrewDesk hiccup must never show the visitor an error.
+    recordInCrewDesk(values).catch((err) => console.error(err));
   };
 
-  const sending = status === 'sending';
   const sent = status === 'sent';
 
   return (
-    /* action/method are the no-JS fallback: the same post the handler makes. */
-    <form
-      className="quote-form reveal"
-      action={ENDPOINT}
-      method="post"
-      acceptCharset="utf-8"
-      onSubmit={handleSubmit}
-      noValidate
-    >
+    <form className="quote-form reveal" onSubmit={handleSubmit} noValidate>
       <h3>Get my free quote</h3>
 
       <div className="field">
         <label htmlFor="name">Full name</label>
         <input
           id="name"
-          name={FIELDS.name}
+          name="name"
           type="text"
           required
           autoComplete="name"
@@ -121,7 +142,7 @@ export default function QuoteForm() {
           <label htmlFor="email">Email</label>
           <input
             id="email"
-            name={FIELDS.email}
+            name="email"
             type="email"
             required
             autoComplete="email"
@@ -138,7 +159,7 @@ export default function QuoteForm() {
           </label>
           <input
             id="phone"
-            name={FIELDS.phone}
+            name="phone"
             type="tel"
             autoComplete="tel"
             placeholder="(555) 123-4567"
@@ -153,7 +174,7 @@ export default function QuoteForm() {
           <label htmlFor="service">Service</label>
           <select
             id="service"
-            name={FIELDS.service}
+            name="service"
             required
             value={values.service}
             onChange={update('service')}
@@ -174,7 +195,7 @@ export default function QuoteForm() {
           </label>
           <input
             id="zip"
-            name={FIELDS.zip}
+            name="zip"
             type="text"
             inputMode="numeric"
             autoComplete="postal-code"
@@ -191,7 +212,7 @@ export default function QuoteForm() {
         </label>
         <textarea
           id="notes"
-          name={FIELDS.notes}
+          name="notes"
           rows={2}
           placeholder="Pets, parking, preferred days…"
           value={values.notes}
@@ -199,43 +220,25 @@ export default function QuoteForm() {
         />
       </div>
 
-      {/* Spam trap — real people never see it, so it must come back empty. */}
-      <input
-        type="text"
-        name={FIELDS.honeypot}
-        hidden
-        aria-hidden="true"
-        tabIndex={-1}
-        autoComplete="off"
-        defaultValue=""
-      />
-
-      <button type="submit" className="btn btn-primary btn-block btn-lg" disabled={sending || sent}>
-        {sent ? (
-          <>
-            Sent <Check size={16} />
-          </>
-        ) : sending ? (
-          'Sending…'
-        ) : (
-          <>
-            Send my free quote <ArrowRight />
-          </>
-        )}
+      <button type="submit" className="btn btn-primary btn-block btn-lg">
+        <WhatsApp size={19} /> {sent ? 'Open WhatsApp again' : 'Send on WhatsApp'}
       </button>
       <p className="form-fineprint">
-        By submitting you agree to be contacted about your quote. We never share your info.
+        Opens WhatsApp with your details filled in — just press send. We never share your info.
       </p>
       {sent && (
         <p className="form-success" role="status">
           <CircleCheck size={19} />
-          <span>Thanks! Your quote request is in — we&apos;ll be in touch within 15 minutes.</span>
+          <span>
+            WhatsApp is opening with your details — press send and we&apos;ll reply within 15
+            minutes.
+          </span>
         </p>
       )}
       {status === 'error' && (
         <p className="form-error" role="alert">
-          Something went wrong sending your request. Please try again, or call us and we&apos;ll
-          take the details over the phone.
+          We couldn&apos;t open WhatsApp. Please call us on {business.telephoneDisplay} and
+          we&apos;ll take the details over the phone.
         </p>
       )}
     </form>
