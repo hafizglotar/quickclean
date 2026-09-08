@@ -6,10 +6,10 @@ import { business, services, fromLabel } from '../lib/business';
 import { ArrowRight, ChevronDown, Logo, Phone, ServiceIcon } from './icons';
 
 const NAV = [
-  { href: '/#how', label: 'How it works' },
-  { href: '/#pricing', label: 'Pricing' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/about', label: 'About' },
   { href: '/#reviews', label: 'Reviews' },
-  { href: '/#faq', label: 'FAQ' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {

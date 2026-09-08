@@ -41,10 +41,13 @@ export const business = {
   telephone: '+1-800-555-0123',
   telephoneDisplay: '(800) 555-0123',
 
-  // WhatsApp number that quote requests are sent to, in international format:
+  // WhatsApp number that receives quote alerts from /api/quote, in
+  // international format:
   // country code first, DIGITS ONLY — no +, spaces, dashes or brackets.
   // e.g. +971 50 123 4567  ->  '971501234567'
-  whatsapp: '18005550123',
+  // Override per-environment with the WHATSAPP_TO env var if you prefer to
+  // keep it out of the repo.
+  whatsapp: '923116229099',
   email: 'hello@quickclean.co',
 
   address: {
@@ -182,35 +185,78 @@ export const steps = [
   { title: "Relax — it's handled", body: 'We clean, you check the results, and you only pay when you’re happy.' },
 ];
 
-export const plans = [
+/* ---------------- Pricing ----------------
+   Three packages, each priced by property size. `prices` is indexed
+   against `pricingSizes` below, so both arrays must stay the same length.
+   Entry prices match the headline rates used across the site
+   (standard 99, deep 179, move-out 189) and scale up with size. */
+
+export const pricingSizes = [
+  'Studio & 1 BR Apt',
+  '2 BR Apartment',
+  '3 BR Apartment',
+  '4 BR Villa',
+  '5 BR Villa',
+  '6 BR Villa',
+];
+
+export const pricingTiers = [
   {
-    name: 'One-Time Clean',
-    price: '129',
-    period: '/ visit',
-    desc: 'Perfect for a refresh, a special occasion, or to try us out.',
-    feats: ['Full standard clean', 'Kitchen & bathrooms detailed', 'Floors, dusting & surfaces', 'Satisfaction guarantee'],
-    cta: 'Book one-time',
+    name: 'Basic',
+    slug: 'basic',
+    desc: 'The essential clean that keeps an already-tidy home fresh.',
+    prices: [99, 129, 159, 199, 239, 279],
+    feats: [
+      'Full standard clean, top to bottom',
+      'Kitchen & bathrooms detailed',
+      'Floors vacuumed & mopped',
+      'Dusting, surfaces & bins emptied',
+      '100% Spotless Guarantee',
+    ],
+    cta: 'Book a basic clean',
     featured: false,
   },
   {
-    name: 'Recurring Plan',
-    price: '99',
-    period: '/ visit',
-    desc: 'Weekly, bi-weekly, or monthly. Your home, always guest-ready.',
-    feats: ['Everything in one-time', 'Save up to 20% per visit', 'Same trusted cleaner', 'Priority scheduling', 'Free re-clean guarantee'],
-    cta: 'Start a plan',
+    name: 'Standard',
+    slug: 'standard',
+    desc: 'Our most popular package — everything in Basic, in more detail.',
+    prices: [149, 189, 229, 279, 329, 379],
+    feats: [
+      'Everything in Basic',
+      'We bring all supplies & equipment',
+      'Inside microwave & appliance fronts',
+      'Baseboards, doors & switch plates',
+      'Same trusted cleaner each visit',
+      'Priority scheduling',
+    ],
+    cta: 'Book a standard clean',
     featured: true,
   },
   {
-    name: 'Deep / Move-Out',
-    price: '189',
-    period: '/ visit',
-    desc: 'The full detailed reset for tough jobs and turnovers.',
-    feats: ['Inside appliances & cabinets', 'Baseboards, grout & vents', 'Inspection-ready finish', 'Satisfaction guarantee'],
-    cta: 'Book deep clean',
+    name: 'Premium',
+    slug: 'premium',
+    desc: 'The full detailed reset for deep cleans, move-outs and handovers.',
+    prices: [189, 239, 289, 349, 409, 469],
+    feats: [
+      'Everything in Standard',
+      'Inside oven, fridge & cabinets',
+      'Grout, vents & light fixtures',
+      'Interior windows & glass',
+      'Inspection-ready finish',
+      'Dedicated account manager',
+    ],
+    cta: 'Book a premium clean',
     featured: false,
   },
 ];
+
+// Extras priced off the service catalogue above, so the numbers never drift.
+export const pricingAddOnSlugs = ['carpet-upholstery-cleaning', 'window-glass-cleaning'];
+
+// Lowest advertised price for a tier — used for "from" labels and schema.
+export function tierFrom(tier) {
+  return Math.min(...tier.prices);
+}
 
 export const reviews = [
   {

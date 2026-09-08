@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { business, currency, stats, trustLogos, services, whyPoints, steps, plans, reviews, faqs } from '../lib/business';
+import { business, stats, trustLogos, services, whyPoints, steps, reviews, faqs } from '../lib/business';
 import { ArrowRight, Bolt, Check, ShieldCheck, Star, Stars } from './icons';
 import ServiceCard from './ServiceCard';
+import { PricingCards } from './PricingTable';
 
 export function TrustBar() {
   return (
@@ -156,33 +157,16 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="pricing-grid">
-          {plans.map((plan) => (
-            <article className={`plan${plan.featured ? ' plan-featured' : ''}`} key={plan.name}>
-              {plan.featured && <span className="plan-tag">Most popular</span>}
-              <h3>{plan.name}</h3>
-              <div className="plan-price">
-                <span>{currency.symbol}</span>
-                {plan.price}
-                <small>{plan.period}</small>
-              </div>
-              <p className="plan-desc">{plan.desc}</p>
-              <ul className="plan-feats">
-                {plan.feats.map((f) => (
-                  <li key={f}>
-                    <Check size={15} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="#quote" className={`btn ${plan.featured ? 'btn-primary' : 'btn-ghost'} btn-block`}>
-                {plan.cta}
-              </a>
-            </article>
-          ))}
+        <PricingCards />
+
+        <div className="services-cta reveal">
+          <Link href="/pricing" className="btn btn-ghost btn-lg">
+            See full price list <ArrowRight />
+          </Link>
         </div>
         <p className="pricing-note reveal">
-          Prices vary by home size and location. Your exact flat rate is shown before you confirm — always.
+          Every package is priced by property size, from a studio up to a 6 BR villa. Your exact
+          flat rate is shown before you confirm — always.
         </p>
       </div>
     </section>

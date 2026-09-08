@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "whatsapp:test": "node --env-file-if-exists=.env.local scripts/test-whatsapp.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "gsap": "^3.12.5",
     "next": "^16.2.9",
     "react": "^19.2.7",

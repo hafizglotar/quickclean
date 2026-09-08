@@ -537,6 +537,90 @@ p, blockquote, .section-lead { text-wrap: pretty; }
   .floater.f1 { left: 0; }
 }
 
+/* ---------- Pricing page ---------- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.price-by-size { background: var(--bg-soft); }
+/* The matrix scrolls inside its own box so the page never scrolls sideways. */
+.price-matrix-wrap {
+  overflow-x: auto; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm); -webkit-overflow-scrolling: touch;
+}
+.price-matrix { width: 100%; border-collapse: collapse; min-width: 620px; }
+.price-matrix th, .price-matrix td { padding: 16px 20px; text-align: center; white-space: nowrap; }
+.price-matrix thead th {
+  font-size: .95rem; font-weight: 800; letter-spacing: -.01em; color: var(--ink);
+  border-bottom: 2px solid var(--line); position: relative;
+}
+.price-matrix thead th:first-child,
+.price-matrix tbody th { text-align: left; color: var(--slate); font-weight: 700; }
+.price-matrix tbody tr + tr th,
+.price-matrix tbody tr + tr td { border-top: 1px solid var(--line); }
+.price-matrix tbody tr:nth-child(odd) { background: var(--bg-soft); }
+.price-matrix td { font-weight: 700; color: var(--teal-700); font-variant-numeric: tabular-nums; }
+.price-matrix .is-featured { background: var(--bg-mint); }
+.price-matrix tbody tr:nth-child(odd) .is-featured { background: #d8f1ed; }
+.matrix-tag {
+  display: block; margin-top: 4px; font-size: .68rem; font-weight: 800; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--teal-700);
+}
+
+/* Add-ons */
+.addons { margin-top: 44px; }
+.addons h3 { font-size: 1.25rem; letter-spacing: -.02em; margin-bottom: 18px; }
+.addon-list { display: grid; gap: 12px; }
+.addon-list li {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px;
+}
+.addon-list a { display: grid; gap: 2px; }
+.addon-list strong { font-size: 1rem; letter-spacing: -.01em; }
+.addon-list span { color: var(--slate); font-size: .92rem; }
+.addon-price { font-weight: 800; color: var(--teal-700); white-space: nowrap; }
+.addon-note { margin-top: 18px; color: var(--muted); font-size: .92rem; }
+.addon-note a { display: inline-flex; align-items: center; gap: 5px; color: var(--teal-700); font-weight: 700; }
+
+/* ---------- About page ---------- */
+.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.value-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px 28px; position: relative;
+}
+.value-ic {
+  width: 30px; height: 30px; border-radius: 50%; background: var(--teal-600); color: #fff;
+  display: grid; place-items: center; margin-bottom: 14px;
+}
+.value-card h3 { font-size: 1.12rem; letter-spacing: -.02em; margin-bottom: 8px; }
+.value-card p { color: var(--slate); font-size: .98rem; }
+.about-areas { background: var(--bg-soft); }
+.about-areas .chips { justify-content: center; }
+
+/* ---------- Contact page ---------- */
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.contact-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px 28px;
+}
+.contact-card h2 { font-size: 1.15rem; letter-spacing: -.02em; margin-bottom: 16px; }
+.contact-card dl { display: grid; gap: 10px; }
+.contact-card dt { color: var(--muted); font-weight: 600; font-size: .85rem; }
+.contact-card dd { font-weight: 700; margin-bottom: 8px; }
+.contact-card a { color: var(--teal-700); font-weight: 700; }
+.contact-card address { font-style: normal; color: var(--slate); line-height: 1.7; }
+.hours-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.hours-row dt { color: var(--slate); font-weight: 600; font-size: .95rem; }
+.hours-row dd { margin-bottom: 0; font-variant-numeric: tabular-nums; }
+.contact-map-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: .92rem; }
+
+@media (max-width: 760px) {
+  .value-grid, .contact-grid { grid-template-columns: 1fr; }
+  .addon-list li { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .price-matrix th, .price-matrix td { padding: 13px 16px; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }

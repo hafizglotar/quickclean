@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, business } from './lib/business';
@@ -113,6 +114,9 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(fullGraph()) }}
         />
         {children}
+
+        {/* Vercel Web Analytics — page views and referrers, no cookies. */}
+        <Analytics />
 
         {/* Google tag (gtag.js) — next/script loads it exactly like the async
             snippet, but keeps it out of the critical path on every route. */}

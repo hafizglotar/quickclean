@@ -8,7 +8,18 @@
    We emit ONE @graph so every node is cross-linked by @id.
    ============================================================ */
 
-import { SITE_URL, business, sameAs, services, reviews, faqs, getService } from './business';
+import {
+  SITE_URL,
+  business,
+  currency,
+  sameAs,
+  services,
+  reviews,
+  faqs,
+  getService,
+  pricingSizes,
+  pricingTiers,
+} from './business';
 import { getServiceContent } from './services-content';
 
 const ORG_ID = `${SITE_URL}/#organization`;
@@ -350,5 +361,119 @@ export function homePageGraph() {
   return {
     '@context': 'https://schema.org',
     '@graph': [webPageNode(), breadcrumbNode(), faqNode()],
+  };
+}
+
+/* ------------------------------------------------------------
+   Pricing / About / Contact pages
+   ------------------------------------------------------------ */
+
+/** Every package × property size as a concrete Offer, so search and answer
+ *  engines can quote real prices rather than guessing from page text. */
+export function pricingPageGraph() {
+  const url = `${SITE_URL}/pricing`;
+  const allPrices = pricingTiers.flatMap((t) => t.prices);
+
+  const offers = pricingTiers.flatMap((tier) =>
+    tier.prices.map((price, i) => ({
+      '@type': 'Offer',
+      '@id': `${url}/#offer-${tier.slug}-${i + 1}`,
+      name: `${tier.name} clean — ${pricingSizes[i]}`,
+      description: tier.desc,
+      priceCurrency: currency.code,
+      price,
+      availability: 'https://schema.org/InStock',
+      url,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: currency.code,
+        price,
+        unitText: pricingSizes[i],
+      },
+    }))
+  );
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: `Cleaning Prices in ${business.address.city}, ${business.address.region}`,
+        description: `Flat cleaning prices by property size. Basic, Standard and Premium packages from ${currency.format(Math.min(...allPrices))}.`,
+        isPartOf: { '@id': SITE_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-US',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Pricing', url },
+      ]),
+      {
+        '@type': 'OfferCatalog',
+        '@id': `${url}/#catalog`,
+        name: `${business.name} cleaning packages`,
+        provider: compactProvider(),
+        itemListElement: offers,
+      },
+      {
+        '@type': 'AggregateOffer',
+        '@id': `${url}/#aggregate`,
+        priceCurrency: currency.code,
+        lowPrice: Math.min(...allPrices),
+        highPrice: Math.max(...allPrices),
+        offerCount: allPrices.length,
+        url,
+      },
+    ],
+  };
+}
+
+export function aboutPageGraph() {
+  const url = `${SITE_URL}/about`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: `About ${business.name}`,
+        description: business.description,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': LOCAL_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-US',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'About', url },
+      ]),
+    ],
+  };
+}
+
+export function contactPageGraph() {
+  const url = `${SITE_URL}/contact`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ContactPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: `Contact ${business.name}`,
+        description: `Call, email or message ${business.name} for a free cleaning quote in ${business.address.city}.`,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': LOCAL_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-US',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Contact', url },
+      ]),
+    ],
   };
 }
