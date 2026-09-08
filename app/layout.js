@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, business } from './lib/business';
@@ -117,6 +118,8 @@ export default function RootLayout({ children }) {
 
         {/* Vercel Web Analytics — page views and referrers, no cookies. */}
         <Analytics />
+        {/* Vercel Speed Insights — real-visitor Core Web Vitals per route. */}
+        <SpeedInsights />
 
         {/* Google tag (gtag.js) — next/script loads it exactly like the async
             snippet, but keeps it out of the critical path on every route. */}
