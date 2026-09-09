@@ -89,8 +89,10 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`mobile-menu${open ? ' open' : ''}`}>
-        <div className="m-services">
+      <nav 
+        className={`mobile-menu${open ? ' open' : ''}`}
+        aria-label="Mobile navigation"
+      >
           <button
             className="m-services-toggle"
             aria-expanded={servicesOpen}
