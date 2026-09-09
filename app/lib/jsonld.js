@@ -125,7 +125,7 @@ export function localBusinessNode() {
         priceSpecification: {
           '@type': 'PriceSpecification',
           priceCurrency: 'AED',
-          minPrice: s.price,
+          price: s.price,
         },
         itemOffered: { '@type': 'Service', name: s.title, description: s.desc },
       })),
