@@ -13,14 +13,15 @@ export default function Hero() {
             {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers
           </span>
           <h1 className="hero-title">
-            <span className="reveal-hero-line">A spotless home,</span>
+            <span className="reveal-hero-line">Professional Home Cleaning</span>
             <span className="reveal-hero-line">
-              without lifting <em>a finger.</em>
+              Services You Can Trust
             </span>
           </h1>
           <p className="hero-sub reveal-hero">
-            Vetted, insured cleaners. Flat upfront pricing. And a 100% satisfaction
-            guarantee — if it&apos;s not perfect, we re-clean it free. Book in 60 seconds.
+            Book reliable home cleaning services with vetted and insured cleaners,
+            transparent upfront pricing, and a 100% satisfaction guarantee.
+            If it&apos;s not perfect, we re-clean it free. Book in 60 seconds.
           </p>
           <div className="hero-cta reveal-hero">
             <a href="#quote" className="btn btn-primary btn-lg">
