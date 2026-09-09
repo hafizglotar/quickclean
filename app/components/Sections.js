@@ -43,10 +43,10 @@ export function Services() {
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">What we clean</span>
-          <h2>Professional Home Cleaning Service</h2>
+          <h2>Professional Home Cleaning Services</h2>
           <p className="section-lead">
             Choose from reliable home cleaning services tailored to your needs,
-            inculding regular,deep move-in cleaning
+            including regular, deep, and move-in cleaning.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export function WhyUs() {
       <div className="container why-grid">
         <div className="why-copy reveal">
           <span className="kicker">Why Quick Clean</span>
-          <h2>You get results, not excuses.</h2>
+          <h2>Why Choose Our Home Cleaning Services?</h2>
           <p className="section-lead">
             We built Quick Clean to fix everything people hate about hiring a cleaner — the
             no-shows, the surprise fees, the rushed jobs.
@@ -151,7 +151,7 @@ export function Pricing() {
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">Simple pricing</span>
-          <h2>Flat rates. Zero surprises.</h2>
+          <h2>Simple & Transparent Home Cleaning Prices</h2>
           <p className="section-lead">
             Save up to 20% on recurring plans. Cancel or reschedule anytime — no contracts, ever.
           </p>
@@ -210,7 +210,7 @@ export function Faq() {
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">Good to know</span>
-          <h2>Questions, answered.</h2>
+          <h2>Frequently Asked Questions About Home Cleaning</h2>
         </div>
         <div className="faq-list">
           {faqs.map((f) => (
