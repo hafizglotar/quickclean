@@ -115,10 +115,10 @@ export default function AboutPage() {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">Where we work</span>
-              <h2>Serving {business.areaServed.length} communities.</h2>
+              <h2>Cleaning Services Across Dubai, Sharjah & Ajman</h2>
               <p className="section-lead">
-                Our teams cover {place} and the surrounding towns. Not sure if you are in range?
-                Tell us your area and we will confirm the same day.
+                Quick Clean provides professional home and office cleaning services across Dubai,
+  Sharjah, Ajman, and surrounding communities.
               </p>
             </div>
             <ul className="chips reveal">
