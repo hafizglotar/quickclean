@@ -43,10 +43,10 @@ export function Services() {
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">What we clean</span>
-          <h2>One team for every clean.</h2>
+          <h2>Professional Home Cleaning Service</h2>
           <p className="section-lead">
-            Pick what you need today — switch or add anytime. Every service is backed by the
-            same satisfaction guarantee.
+            Choose from reliable home cleaning services tailored to your needs,
+            inculding regular,deep move-in cleaning
           </p>
         </div>
 
