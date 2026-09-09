@@ -41,8 +41,9 @@ export default function ServicesIndex() {
             <span className="kicker">Our services</span>
             <h1>{title}</h1>
             <p className="section-lead">
-              One vetted team for every clean. Pick a service below — each is backed by our
-              100% Spotless Guarantee, flat upfront pricing, and no contracts.
+              Quick Clean provides professional home and office cleaning services in Dubai,
+  including residential cleaning, deep cleaning, move-in and move-out cleaning,
+  carpet and upholstery cleaning, and window cleaning.
             </p>
             <div className="subpage-hero-cta">
               <a href="#quote" className="btn btn-primary btn-lg">
