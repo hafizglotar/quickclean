@@ -15,10 +15,11 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.quickclean.ae';
 
-/* ---- Contact placeholders ----
-   PHONE and ADDRESS are not final. Fill them in here and every header,
-   footer, tel: link, contact card and schema node updates with them. */
-export const PHONE = '+971 XX XXX XXXX';
+/* ---- Contact details ----
+   Edit here and every header, footer, tel: link, contact card and schema
+   node updates with them. PHONE is written for display; the tel: href is
+   derived from it below by stripping the spaces. */
+export const PHONE = '+971 58 933 1711';
 export const ADDRESS = 'Dubai, UAE';
 export const SERVICE_AREAS =
   'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
@@ -57,7 +58,7 @@ export const business = {
   // Override per-environment with the WHATSAPP_TO env var if you prefer to
   // keep it out of the repo.
   whatsapp: '923116229099',
-  email: 'hello@quickclean.ae',
+  email: 'info@quickclean.ae',
 
   // `street` and `postalCode` are intentionally blank: ADDRESS above is a
   // placeholder and the UAE does not use postal codes. Schema omits empties.
