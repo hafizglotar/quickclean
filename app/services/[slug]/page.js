@@ -24,9 +24,7 @@ export async function generateMetadata({ params }) {
   if (!svc || !content) return {};
 
   const place = `${business.address.city}, ${business.address.region}`;
-  const title = `${svc.title} in ${place}${svc.price ? ` — From ${currency.format(svc.price)}` : ''}`;
-  return {
-    title,
+  const title = `${svc.title} in ${place}`;
     description: content.subhead,
     alternates: { canonical: `/services/${slug}` },
     openGraph: {
