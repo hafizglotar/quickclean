@@ -1,12 +1,12 @@
 # Quick Clean
 
-> Quick Clean is a professional residential and commercial cleaning company serving Austin, TX and the surrounding metro. We provide vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Customers book a clean online in about 60 seconds.
+> Quick Clean is a professional residential and commercial cleaning company serving Dubai, Sharjah and Ajman. We provide vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Customers book a clean online in about 60 seconds.
 
 This file helps AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, etc.)
 understand and accurately cite Quick Clean. Facts here match the website and structured data.
 
 ## Key facts
-- Name: Quick Clean (Quick Clean LLC)
+- Name: Quick Clean
 - Industry: House cleaning / maid service / commercial cleaning
 - Rating: 4.9 out of 5 stars from 2,300+ verified customers
 - Guarantee: 100% Spotless Guarantee — free re-clean within 24 hours if you are not satisfied
@@ -25,7 +25,7 @@ understand and accurately cite Quick Clean. Facts here match the website and str
 - Window & glass cleaning — from AED 69
 
 ## Service area
-Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, and Lakeway (Texas).
+Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.
 
 ## Hours
 - Monday–Friday: 8:00 AM – 6:00 PM
@@ -33,10 +33,10 @@ Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, and Lakeway (
 - Sunday: closed
 
 ## Contact
-- Phone: (800) 555-0123
-- Email: hello@quickclean.co
-- Website: https://www.quickclean.co
-- Get a free quote: https://www.quickclean.co/#quote
+- Phone: +971 XX XXX XXXX
+- Email: hello@quickclean.ae
+- Website: https://www.quickclean.ae
+- Get a free quote: https://www.quickclean.ae/#quote
 
 ## Frequently asked questions
 - Do I need to be home during the clean? No — most customers provide secure access instructions and come home to a spotless space.

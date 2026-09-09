@@ -37,12 +37,14 @@ function openingHoursSpec() {
 }
 
 function postalAddress() {
+  // street/postalCode are optional here: the UAE does not use postal codes and
+  // the street line is a placeholder, so emit them only when actually set.
   return {
     '@type': 'PostalAddress',
-    streetAddress: business.address.street,
+    ...(business.address.street ? { streetAddress: business.address.street } : {}),
     addressLocality: business.address.city,
     addressRegion: business.address.region,
-    postalCode: business.address.postalCode,
+    ...(business.address.postalCode ? { postalCode: business.address.postalCode } : {}),
     addressCountry: business.address.country,
   };
 }
@@ -76,7 +78,7 @@ export function websiteNode() {
     name: business.name,
     description: business.description,
     publisher: { '@id': ORG_ID },
-    inLanguage: 'en-US',
+    inLanguage: 'en-AE',
   };
 }
 
@@ -183,7 +185,7 @@ export function webPageNode() {
     isPartOf: { '@id': SITE_ID },
     about: { '@id': LOCAL_ID },
     breadcrumb: { '@id': `${SITE_URL}/#breadcrumb` },
-    inLanguage: 'en-US',
+    inLanguage: 'en-AE',
     // Lets voice assistants read the headline answer aloud (AEO).
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -297,7 +299,7 @@ export function servicePageGraph(slug) {
         isPartOf: { '@id': SITE_ID },
         about: { '@id': `${url}/#service` },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: 'en-AE',
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
@@ -323,7 +325,7 @@ export function servicesIndexGraph() {
         description: `Explore every cleaning service Quick Clean offers in ${business.address.city} — residential, deep, move-out, office, carpet, and window cleaning.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: 'en-AE',
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
@@ -404,7 +406,7 @@ export function pricingPageGraph() {
         description: `Flat cleaning prices by property size. Basic, Standard and Premium packages from ${currency.format(Math.min(...allPrices))}.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: 'en-AE',
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
@@ -444,7 +446,7 @@ export function aboutPageGraph() {
         isPartOf: { '@id': SITE_ID },
         about: { '@id': LOCAL_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: 'en-AE',
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
@@ -468,7 +470,7 @@ export function contactPageGraph() {
         isPartOf: { '@id': SITE_ID },
         about: { '@id': LOCAL_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
-        inLanguage: 'en-US',
+        inLanguage: 'en-AE',
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },

@@ -10,7 +10,7 @@ export default function manifest() {
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#0d9488',
-    lang: 'en-US',
+    lang: 'en-AE',
     categories: ['business', 'lifestyle', 'productivity'],
     icons: [
       { src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },

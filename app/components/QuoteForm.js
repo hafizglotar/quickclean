@@ -11,7 +11,7 @@ const SERVICES = [
   'Carpet & Upholstery',
 ];
 
-const EMPTY = { name: '', email: '', phone: '', service: '', zip: '', notes: '' };
+const EMPTY = { name: '', email: '', phone: '', service: '', area: '', notes: '' };
 
 export default function QuoteForm() {
   const [values, setValues] = useState(EMPTY);
@@ -133,18 +133,17 @@ export default function QuoteForm() {
           </select>
         </div>
         <div className="field">
-          <label htmlFor="zip">
-            Zip code <span>(optional)</span>
+          <label htmlFor="area">
+            Area / Community <span>(optional)</span>
           </label>
           <input
-            id="zip"
-            name="zip"
+            id="area"
+            name="area"
             type="text"
-            inputMode="numeric"
-            autoComplete="postal-code"
-            placeholder="0000"
-            value={values.zip}
-            onChange={update('zip')}
+            autoComplete="address-level2"
+            placeholder="Dubai Marina"
+            value={values.area}
+            onChange={update('area')}
           />
         </div>
       </div>

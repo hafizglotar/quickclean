@@ -5,7 +5,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
 import { Faq } from '../components/Sections';
 import { ArrowRight, Phone } from '../components/icons';
-import { business, SITE_URL } from '../lib/business';
+import { ADDRESS, business, SITE_URL } from '../lib/business';
 import { contactPageGraph } from '../lib/jsonld';
 
 const place = `${business.address.city}, ${business.address.region}`;
@@ -114,15 +114,12 @@ export default function ContactPage() {
                 <address>
                   {business.legalName}
                   <br />
-                  {business.address.street}
-                  <br />
-                  {business.address.city}, {business.address.region}{' '}
-                  {business.address.postalCode}
+                  {ADDRESS}
                 </address>
                 <a
                   className="contact-map-link"
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    `${business.legalName}, ${business.address.street}, ${business.address.city}, ${business.address.region} ${business.address.postalCode}`
+                    `${business.legalName}, ${ADDRESS}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

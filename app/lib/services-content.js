@@ -6,7 +6,7 @@
 
 import { business } from './business';
 
-const CITY = business.address.city; // "Austin"
+const CITY = business.address.city; // "Dubai"
 
 export const serviceContent = {
   'residential-cleaning': {

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { business } from '../lib/business';
+import { ADDRESS, business } from '../lib/business';
 import { Logo, Stars } from './icons';
 
 export default function Footer() {
@@ -16,10 +16,7 @@ export default function Footer() {
             <Stars size={13} decorative />{' '}
             {business.rating.value}/5 from {business.rating.count.toLocaleString()}+ customers
           </div>
-          <address className="footer-address">
-            {business.address.street}, {business.address.city}, {business.address.region}{' '}
-            {business.address.postalCode}
-          </address>
+          <address className="footer-address">{ADDRESS}</address>
         </div>
 
         <div className="footer-col">

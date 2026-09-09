@@ -13,7 +13,15 @@
 
 // IMPORTANT: set this to your real domain before launch (no trailing slash).
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.quickclean.co';
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.quickclean.ae';
+
+/* ---- Contact placeholders ----
+   PHONE and ADDRESS are not final. Fill them in here and every header,
+   footer, tel: link, contact card and schema node updates with them. */
+export const PHONE = '+971 XX XXX XXXX';
+export const ADDRESS = 'Dubai, UAE';
+export const SERVICE_AREAS =
+  'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
 
 // Currency — single switch for the whole site's pricing.
 // `code` is the ISO code used in structured data; `format` renders a bare amount.
@@ -30,7 +38,7 @@ export function fromLabel(service) {
 
 export const business = {
   name: 'Quick Clean',
-  legalName: 'Quick Clean LLC',
+  legalName: 'Quick Clean',
   tagline: 'Spotless homes & offices, guaranteed.',
   // A crisp, factual one-liner — AI answer engines (AEO/GEO) quote sentences like this.
   description:
@@ -38,8 +46,9 @@ export const business = {
   foundingYear: 2018,
 
   // ---- Contact / NAP (Name, Address, Phone — keep identical everywhere for local SEO) ----
-  telephone: '+1-800-555-0123',
-  telephoneDisplay: '(800) 555-0123',
+  // tel: href — strip spaces so it dials correctly once PHONE is filled in.
+  telephone: PHONE.replace(/\s+/g, ''),
+  telephoneDisplay: PHONE,
 
   // WhatsApp number that receives quote alerts from /api/quote, in
   // international format:
@@ -48,29 +57,31 @@ export const business = {
   // Override per-environment with the WHATSAPP_TO env var if you prefer to
   // keep it out of the repo.
   whatsapp: '923116229099',
-  email: 'hello@quickclean.co',
+  email: 'hello@quickclean.ae',
 
+  // `street` and `postalCode` are intentionally blank: ADDRESS above is a
+  // placeholder and the UAE does not use postal codes. Schema omits empties.
   address: {
-    street: '100 Market Street, Suite 200',
-    city: 'Austin',
-    region: 'TX',
-    regionName: 'Texas',
-    postalCode: '78701',
-    country: 'US',
+    street: '',
+    city: 'Dubai',
+    region: 'UAE',
+    regionName: 'United Arab Emirates',
+    postalCode: '',
+    country: 'AE',
   },
 
   // Used for LocalBusiness geo (helps Google Maps / local + GEO geographic ranking).
-  geo: { latitude: 30.2672, longitude: -97.7431 },
+  geo: { latitude: 25.2048, longitude: 55.2708 },
 
   // Cities you serve — drives local SEO + "near me" / geographic answers.
   areaServed: [
-    'Austin',
-    'Round Rock',
-    'Cedar Park',
-    'Pflugerville',
-    'Georgetown',
-    'Leander',
-    'Lakeway',
+    'Dubai',
+    'Sharjah',
+    'Ajman',
+    'Dubai Marina',
+    'Downtown Dubai',
+    'JVC',
+    'Business Bay',
   ],
 
   openingHours: [
@@ -278,7 +289,7 @@ export const reviews = [
     name: 'Alicia R.',
     meta: 'Move-out clean · Maple Ave',
     quote:
-      'Got my full deposit back after a move-out clean. The landlord said it was the cleanest unit he’d seen. Worth every penny.',
+      'Got my full deposit back after a move-out clean. The landlord said it was the cleanest unit he’d seen. Worth every dirham.',
   },
 ];
 
@@ -306,11 +317,11 @@ export const faqs = [
   },
   {
     q: 'How much does house cleaning cost with Quick Clean?',
-    a: 'Standard cleans start at AED 99, deep cleans at AED 179, and move-in/move-out cleans at AED 189. You see your exact flat rate before you book — pricing depends on home size and location.',
+    a: 'Basic cleans start at AED 99, our Standard package is AED 149, deep cleans at AED 179, and move-in/move-out cleans at AED 189. You see your exact flat rate before you book — pricing depends on home size and location.',
   },
   {
     q: 'Which areas do you serve?',
-    a: `Quick Clean serves ${business.areaServed.slice(0, -1).join(', ')}, and ${business.areaServed[business.areaServed.length - 1]}.`,
+    a: `Quick Clean serves ${SERVICE_AREAS}`,
   },
   {
     q: 'How long does a house cleaning take?',

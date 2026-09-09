@@ -118,7 +118,7 @@ export default function AboutPage() {
               <h2>Serving {business.areaServed.length} communities.</h2>
               <p className="section-lead">
                 Our teams cover {place} and the surrounding towns. Not sure if you are in range?
-                Send your zip code and we will confirm the same day.
+                Tell us your area and we will confirm the same day.
               </p>
             </div>
             <ul className="chips reveal">

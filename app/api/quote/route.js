@@ -184,7 +184,8 @@ export async function POST(request) {
     email: str(data.email),
     phone: str(data.phone),
     service: str(data.service),
-    zip: str(data.zip),
+    // The form sends `area` (Area / Community); older payloads sent `zip`.
+    zip: str(data.area ?? data.zip),
     notes: str(data.notes).slice(0, 2000),
   };
 
