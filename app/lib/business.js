@@ -134,14 +134,14 @@ export const services = [
     icon: 'sparkle',
     title: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
-    price:40
+    price:170
   },
   {
     slug: 'move-in-move-out-cleaning',
     icon: 'box',
     title: 'Move In / Move Out',
     desc: 'Move-in and move-out cleaning in Dubai to help leave your apartment or villa spotless and inspection-ready.',
-    price: 84
+    price: 189
   },
   {
     slug: 'office-commercial-cleaning',
