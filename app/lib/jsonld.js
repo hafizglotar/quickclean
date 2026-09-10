@@ -279,7 +279,7 @@ export function servicePageGraph(slug) {
             priceSpecification: {
               '@type': 'PriceSpecification',
               priceCurrency: 'AED',
-              minPrice: svc.price,
+              Price: svc.price,
             },
           },
         }
