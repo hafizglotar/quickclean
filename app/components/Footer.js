@@ -60,6 +60,7 @@ export default function Footer() {
         <span>
           © {year} {business.legalName}. All rights reserved.
         </span>
+  </div> 
     </footer>
   );
 }
