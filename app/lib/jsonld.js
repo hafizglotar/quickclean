@@ -123,7 +123,7 @@ export function localBusinessNode() {
         priceCurrency: 'AED',
         price: s.price,
         priceSpecification: {
-          '@type': 'PriceSpecification',
+          '@type': 'priceSpecification',
           priceCurrency: 'AED',
           price: s.price,
         },
