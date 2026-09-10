@@ -6,7 +6,7 @@ export default function robots() {
     rules: [
       // Standard search crawlers
       { userAgent: '*', allow: '/' },
-
+      
       // ---- AEO / GEO: explicitly welcome AI answer-engine crawlers ----
       // Many sites accidentally block these and vanish from AI answers.
       // Allowing them lets Quick Clean be cited by ChatGPT, Perplexity,
