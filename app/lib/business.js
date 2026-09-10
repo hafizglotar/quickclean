@@ -134,7 +134,7 @@ export const services = [
     icon: 'sparkle',
     title: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
-    price:170
+    price:179
   },
   {
     slug: 'move-in-move-out-cleaning',
