@@ -25,6 +25,9 @@ export async function generateMetadata({ params }) {
 
   const place = `${business.address.city}, ${business.address.region}`;
   const title = `${svc.title} in ${place}`;
+
+  return{
+    title,
     description: content.subhead,
     alternates: { canonical: `/services/${slug}` },
     openGraph: {
