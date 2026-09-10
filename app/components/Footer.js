@@ -25,6 +25,15 @@ export default function Footer() {
           <Link href="/services/deep-cleaning">Deep cleaning</Link>
           <Link href="/services/move-in-move-out-cleaning">Move in / out</Link>
           <Link href="/services/office-commercial-cleaning">Office &amp; commercial</Link>
+
+            <Link href="/services/carpet-upholstery-cleaning">
+              Carpet &amp; Upholstery
+            </Link>
+
+            <Link href="/services/window-glass-cleaning">
+              Window &amp; glass
+              </Link>
+              
           <Link href="/services">All services</Link>
         </div>
 
@@ -51,12 +60,6 @@ export default function Footer() {
         <span>
           © {year} {business.legalName}. All rights reserved.
         </span>
-        <div className="footer-legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Service areas</a>
-        </div>
-      </div>
     </footer>
   );
 }
