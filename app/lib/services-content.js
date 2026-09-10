@@ -10,7 +10,7 @@ const CITY = business.address.city; // "Dubai"
 
 export const serviceContent = {
   'residential-cleaning': {
-    serviceType: 'Residentail Cleaning',
+    serviceType: 'Residential Cleaning',
     subhead:
       'Recurring or one-time house cleaning that keeps your whole home fresh, healthy, and guest-ready — without you lifting a finger.',
     intro: `Quick Clean's residential cleaning service covers every room of your home with a consistent, top-to-bottom checklist. Choose weekly, bi-weekly, or monthly visits and we send the same vetted, insured cleaner each time, or book a one-time clean whenever you need a reset.`,
