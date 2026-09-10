@@ -23,7 +23,7 @@ const inter = Inter({
 // Google Analytics 4 measurement ID.
 const GA_ID = 'G-B8VTY7HQFH';
 
-const title = `House Cleaning Services in Austin, TX | Quick Clean`
+const title = `House Cleaning Services in Dubai | Quick Clean`;
 
 // ---- SEO metadata (Next.js Metadata API) ----
 export const metadata = {
@@ -32,18 +32,18 @@ export const metadata = {
     default: title,
     template: `%s | ${business.name}`,
   },
-  description: 'Professional house cleaning service in Austin, TX. Book residentail, deep, move-in/move-out and commerical cleaning with upfront pricing and a satisfaction guarantee.',
+  description: 'Professional house cleaning service in Dubai. Book residentail, deep, move-in/move-out and commerical cleaning with upfront pricing and a satisfaction guarantee.',
   applicationName: business.name,
   generator: 'Next.js',
   keywords: [
-    'house cleaning Austin',
-  'cleaning service Austin',
-  'deep cleaning Austin',
-  'move out cleaning Austin',
-  'residential cleaning Austin',
-  'commercial cleaning Austin',
-  'maid service Austin',
-  'cleaning company Austin',
+    'house cleaning Dubai',
+  'cleaning service Dubai',
+  'deep cleaning Dubai',
+  'move out cleaning Dubai',
+  'residential cleaning Dubai',
+  'commercial cleaning Dubai',
+  'maid service Dubai',
+  'cleaning company Dubai',
   ],
   authors: [{ name: business.name, url: SITE_URL }],
   creator: business.name,
