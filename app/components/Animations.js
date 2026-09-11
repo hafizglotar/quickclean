@@ -17,7 +17,6 @@ export default function Animations() {
       /* ---- Hero intro timeline ---- */
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
       tl.from('.eyebrow', { y: 18, opacity: 0, duration: 0.6 })
-        .from('.reveal-hero-line', { y: 40, opacity: 0, duration: 0.8, stagger: 0.12 }, '-=0.3')
         .from('.hero-sub', { y: 24, opacity: 0, duration: 0.6 }, '-=0.4')
         .from('.hero-cta', { y: 20, opacity: 0, duration: 0.5 }, '-=0.35')
         .from('.hero-trust li', { y: 14, opacity: 0, duration: 0.4, stagger: 0.08 }, '-=0.3')
