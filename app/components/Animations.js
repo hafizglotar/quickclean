@@ -15,12 +15,12 @@ export default function Animations() {
     // React Strict Mode's double-mount in development).
     const ctx = gsap.context(() => {
       /* ---- Hero intro timeline ---- */
-      // const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      // tl.from('.eyebrow', { y: 18, opacity: 0, duration: 0.6 })
-        // .from('.hero-sub', { y: 24, opacity: 0, duration: 0.6 }, '-=0.4')
-        // .from('.hero-cta', { y: 20, opacity: 0, duration: 0.5 }, '-=0.35')
-        // .from('.hero-trust li', { y: 14, opacity: 0, duration: 0.4, stagger: 0.08 }, '-=0.3')
-        // .from('.hero-card', { y: 40, opacity: 0, scale: 0.96, duration: 0.8 }, '-=0.7');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('.eyebrow', { y: 18, opacity: 0, duration: 0.6 })
+        .from('.hero-sub', { y: 24, opacity: 0, duration: 0.6 }, '-=0.4')
+        .from('.hero-cta', { y: 20, opacity: 0, duration: 0.5 }, '-=0.35')
+        .from('.hero-trust li', { y: 14, opacity: 0, duration: 0.4, stagger: 0.08 }, '-=0.3')
+        .from('.hero-card', { y: 40, opacity: 0, scale: 0.96, duration: 0.8 }, '-=0.7');
 
       /* ---- Generic scroll reveals ---- */
       gsap.utils.toArray('.reveal').forEach((el) => {
