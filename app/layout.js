@@ -90,8 +90,8 @@ export const metadata = {
   },
   // Add your real verification tokens (or set via env) when you have them.
   verification: {
-    google: 'ABs2HyQPMvpP5Bu5xp8wLXIMoJCKU9PQdGJLbEd7NfM',
-  },
+  google: '5DWjxPGuQ-ewPBtXnLXjumx42NVkUE9Ql4utDML2zDg',
+},
 };
 
 export const viewport = {
