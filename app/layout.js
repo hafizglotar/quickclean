@@ -32,7 +32,7 @@ export const metadata = {
     default: title,
     template: `%s | ${business.name}`,
   },
-  description: 'Professional house cleaning service in Dubai. Book residentail, deep, move-in/move-out and commerical cleaning with upfront pricing and a satisfaction guarantee.',
+  description: 'Professional house cleaning service in Dubai. Book residential, deep, move-in/move-out and commercial cleaning with upfront pricing and a satisfaction guarantee.',
   applicationName: business.name,
   generator: 'Next.js',
   keywords: [
