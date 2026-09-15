@@ -19,9 +19,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-sub reveal-hero">
-            Book reliable home cleaning services with vetted and insured cleaners,
-            transparent upfront pricing, and a 100% satisfaction guarantee.
-            If it&apos;s not perfect, we re-clean it free. Book in 60 seconds.
+            Book reliable home cleaning services in Dubai with vetted and insured cleaners,
+transparent upfront pricing, and a 100% satisfaction guarantee.
+If it&apos;s not perfect, we re-clean it free. Book in 60 seconds.
           </p>
           <div className="hero-cta reveal-hero">
             <a href="#quote" className="btn btn-primary btn-lg">
