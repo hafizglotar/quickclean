@@ -13,9 +13,8 @@ export default function Hero() {
             {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers
           </span>
           <h1 className="hero-title">
-            <span className="reveal-hero-line">Professional Home Cleaning</span>
             <span className="reveal-hero-line">
-              Services You Can Trust
+              Professional House Cleaning Services in Dubai
             </span>
           </h1>
           <p className="hero-sub reveal-hero">
