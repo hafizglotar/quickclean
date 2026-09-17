@@ -71,7 +71,7 @@ export function WhyUs() {
       <div className="container why-grid">
         <div className="why-copy reveal">
           <span className="kicker">Why Quick Clean</span>
-          <h2>Why Choose Our Home Cleaning Services?</h2>
+          <h2>Why Choose Our Home Cleaning Services in Dubai?</h2>
           <p className="section-lead">
             We built Quick Clean to fix everything people hate about hiring a cleaner — the
             no-shows, the surprise fees, the rushed jobs.
