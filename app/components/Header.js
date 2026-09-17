@@ -89,10 +89,11 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <nav 
+      <nav
         className={`mobile-menu${open ? ' open' : ''}`}
         aria-label="Mobile navigation"
       >
+        <div className="m-services">
           <button
             className="m-services-toggle"
             aria-expanded={servicesOpen}
@@ -120,7 +121,7 @@ export default function Header() {
         <a href="#quote" className="btn btn-primary" onClick={closeAll}>
           Get a Free Quote
         </a>
-      </div>
+      </nav>
     </header>
   );
 }
