@@ -155,14 +155,14 @@ export const services = [
     icon: 'sofa',
     title: 'Carpet & Upholstery',
     desc: 'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, and built-up dirt.',
-    price: '89',
+    price: 89,
   },
   {
     slug: 'window-glass-cleaning',
     icon: 'window',
     title: 'Window & Glass',
     desc: 'Professional window and glass cleaning in Dubai for clear, streak-free results inside and out.',
-    price: '69',
+    price: 69,
   },
 ];
 
