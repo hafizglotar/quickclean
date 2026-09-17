@@ -61,9 +61,9 @@ export const serviceContent = {
     idealFor: ['First-time cleans', 'Spring cleaning & pre-holiday', 'Homes that haven’t been cleaned in a while'],
     faqs: [
       {
-        q: 'What is the difference between a standard and deep clean?',
-        a: 'A standard clean maintains an already-tidy home. A deep clean is more thorough and time-intensive — it targets built-up grime, baseboards, grout, vents, and behind/inside appliances.',
-      },
+        q: 'What is the difference between standard and deep cleaning in Dubai?',
+        a: 'Standard cleaning is designed to maintain an already tidy home, while deep cleaning in Dubai is more detailed and time-intensive. It targets built-up grime, baseboards, grout, vents, and areas behind or inside appliances.',
+     },
       {
         q: `How much does a deep cleaning cost in ${CITY}?`,
         a: 'Deep cleans start at AED 179, with the exact flat rate shown before you book based on home size and condition.',
