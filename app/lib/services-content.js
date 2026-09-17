@@ -45,7 +45,7 @@ export const serviceContent = {
   'deep-cleaning': {
     serviceType: 'Deep Cleaning',
     subhead:
-       'Professional deep cleaning in Dubai for homes that need a detailed top-to-bottom clean, including baseboards, grout, appliances, vents, and hard-to-reach areas.',
+       'Professional deep cleaning services in Dubai for homes that need a detailed top-to-bottom clean, including baseboards, grout, appliances, vents, and hard-to-reach areas.',
    intro: `Quick Clean provides professional deep cleaning services in Dubai for homes that need more than a standard clean. We tackle built-up grime, hard-to-reach areas, baseboards, grout, appliances, vents, and detailed surfaces. Deep cleaning is ideal before guests arrive, after a renovation, or as the first clean before starting a recurring service.`,
     turnaround: 'Recommended 1–2 days ahead',
     includes: [
