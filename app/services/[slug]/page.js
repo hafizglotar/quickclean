@@ -131,7 +131,7 @@ export default async function ServicePage({ params }) {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">What you get</span>
-              <h2>What&apos;s included in your {svc.title.toLowerCase()}</h2>
+              <h2>What&apos;s Included in Our {svc.title.toLowerCase()} Services in Dubai?</h2>
               <p className="section-lead">{content.intro}</p>
             </div>
             <ul className="includes-grid">
@@ -165,7 +165,7 @@ export default async function ServicePage({ params }) {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">{svc.title} FAQ</span>
-              <h2>Questions about {svc.title.toLowerCase()}</h2>
+              <h2>Frequently Asked Questions About {svc.title.toLowerCase()} Services in Dubai</h2>
             </div>
             <div className="faq-list">
               {content.faqs.map((f) => (
@@ -186,7 +186,7 @@ export default async function ServicePage({ params }) {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">More services</span>
-              <h2>Explore other cleaning services</h2>
+              <h2>Explore Our Other cleaning Services in Dubai</h2>
             </div>
             <div className="services-grid">
               {related.map((s) => (
