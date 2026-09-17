@@ -54,7 +54,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en-US',
+    locale: 'en-AE',
     url: SITE_URL,
     siteName: business.name,
     title,
