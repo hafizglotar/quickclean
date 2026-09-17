@@ -78,8 +78,8 @@ export const serviceContent = {
   'move-in-move-out-cleaning': {
     serviceType: 'Move Out Cleaning',
     subhead:
-      'Hand back the keys spotless. A detailed, inspection-ready clean of the entire empty home so you protect your deposit or welcome new tenants.',
-    intro: `Quick Clean's move in / move out cleaning gets an empty home truly inspection-ready. We clean inside cabinets, drawers, appliances, and closets — the areas landlords and property managers check first — so renters protect their deposit and owners hand over a flawless space.`,
+      'Professional move-in and move-out cleaning in Dubai for apartments and villas, with detailed cleaning to help prepare your home for inspection, handover, or a fresh start.',
+    intro: `Quick Clean provides professional move-in and move-out cleaning in Dubai for apartments and villas. We clean inside cabinets, drawers, appliances, closets, bathrooms, floors, and other areas commonly checked during inspections. It is ideal for tenants preparing to hand back a property, landlords getting a home ready for new tenants, or anyone moving into a freshly cleaned space.`,
     turnaround: 'Book around your move date',
     includes: [
       'Inside all cabinets, drawers, and closets',
@@ -94,24 +94,24 @@ export const serviceContent = {
     idealFor: ['Renters protecting a deposit', 'Landlords & property managers', 'Realtors prepping a listing'],
     faqs: [
       {
-        q: 'Will a move-out clean help me get my deposit back?',
-        a: 'Yes — our move-out clean targets exactly what landlords inspect (inside appliances, cabinets, baseboards, and bathrooms). It is backed by our 100% Spotless Guarantee.',
-      },
+        q: 'Will move-out cleaning help me get my deposit back in Dubai?',
+        a: 'A thorough move-out cleaning in Dubai can help prepare the property for inspection by cleaning areas landlords commonly check, including appliances, cabinets, baseboards, bathrooms, and floors. The service is backed by our 100% Spotless Guarantee.',
+     },
       {
-        q: 'Should the home be empty for a move-out clean?',
-        a: 'An empty home gets the best result because we can reach every surface. We can still clean partially furnished spaces — just let us know when you book.',
-      },
+        q: Does the home need to be empty for move-out cleaning in Dubai?',
+        a: 'An empty home allows our cleaners to reach more surfaces and deliver the best result. We can also clean partially furnished homes in Dubai, so let us know the property condition when you book.',
+     },
       {
-        q: `How much does move-out cleaning cost in ${CITY}?`,
-        a: 'Move in / move out cleans start at AED 189, with your exact flat rate confirmed before booking based on home size.',
-      },
+        q: `How much does move-in and move-out cleaning cost in ${CITY}?`,
+        a: 'Move-in and move-out cleaning in Dubai starts at AED 189. The exact flat rate depends on your home size and cleaning needs and is confirmed before booking.',
+    },
     ],
   },
 
   'office-commercial-cleaning': {
     serviceType: 'Commercial Cleaning',
     subhead:
-      'Reliable after-hours office and commercial cleaning that keeps your workspace sharp, healthy, and ready for business.',
+      'Professional office and commercial cleaning in Dubai with flexible after-hours service to keep workplaces clean, healthy, and ready for business.',
     intro: `Quick Clean keeps your workplace spotless with flexible, after-hours commercial cleaning. From offices and clinics to studios and retail, we build a recurring plan around your schedule with vetted, insured pros — so your team walks into a fresh space every morning and never deals with a no-show.`,
     turnaround: 'Custom recurring schedule',
     includes: [
