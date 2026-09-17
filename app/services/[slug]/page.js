@@ -72,7 +72,7 @@ export default async function ServicePage({ params }) {
                 <ServiceIcon name={svc.icon} size={16} /> {content.serviceType}
               </span>
               <h1>
-                {svc.title} in {place}
+                Professional {svc.title.toLowerCase()} services in {place}
               </h1>
               <p className="section-lead">{content.subhead}</p>
               <div className="subpage-hero-cta">
