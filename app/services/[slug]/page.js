@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
   return{
     title,
     description: content.subhead,
-    alternates: { canonical: `/services/${slug}` },
+    alternates: { canonical: ${SITE_URL}/services/${slug}` },
     openGraph: {
       title: `${title} | ${business.name}`,
       description: content.subhead,
