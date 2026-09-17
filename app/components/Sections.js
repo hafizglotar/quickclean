@@ -44,12 +44,10 @@ export function Services() {
         <div className="section-head reveal">
           <span className="kicker">What we clean</span>
           <h2>Professional Home Cleaning Services in Dubai</h2>
-          <p className="section-lead">
             <p className="section-lead">
-  Choose from reliable home cleaning services in Dubai tailored to your needs,
-  including regular, deep, move-in/move-out, and commercial cleaning.
-</p>
-          </p>
+          Choose from reliable home cleaning services in Dubai tailored to your needs,
+          including regular, deep, move-in/move-out, and commercial cleaning.
+           </p>
         </div>
 
         <div className="services-grid">
