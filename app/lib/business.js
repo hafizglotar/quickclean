@@ -97,7 +97,6 @@ export const business = {
   social: {
     facebook: 'https://www.facebook.com/quickclean',
     instagram: 'https://www.instagram.com/quickclean',
-    google: 'https://www.google.com/maps?cid=000000000000000000',
     yelp: 'https://www.yelp.com/biz/quick-clean',
   },
 };
