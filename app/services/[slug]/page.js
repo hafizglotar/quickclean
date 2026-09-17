@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   if (!svc || !content) return {};
 
   const place = `${business.address.city}, ${business.address.region}`;
-  const title = `${svc.title} in ${place}`;
+  const title = `Professional ${svc.title.toLowerCase()} services in ${place}`;
 
   return{
     title,
