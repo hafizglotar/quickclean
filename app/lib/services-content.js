@@ -65,9 +65,9 @@ export const serviceContent = {
         a: 'Standard cleaning is designed to maintain an already tidy home, while deep cleaning in Dubai is more detailed and time-intensive. It targets built-up grime, baseboards, grout, vents, and areas behind or inside appliances.',
      },
       {
-        q: `How much does a deep cleaning cost in ${CITY}?`,
-        a: 'Deep cleans start at AED 179, with the exact flat rate shown before you book based on home size and condition.',
-      },
+        q: `How much does deep cleaning cost in ${CITY}?`,
+        a: 'Deep cleaning in Dubai starts at AED 179. The exact flat rate depends on your home size and cleaning needs and is shown before you book.',
+    },
       {
         q: 'How often do I need a deep clean?',
         a: 'Most homes benefit from a deep clean 2–4 times a year, or as the first visit before switching to a recurring standard clean.',
