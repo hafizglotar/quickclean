@@ -76,7 +76,7 @@ export const serviceContent = {
   },
 
   'move-in-move-out-cleaning': {
-    serviceType: 'Move Out Cleaning',
+    serviceType: 'Move In /'Move Out Cleaning',
     subhead:
       'Professional move-in and move-out cleaning in Dubai for apartments and villas, with detailed cleaning to help prepare your home for inspection, handover, or a fresh start.',
     intro: `Quick Clean provides professional move-in and move-out cleaning in Dubai for apartments and villas. We clean inside cabinets, drawers, appliances, closets, bathrooms, floors, and other areas commonly checked during inspections. It is ideal for tenants preparing to hand back a property, landlords getting a home ready for new tenants, or anyone moving into a freshly cleaned space.`,
@@ -98,7 +98,7 @@ export const serviceContent = {
         a: 'A thorough move-out cleaning in Dubai can help prepare the property for inspection by cleaning areas landlords commonly check, including appliances, cabinets, baseboards, bathrooms, and floors. The service is backed by our 100% Spotless Guarantee.',
      },
       {
-        q: Does the home need to be empty for move-out cleaning in Dubai?',
+        q: 'Does the home need to be empty for move-out cleaning in Dubai?',
         a: 'An empty home allows our cleaners to reach more surfaces and deliver the best result. We can also clean partially furnished homes in Dubai, so let us know the property condition when you book.',
      },
       {
@@ -112,7 +112,7 @@ export const serviceContent = {
     serviceType: 'Commercial Cleaning',
     subhead:
       'Professional office and commercial cleaning in Dubai with flexible after-hours service to keep workplaces clean, healthy, and ready for business.',
-    intro: `Quick Clean keeps your workplace spotless with flexible, after-hours commercial cleaning. From offices and clinics to studios and retail, we build a recurring plan around your schedule with vetted, insured pros — so your team walks into a fresh space every morning and never deals with a no-show.`,
+    intro: `Quick Clean provides professional office and commercial cleaning services in Dubai for offices, clinics, studios, retail spaces, and other workplaces. We offer flexible after-hours cleaning with vetted and insured cleaners, customized checklists, and recurring schedules that fit your business hours.`,
     turnaround: 'Custom recurring schedule',
     includes: [
       'Workstations, desks, and common areas',
