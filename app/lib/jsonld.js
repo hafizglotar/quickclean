@@ -216,12 +216,6 @@ function compactProvider() {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: business.rating.value,
-      reviewCount: business.rating.count,
-      bestRating: business.rating.best,
-    },
   };
 }
 
@@ -279,7 +273,7 @@ export function servicePageGraph(slug) {
             priceSpecification: {
               '@type': 'PriceSpecification',
               priceCurrency: 'AED',
-              Price: svc.price,
+              price: svc.price,
             },
           },
         }
