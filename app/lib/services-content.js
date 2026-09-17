@@ -33,8 +33,8 @@ export const serviceContent = {
     },   
       {
         q: 'Can I get the same cleaner every time?',
-        a: 'Yes. On recurring plans we send the pro who already knows your home and your preferences.',
-      },
+        a: 'Yes. For recurring residential cleaning in Dubai, we aim to send the same cleaner whenever possible, so they can become familiar with your home and preferences.',
+    },
       {
         q: 'How often should I schedule a house cleaning?',
         a: 'Most households choose bi-weekly cleaning. Homes with kids or pets often prefer weekly, while lighter homes do well with monthly visits.',
