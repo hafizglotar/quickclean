@@ -36,9 +36,9 @@ export const serviceContent = {
         a: 'Yes. For recurring residential cleaning in Dubai, we aim to send the same cleaner whenever possible, so they can become familiar with your home and preferences.',
     },
       {
-        q: 'How often should I schedule a house cleaning?',
-        a: 'Most households choose bi-weekly cleaning. Homes with kids or pets often prefer weekly, while lighter homes do well with monthly visits.',
-      },
+       q: 'How often should I schedule a house cleaning in Dubai?',
+      a: 'Most households in Dubai choose bi-weekly residential cleaning. Homes with kids or pets often prefer weekly cleaning, while lighter-use homes may only need a monthly visit.',
+   },
     ],
   },
 
