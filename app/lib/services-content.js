@@ -69,9 +69,9 @@ export const serviceContent = {
         a: 'Deep cleaning in Dubai starts at AED 179. The exact flat rate depends on your home size and cleaning needs and is shown before you book.',
     },
       {
-        q: 'How often do I need a deep clean?',
-        a: 'Most homes benefit from a deep clean 2–4 times a year, or as the first visit before switching to a recurring standard clean.',
-      },
+        q: 'How often should I schedule deep cleaning in Dubai?',
+        a: 'Most homes benefit from deep cleaning in Dubai 2–4 times a year. You may also want a deep clean before guests arrive, after renovations, or as the first visit before starting regular residential cleaning.',
+   },
     ],
   },
 
