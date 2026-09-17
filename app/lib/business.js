@@ -128,13 +128,14 @@ export const services = [
     icon: 'home',
     title: 'Residential Cleaning',
     desc: 'Reliable residential cleaning in Dubai for recurring or one-time visits that keep your home fresh, top to bottom.',
+    price: 99,
   },
   {
     slug: 'deep-cleaning',
     icon: 'sparkle',
     title: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
-    price: 99,
+    price: 179,
   },
   {
     slug: 'move-in-move-out-cleaning',
