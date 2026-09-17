@@ -12,7 +12,7 @@ export const serviceContent = {
   'residential-cleaning': {
     serviceType: 'Residential Cleaning',
     subhead:
-      'Recurring or one-time house cleaning that keeps your whole home fresh, healthy, and guest-ready — without you lifting a finger.',
+      'Professional residential cleaning in Dubai for recurring or one-time visits. Enjoy a fresh, healthy, guest-ready home with vetted and insured cleaners.',
     intro: `Quick Clean's residential cleaning service covers every room of your home with a consistent, top-to-bottom checklist. Choose weekly, bi-weekly, or monthly visits and we send the same vetted, insured cleaner each time, or book a one-time clean whenever you need a reset.`,
     turnaround: 'Same-day & next-day slots',
     includes: [
