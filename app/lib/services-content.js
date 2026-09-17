@@ -76,7 +76,7 @@ export const serviceContent = {
   },
 
   'move-in-move-out-cleaning': {
-    serviceType: 'Move In /'Move Out Cleaning',
+    serviceType: 'Move In / Move Out Cleaning',
     subhead:
       'Professional move-in and move-out cleaning in Dubai for apartments and villas, with detailed cleaning to help prepare your home for inspection, handover, or a fresh start.',
     intro: `Quick Clean provides professional move-in and move-out cleaning in Dubai for apartments and villas. We clean inside cabinets, drawers, appliances, closets, bathrooms, floors, and other areas commonly checked during inspections. It is ideal for tenants preparing to hand back a property, landlords getting a home ready for new tenants, or anyone moving into a freshly cleaned space.`,
