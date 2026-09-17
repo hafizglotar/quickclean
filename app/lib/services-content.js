@@ -144,7 +144,7 @@ export const serviceContent = {
   'carpet-upholstery-cleaning': {
     serviceType: 'Carpet Cleaning',
     subhead:
-      'Deep-extraction carpet and upholstery cleaning that lifts stains, odors, allergens, and years of wear.',
+      'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, allergens, and built-up dirt from carpets, rugs, sofas, and chairs.',
     intro: `Quick Clean's carpet and upholstery cleaning uses hot-water extraction to pull out trapped dirt, allergens, and odors that vacuuming leaves behind. Carpets, rugs, sofas, and chairs come back fresher, brighter, and faster-drying — a healthier home without the rental-machine hassle.`,
     turnaround: 'Dries in a few hours',
     includes: [
