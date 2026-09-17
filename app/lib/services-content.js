@@ -28,9 +28,9 @@ export const serviceContent = {
     idealFor: ['Busy households & families', 'Working professionals', 'Anyone who wants a reliable recurring clean'],
     faqs: [
       {
-        q: `How much does residential cleaning cost in ${CITY}?`,
-        a: 'Standard residential cleans start at AED 99. Recurring plans save up to 20% per visit. You see your exact flat rate before you book, based on home size.',
-      },
+        q:  `How much does residential cleaning cost in ${CITY}?`,
+        a: 'Residential cleaning in Dubai starts at AED 99. The exact price depends on your home size and cleaning needs. You see the flat rate before booking, and recurring plans can save up to 20% per visit.',
+    },   
       {
         q: 'Can I get the same cleaner every time?',
         a: 'Yes. On recurring plans we send the pro who already knows your home and your preferences.',
