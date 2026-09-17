@@ -13,7 +13,7 @@ export const serviceContent = {
     serviceType: 'Residential Cleaning',
     subhead:
       'Professional residential cleaning in Dubai for recurring or one-time visits. Enjoy a fresh, healthy, guest-ready home with vetted and insured cleaners.',
-    intro: `Quick Clean's residential cleaning service covers every room of your home with a consistent, top-to-bottom checklist. Choose weekly, bi-weekly, or monthly visits and we send the same vetted, insured cleaner each time, or book a one-time clean whenever you need a reset.`,
+    intro: `Quick Clean provides reliable residential cleaning services in Dubai for apartments, villas, and family homes. Our vetted and insured cleaners follow a consistent top-to-bottom checklist covering kitchens, bathrooms, living areas, bedrooms, floors, and high-touch surfaces. Choose a one-time clean or a recurring weekly, bi-weekly, or monthly service based on your needs.`,
     turnaround: 'Same-day & next-day slots',
     includes: [
       'Kitchen: counters, sink, stovetop, exterior of appliances',
