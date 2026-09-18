@@ -17,8 +17,7 @@ export default function Animations() {
       /* ---- Hero intro timeline ---- */
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
      
-      tl.from('.hero-sub', { y: 24, opacity: 0, duration: 0.6 }, '-=0.4')
-        .from('.hero-cta', { y: 20, opacity: 0, duration: 0.5 }, '-=0.35')
+       tl.from('.hero-cta', { y: 20, opacity: 0, duration: 0.5 }, '+=0.1')
         .from('.hero-trust li', { y: 14, opacity: 0, duration: 0.4, stagger: 0.08 }, '-=0.3')
         .from('.hero-card', { y: 40, opacity: 0, scale: 0.96, duration: 0.8 }, '-=0.7');
 
@@ -87,9 +86,9 @@ export default function Animations() {
       const bg = document.querySelector('.hero-bg');
       if (bg) {
         gsap.to(bg, {
-          yPercent: 12,
+          yPercent: 8,
           ease: 'none',
-          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
+          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
         });
       }
 
