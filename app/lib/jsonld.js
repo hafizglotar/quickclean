@@ -136,15 +136,8 @@ export function localBusinessNode() {
         },
       })),
     },
-    review: reviews.map((r) => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      author: { '@type': 'Person', name: r.name },
-      reviewBody: r.quote,
-    })),
   };
 }
-
 export function faqNode() {
   return {
     '@type': 'FAQPage',
