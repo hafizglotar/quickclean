@@ -431,7 +431,7 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .sticky-cta.show { transform: translateY(0); }
 
 /* ---------- Reveal animation base (GSAP toggles via JS; CSS is fallback) ---------- */
-.reveal, .reveal-hero, .reveal-hero-line { will-change: transform, opacity; }
+.reveal, .reveal-hero-line { will-change: transform, opacity; }
 
 /* ============================================================
    Service pages (index + detail)
