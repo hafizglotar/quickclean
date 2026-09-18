@@ -106,16 +106,8 @@ export function localBusinessNode() {
       longitude: business.geo.longitude,
     },
     areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
-    hasMap: business.social.google,
     openingHoursSpecification: openingHoursSpec(),
     sameAs,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: business.rating.value,
-      reviewCount: business.rating.count,
-      bestRating: business.rating.best,
-      worstRating: 1,
-    },
     makesOffer: services
       .filter((s) => s.price)
       .map((s) => ({
