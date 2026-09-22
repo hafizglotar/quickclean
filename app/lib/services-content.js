@@ -13,7 +13,8 @@ export const serviceContent = {
   'residential-cleaning': {
     serviceType: 'Residential Cleaning',
     subhead:
-     'Professional window and glass cleaning in Dubai for streak-free results inside and out, including glass doors, mirrors, sills, tracks, and accessible exterior windows.',
+     subhead:
+  'Professional residential cleaning services in Dubai for apartments, villas, and family homes, with reliable cleaners and detailed cleaning for kitchens, bathrooms, bedrooms, floors, and living areas.',
        intro: `Quick Clean provides reliable residential cleaning services in Dubai for apartments, villas, and family homes. Our vetted and insured cleaners follow a consistent top-to-bottom checklist covering kitchens, bathrooms, living areas, bedrooms, floors, and high-touch surfaces. Choose a one-time clean or a recurring weekly, bi-weekly, or monthly service based on your needs.`,
     turnaround: 'Same-day & next-day slots',
     includes: [
