@@ -13,9 +13,7 @@
 
 
 // IMPORTANT: set this to your real domain before launch (no trailing slash).
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.quickclean.ae';
-
+export const SITE_URL = 'https://www.quickclean.ae';
 /* ---- Contact details ----
    Edit here and every header, footer, tel: link, contact card and schema
    node updates with them. PHONE is written for display; the tel: href is
