@@ -6,7 +6,6 @@ import './globals.css';
 import { SITE_URL, business } from './lib/business';
 import { fullGraph } from './lib/jsonld';
 
-// Self-hosted Google fonts via next/font — zero layout shift, faster LCP (a ranking signal).
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -20,31 +19,21 @@ const inter = Inter({
   display: 'swap',
 });
 
-// Google Analytics 4 measurement ID.
 const GA_ID = 'G-B8VTY7HQFH';
 
 const title = `House Cleaning Services in Dubai | Quick Clean`;
+const description =
+  'Professional house cleaning service in Dubai. Book residential, deep, move-in/move-out and commercial cleaning with upfront pricing and a satisfaction guarantee.';
 
-// ---- SEO metadata (Next.js Metadata API) ----
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: title,
     template: `%s | ${business.name}`,
   },
-  description: 'Professional house cleaning service in Dubai. Book residential, deep, move-in/move-out and commercial cleaning with upfront pricing and a satisfaction guarantee.',
+  description,
   applicationName: business.name,
   generator: 'Next.js',
-  keywords: [
-    'house cleaning Dubai',
-  'cleaning service Dubai',
-  'deep cleaning Dubai',
-  'move out cleaning Dubai',
-  'residential cleaning Dubai',
-  'commercial cleaning Dubai',
-  'maid service Dubai',
-  'cleaning company Dubai',
-  ],
   authors: [{ name: business.name, url: SITE_URL }],
   creator: business.name,
   publisher: business.name,
@@ -59,12 +48,11 @@ export const metadata = {
     siteName: business.name,
     title,
     description: business.description,
-    // opengraph-image.js generates the image automatically.
   },
   twitter: {
     card: 'summary_large_image',
     title,
-    description: business.tagline,
+    description,
   },
   robots: {
     index: true,
@@ -78,7 +66,7 @@ export const metadata = {
     },
   },
   icons: {
-    icon: [  
+    icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
@@ -91,10 +79,9 @@ export const metadata = {
     address: true,
     email: true,
   },
-  // Add your real verification tokens (or set via env) when you have them.
   verification: {
-  google: '5DWjxPGuQ-ewPBtXnLXjumx42NVkUE9Ql4utDML2zDg',
-},
+    google: '5DWjxPGuQ-ewPBtXnLXjumx42NVkUE9Ql4utDML2zDg',
+  },
 };
 
 export const viewport = {
@@ -108,21 +95,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
       <body>
-        {/* JSON-LD: Organization + WebSite + LocalBusiness + WebPage + Breadcrumb + FAQ.
-            Documented Next.js pattern — rendered in the tree, hoisted by the framework. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(fullGraph()) }}
         />
         {children}
 
-        {/* Vercel Web Analytics — page views and referrers, no cookies. */}
         <Analytics />
-        {/* Vercel Speed Insights — real-visitor Core Web Vitals per route. */}
         <SpeedInsights />
 
-        {/* Google tag (gtag.js) — next/script loads it exactly like the async
-            snippet, but keeps it out of the critical path on every route. */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
