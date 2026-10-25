@@ -9,6 +9,7 @@
     "prebuild": "node scripts/build-llms-full.mjs",
     "build": "next build",
     "llms": "node scripts/build-llms-full.mjs",
+    "lint": "eslint .",
     "start": "next start",
     "whatsapp:test": "node --env-file-if-exists=.env.local scripts/test-whatsapp.mjs"
   },
@@ -20,5 +21,9 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-icons": "^5.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.3"
   }
 }
