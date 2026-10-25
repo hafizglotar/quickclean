@@ -41,11 +41,20 @@ everywhere.
 | `app/lib/business.js` | Name, phone, email, address, hours, social links, FAQs, `pageUpdatedAt` |
 | `app/lib/pricing.js` | Every price: size matrix, starting prices, `flatRate()` |
 | `app/lib/services-content.js` | Long-form copy, FAQs and `updatedAt` per service page |
-| `app/lib/areas.js` | Copy, FAQs and `updatedAt` per area page (`/cleaning-services-<area>`) |
+| `app/lib/areas.js` + `app/lib/area-pages/*.js` | Copy, FAQs, `nearby` and `updatedAt` per area page (`/cleaning-services-<area>`); `/areas` is the hub that lists them all |
 | `app/lib/social-proof.js` | Ratings, stats, logos, testimonials (empty until verified) |
 
 `updatedAt` / `pageUpdatedAt` feed `<lastmod>` in `sitemap.xml`. Bump the date when you
 change a page.
+
+### Area page copy rules
+
+Area copy is plain text for phone readers and AI answer engines: no dashes, slashes,
+ampersands, semicolons, colons, brackets, curly quotes or emoji in any name, meta
+description, paragraph or FAQ. `scripts/check-area-copy.mjs` enforces this on every
+`npm run build` (and via `npm run check:areas`) and warns when a page falls outside
+550 to 750 words or a meta description passes 155 characters. The six original areas
+predate the rules and are reported, not enforced, until they are rewritten.
 
 ### llms.txt and llms-full.txt
 

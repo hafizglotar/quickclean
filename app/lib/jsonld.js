@@ -27,7 +27,7 @@ import {
 } from './business.js';
 import { cleanTypes, lowestPackagePrice, propertySizes } from './pricing.js';
 import { getServiceContent } from './services-content.js';
-import { areaPath, getArea } from './areas.js';
+import { AREAS_HUB_PATH, areaPath, areas, getArea } from './areas.js';
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const BUSINESS_ID = `${SITE_URL}/#business`;
@@ -380,6 +380,41 @@ export function areaPageGraph(slug) {
         { name, url },
       ]),
       faqPage(`${url}/#faq`, area.faqs),
+    ],
+  };
+}
+
+/** JSON-LD graph for the /areas hub page. */
+export function areasIndexGraph() {
+  const url = `${SITE_URL}${AREAS_HUB_PATH}`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: 'Areas We Serve in Dubai, Sharjah and Ajman',
+        description: `Every community where ${business.name} provides house cleaning, with a page for each area.`,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': BUSINESS_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-AE',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Areas we serve', url },
+      ]),
+      {
+        '@type': 'ItemList',
+        '@id': `${url}/#list`,
+        itemListElement: areas.map((a, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: `House Cleaning Services in ${a.name}`,
+          url: `${SITE_URL}${areaPath(a.slug)}`,
+        })),
+      },
     ],
   };
 }

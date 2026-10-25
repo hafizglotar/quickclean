@@ -1,29 +1,37 @@
 import Link from 'next/link';
-import { areas, areaPath } from '../lib/areas';
+import { AREAS_HUB_PATH, areaPath, areas, featuredAreas, nearbyAreas } from '../lib/areas';
 
-/* Chips linking to every area page (optionally minus the current one). */
-export function AreaChips({ exclude }) {
+/* Chips linking to a list of area pages. With no `list` it shows the featured
+   areas plus a link to the hub page that lists every area. */
+export function AreaChips({ list, exclude, showAll = true }) {
+  const items = (list || featuredAreas()).filter((a) => a.slug !== exclude);
   return (
     <ul className="chips">
-      {areas
-        .filter((a) => a.slug !== exclude)
-        .map((a) => (
-          <li key={a.slug}>
-            <Link href={areaPath(a.slug)} className="chip">
-              {a.name}
-            </Link>
-          </li>
-        ))}
+      {items.map((a) => (
+        <li key={a.slug}>
+          <Link href={areaPath(a.slug)} className="chip">
+            {a.name}
+          </Link>
+        </li>
+      ))}
+      {showAll && (
+        <li>
+          <Link href={AREAS_HUB_PATH} className="chip chip-all">
+            All {areas.length} areas
+          </Link>
+        </li>
+      )}
     </ul>
   );
 }
 
-/* "Areas we serve" section, used on service pages and area pages so every
-   location page is reachable within one click of every service. */
-export default function AreasServed({ exclude, kicker = 'Where we work', title }) {
+/* "Areas we serve" section. On an area page pass `area` and it shows that
+   area's nearby communities; on service pages it shows the featured areas.
+   Both end with a link to the /areas hub. */
+export default function AreasServed({ area, kicker = 'Where we work', title }) {
+  const list = area ? nearbyAreas(area) : featuredAreas();
   const heading =
-    title ||
-    (exclude ? 'Other Areas We Serve' : 'House Cleaning Services Across Dubai, Sharjah & Ajman');
+    title || (area ? `Other Areas Near ${area.name}` : 'House Cleaning Services Across Dubai, Sharjah and Ajman');
   return (
     <section className="section about-areas" aria-label="Areas we serve">
       <div className="container">
@@ -36,7 +44,7 @@ export default function AreasServed({ exclude, kicker = 'Where we work', title }
           </p>
         </div>
         <div className="reveal">
-          <AreaChips exclude={exclude} />
+          <AreaChips list={list} exclude={area?.slug} />
         </div>
       </div>
     </section>

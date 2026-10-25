@@ -181,7 +181,7 @@ export default async function AreaPage({ params }) {
         </section>
 
         <QuoteSection />
-        <AreasServed exclude={slug} kicker="Nearby" />
+        <AreasServed area={area} kicker="Nearby" />
       </main>
       <Footer />
       <StickyCta />

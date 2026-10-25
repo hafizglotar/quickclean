@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { business, formatAddress, hoursRows } from '../lib/business';
-import { areas, areaPath } from '../lib/areas';
+import { AREAS_HUB_PATH, areaPath, featuredAreas } from '../lib/areas';
 import { hasReviews, rating } from '../lib/social-proof';
 import { Logo, Stars } from './icons';
 
@@ -47,11 +47,14 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Areas we serve</h4>
-          {areas.map((a) => (
-            <Link href={areaPath(a.slug)} key={a.slug}>
-              {a.name}
-            </Link>
-          ))}
+          {featuredAreas()
+            .slice(0, 8)
+            .map((a) => (
+              <Link href={areaPath(a.slug)} key={a.slug}>
+                {a.name}
+              </Link>
+            ))}
+          <Link href={AREAS_HUB_PATH}>All areas</Link>
         </div>
 
         <div className="footer-col">

@@ -23,7 +23,7 @@ import {
 } from '../app/lib/business.js';
 import { cleanTypes, currency, priceTable, propertySizes } from '../app/lib/pricing.js';
 import { getServiceContent } from '../app/lib/services-content.js';
-import { areas, areaPath } from '../app/lib/areas.js';
+import { AREAS_HUB_PATH, areas, areaPath } from '../app/lib/areas.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_DIR = path.join(ROOT, 'public');
@@ -87,6 +87,7 @@ function pagesBlock() {
     `- [All services](${SITE_URL}/services)`,
     `- [About](${SITE_URL}/about)`,
     `- [Contact](${SITE_URL}/contact)`,
+    `- [Areas we serve](${SITE_URL}${AREAS_HUB_PATH})`,
   ];
   const svc = services.map((s) => `- [${s.name || s.title} in Dubai](${serviceUrl(s.slug)})`);
   const loc = areas.map((a) => `- [House Cleaning Services in ${a.name}](${areaUrl(a.slug)})`);
