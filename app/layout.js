@@ -5,6 +5,7 @@ import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, business } from './lib/business';
 import { fullGraph } from './lib/jsonld';
+import JsonLd from './components/seo/JsonLd';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -95,10 +96,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(fullGraph()) }}
-        />
+        <JsonLd data={fullGraph()} />
         {children}
 
         <Analytics />

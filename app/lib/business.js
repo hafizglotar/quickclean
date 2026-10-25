@@ -56,10 +56,12 @@ export const business = {
   whatsapp: '923116229099',
   email: 'info@quickclean.ae',
 
-  // `street` and `postalCode` are intentionally blank: ADDRESS above is a
-  // placeholder and the UAE does not use postal codes. Schema omits empties.
+  // TODO: replace STREET_ADDRESS_TODO with the real street address (building,
+  // street, community). Anything still containing "TODO" is skipped by the
+  // schema and the visible pages until it is filled in. The UAE does not use
+  // postal codes, so `postalCode` stays blank.
   address: {
-    street: '',
+    street: 'STREET_ADDRESS_TODO',
     city: 'Dubai',
     region: 'UAE',
     regionName: 'United Arab Emirates',
@@ -70,16 +72,9 @@ export const business = {
   // Used for LocalBusiness geo (helps Google Maps / local + GEO geographic ranking).
   geo: { latitude: 25.2048, longitude: 55.2708 },
 
-  // Cities you serve — drives local SEO + "near me" / geographic answers.
-  areaServed: [
-    'Dubai',
-    'Sharjah',
-    'Ajman',
-    'Dubai Marina',
-    'Downtown Dubai',
-    'JVC',
-    'Business Bay',
-  ],
+  // Emirates served — drives the LocalBusiness areaServed and the footer.
+  // Individual communities (Dubai Marina, JVC, ...) live in lib/areas.js.
+  areaServed: ['Dubai', 'Sharjah', 'Ajman'],
 
   openingHours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
@@ -90,14 +85,22 @@ export const business = {
 
   rating: { value: 4.9, count: 2300, best: 5 },
 
+  // TODO: replace each placeholder with the real profile URL. Entries still
+  // containing "TODO" are left out of sameAs and never rendered.
   social: {
-    facebook: 'https://www.facebook.com/quickclean',
-    instagram: 'https://www.instagram.com/quickclean',
-    yelp: 'https://www.yelp.com/biz/quick-clean',
+    googleBusinessProfile: 'TODO_GOOGLE_BUSINESS_PROFILE_URL',
+    instagram: 'TODO_INSTAGRAM_URL',
+    facebook: 'TODO_FACEBOOK_URL',
   },
 };
 
-export const sameAs = Object.values(business.social);
+/** True for a value that is still a TODO placeholder (never emit these). */
+export function isPlaceholder(value) {
+  return typeof value === 'string' && /TODO/.test(value);
+}
+
+// Social / profile URLs that are real, for schema.org sameAs.
+export const sameAs = Object.values(business.social).filter((u) => u && !isPlaceholder(u));
 
 /* ---------------- Content data (shared by UI + schema) ---------------- */
 

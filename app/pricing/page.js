@@ -10,6 +10,7 @@ import { ArrowRight, Check } from '../components/icons';
 import { business, currency, SITE_URL } from '../lib/business';
 import { lowestPackagePrice } from '../lib/pricing';
 import { pricingPageGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 
 const place = `${business.address.city}, ${business.address.region}`;
 const lowest = lowestPackagePrice;
@@ -34,10 +35,7 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingPageGraph()) }}
-      />
+      <JsonLd data={pricingPageGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">

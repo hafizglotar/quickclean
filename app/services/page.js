@@ -8,6 +8,7 @@ import QuoteSection from '../components/QuoteSection';
 import { WhyUs } from '../components/Sections';
 import { business, services, SITE_URL } from '../lib/business';
 import { servicesIndexGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 import { ArrowRight } from '../components/icons';
 
 const title = `Cleaning Services in ${business.address.city}, ${business.address.region}`;
@@ -23,10 +24,7 @@ export const metadata = {
 export default function ServicesIndex() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesIndexGraph()) }}
-      />
+      <JsonLd data={servicesIndexGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">

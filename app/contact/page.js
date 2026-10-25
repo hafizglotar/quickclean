@@ -7,6 +7,7 @@ import { Faq } from '../components/Sections';
 import { ArrowRight, Phone } from '../components/icons';
 import { ADDRESS, business, SITE_URL } from '../lib/business';
 import { contactPageGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 
 const place = `${business.address.city}, ${business.address.region}`;
 
@@ -42,10 +43,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageGraph()) }}
-      />
+      <JsonLd data={contactPageGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">

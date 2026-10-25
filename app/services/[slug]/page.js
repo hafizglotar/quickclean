@@ -11,6 +11,7 @@ import { ArrowRight, Check, ServiceIcon, Star } from '../../components/icons';
 import { business, services, getService, currency, SITE_URL } from '../../lib/business';
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
+import JsonLd from '../../components/seo/JsonLd';
 
 // Pre-render one static page per service at build time.
 export function generateStaticParams() {
@@ -50,10 +51,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicePageGraph(slug)) }}
-      />
+      <JsonLd data={servicePageGraph(slug)} />
       <Header />
       <main>
         {/* Hero */}

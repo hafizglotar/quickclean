@@ -9,6 +9,7 @@ import { Reviews, Stats, WhyUs } from '../components/Sections';
 import { ArrowRight, Check } from '../components/icons';
 import { business, SITE_URL, stats } from '../lib/business';
 import { aboutPageGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 
 const place = `${business.address.city}, ${business.address.region}`;
 const years = new Date().getFullYear() - business.foundingYear;
@@ -50,10 +51,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageGraph()) }}
-      />
+      <JsonLd data={aboutPageGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">
