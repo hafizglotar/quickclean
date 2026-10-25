@@ -11,18 +11,17 @@ import {
   Faq,
 } from './components/Sections';
 import QuoteSection from './components/QuoteSection';
+import GoogleReviews from './components/GoogleReviews';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
 import Animations from './components/Animations';
 import { homePageGraph } from './lib/jsonld';
+import JsonLd from './components/seo/JsonLd';
 
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageGraph()) }}
-      />
+      <JsonLd data={homePageGraph()} />
       <Header />
       <main>
         <Hero />
@@ -33,6 +32,7 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <Reviews />
+        <GoogleReviews />
         <QuoteSection />
         <Faq />
       </main>

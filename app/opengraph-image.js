@@ -56,7 +56,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: 'flex', fontSize: 30, fontWeight: 700, color: '#5eead4' }}>
-          Rated 4.9/5 · 2,300+ reviews · Book in 60 seconds
+          Dubai · Sharjah · Ajman · Book in 60 seconds
         </div>
       </div>
     ),

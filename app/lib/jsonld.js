@@ -1,11 +1,18 @@
 /* ============================================================
    Structured data (JSON-LD) — the backbone of SEO, AEO & GEO.
    ------------------------------------------------------------
-   • SEO: rich results (rating stars, FAQ, sitelinks, local pack)
+   • SEO: rich results (FAQ, breadcrumbs, sitelinks, local pack)
    • AEO: machine-readable Q&A for answer engines
    • GEO (generative): explicit entities AI engines can cite
-   • GEO (geographic): LocalBusiness + GeoCoordinates + areaServed
-   We emit ONE @graph so every node is cross-linked by @id.
+   • GEO (geographic): HomeAndConstructionBusiness + areaServed
+
+   The root layout emits the site-wide graph (Organization + the
+   business node, @id …/#business) on EVERY page. Each page adds
+   its own nodes (WebPage, BreadcrumbList, FAQPage, Service) and
+   points at the business by @id rather than repeating it.
+
+   No AggregateRating / Review schema is emitted anywhere: there is
+   no verified review source yet. Rendered via components/seo/JsonLd.
    ============================================================ */
 
 import {
@@ -14,18 +21,22 @@ import {
   currency,
   sameAs,
   services,
-  reviews,
   faqs,
   getService,
-  pricingSizes,
-  pricingTiers,
-} from './business';
-import { getServiceContent } from './services-content';
+  isPlaceholder,
+} from './business.js';
+import { cleanTypes, lowestPackagePrice, propertySizes } from './pricing.js';
+import { getServiceContent } from './services-content.js';
+import { areaPath, getArea } from './areas.js';
 
-const ORG_ID = `${SITE_URL}/#organization`;
-const SITE_ID = `${SITE_URL}/#website`;
-const LOCAL_ID = `${SITE_URL}/#localbusiness`;
-const OG_IMAGE = `${SITE_URL}/opengraph-image`;
+export const ORG_ID = `${SITE_URL}/#organization`;
+export const BUSINESS_ID = `${SITE_URL}/#business`;
+export const SITE_ID = `${SITE_URL}/#website`;
+export const OG_IMAGE = `${SITE_URL}/opengraph-image`;
+
+export const serviceUrl = (slug) => `${SITE_URL}/services/${slug}`;
+
+/* ---------------- Shared fragments ---------------- */
 
 function openingHoursSpec() {
   return business.openingHours.map((o) => ({
@@ -36,18 +47,62 @@ function openingHoursSpec() {
   }));
 }
 
-function postalAddress() {
-  // street/postalCode are optional here: the UAE does not use postal codes and
-  // the street line is a placeholder, so emit them only when actually set.
+export function postalAddress() {
+  const a = business.address;
   return {
     '@type': 'PostalAddress',
-    ...(business.address.street ? { streetAddress: business.address.street } : {}),
-    addressLocality: business.address.city,
-    addressRegion: business.address.region,
-    ...(business.address.postalCode ? { postalCode: business.address.postalCode } : {}),
-    addressCountry: business.address.country,
+    // The street line is only emitted once the TODO placeholder is replaced.
+    ...(a.street && !isPlaceholder(a.street) ? { streetAddress: a.street } : {}),
+    addressLocality: a.city,
+    ...(a.postalCode ? { postalCode: a.postalCode } : {}),
+    addressCountry: a.country,
   };
 }
+
+export const cityList = (names = business.areaServed) =>
+  names.map((name) => ({ '@type': 'City', name }));
+
+function offer(price, url) {
+  return {
+    '@type': 'Offer',
+    url,
+    priceCurrency: currency.code,
+    price,
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: currency.code,
+      price,
+    },
+  };
+}
+
+export function breadcrumbList(id, items) {
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': id,
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: it.url,
+    })),
+  };
+}
+
+export function faqPage(id, list) {
+  return {
+    '@type': 'FAQPage',
+    '@id': id,
+    mainEntity: list.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
+
+/* ---------------- Site-wide nodes (root layout) ---------------- */
 
 export function organizationNode() {
   return {
@@ -66,9 +121,73 @@ export function organizationNode() {
     telephone: business.telephone,
     foundingDate: String(business.foundingYear),
     description: business.description,
-    sameAs,
+    ...(sameAs.length ? { sameAs } : {}),
   };
 }
+
+/** The local business entity every page points at: …/#business */
+export function businessNode() {
+  return {
+    '@type': 'HomeAndConstructionBusiness',
+    '@id': BUSINESS_ID,
+    name: business.name,
+    url: SITE_URL,
+    image: OG_IMAGE,
+    logo: `${SITE_URL}/icon.svg`,
+    description: business.description,
+    telephone: business.telephone,
+    email: business.email,
+    priceRange: business.priceRange,
+    currenciesAccepted: currency.code,
+    paymentAccepted: 'Credit Card, Debit Card',
+    foundingDate: String(business.foundingYear),
+    parentOrganization: { '@id': ORG_ID },
+    address: postalAddress(),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: business.geo.latitude,
+      longitude: business.geo.longitude,
+    },
+    areaServed: cityList(),
+    openingHoursSpecification: openingHoursSpec(),
+    ...(sameAs.length ? { sameAs } : {}),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Cleaning services',
+      itemListElement: services.map((s) => {
+        const url = serviceUrl(s.slug);
+        return {
+          '@type': 'Offer',
+          url,
+          ...(s.price ? { price: s.price, priceCurrency: currency.code } : {}),
+          itemOffered: {
+            '@type': 'Service',
+            '@id': `${url}/#service`,
+            name: s.name || s.title,
+            url,
+            description: s.desc,
+            serviceType: s.title,
+            provider: { '@id': BUSINESS_ID },
+            areaServed: cityList(),
+          },
+        };
+      }),
+    },
+  };
+}
+
+/**
+ * Site-wide graph — injected on EVERY page via the root layout.
+ * Only entities that describe the business as a whole belong here.
+ */
+export function fullGraph() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [organizationNode(), businessNode()],
+  };
+}
+
+/* ---------------- Home page ---------------- */
 
 export function websiteNode() {
   return {
@@ -82,85 +201,7 @@ export function websiteNode() {
   };
 }
 
-export function localBusinessNode() {
-  return {
-    // Multiple types so search + AI engines understand the entity precisely.
-    '@type': ['LocalBusiness', 'HomeAndConstructionBusiness', 'CleaningService'],
-    '@id': LOCAL_ID,
-    name: business.name,
-    url: SITE_URL,
-    image: OG_IMAGE,
-    logo: `${SITE_URL}/icon.svg`,
-    description: business.description,
-    telephone: business.telephone,
-    email: business.email,
-    priceRange: business.priceRange,
-    currenciesAccepted: 'AED',
-    paymentAccepted: 'Credit Card, Debit Card',
-    foundingDate: String(business.foundingYear),
-    parentOrganization: { '@id': ORG_ID },
-    address: postalAddress(),
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: business.geo.latitude,
-      longitude: business.geo.longitude,
-    },
-    areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
-    openingHoursSpecification: openingHoursSpec(),
-    sameAs,
-    makesOffer: services
-      .filter((s) => s.price)
-      .map((s) => ({
-        '@type': 'Offer',
-        priceCurrency: 'AED',
-        price: s.price,
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          priceCurrency: 'AED',
-          price: s.price,
-        },
-        itemOffered: { '@type': 'Service', name: s.title, description: s.desc },
-      })),
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Cleaning services',
-      itemListElement: services.map((s) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: s.title,
-          description: s.desc,
-          serviceType: s.title,
-          provider: { '@id': LOCAL_ID },
-          areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
-        },
-      })),
-    },
-  };
-}
-export function faqNode() {
-  return {
-    '@type': 'FAQPage',
-    '@id': `${SITE_URL}/#faq`,
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-}
-
-export function breadcrumbNode() {
-  return {
-    '@type': 'BreadcrumbList',
-    '@id': `${SITE_URL}/#breadcrumb`,
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    ],
-  };
-}
-
-export function webPageNode() {
+function homeWebPageNode() {
   return {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/#webpage`,
@@ -168,7 +209,7 @@ export function webPageNode() {
     name: `${business.name} — ${business.tagline}`,
     description: business.description,
     isPartOf: { '@id': SITE_ID },
-    about: { '@id': LOCAL_ID },
+    about: { '@id': BUSINESS_ID },
     breadcrumb: { '@id': `${SITE_URL}/#breadcrumb` },
     inLanguage: 'en-AE',
     // Lets voice assistants read the headline answer aloud (AEO).
@@ -179,63 +220,28 @@ export function webPageNode() {
   };
 }
 
-/* ------------------------------------------------------------
-   Service pages
-   ------------------------------------------------------------ */
-
-const cityList = () => business.areaServed.map((c) => ({ '@type': 'City', name: c }));
-
-// Compact, self-contained provider so each service page resolves on its own.
-function compactProvider() {
+/** Page-level graph for the home page only: WebSite + FAQPage (+ page/breadcrumb). */
+export function homePageGraph() {
   return {
-    '@type': ['LocalBusiness', 'CleaningService'],
-    '@id': LOCAL_ID,
-    name: business.name,
-    url: SITE_URL,
-    telephone: business.telephone,
-    image: OG_IMAGE,
-    priceRange: business.priceRange,
-    address: postalAddress(),
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: business.geo.latitude,
-      longitude: business.geo.longitude,
-    },
+    '@context': 'https://schema.org',
+    '@graph': [
+      websiteNode(),
+      homeWebPageNode(),
+      breadcrumbList(`${SITE_URL}/#breadcrumb`, [{ name: 'Home', url: SITE_URL }]),
+      faqPage(`${SITE_URL}/#faq`, faqs),
+    ],
   };
 }
 
-function breadcrumbList(id, items) {
-  return {
-    '@type': 'BreadcrumbList',
-    '@id': id,
-    itemListElement: items.map((it, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: it.name,
-      item: it.url,
-    })),
-  };
-}
-
-function faqNodeFor(id, list) {
-  return {
-    '@type': 'FAQPage',
-    '@id': id,
-    mainEntity: list.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-}
+/* ---------------- Service pages ---------------- */
 
 /** Full JSON-LD graph for a single /services/[slug] page. */
 export function servicePageGraph(slug) {
   const svc = getService(slug);
   const content = getServiceContent(slug);
   if (!svc || !content) return null;
-  const url = `${SITE_URL}/services/${slug}`;
-  const name = `${svc.title} in ${business.address.city}, ${business.address.region}`;
+  const url = serviceUrl(slug);
+  const name = `${svc.name || svc.title} in ${business.address.city}`;
 
   const serviceNode = {
     '@type': 'Service',
@@ -244,25 +250,10 @@ export function servicePageGraph(slug) {
     serviceType: content.serviceType,
     description: content.subhead,
     url,
-    provider: compactProvider(),
+    provider: { '@id': BUSINESS_ID },
     areaServed: cityList(),
     category: 'Cleaning service',
-    ...(svc.price
-      ? {
-          offers: {
-            '@type': 'Offer',
-            url,
-            priceCurrency: 'AED',
-            price: svc.price,
-            availability: 'https://schema.org/InStock',
-            priceSpecification: {
-              '@type': 'PriceSpecification',
-              priceCurrency: 'AED',
-              price: svc.price,
-            },
-          },
-        }
-      : {}),
+    ...(svc.price ? { offers: offer(svc.price, url) } : {}),
   };
 
   return {
@@ -283,9 +274,9 @@ export function servicePageGraph(slug) {
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
         { name: 'Services', url: `${SITE_URL}/services` },
-        { name: svc.title, url },
+        { name: svc.name || svc.title, url },
       ]),
-      faqNodeFor(`${url}/#faq`, content.faqs),
+      faqPage(`${url}/#faq`, content.faqs),
     ],
   };
 }
@@ -316,51 +307,97 @@ export function servicesIndexGraph() {
         itemListElement: services.map((s, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          name: s.title,
-          url: `${SITE_URL}/services/${s.slug}`,
+          name: s.name || s.title,
+          url: serviceUrl(s.slug),
         })),
       },
     ],
   };
 }
 
-/**
- * Site-wide graph — injected on EVERY page via the root layout.
- * Only entities that describe the business/site as a whole belong here.
- * Page-specific nodes (WebPage, BreadcrumbList, FAQPage) are emitted per page
- * so we never ship duplicate or mismatched page schema.
- */
-export function fullGraph() {
+/* ---------------- Area (location) pages ---------------- */
+
+/** Full JSON-LD graph for /cleaning-services-<area>. */
+export function areaPageGraph(slug) {
+  const area = getArea(slug);
+  if (!area) return null;
+  const url = `${SITE_URL}${areaPath(slug)}`;
+  const name = `House Cleaning Services in ${area.name}`;
+  const place = {
+    '@type': 'City',
+    name: area.name,
+    containedInPlace: { '@type': 'AdministrativeArea', name: area.containedIn },
+  };
+  const prices = cleanTypes.flatMap((t) =>
+    t.prices.filter((_, i) => area.propertySizeKeys.includes(propertySizes[i].key))
+  );
+
   return {
     '@context': 'https://schema.org',
-    '@graph': [organizationNode(), websiteNode(), localBusinessNode()],
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${url}/#service`,
+        name,
+        serviceType: 'House cleaning',
+        description: area.metaDescription,
+        url,
+        provider: { '@id': BUSINESS_ID },
+        areaServed: place,
+        category: 'Cleaning service',
+        offers: {
+          '@type': 'AggregateOffer',
+          url,
+          priceCurrency: currency.code,
+          lowPrice: Math.min(lowestPackagePrice, ...prices),
+          highPrice: Math.max(...prices),
+          offerCount: prices.length,
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: `Cleaning services in ${area.name}`,
+          itemListElement: services.map((s) => ({
+            '@type': 'Offer',
+            url: serviceUrl(s.slug),
+            ...(s.price ? { price: s.price, priceCurrency: currency.code } : {}),
+            itemOffered: { '@type': 'Service', '@id': `${serviceUrl(s.slug)}/#service`, name: s.name || s.title },
+          })),
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name,
+        description: area.metaDescription,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': `${url}/#service` },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-AE',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name, url },
+      ]),
+      faqPage(`${url}/#faq`, area.faqs),
+    ],
   };
 }
 
-/** Page-level graph for the home page only. */
-export function homePageGraph() {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [webPageNode(), breadcrumbNode(), faqNode()],
-  };
-}
+/* ---------------- Pricing / About / Contact pages ---------------- */
 
-/* ------------------------------------------------------------
-   Pricing / About / Contact pages
-   ------------------------------------------------------------ */
-
-/** Every package × property size as a concrete Offer, so search and answer
+/** Every clean type × property size as a concrete Offer, so search and answer
  *  engines can quote real prices rather than guessing from page text. */
 export function pricingPageGraph() {
   const url = `${SITE_URL}/pricing`;
-  const allPrices = pricingTiers.flatMap((t) => t.prices);
+  const allPrices = cleanTypes.flatMap((t) => t.prices);
 
-  const offers = pricingTiers.flatMap((tier) =>
+  const offers = cleanTypes.flatMap((tier) =>
     tier.prices.map((price, i) => ({
       '@type': 'Offer',
-      '@id': `${url}/#offer-${tier.slug}-${i + 1}`,
-      name: `${tier.name} clean — ${pricingSizes[i]}`,
-      description: tier.desc,
+      '@id': `${url}/#offer-${tier.key}-${i + 1}`,
+      name: `${tier.label} — ${propertySizes[i].label}`,
+      description: `${tier.label} for a ${propertySizes[i].label.toLowerCase()}, flat rate per visit.`,
       priceCurrency: currency.code,
       price,
       availability: 'https://schema.org/InStock',
@@ -369,7 +406,7 @@ export function pricingPageGraph() {
         '@type': 'UnitPriceSpecification',
         priceCurrency: currency.code,
         price,
-        unitText: pricingSizes[i],
+        unitText: propertySizes[i].label,
       },
     }))
   );
@@ -382,7 +419,7 @@ export function pricingPageGraph() {
         '@id': `${url}/#webpage`,
         url,
         name: `Cleaning Prices in ${business.address.city}, ${business.address.region}`,
-        description: `Flat cleaning prices by property size. Basic, Standard and Premium packages from ${currency.format(Math.min(...allPrices))}.`,
+        description: `Flat cleaning prices by property size. Basic, Standard, Deep and Move in / out cleans from ${currency.format(Math.min(...allPrices))}.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
         inLanguage: 'en-AE',
@@ -395,7 +432,7 @@ export function pricingPageGraph() {
         '@type': 'OfferCatalog',
         '@id': `${url}/#catalog`,
         name: `${business.name} cleaning packages`,
-        provider: compactProvider(),
+        provider: { '@id': BUSINESS_ID },
         itemListElement: offers,
       },
       {
@@ -423,7 +460,7 @@ export function aboutPageGraph() {
         name: `About ${business.name}`,
         description: business.description,
         isPartOf: { '@id': SITE_ID },
-        about: { '@id': LOCAL_ID },
+        about: { '@id': BUSINESS_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
         inLanguage: 'en-AE',
       },
@@ -447,7 +484,7 @@ export function contactPageGraph() {
         name: `Contact ${business.name}`,
         description: `Call, email or message ${business.name} for a free cleaning quote in ${business.address.city}.`,
         isPartOf: { '@id': SITE_ID },
-        about: { '@id': LOCAL_ID },
+        about: { '@id': BUSINESS_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
         inLanguage: 'en-AE',
       },

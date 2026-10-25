@@ -10,6 +10,29 @@ const nextConfig = {
   compress: true,
   // Pin the workspace root so Next doesn't pick up a stray parent lockfile.
   turbopack: { root: __dirname },
+  // Canonical host is https://www.quickclean.ae. Send the bare apex to www
+  // with a 301 so search engines consolidate signals on one host. Vercel's
+  // domain settings must agree (see README → Domains).
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'quickclean.ae' }],
+        destination: 'https://www.quickclean.ae/:path*',
+        permanent: true,
+      },
+      // Area pages live in app/areas/[area] but are published at
+      // /cleaning-services-<area>; keep the internal path out of the index.
+      {
+        source: '/areas/:area',
+        destination: '/cleaning-services-:area',
+        permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [{ source: '/cleaning-services-:area', destination: '/areas/:area' }];
+  },
   // Long-cache the immutable static assets for better Core Web Vitals (a ranking factor).
   async headers() {
     return [

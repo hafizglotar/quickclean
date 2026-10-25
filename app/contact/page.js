@@ -3,10 +3,20 @@ import Footer from '../components/Footer';
 import Animations from '../components/Animations';
 import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
+import MapEmbed from '../components/MapEmbed';
+import { AreaChips } from '../components/AreasServed';
 import { Faq } from '../components/Sections';
 import { ArrowRight, Phone } from '../components/icons';
-import { ADDRESS, business, SITE_URL } from '../lib/business';
+import {
+  business,
+  formatAddress,
+  googleBusinessProfileUrl,
+  hoursRows,
+  mapsSearchUrl,
+  SITE_URL,
+} from '../lib/business';
 import { contactPageGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 
 const place = `${business.address.city}, ${business.address.region}`;
 
@@ -25,27 +35,12 @@ export const metadata = {
   },
 };
 
-// Turns the openingHours data into "Monday – Friday" style rows.
-function hoursRows() {
-  return business.openingHours.map((o) => {
-    const days =
-      o.days.length === 1 ? o.days[0] : `${o.days[0]} – ${o.days[o.days.length - 1]}`;
-    return { days, hours: `${o.opens} – ${o.closes}` };
-  });
-}
-
 export default function ContactPage() {
   const rows = hoursRows();
-  const closedDays = ['Sunday'].filter(
-    (d) => !business.openingHours.some((o) => o.days.includes(d))
-  );
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageGraph()) }}
-      />
+      <JsonLd data={contactPageGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">
@@ -88,6 +83,16 @@ export default function ContactPage() {
                   <dd>
                     <a href={`mailto:${business.email}`}>{business.email}</a>
                   </dd>
+                  {googleBusinessProfileUrl && (
+                    <>
+                      <dt>Google</dt>
+                      <dd>
+                        <a href={googleBusinessProfileUrl} target="_blank" rel="noopener noreferrer">
+                          Google Business Profile
+                        </a>
+                      </dd>
+                    </>
+                  )}
                 </dl>
               </article>
 
@@ -100,12 +105,6 @@ export default function ContactPage() {
                       <dd>{r.hours}</dd>
                     </div>
                   ))}
-                  {closedDays.map((d) => (
-                    <div className="hours-row" key={d}>
-                      <dt>{d}</dt>
-                      <dd>Closed</dd>
-                    </div>
-                  ))}
                 </dl>
               </article>
 
@@ -114,13 +113,11 @@ export default function ContactPage() {
                 <address>
                   {business.legalName}
                   <br />
-                  {ADDRESS}
+                  {formatAddress()}
                 </address>
                 <a
                   className="contact-map-link"
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    `${business.legalName}, ${ADDRESS}`
-                  )}`}
+                  href={mapsSearchUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -130,14 +127,11 @@ export default function ContactPage() {
 
               <article className="contact-card reveal">
                 <h2>Areas we serve</h2>
-                <ul className="chips">
-                  {business.areaServed.map((city) => (
-                    <li className="chip" key={city}>
-                      {city}
-                    </li>
-                  ))}
-                </ul>
+                <AreaChips />
               </article>
+            </div>
+            <div className="reveal">
+              <MapEmbed />
             </div>
           </div>
         </section>

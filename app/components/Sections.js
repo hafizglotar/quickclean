@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { business, stats, trustLogos, services, whyPoints, steps, reviews, faqs } from '../lib/business';
+import { services, whyPoints, steps, faqs } from '../lib/business';
+import { stats, trustLogos, testimonials } from '../lib/social-proof';
 import { ArrowRight, Bolt, Check, ShieldCheck, Star, Stars } from './icons';
 import ServiceCard from './ServiceCard';
 import { PricingCards } from './PricingTable';
 
 export function TrustBar() {
+  if (!trustLogos.length) return null;
   return (
     <section className="trustbar" aria-label="Trusted by">
       <div className="container trustbar-inner">
@@ -20,6 +22,7 @@ export function TrustBar() {
 }
 
 export function Stats() {
+  if (!stats.length) return null;
   return (
     <section className="stats" aria-label="Quick Clean by the numbers">
       <div className="container stats-grid">
@@ -104,7 +107,7 @@ export function WhyUs() {
           </div>
           <div className="why-floaters" aria-hidden="true">
             <span className="floater f1">
-              <Star size={14} /> {business.rating.value} average rating
+              <Star size={14} /> Flat, upfront pricing
             </span>
             <span className="floater f2">
               <Bolt /> Booked in 60s
@@ -174,16 +177,17 @@ export function Pricing() {
 }
 
 export function Reviews() {
+  if (!testimonials.length) return null;
   return (
     <section className="section reviews" id="reviews">
       <div className="container">
         <div className="section-head reveal">
           <span className="kicker">Real customers</span>
-          <h2>{business.rating.count.toLocaleString()}+ five-star cleans and counting.</h2>
+          <h2>What Our Customers Say</h2>
         </div>
 
         <div className="reviews-grid">
-          {reviews.map((r) => (
+          {testimonials.map((r) => (
             <figure className="review" key={r.name}>
               <Stars />
               <blockquote>{r.quote}</blockquote>

@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ADDRESS, business } from '../lib/business';
+import { business, formatAddress, hoursRows } from '../lib/business';
+import { areas, areaPath } from '../lib/areas';
+import { hasReviews, rating } from '../lib/social-proof';
 import { Logo, Stars } from './icons';
 
 export default function Footer() {
@@ -12,11 +14,17 @@ export default function Footer() {
             <Logo light />
           </Link>
           <p>Spotless homes and offices, guaranteed. Vetted pros, flat pricing, zero hassle.</p>
-          <div className="footer-rating">
-            <Stars size={13} decorative />{' '}
-            {business.rating.value}/5 from {business.rating.count.toLocaleString()}+ customers
-          </div>
-          <address className="footer-address">{ADDRESS}</address>
+          {rating && (
+            <div className="footer-rating">
+              <Stars size={13} decorative /> {rating.value}/{rating.best} from{' '}
+              {rating.count.toLocaleString()}+ customers
+            </div>
+          )}
+          <address className="footer-address">
+            {business.legalName}
+            <br />
+            {formatAddress()}
+          </address>
         </div>
 
         <div className="footer-col">
@@ -38,11 +46,20 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
+          <h4>Areas we serve</h4>
+          {areas.map((a) => (
+            <Link href={areaPath(a.slug)} key={a.slug}>
+              {a.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="footer-col">
           <h4>Company</h4>
           <Link href="/about">About us</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/#reviews">Reviews</Link>
+          {hasReviews && <Link href="/#reviews">Reviews</Link>}
           <Link href="/#faq">FAQ</Link>
         </div>
 
@@ -50,6 +67,13 @@ export default function Footer() {
           <h4>Get in touch</h4>
           <a href={`tel:${business.telephone}`}>{business.telephoneDisplay}</a>
           <a href={`mailto:${business.email}`}>{business.email}</a>
+          <div className="footer-hours" aria-label="Opening hours">
+            {hoursRows().map((r) => (
+              <span key={r.days}>
+                {r.days}: {r.hours}
+              </span>
+            ))}
+          </div>
           <a href="#quote" className="btn btn-primary btn-sm">
             Get a free quote
           </a>

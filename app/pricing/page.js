@@ -7,14 +7,16 @@ import QuoteSection from '../components/QuoteSection';
 import { Faq, HowItWorks } from '../components/Sections';
 import { PricingAddOns, PricingCards, PricingMatrix } from '../components/PricingTable';
 import { ArrowRight, Check } from '../components/icons';
-import { business, currency, pricingTiers, SITE_URL } from '../lib/business';
+import { business, currency, SITE_URL } from '../lib/business';
+import { lowestPackagePrice } from '../lib/pricing';
 import { pricingPageGraph } from '../lib/jsonld';
+import JsonLd from '../components/seo/JsonLd';
 
 const place = `${business.address.city}, ${business.address.region}`;
-const lowest = Math.min(...pricingTiers.flatMap((t) => t.prices));
+const lowest = lowestPackagePrice;
 
 const title = `Cleaning Prices in ${place} — From ${currency.format(lowest)}`;
-const description = `Flat cleaning prices from ${business.name}, by property size. Basic, Standard and Premium packages from ${currency.format(
+const description = `Flat cleaning prices from ${business.name}, by property size. Basic, Standard and Deep packages from ${currency.format(
   lowest
 )} per visit — studio apartments up to 6 bedroom villas. No hourly rates, no surprise fees.`;
 
@@ -33,10 +35,7 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingPageGraph()) }}
-      />
+      <JsonLd data={pricingPageGraph()} />
       <Header />
       <main>
         <section className="subpage-hero">
@@ -83,8 +82,8 @@ export default function PricingPage() {
               <span className="kicker">Choose a package</span>
               <h2>Three packages. One flat price.</h2>
               <p className="section-lead">
-                Start with Basic for upkeep, Standard for the detail most homes need, or Premium
-                for deep cleans, move-outs and handovers.
+                Start with Basic for upkeep, Standard for the detail most homes need, or Deep for a
+                full top-to-bottom reset. Moving? Move in / out prices are in the table below.
               </p>
             </div>
             <PricingCards />

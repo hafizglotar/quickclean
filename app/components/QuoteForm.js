@@ -105,7 +105,7 @@ export default function QuoteForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="(555) 123-4567"
+            placeholder="+971 50 123 4567"
             value={values.phone}
             onChange={update('phone')}
           />

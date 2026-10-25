@@ -6,11 +6,14 @@ import Animations from '../../components/Animations';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
+import GoogleReviews from '../../components/GoogleReviews';
+import AreasServed from '../../components/AreasServed';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
-import { ArrowRight, Check, ServiceIcon, Star } from '../../components/icons';
+import { ArrowRight, Check, ServiceIcon } from '../../components/icons';
 import { business, services, getService, currency, SITE_URL } from '../../lib/business';
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
+import JsonLd from '../../components/seo/JsonLd';
 
 // Pre-render one static page per service at build time.
 export function generateStaticParams() {
@@ -23,18 +26,28 @@ export async function generateMetadata({ params }) {
   const content = getServiceContent(slug);
   if (!svc || !content) return {};
 
-  const place = `${business.address.city}, ${business.address.region}`;
-  const title = `Professional ${svc.title.toLowerCase()} services in ${place}`;
+  const url = `${SITE_URL}/services/${slug}`;
+  const title = `${svc.name} in ${business.address.city} | ${business.name}`;
+  const description = content.metaDescription;
 
-  return{
-    title,
-    description: content.subhead,
-    alternates: { canonical: `${SITE_URL}/services/${slug}` },
+  // The per-service social image comes from ./opengraph-image.js (file
+  // convention), which Next wires into both og:image and twitter:image.
+  return {
+    title: { absolute: title },
+    description,
+    alternates: { canonical: url },
     openGraph: {
-      title: `${title} | ${business.name}`,
-      description: content.subhead,
-      url: `${SITE_URL}/services/${slug}`,
+      title,
+      description,
+      url,
       type: 'website',
+      locale: 'en-AE',
+      siteName: business.name,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
     },
   };
 }
@@ -50,10 +63,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicePageGraph(slug)) }}
-      />
+      <JsonLd data={servicePageGraph(slug)} />
       <Header />
       <main>
         {/* Hero */}
@@ -72,7 +82,7 @@ export default async function ServicePage({ params }) {
                 <ServiceIcon name={svc.icon} size={16} /> {content.serviceType}
               </span>
               <h1>
-                Professional {svc.title.toLowerCase()} services in {place}
+                Professional {svc.name} Services in {place}
               </h1>
               <p className="section-lead">{content.subhead}</p>
               <div className="subpage-hero-cta">
@@ -107,11 +117,8 @@ export default async function ServicePage({ params }) {
                   <strong>{content.turnaround}</strong>
                 </div>
                 <div className="svc-fact">
-                  <span>Rating</span>
-                  <strong className="fact-rating">
-                    <Star size={13} /> {business.rating.value}/5 (
-                    {business.rating.count.toLocaleString()}+)
-                  </strong>
+                  <span>Supplies</span>
+                  <strong>Eco-friendly, included</strong>
                 </div>
                 <div className="svc-fact">
                   <span>Guarantee</span>
@@ -131,7 +138,7 @@ export default async function ServicePage({ params }) {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">What you get</span>
-              <h2>What&apos;s Included in Our {svc.title.toLowerCase()} Services in Dubai?</h2>
+              <h2>What&apos;s Included in Our {svc.name} Service in Dubai?</h2>
               <p className="section-lead">{content.intro}</p>
             </div>
             <ul className="includes-grid">
@@ -159,13 +166,14 @@ export default async function ServicePage({ params }) {
         <WhyUs />
         <HowItWorks />
         <Reviews />
+        <GoogleReviews />
 
         {/* Service-specific FAQ */}
         <section className="section faq" id="faq">
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">{svc.title} FAQ</span>
-              <h2>Frequently Asked Questions About {svc.title.toLowerCase()} Services in Dubai</h2>
+              <h2>Frequently Asked Questions About {svc.name} in Dubai</h2>
             </div>
             <div className="faq-list">
               {content.faqs.map((f) => (
@@ -186,7 +194,7 @@ export default async function ServicePage({ params }) {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">More services</span>
-              <h2>Explore Our Other cleaning Services in Dubai</h2>
+              <h2>Explore Our Other Cleaning Services in Dubai</h2>
             </div>
             <div className="services-grid">
               {related.map((s) => (
@@ -196,6 +204,7 @@ export default async function ServicePage({ params }) {
           </div>
         </section>
 
+        <AreasServed />
         <QuoteSection />
       </main>
       <Footer />

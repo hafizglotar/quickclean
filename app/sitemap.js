@@ -1,17 +1,29 @@
-import { SITE_URL, services } from './lib/business';
+import { SITE_URL, services, pageUpdatedAt } from './lib/business';
+import { getServiceContent } from './lib/services-content';
+import { areas, areaPath } from './lib/areas';
 
-// Generates /sitemap.xml
+/* Generates /sitemap.xml.
+   lastModified comes from the `updatedAt` fields in the data files rather
+   than the build time, so a redeploy with no content change does not tell
+   crawlers every page is new. */
+const date = (iso) => new Date(iso);
+
 export default function sitemap() {
-  const now = new Date();
   return [
-    { url: `${SITE_URL}/`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${SITE_URL}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
-    { url: `${SITE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
+    { url: `${SITE_URL}/`, lastModified: date(pageUpdatedAt.home), changeFrequency: 'weekly', priority: 1 },
+    { url: `${SITE_URL}/pricing`, lastModified: date(pageUpdatedAt.pricing), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/services`, lastModified: date(pageUpdatedAt.services), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/about`, lastModified: date(pageUpdatedAt.about), changeFrequency: 'yearly', priority: 0.6 },
+    { url: `${SITE_URL}/contact`, lastModified: date(pageUpdatedAt.contact), changeFrequency: 'yearly', priority: 0.7 },
     ...services.map((s) => ({
       url: `${SITE_URL}/services/${s.slug}`,
-      lastModified: now,
+      lastModified: date(getServiceContent(s.slug)?.updatedAt || pageUpdatedAt.services),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
+    ...areas.map((a) => ({
+      url: `${SITE_URL}${areaPath(a.slug)}`,
+      lastModified: date(a.updatedAt),
       changeFrequency: 'monthly',
       priority: 0.8,
     })),

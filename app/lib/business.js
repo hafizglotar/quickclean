@@ -12,6 +12,8 @@
    ============================================================ */
 
 
+import { currency, servicePrice, PRICE_RANGE, startingPrices } from './pricing.js';
+
 // IMPORTANT: set this to your real domain before launch (no trailing slash).
 export const SITE_URL = 'https://www.quickclean.ae';
 /* ---- Contact details ----
@@ -19,17 +21,11 @@ export const SITE_URL = 'https://www.quickclean.ae';
    node updates with them. PHONE is written for display; the tel: href is
    derived from it below by stripping the spaces. */
 export const PHONE = '+971 58 933 1711';
-export const ADDRESS = 'Dubai, UAE';
 export const SERVICE_AREAS =
   'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
 
-// Currency — single switch for the whole site's pricing.
-// `code` is the ISO code used in structured data; `format` renders a bare amount.
-export const currency = {
-  code: 'AED',
-  symbol: 'AED',
-  format: (amount) => `AED ${amount}`,
-};
+// Currency and every price live in pricing.js — the single source of truth.
+export { currency };
 
 // "From AED 99" / "Custom quote" label for a service.
 export function fromLabel(service) {
@@ -59,10 +55,12 @@ export const business = {
   whatsapp: '923116229099',
   email: 'info@quickclean.ae',
 
-  // `street` and `postalCode` are intentionally blank: ADDRESS above is a
-  // placeholder and the UAE does not use postal codes. Schema omits empties.
+  // TODO: replace STREET_ADDRESS_TODO with the real street address (building,
+  // street, community). Anything still containing "TODO" is skipped by the
+  // schema and the visible pages until it is filled in. The UAE does not use
+  // postal codes, so `postalCode` stays blank.
   address: {
-    street: '',
+    street: 'STREET_ADDRESS_TODO',
     city: 'Dubai',
     region: 'UAE',
     regionName: 'United Arab Emirates',
@@ -73,95 +71,139 @@ export const business = {
   // Used for LocalBusiness geo (helps Google Maps / local + GEO geographic ranking).
   geo: { latitude: 25.2048, longitude: 55.2708 },
 
-  // Cities you serve — drives local SEO + "near me" / geographic answers.
-  areaServed: [
-    'Dubai',
-    'Sharjah',
-    'Ajman',
-    'Dubai Marina',
-    'Downtown Dubai',
-    'JVC',
-    'Business Bay',
-  ],
+  // TODO: paste the "Embed a map" iframe src from Google Maps (Share → Embed a
+  // map). The contact page shows a placeholder panel until this is real.
+  map: { embedUrl: 'TODO_GOOGLE_MAPS_EMBED_URL' },
+
+  // Emirates served — drives the LocalBusiness areaServed and the footer.
+  // Individual communities (Dubai Marina, JVC, ...) live in lib/areas.js.
+  areaServed: ['Dubai', 'Sharjah', 'Ajman'],
 
   openingHours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
     { days: ['Saturday'], opens: '09:00', closes: '16:00' },
   ],
 
-  priceRange: 'AED 69–189',
+  priceRange: PRICE_RANGE,
 
-  rating: { value: 4.9, count: 2300, best: 5 },
-
+  // TODO: replace each placeholder with the real profile URL. Entries still
+  // containing "TODO" are left out of sameAs and never rendered.
   social: {
-    facebook: 'https://www.facebook.com/quickclean',
-    instagram: 'https://www.instagram.com/quickclean',
-    yelp: 'https://www.yelp.com/biz/quick-clean',
+    googleBusinessProfile: 'TODO_GOOGLE_BUSINESS_PROFILE_URL',
+    instagram: 'TODO_INSTAGRAM_URL',
+    facebook: 'TODO_FACEBOOK_URL',
   },
 };
 
-export const sameAs = Object.values(business.social);
+/** True for a value that is still a TODO placeholder (never emit these). */
+export function isPlaceholder(value) {
+  return typeof value === 'string' && /TODO/.test(value);
+}
+
+/** Google Business Profile URL, or null while it is still the TODO placeholder. */
+export const googleBusinessProfileUrl = isPlaceholder(business.social.googleBusinessProfile)
+  ? null
+  : business.social.googleBusinessProfile;
+
+/** One-line postal address for the footer, contact page and map links.
+ *  The street is included only once its TODO placeholder has been replaced. */
+export function formatAddress() {
+  const a = business.address;
+  return [a.street && !isPlaceholder(a.street) ? a.street : null, a.city, a.regionName]
+    .filter(Boolean)
+    .join(', ');
+}
+
+/** Google Maps search link for the address (works before the embed exists). */
+export function mapsSearchUrl() {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${business.legalName}, ${formatAddress()}`
+  )}`;
+}
+
+const WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+/** Opening hours as display rows, e.g. { days: 'Monday – Friday', hours: '08:00 – 18:00' },
+ *  followed by a "Closed" row for any day not covered. */
+export function hoursRows() {
+  const rows = business.openingHours.map((o) => ({
+    days: o.days.length === 1 ? o.days[0] : `${o.days[0]} – ${o.days[o.days.length - 1]}`,
+    hours: `${o.opens} – ${o.closes}`,
+  }));
+  const closed = WEEK.filter((d) => !business.openingHours.some((o) => o.days.includes(d)));
+  return [...rows, ...closed.map((d) => ({ days: d, hours: 'Closed' }))];
+}
+
+// Social / profile URLs that are real, for schema.org sameAs.
+export const sameAs = Object.values(business.social).filter((u) => u && !isPlaceholder(u));
+
+/* ---------------- Page timestamps ----------------
+   Feeds <lastmod> in sitemap.xml. Bump the date when you change a page's
+   content; service and area pages carry their own `updatedAt` in
+   services-content.js and areas.js. */
+export const pageUpdatedAt = {
+  home: '2026-10-25',
+  pricing: '2026-10-25',
+  services: '2026-10-25',
+  about: '2026-10-25',
+  contact: '2026-10-25',
+};
 
 /* ---------------- Content data (shared by UI + schema) ---------------- */
 
-export const stats = [
-  { value: 47000, suffix: '', label: 'Cleans completed' },
-  { value: 2300, suffix: '', label: '5-star reviews' },
-  { value: 98, suffix: '%', label: 'Re-book rate' },
-  { value: 60, suffix: 's', label: 'To book online' },
-];
-
-export const trustLogos = [
-  'Northside Realty',
-  'Brightwork Offices',
-  'Maple Property Co.',
-  'Harbor Dental',
-  'Lumen Studios',
-];
+// Ratings, stats, client logos and testimonials live in social-proof.js.
 
 // `icon` is a key into SERVICE_ICONS in components/icons.js (real SVG icons, not emoji).
+// `title` is the short label for cards and navigation; `name` is the full
+// Title Case service name used in page titles, headings and schema.
 export const services = [
   {
     slug: 'residential-cleaning',
     icon: 'home',
     title: 'Residential Cleaning',
+    name: 'Residential Cleaning',
     desc: 'Reliable residential cleaning in Dubai for recurring or one-time visits that keep your home fresh, top to bottom.',
-    price: 99,
+    price: servicePrice('residential-cleaning'),
   },
   {
     slug: 'deep-cleaning',
     icon: 'sparkle',
     title: 'Deep Cleaning',
+    name: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
-    price: 179,
+    price: servicePrice('deep-cleaning'),
   },
   {
     slug: 'move-in-move-out-cleaning',
     icon: 'box',
     title: 'Move In / Move Out',
+    name: 'Move In / Move Out Cleaning',
     desc: 'Move-in and move-out cleaning in Dubai to help leave your apartment or villa spotless and inspection-ready.',
-    price: 189
+    price: servicePrice('move-in-move-out-cleaning'),
   },
   {
     slug: 'office-commercial-cleaning',
     icon: 'building',
     title: 'Office & Commercial',
+    name: 'Office & Commercial Cleaning',
     desc: 'Professional office and commercial cleaning in Dubai with flexible after-hours service for a clean, healthy workspace.',
-    price: null,
+    price: servicePrice('office-commercial-cleaning'),
   },
   {
     slug: 'carpet-upholstery-cleaning',
     icon: 'sofa',
     title: 'Carpet & Upholstery',
+    name: 'Carpet & Upholstery Cleaning',
     desc: 'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, and built-up dirt.',
-    price: 89,
+    price: servicePrice('carpet-upholstery-cleaning'),
   },
   {
     slug: 'window-glass-cleaning',
     icon: 'window',
     title: 'Window & Glass',
+    name: 'Window & Glass Cleaning',
     desc: 'Professional window and glass cleaning in Dubai for clear, streak-free results inside and out.',
-    price: 69,
+    price: servicePrice('window-glass-cleaning'),
   },
 ];
 
@@ -196,101 +238,8 @@ export const steps = [
 ];
 
 /* ---------------- Pricing ----------------
-   Three packages, each priced by property size. `prices` is indexed
-   against `pricingSizes` below, so both arrays must stay the same length.
-   Entry prices match the headline rates used across the site
-   (standard 99, deep 179, move-out 189) and scale up with size. */
-
-export const pricingSizes = [
-  'Studio & 1 BR Apt',
-  '2 BR Apartment',
-  '3 BR Apartment',
-  '4 BR Villa',
-  '5 BR Villa',
-  '6 BR Villa',
-];
-
-export const pricingTiers = [
-  {
-    name: 'Basic',
-    slug: 'basic',
-    desc: 'The essential clean that keeps an already-tidy home fresh.',
-    prices: [99, 129, 159, 199, 239, 279],
-    feats: [
-      'Full standard clean, top to bottom',
-      'Kitchen & bathrooms detailed',
-      'Floors vacuumed & mopped',
-      'Dusting, surfaces & bins emptied',
-      '100% Spotless Guarantee',
-    ],
-    cta: 'Book a basic clean',
-    featured: false,
-  },
-  {
-    name: 'Standard',
-    slug: 'standard',
-    desc: 'Our most popular package — everything in Basic, in more detail.',
-    prices: [149, 189, 229, 279, 329, 379],
-    feats: [
-      'Everything in Basic',
-      'We bring all supplies & equipment',
-      'Inside microwave & appliance fronts',
-      'Baseboards, doors & switch plates',
-      'Same trusted cleaner each visit',
-      'Priority scheduling',
-    ],
-    cta: 'Book a standard clean',
-    featured: true,
-  },
-  {
-    name: 'Premium',
-    slug: 'premium',
-    desc: 'The full detailed reset for deep cleans, move-outs and handovers.',
-    prices: [189, 239, 289, 349, 409, 469],
-    feats: [
-      'Everything in Standard',
-      'Inside oven, fridge & cabinets',
-      'Grout, vents & light fixtures',
-      'Interior windows & glass',
-      'Inspection-ready finish',
-      'Dedicated account manager',
-    ],
-    cta: 'Book a premium clean',
-    featured: false,
-  },
-];
-
-// Extras priced off the service catalogue above, so the numbers never drift.
-export const pricingAddOnSlugs = ['carpet-upholstery-cleaning', 'window-glass-cleaning'];
-
-// Lowest advertised price for a tier — used for "from" labels and schema.
-export function tierFrom(tier) {
-  return Math.min(...tier.prices);
-}
-
-export const reviews = [
-  {
-    initials: 'SM',
-    name: 'Sarah M.',
-    meta: 'Bi-weekly plan · Downtown',
-    quote:
-      'I booked at 9am and my apartment was spotless by 4pm. The cleaner was lovely and didn’t miss a thing. This is my go-to now.',
-  },
-  {
-    initials: 'DJ',
-    name: 'Dr. James K.',
-    meta: 'Office cleaning · Harbor Dental',
-    quote:
-      'We use Quick Clean for our dental office. Reliable, professional, and the place always smells incredible. Never had a no-show.',
-  },
-  {
-    initials: 'AR',
-    name: 'Alicia R.',
-    meta: 'Move-out clean · Maple Ave',
-    quote:
-      'Got my full deposit back after a move-out clean. The landlord said it was the cleanest unit he’d seen. Worth every dirham.',
-  },
-];
+   Sizes, clean types, package cards and the flat-rate function all live in
+   pricing.js so the numbers are defined exactly once. */
 
 // AEO/GEO gold: clear, self-contained Q&A. Powers both the visible FAQ and FAQPage schema.
 export const faqs = [
@@ -316,7 +265,7 @@ export const faqs = [
   },
   {
     q: 'How much does house cleaning cost with Quick Clean?',
-    a: 'Basic cleans start at AED 99, our Standard package is AED 149, deep cleans at AED 179, and move-in/move-out cleans at AED 189. You see your exact flat rate before you book — pricing depends on home size and location.',
+    a: `Basic cleans start at ${currency.format(startingPrices.basic)}, our Standard package from ${currency.format(startingPrices.standard)}, deep cleans from ${currency.format(startingPrices.deep)}, and move-in/move-out cleans from ${currency.format(startingPrices.moveInOut)}. You see your exact flat rate before you book — pricing depends on home size and the number of bathrooms.`,
   },
   {
     q: 'Which areas do you serve?',
