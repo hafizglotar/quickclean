@@ -6,6 +6,7 @@ import Animations from '../components/Animations';
 import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
 import GoogleReviews from '../components/GoogleReviews';
+import { AreaChips } from '../components/AreasServed';
 import { Reviews, Stats, WhyUs } from '../components/Sections';
 import { ArrowRight, Check } from '../components/icons';
 import { business, SITE_URL } from '../lib/business';
@@ -120,13 +121,9 @@ export default function AboutPage() {
   Sharjah, Ajman, and surrounding communities.
               </p>
             </div>
-            <ul className="chips reveal">
-              {business.areaServed.map((city) => (
-                <li className="chip" key={city}>
-                  {city}
-                </li>
-              ))}
-            </ul>
+            <div className="reveal">
+              <AreaChips />
+            </div>
           </div>
         </section>
 

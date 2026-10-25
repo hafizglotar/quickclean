@@ -25,8 +25,9 @@ import {
   getService,
   isPlaceholder,
 } from './business.js';
-import { cleanTypes, propertySizes } from './pricing.js';
+import { cleanTypes, lowestPackagePrice, propertySizes } from './pricing.js';
 import { getServiceContent } from './services-content.js';
+import { areaPath, getArea } from './areas.js';
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const BUSINESS_ID = `${SITE_URL}/#business`;
@@ -310,6 +311,75 @@ export function servicesIndexGraph() {
           url: serviceUrl(s.slug),
         })),
       },
+    ],
+  };
+}
+
+/* ---------------- Area (location) pages ---------------- */
+
+/** Full JSON-LD graph for /cleaning-services-<area>. */
+export function areaPageGraph(slug) {
+  const area = getArea(slug);
+  if (!area) return null;
+  const url = `${SITE_URL}${areaPath(slug)}`;
+  const name = `House Cleaning Services in ${area.name}`;
+  const place = {
+    '@type': 'City',
+    name: area.name,
+    containedInPlace: { '@type': 'AdministrativeArea', name: area.containedIn },
+  };
+  const prices = cleanTypes.flatMap((t) =>
+    t.prices.filter((_, i) => area.propertySizeKeys.includes(propertySizes[i].key))
+  );
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${url}/#service`,
+        name,
+        serviceType: 'House cleaning',
+        description: area.metaDescription,
+        url,
+        provider: { '@id': BUSINESS_ID },
+        areaServed: place,
+        category: 'Cleaning service',
+        offers: {
+          '@type': 'AggregateOffer',
+          url,
+          priceCurrency: currency.code,
+          lowPrice: Math.min(lowestPackagePrice, ...prices),
+          highPrice: Math.max(...prices),
+          offerCount: prices.length,
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: `Cleaning services in ${area.name}`,
+          itemListElement: services.map((s) => ({
+            '@type': 'Offer',
+            url: serviceUrl(s.slug),
+            ...(s.price ? { price: s.price, priceCurrency: currency.code } : {}),
+            itemOffered: { '@type': 'Service', '@id': `${serviceUrl(s.slug)}/#service`, name: s.name || s.title },
+          })),
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name,
+        description: area.metaDescription,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': `${url}/#service` },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-AE',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name, url },
+      ]),
+      faqPage(`${url}/#faq`, area.faqs),
     ],
   };
 }

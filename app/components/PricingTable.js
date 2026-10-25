@@ -5,12 +5,13 @@ import { ArrowRight, Check } from './icons';
 
 /* Full matrix: every clean type priced against every property size.
    Scrolls horizontally on small screens rather than squashing. */
-export function PricingMatrix() {
+export function PricingMatrix({ sizes, caption }) {
+  const rows = sizes ? propertySizes.filter((s) => sizes.includes(s.key)) : propertySizes;
   return (
     <div className="price-matrix-wrap">
       <table className="price-matrix">
         <caption className="sr-only">
-          Cleaning prices by clean type and property size, in {currency.code}
+          {caption || `Cleaning prices by clean type and property size, in ${currency.code}`}
         </caption>
         <thead>
           <tr>
@@ -24,16 +25,19 @@ export function PricingMatrix() {
           </tr>
         </thead>
         <tbody>
-          {propertySizes.map((size, i) => (
-            <tr key={size.key}>
-              <th scope="row">{size.label}</th>
-              {cleanTypes.map((t) => (
-                <td key={t.key} className={t.featured ? 'is-featured' : undefined}>
-                  {currency.format(t.prices[i])}
-                </td>
-              ))}
-            </tr>
-          ))}
+          {rows.map((size) => {
+            const i = propertySizes.indexOf(size);
+            return (
+              <tr key={size.key}>
+                <th scope="row">{size.label}</th>
+                {cleanTypes.map((t) => (
+                  <td key={t.key} className={t.featured ? 'is-featured' : undefined}>
+                    {currency.format(t.prices[i])}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

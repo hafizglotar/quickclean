@@ -21,7 +21,17 @@ const nextConfig = {
         destination: 'https://www.quickclean.ae/:path*',
         permanent: true,
       },
+      // Area pages live in app/areas/[area] but are published at
+      // /cleaning-services-<area>; keep the internal path out of the index.
+      {
+        source: '/areas/:area',
+        destination: '/cleaning-services-:area',
+        permanent: true,
+      },
     ];
+  },
+  async rewrites() {
+    return [{ source: '/cleaning-services-:area', destination: '/areas/:area' }];
   },
   // Long-cache the immutable static assets for better Core Web Vitals (a ranking factor).
   async headers() {

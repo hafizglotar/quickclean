@@ -4,6 +4,7 @@ import Animations from '../components/Animations';
 import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
 import MapEmbed from '../components/MapEmbed';
+import { AreaChips } from '../components/AreasServed';
 import { Faq } from '../components/Sections';
 import { ArrowRight, Phone } from '../components/icons';
 import {
@@ -126,13 +127,7 @@ export default function ContactPage() {
 
               <article className="contact-card reveal">
                 <h2>Areas we serve</h2>
-                <ul className="chips">
-                  {business.areaServed.map((city) => (
-                    <li className="chip" key={city}>
-                      {city}
-                    </li>
-                  ))}
-                </ul>
+                <AreaChips />
               </article>
             </div>
             <div className="reveal">

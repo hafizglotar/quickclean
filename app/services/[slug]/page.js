@@ -7,6 +7,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
 import GoogleReviews from '../../components/GoogleReviews';
+import AreasServed from '../../components/AreasServed';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
 import { ArrowRight, Check, ServiceIcon } from '../../components/icons';
 import { business, services, getService, currency, SITE_URL } from '../../lib/business';
@@ -203,6 +204,7 @@ export default async function ServicePage({ params }) {
           </div>
         </section>
 
+        <AreasServed />
         <QuoteSection />
       </main>
       <Footer />
