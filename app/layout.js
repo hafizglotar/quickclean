@@ -42,13 +42,15 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  // One description everywhere: <meta name="description">, og:description and
+  // twitter:description must say the same thing.
   openGraph: {
     type: 'website',
     locale: 'en-AE',
     url: SITE_URL,
     siteName: business.name,
     title,
-    description: business.description,
+    description,
   },
   twitter: {
     card: 'summary_large_image',
