@@ -35,11 +35,11 @@ Premium: the full service, with linens, laundry, supplies and amenities provided
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Other services:
 - Deep cleaning — custom quote
@@ -238,7 +238,7 @@ Prices in Dubai Marina (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
 
 Services available in Dubai Marina:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -278,7 +278,7 @@ Prices in Downtown Dubai (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
 
 Services available in Downtown Dubai:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -318,11 +318,11 @@ Prices in JVC (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in JVC:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -401,11 +401,11 @@ Prices in Sharjah (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Sharjah:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -445,11 +445,11 @@ Prices in Ajman (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Ajman:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -489,9 +489,9 @@ Prices in Dubai South (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
 
 Services available in Dubai South:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -531,7 +531,7 @@ Prices in Expo City Dubai (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
 
 Services available in Expo City Dubai:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -570,9 +570,9 @@ Prices in Jebel Ali (AED, per visit, flat rate by property size):
 |---|---|---|---|
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
 
 Services available in Jebel Ali:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -612,11 +612,11 @@ Prices in Al Furjan (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Al Furjan:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -695,11 +695,11 @@ Prices in Dubai Investment Park (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Dubai Investment Park:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -739,7 +739,7 @@ Prices in JLT (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
 
 Services available in JLT:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -779,10 +779,10 @@ Prices in Palm Jumeirah (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Palm Jumeirah:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -822,11 +822,11 @@ Prices in Dubai Sports City (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Dubai Sports City:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -866,9 +866,9 @@ Prices in Motor City (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
 
 Services available in Motor City:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -905,10 +905,10 @@ Prices follow the flat table below for the villa and townhouse sizes found in Ar
 Prices in Arabian Ranches (AED, per visit, flat rate by property size):
 | Property size | Basic | Standard | Premium |
 |---|---|---|---|
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Arabian Ranches:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -948,11 +948,11 @@ Prices in Damac Hills (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Damac Hills:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -992,11 +992,11 @@ Prices in Dubai Hills Estate (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Dubai Hills Estate:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1036,9 +1036,9 @@ Prices in Mudon (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
 
 Services available in Mudon:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1078,8 +1078,8 @@ Prices in Town Square (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
 
 Services available in Town Square:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1119,9 +1119,9 @@ Prices in Dubai Silicon Oasis (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
 
 Services available in Dubai Silicon Oasis:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1161,11 +1161,11 @@ Prices in Al Barsha (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Al Barsha:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1205,10 +1205,10 @@ Prices in Jumeirah and Umm Suqeim (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Jumeirah and Umm Suqeim:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
@@ -1248,11 +1248,11 @@ Prices in Mirdif (AED, per visit, flat rate by property size):
 | Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
 | 2 BR Apartment | AED 300 | AED 400 | AED 450 |
 | 3 BR Apartment | AED 400 | AED 500 | AED 550 |
-| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
-| 3 BR Villa | AED 500 | AED 700 | AED 650 |
-| 4 BR Villa | AED 600 | AED 715 | AED 750 |
-| 5 BR Villa | AED 700 | AED 800 | AED 850 |
-| 6 BR Villa | AED 800 | AED 900 | AED 950 |
+| 4 BR Apt or Penthouse | AED 450 | AED 600 | AED 700 |
+| 3 BR Villa | AED 500 | AED 650 | AED 750 |
+| 4 BR Villa | AED 600 | AED 750 | AED 850 |
+| 5 BR Villa | AED 700 | AED 850 | AED 950 |
+| 6 BR Villa | AED 800 | AED 950 | AED 1050 |
 
 Services available in Mirdif:
 - Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning

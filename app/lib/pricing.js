@@ -6,8 +6,11 @@
    from this file, so the figures can never contradict each other.
    Change a price here and it changes everywhere.
 
-   Prices below are the owner's published plan card (2026-10-25):
-   three plans (Basic, Standard, Premium) priced flat by unit type.
+   Prices below are the owner's plan card (2026-10-25) with the two
+   anomalies corrected on 2026-10-26: three plans (Basic, Standard,
+   Premium) priced flat by unit type. scripts/check-pricing.mjs fails
+   the build unless every row rises down the table and Premium >
+   Standard > Basic on every row.
 
    This file is imported by Node scripts as well as by Next, so it
    must stay dependency-free and use explicit ".js" import paths.
@@ -55,7 +58,7 @@ export const cleanTypes = [
     label: 'Standard clean',
     tagline: 'Cleaning & Laundry + Supplies',
     provided: 'Provided by owner: linens only',
-    prices: [300, 400, 500, 650, 700, 715, 800, 900],
+    prices: [300, 400, 500, 600, 650, 750, 850, 950],
     featured: true,
   },
   {
@@ -64,7 +67,7 @@ export const cleanTypes = [
     label: 'Premium clean',
     tagline: 'We provide the full service',
     provided: 'Cleaning · Linens & laundry · Supplies & amenities',
-    prices: [350, 450, 550, 650, 650, 750, 850, 950],
+    prices: [350, 450, 550, 700, 750, 850, 950, 1050],
   },
 ];
 
@@ -153,12 +156,10 @@ export const lowestPackagePrice = Math.min(...cleanTypes.map((t) => t.prices[0])
 export const lowestPrice = Math.min(
   ...Object.values(startingPrices).filter((p) => Number.isFinite(p))
 ); // 69
-export const highestPrice = Math.max(...cleanTypes.flatMap((t) => t.prices)); // 950
+export const highestPrice = Math.max(...cleanTypes.flatMap((t) => t.prices)); // 1050
 
-/* Schema.org priceRange, with the ceiling rounded up to the next hundred. */
-export const PRICE_RANGE = `${currency.format(lowestPrice)} - ${currency.format(
-  Math.ceil(highestPrice / 100) * 100
-)}`; // "AED 69 - AED 1000"
+/* Schema.org priceRange: the cheapest published rate to the dearest. */
+export const PRICE_RANGE = `${currency.format(lowestPrice)} - ${currency.format(highestPrice)}`; // "AED 69 - AED 1050"
 
 /* The three plan cards shown on the home and pricing pages. Their prices
    come straight from the matrix so a card can never disagree with the table. */

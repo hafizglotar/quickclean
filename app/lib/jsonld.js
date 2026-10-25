@@ -25,7 +25,7 @@ import {
   getService,
   isPlaceholder,
 } from './business.js';
-import { cleanTypes, lowestPackagePrice, propertySizes } from './pricing.js';
+import { cleanTypes, lowestPackagePrice, packages, propertySizes } from './pricing.js';
 import { getServiceContent } from './services-content.js';
 import { AREAS_HUB_PATH, areaPath, areas, getArea } from './areas.js';
 
@@ -61,6 +61,75 @@ export function postalAddress() {
 
 export const cityList = (names = business.areaServed) =>
   names.map((name) => ({ '@type': 'City', name }));
+
+/* The business serves the three emirates plus every community that has an
+   area page. Communities carry containedInPlace so engines can place them. */
+export function businessAreaServed() {
+  const emirates = cityList();
+  const seen = new Set(business.areaServed);
+  const places = [];
+  for (const a of areas) {
+    if (seen.has(a.name)) continue;
+    seen.add(a.name);
+    places.push({
+      '@type': 'Place',
+      name: a.name,
+      url: `${SITE_URL}${areaPath(a.slug)}`,
+      containedInPlace: { '@type': a.containedIn === 'Dubai' ? 'City' : 'Country', name: a.containedIn },
+    });
+  }
+  return [...emirates, ...places];
+}
+
+/* Offer catalog read from lib/pricing.js: the three plans with their
+   starting prices, then every service, priced only where a published
+   starting price exists. */
+export function offerCatalog() {
+  const planOffers = packages.map((p) => ({
+    '@type': 'Offer',
+    url: `${SITE_URL}/pricing`,
+    price: p.from,
+    priceCurrency: currency.code,
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      price: p.from,
+      priceCurrency: currency.code,
+      description: `From price for a studio or 1 BR apartment; see /pricing for every unit type.`,
+    },
+    itemOffered: {
+      '@type': 'Service',
+      '@id': `${SITE_URL}/pricing#${p.key}`,
+      name: `${p.name} cleaning plan`,
+      description: `${p.tagline}. ${p.provided}.`,
+      serviceType: 'House cleaning',
+      provider: { '@id': BUSINESS_ID },
+      areaServed: cityList(),
+    },
+  }));
+  const serviceOffers = services.map((s) => {
+    const url = serviceUrl(s.slug);
+    return {
+      '@type': 'Offer',
+      url,
+      ...(s.price ? { price: s.price, priceCurrency: currency.code } : {}),
+      itemOffered: {
+        '@type': 'Service',
+        '@id': `${url}/#service`,
+        name: s.name || s.title,
+        url,
+        description: s.desc,
+        serviceType: s.title,
+        provider: { '@id': BUSINESS_ID },
+        areaServed: cityList(),
+      },
+    };
+  });
+  return {
+    '@type': 'OfferCatalog',
+    name: 'Cleaning plans and services',
+    itemListElement: [...planOffers, ...serviceOffers],
+  };
+}
 
 function offer(price, url) {
   return {
@@ -148,31 +217,10 @@ export function businessNode() {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
-    areaServed: cityList(),
+    areaServed: businessAreaServed(),
     openingHoursSpecification: openingHoursSpec(),
     ...(sameAs.length ? { sameAs } : {}),
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Cleaning services',
-      itemListElement: services.map((s) => {
-        const url = serviceUrl(s.slug);
-        return {
-          '@type': 'Offer',
-          url,
-          ...(s.price ? { price: s.price, priceCurrency: currency.code } : {}),
-          itemOffered: {
-            '@type': 'Service',
-            '@id': `${url}/#service`,
-            name: s.name || s.title,
-            url,
-            description: s.desc,
-            serviceType: s.title,
-            provider: { '@id': BUSINESS_ID },
-            areaServed: cityList(),
-          },
-        };
-      }),
-    },
+    hasOfferCatalog: offerCatalog(),
   };
 }
 
@@ -377,6 +425,7 @@ export function areaPageGraph(slug) {
       },
       breadcrumbList(`${url}/#breadcrumb`, [
         { name: 'Home', url: SITE_URL },
+        { name: 'Areas we serve', url: `${SITE_URL}${AREAS_HUB_PATH}` },
         { name, url },
       ]),
       faqPage(`${url}/#faq`, area.faqs),

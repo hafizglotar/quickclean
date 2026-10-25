@@ -12,7 +12,7 @@ import { PricingMatrix } from '../../components/PricingTable';
 import { WhyUs, HowItWorks } from '../../components/Sections';
 import { ArrowRight, Check } from '../../components/icons';
 import { business, services, SITE_URL } from '../../lib/business';
-import { areas, areaDisplayName, areaPath, getArea } from '../../lib/areas';
+import { AREAS_HUB_PATH, areas, areaDisplayName, areaPath, getArea } from '../../lib/areas';
 import { currency, lowestPackagePrice } from '../../lib/pricing';
 import { areaPageGraph } from '../../lib/jsonld';
 
@@ -74,6 +74,7 @@ export default async function AreaPage({ params }) {
             <Breadcrumbs
               items={[
                 { name: 'Home', href: '/' },
+                { name: 'Areas we serve', href: AREAS_HUB_PATH },
                 { name: h1, href: areaPath(slug) },
               ]}
             />
