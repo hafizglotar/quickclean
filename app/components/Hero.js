@@ -1,5 +1,5 @@
-import { business } from '../lib/business';
-import { ArrowRight, Check, Stars } from './icons';
+import { rating } from '../lib/social-proof';
+import { ArrowRight, Check, ShieldCheck, Stars } from './icons';
 import PriceCalculator from './PriceCalculator';
 
 export default function Hero() {
@@ -9,8 +9,16 @@ export default function Hero() {
       <div className="container hero-grid">
         <div className="hero-copy">
           <span className="eyebrow reveal-hero">
-            <Stars size={13} decorative /> Rated{' '}
-            {business.rating.value}/5 by {business.rating.count.toLocaleString()}+ customers
+            {rating ? (
+              <>
+                <Stars size={13} decorative /> Rated {rating.value}/{rating.best} by{' '}
+                {rating.count.toLocaleString()}+ customers
+              </>
+            ) : (
+              <>
+                <ShieldCheck size={13} /> 100% Spotless Guarantee · Insured &amp; bonded
+              </>
+            )}
           </span>
           <h1 className="hero-title">
             <span className="reveal-hero-line">

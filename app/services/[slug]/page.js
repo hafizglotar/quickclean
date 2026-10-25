@@ -6,8 +6,9 @@ import Animations from '../../components/Animations';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
+import GoogleReviews from '../../components/GoogleReviews';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
-import { ArrowRight, Check, ServiceIcon, Star } from '../../components/icons';
+import { ArrowRight, Check, ServiceIcon } from '../../components/icons';
 import { business, services, getService, currency, SITE_URL } from '../../lib/business';
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
@@ -115,11 +116,8 @@ export default async function ServicePage({ params }) {
                   <strong>{content.turnaround}</strong>
                 </div>
                 <div className="svc-fact">
-                  <span>Rating</span>
-                  <strong className="fact-rating">
-                    <Star size={13} /> {business.rating.value}/5 (
-                    {business.rating.count.toLocaleString()}+)
-                  </strong>
+                  <span>Supplies</span>
+                  <strong>Eco-friendly, included</strong>
                 </div>
                 <div className="svc-fact">
                   <span>Guarantee</span>
@@ -167,6 +165,7 @@ export default async function ServicePage({ params }) {
         <WhyUs />
         <HowItWorks />
         <Reviews />
+        <GoogleReviews />
 
         {/* Service-specific FAQ */}
         <section className="section faq" id="faq">

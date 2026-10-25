@@ -5,9 +5,10 @@ import StickyCta from '../components/StickyCta';
 import Animations from '../components/Animations';
 import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
+import GoogleReviews from '../components/GoogleReviews';
 import { Reviews, Stats, WhyUs } from '../components/Sections';
 import { ArrowRight, Check } from '../components/icons';
-import { business, SITE_URL, stats } from '../lib/business';
+import { business, SITE_URL } from '../lib/business';
 import { aboutPageGraph } from '../lib/jsonld';
 import JsonLd from '../components/seo/JsonLd';
 
@@ -69,8 +70,8 @@ export default function AboutPage() {
             </h1>
             <p className="section-lead">
               {business.name} started with one van and a simple promise: turn up when we say,
-              charge what we quoted, and leave the place spotless. {years} years and{' '}
-              {stats[0].value.toLocaleString()} cleans later, that promise has not changed.
+              charge what we quoted, and leave the place spotless. {years} years later, that
+              promise has not changed.
             </p>
             <div className="subpage-hero-cta">
               <a href="#quote" className="btn btn-primary btn-lg">
@@ -131,6 +132,7 @@ export default function AboutPage() {
 
         <WhyUs />
         <Reviews />
+        <GoogleReviews />
         <QuoteSection />
       </main>
       <Footer />

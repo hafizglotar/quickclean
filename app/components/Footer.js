@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ADDRESS, business } from '../lib/business';
+import { hasReviews, rating } from '../lib/social-proof';
 import { Logo, Stars } from './icons';
 
 export default function Footer() {
@@ -12,10 +13,12 @@ export default function Footer() {
             <Logo light />
           </Link>
           <p>Spotless homes and offices, guaranteed. Vetted pros, flat pricing, zero hassle.</p>
-          <div className="footer-rating">
-            <Stars size={13} decorative />{' '}
-            {business.rating.value}/5 from {business.rating.count.toLocaleString()}+ customers
-          </div>
+          {rating && (
+            <div className="footer-rating">
+              <Stars size={13} decorative /> {rating.value}/{rating.best} from{' '}
+              {rating.count.toLocaleString()}+ customers
+            </div>
+          )}
           <address className="footer-address">{ADDRESS}</address>
         </div>
 
@@ -42,7 +45,7 @@ export default function Footer() {
           <Link href="/about">About us</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/#reviews">Reviews</Link>
+          {hasReviews && <Link href="/#reviews">Reviews</Link>}
           <Link href="/#faq">FAQ</Link>
         </div>
 

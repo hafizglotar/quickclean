@@ -3,12 +3,14 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { business, services, fromLabel } from '../lib/business';
+import { hasReviews } from '../lib/social-proof';
 import { ArrowRight, ChevronDown, Logo, Phone, ServiceIcon } from './icons';
 
 const NAV = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
-  { href: '/#reviews', label: 'Reviews' },
+  // Only link to reviews once a real reviews section exists.
+  ...(hasReviews ? [{ href: '/#reviews', label: 'Reviews' }] : []),
   { href: '/contact', label: 'Contact' },
 ];
 

@@ -83,8 +83,6 @@ export const business = {
 
   priceRange: PRICE_RANGE,
 
-  rating: { value: 4.9, count: 2300, best: 5 },
-
   // TODO: replace each placeholder with the real profile URL. Entries still
   // containing "TODO" are left out of sameAs and never rendered.
   social: {
@@ -104,20 +102,7 @@ export const sameAs = Object.values(business.social).filter((u) => u && !isPlace
 
 /* ---------------- Content data (shared by UI + schema) ---------------- */
 
-export const stats = [
-  { value: 47000, suffix: '', label: 'Cleans completed' },
-  { value: 2300, suffix: '', label: '5-star reviews' },
-  { value: 98, suffix: '%', label: 'Re-book rate' },
-  { value: 60, suffix: 's', label: 'To book online' },
-];
-
-export const trustLogos = [
-  'Northside Realty',
-  'Brightwork Offices',
-  'Maple Property Co.',
-  'Harbor Dental',
-  'Lumen Studios',
-];
+// Ratings, stats, client logos and testimonials live in social-proof.js.
 
 // `icon` is a key into SERVICE_ICONS in components/icons.js (real SVG icons, not emoji).
 // `title` is the short label for cards and navigation; `name` is the full
@@ -206,30 +191,6 @@ export const steps = [
 /* ---------------- Pricing ----------------
    Sizes, clean types, package cards and the flat-rate function all live in
    pricing.js so the numbers are defined exactly once. */
-
-export const reviews = [
-  {
-    initials: 'SM',
-    name: 'Sarah M.',
-    meta: 'Bi-weekly plan · Downtown',
-    quote:
-      'I booked at 9am and my apartment was spotless by 4pm. The cleaner was lovely and didn’t miss a thing. This is my go-to now.',
-  },
-  {
-    initials: 'DJ',
-    name: 'Dr. James K.',
-    meta: 'Office cleaning · Harbor Dental',
-    quote:
-      'We use Quick Clean for our dental office. Reliable, professional, and the place always smells incredible. Never had a no-show.',
-  },
-  {
-    initials: 'AR',
-    name: 'Alicia R.',
-    meta: 'Move-out clean · Maple Ave',
-    quote:
-      'Got my full deposit back after a move-out clean. The landlord said it was the cleanest unit he’d seen. Worth every dirham.',
-  },
-];
 
 // AEO/GEO gold: clear, self-contained Q&A. Powers both the visible FAQ and FAQPage schema.
 export const faqs = [

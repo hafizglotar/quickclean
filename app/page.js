@@ -11,6 +11,7 @@ import {
   Faq,
 } from './components/Sections';
 import QuoteSection from './components/QuoteSection';
+import GoogleReviews from './components/GoogleReviews';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
 import Animations from './components/Animations';
@@ -31,6 +32,7 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <Reviews />
+        <GoogleReviews />
         <QuoteSection />
         <Faq />
       </main>
