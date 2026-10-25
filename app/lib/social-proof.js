@@ -10,17 +10,13 @@
    Fill an array in and its section appears again — nothing else
    needs to change.
 
-   Shapes (the previous placeholder values, kept only as examples):
+   Shapes:
 
-   rating       { value: 4.9, count: 2300, best: 5 }
-   stats        [{ value: 47000, suffix: '',  label: 'Cleans completed' },
-                 { value: 2300,  suffix: '',  label: '5-star reviews' },
-                 { value: 98,    suffix: '%', label: 'Re-book rate' },
-                 { value: 60,    suffix: 's', label: 'To book online' }]
-   trustLogos   ['Northside Realty', 'Brightwork Offices', 'Maple Property Co.',
-                 'Harbor Dental', 'Lumen Studios']
-   testimonials [{ initials: 'SM', name: 'Sarah M.', meta: 'Bi-weekly plan · Downtown',
-                   quote: '...' }]
+   rating       { value: <number>, count: <number of reviews>, best: 5 }
+   stats        [{ value: <number>, suffix: '' | '%' | 's', label: '<what it counts>' }]
+   trustLogos   ['<client name>', ...]   (only with the client's written permission)
+   testimonials [{ initials: '<AB>', name: '<First L.>', meta: '<plan · area>',
+                   quote: '<verbatim review text>' }]
 
    No AggregateRating / Review schema is emitted from this data.
    ============================================================ */
