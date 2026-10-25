@@ -265,7 +265,7 @@ export const faqs = [
   },
   {
     q: 'How much does house cleaning cost with Quick Clean?',
-    a: `Basic cleans start at ${currency.format(startingPrices.basic)}, our Standard package from ${currency.format(startingPrices.standard)}, deep cleans from ${currency.format(startingPrices.deep)}, and move-in/move-out cleans from ${currency.format(startingPrices.moveInOut)}. You see your exact flat rate before you book — pricing depends on home size and the number of bathrooms.`,
+    a: `Every plan is a flat rate by unit type. Basic starts at ${currency.format(startingPrices.basic)} for a studio or one bedroom apartment, Standard at ${currency.format(startingPrices.standard)} and Premium at ${currency.format(startingPrices.premium)}, and the pricing page lists every unit type from a studio up to a six bedroom villa. Deep cleans and move in or move out cleans are quoted for your property before you book.`,
   },
   {
     q: 'Which areas do you serve?',

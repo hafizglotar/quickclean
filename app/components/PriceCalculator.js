@@ -2,28 +2,40 @@
 
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { cleanTypes, currency, flatRate, propertySizes } from '../lib/pricing';
+import {
+  bedroomRange,
+  cleanTypes,
+  currency,
+  flatRate,
+  propertyTypes,
+  sizeFor,
+} from '../lib/pricing';
 import { ArrowRight, Minus, Plus } from './icons';
-
-const MAX_BEDROOMS = propertySizes.length;
-const MAX_BATHROOMS = 5;
 
 function clamp(v, min, max) {
   return Math.max(min, Math.min(max, v));
 }
 
 /* Instant price checker. Every figure comes from flatRate() in lib/pricing.js,
-   the same matrix the pricing page prints, so the result can never undercut a
-   "from AED" price shown elsewhere on the site. */
+   the same matrix the pricing page prints, so the result always matches the
+   published plan card for that unit type. */
 export default function PriceCalculator() {
+  const [propertyType, setPropertyType] = useState('apartment');
   const [beds, setBeds] = useState(2);
-  const [baths, setBaths] = useState(1);
-  const [type, setType] = useState('standard');
+  const [plan, setPlan] = useState('standard');
 
-  const price = flatRate({ bedrooms: beds, bathrooms: baths, cleanType: type });
+  const range = bedroomRange(propertyType);
+  const size = sizeFor(propertyType, beds);
+  const price = flatRate({ propertyType, bedrooms: beds, cleanType: plan });
 
   const priceEl = useRef(null);
   const prev = useRef(price);
+
+  const changeType = (next) => {
+    setPropertyType(next);
+    const r = bedroomRange(next);
+    setBeds((v) => clamp(v, r.min, r.max));
+  };
 
   useEffect(() => {
     const el = priceEl.current;
@@ -55,51 +67,9 @@ export default function PriceCalculator() {
       <p className="quote-card-sub">See your flat rate — no surprises.</p>
 
       <div className="qc-row">
-        <label>Bedrooms</label>
-        <div className="qc-stepper">
-          <button
-            type="button"
-            aria-label="fewer bedrooms"
-            onClick={() => setBeds((v) => clamp(v - 1, 1, MAX_BEDROOMS))}
-          >
-            <Minus />
-          </button>
-          <span>{beds}</span>
-          <button
-            type="button"
-            aria-label="more bedrooms"
-            onClick={() => setBeds((v) => clamp(v + 1, 1, MAX_BEDROOMS))}
-          >
-            <Plus />
-          </button>
-        </div>
-      </div>
-
-      <div className="qc-row">
-        <label>Bathrooms</label>
-        <div className="qc-stepper">
-          <button
-            type="button"
-            aria-label="fewer bathrooms"
-            onClick={() => setBaths((v) => clamp(v - 1, 1, MAX_BATHROOMS))}
-          >
-            <Minus />
-          </button>
-          <span>{baths}</span>
-          <button
-            type="button"
-            aria-label="more bathrooms"
-            onClick={() => setBaths((v) => clamp(v + 1, 1, MAX_BATHROOMS))}
-          >
-            <Plus />
-          </button>
-        </div>
-      </div>
-
-      <div className="qc-row">
-        <label htmlFor="qcType">Clean type</label>
-        <select id="qcType" value={type} onChange={(e) => setType(e.target.value)}>
-          {cleanTypes.map((t) => (
+        <label htmlFor="qcProperty">Property</label>
+        <select id="qcProperty" value={propertyType} onChange={(e) => changeType(e.target.value)}>
+          {propertyTypes.map((t) => (
             <option key={t.key} value={t.key}>
               {t.label}
             </option>
@@ -107,8 +77,40 @@ export default function PriceCalculator() {
         </select>
       </div>
 
+      <div className="qc-row">
+        <label>Bedrooms</label>
+        <div className="qc-stepper">
+          <button
+            type="button"
+            aria-label="fewer bedrooms"
+            onClick={() => setBeds((v) => clamp(v - 1, range.min, range.max))}
+          >
+            <Minus />
+          </button>
+          <span>{propertyType === 'apartment' && size.bedrooms === 1 ? 'Studio / 1' : size.bedrooms}</span>
+          <button
+            type="button"
+            aria-label="more bedrooms"
+            onClick={() => setBeds((v) => clamp(v + 1, range.min, range.max))}
+          >
+            <Plus />
+          </button>
+        </div>
+      </div>
+
+      <div className="qc-row">
+        <label htmlFor="qcType">Plan</label>
+        <select id="qcType" value={plan} onChange={(e) => setPlan(e.target.value)}>
+          {cleanTypes.map((t) => (
+            <option key={t.key} value={t.key}>
+              {t.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="qc-total">
-        <span>Your flat rate</span>
+        <span>{size.label}</span>
         <strong ref={priceEl}>{currency.format(price)}</strong>
       </div>
 

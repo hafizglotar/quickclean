@@ -16,7 +16,7 @@ const place = `${business.address.city}, ${business.address.region}`;
 const lowest = lowestPackagePrice;
 
 const title = `Cleaning Prices in ${place} — From ${currency.format(lowest)}`;
-const description = `Flat cleaning prices from ${business.name}, by property size. Basic, Standard and Deep packages from ${currency.format(
+const description = `Flat cleaning prices from ${business.name}, by unit type. Basic, Standard and Premium plans from ${currency.format(
   lowest
 )} per visit — studio apartments up to 6 bedroom villas. No hourly rates, no surprise fees.`;
 
@@ -80,10 +80,11 @@ export default function PricingPage() {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">Choose a package</span>
-              <h2>Three packages. One flat price.</h2>
+              <h2>Three plans. One flat price per unit type.</h2>
               <p className="section-lead">
-                Start with Basic for upkeep, Standard for the detail most homes need, or Deep for a
-                full top-to-bottom reset. Moving? Move in / out prices are in the table below.
+                Basic covers cleaning, housekeeping and laundry with your linens and supplies. Standard
+                adds our supplies. Premium is the full service, with linens, laundry and amenities
+                all provided by us.
               </p>
             </div>
             <PricingCards />
@@ -95,7 +96,7 @@ export default function PricingPage() {
           <div className="container">
             <div className="section-head reveal">
               <span className="kicker">Full price list</span>
-              <h2>Priced by property size.</h2>
+              <h2>Priced by unit type.</h2>
               <p className="section-lead">
                 All prices in {currency.code}, per visit. Recurring plans save up to 20% on every
                 clean after the first.

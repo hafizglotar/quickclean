@@ -454,7 +454,7 @@ export function pricingPageGraph() {
         '@id': `${url}/#webpage`,
         url,
         name: `Cleaning Prices in ${business.address.city}, ${business.address.region}`,
-        description: `Flat cleaning prices by property size. Basic, Standard, Deep and Move in / out cleans from ${currency.format(Math.min(...allPrices))}.`,
+        description: `Flat cleaning prices by unit type. Basic, Standard and Premium plans from ${currency.format(Math.min(...allPrices))}.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
         inLanguage: 'en-AE',

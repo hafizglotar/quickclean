@@ -9,7 +9,7 @@ export const westAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Dubai Investment Park for Green Community villas and the apartments in DIP 1 and DIP 2. Flat prices by home size, no travel surcharge.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Dubai Investment Park, which everyone calls DIP, is a wide district between Expo Road and Jebel Ali that mixes homes, schools, warehouses and offices. The residential side is bigger than most people expect. Green Community West and Green Community East are leafy, gated neighbourhoods of villas, townhouses and low rise apartments arranged around lakes and shaded walkways, while Ritaj, Centurion Residences, Dunes Village and the buildings around the Market area offer studios and one to three bedroom apartments at some of the lowest rents in this part of the city. There is also a lot of staff accommodation towards the industrial plots in DIP 2.`,
       `Cleaning in DIP means dealing with two kinds of dust. The industrial side and the constant truck traffic on the main roads leave a fine grey layer on balconies, window sills and outdoor furniture, and the open desert to the south adds sand on windy days. In Green Community the gardens are mature, so there are leaves, soil and irrigation splashes on patios and ground floor glass, and the villas have pools and outdoor seating that need regular attention. Apartment kitchens in the older buildings around the Market tend to need a proper degrease more often than newer ones. Staff housing in DIP 2 is often shared by several people, so the kitchen and bathrooms take the most wear and need a thorough visit rather than a quick one.`,
@@ -49,7 +49,7 @@ export const westAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in JLT for studios and one to three bedroom apartments across the clusters of Jumeirah Lake Towers. Flat prices, tower access arranged.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt'],
     intro: [
       `Jumeirah Lake Towers, which everyone in Dubai calls JLT, is a dense district of more than 80 towers arranged around three lakes, directly across Sheikh Zayed Road from Dubai Marina. The clusters are lettered A to Z, and each one holds a mix of residential and office towers such as Lake Terrace, Goldcrest Views, Saba Towers, Green Lakes, Lake Shore, Al Seef Towers, Bonnington and Dubai Gate. Homes are almost all apartments, mostly studios, one bedroom and two bedroom units, with three bedroom apartments and duplexes in the larger towers. Many residents work in the DMCC free zone towers next door.`,
       `JLT apartments share the cleaning issues of any busy tower district, with a few of their own. Floor to ceiling glass facing the lakes shows every smear and picks up dust from the constant traffic on Sheikh Zayed Road and First Al Khail Street. Open kitchens send cooking residue onto nearby surfaces. The older towers from the first phase have bathrooms with grout and glass screens that need regular descaling. Many apartments are rented furnished or used as short stay lets, so turnovers between tenants and guests are frequent. Pets are allowed in many towers, so hair on sofas and rugs comes up often, and the balconies above the lakes collect a surprising amount of dust.`,
@@ -88,7 +88,7 @@ export const westAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning on Palm Jumeirah for trunk apartments and the Garden Homes and Signature Villas on the fronds. Flat prices by home size, salt haze handled.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Palm Jumeirah is unlike anywhere else we clean. The trunk is lined with apartment buildings, from the Shoreline Apartments and the Golden Mile to Marina Residences, Tiara, Oceana and the newer towers near Nakheel Mall, offering one to four bedroom apartments and penthouses with sea or marina views. The sixteen fronds hold the Garden Homes with four and five bedrooms and the Signature Villas with five to seven bedrooms, nearly all with private pools, gardens and direct beach access. Many homes are second homes or holiday lets, and the turnover of guests is constant.`,
       `Sea air is the defining cleaning problem on the Palm. Salt settles on glass, balcony railings, outdoor furniture and pool decks within days, leaving a haze that ordinary wiping only spreads around. Humidity encourages mildew in bathrooms and around pool houses, sand from the beach walks into ground floor rooms, and the gardens on the fronds drop leaves and petals onto patios daily. In the apartments, the large glass fronts and the balconies take the most work, and furnished holiday homes need everything from the linen to the inside of the fridge checked between guests.`,
@@ -127,7 +127,7 @@ export const westAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Dubai Sports City for Canal Residence and Elite Residence apartments and Victory Heights villas. Flat prices by home size, easy parking.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Dubai Sports City sits between Hessa Street and Sheikh Mohammed Bin Zayed Road, built around the Dubai International Stadium, the Els Club golf course and a cluster of sports academies. The homes are a mix. Towers such as Canal Residence, Elite Residence, Hub Canal, Golf View, Royal Residence and the Giovanni Boutique Suites hold studios and one, two and three bedroom apartments, many with views over the golf course or the canal. Victory Heights, on the far side of the course, is a gated community of three to six bedroom villas with gardens and pools. Families with children and sporty professionals make up most of the residents.`,
       `Cleaning here means dealing with sand and grass in equal measure. The open land to the south sends sand across balconies and into ground floor rooms, and the golf course and the parks bring cut grass, pollen and soil onto patios and doormats. Villa gardens in Victory Heights shed leaves onto pool decks, and the villas have several bathrooms and large kitchens that take time to do well. In the towers, the main issues are the glass facing the course, the balconies and the kitchens of the many furnished rental units. Families with children in the towers also find that crumbs and marks build up fast on the light floors used in most buildings, and stadium event nights bring extra dust and litter onto the lower balconies.`,
@@ -166,7 +166,7 @@ export const westAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Motor City for Uptown apartments and Green Community villas, with pet hair and balconies handled. Flat prices by home size.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa', '5br-villa'],
     intro: [
       `Motor City grew up around the Dubai Autodrome, and it has become one of the most relaxed family areas in new Dubai. Uptown Motor City is the apartment side, with low and mid rise buildings in a loose English style such as Shakespeare Circus, Dickens Circus, Fox Hill, Claverton House, Norton Court and Widcombe House, offering studios and one to three bedroom apartments with generous layouts. Green Community Motor City is the villa side, with three to five bedroom villas and townhouses on quiet streets with gardens. First Avenue Mall and the many dog friendly cafes give the area its character.`,
       `The cleaning issues in Motor City are those of a green, family and pet friendly suburb on the edge of the desert. Dogs are everywhere, so pet hair on floors, rugs and sofas is the most common request. Children bring crumbs and marks on walls and floors. Sand from the open land behind the Autodrome blows onto balconies and into ground floor rooms, and the gardens in Green Community drop leaves and soil onto patios. The apartments in Uptown have large balconies and terraces that need regular attention to stay usable. Race weekends at the Autodrome bring extra dust and noise, and many residents book a clean for the Sunday after.`,

@@ -8,7 +8,7 @@ export const centralAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Dubai Silicon Oasis for Silicon Gates, Palace Towers and Binghatti apartments and Cedre Villas. Flat prices by home size.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa', '5br-villa'],
     intro: [
       `Dubai Silicon Oasis, usually shortened to DSO, is a free zone and residential district off Sheikh Mohammed Bin Zayed Road and the Dubai Al Ain Road, home to a university campus, tech offices and a lot of apartments. Buildings such as Silicon Gates, Palace Towers, Axis Residences, Le Presidium, Silicon Heights and the many Binghatti towers offer studios and one to three bedroom apartments at reasonable rents, which draws students, young professionals and families. Cedre Villas and Semmer Villas add three to five bedroom villas with gardens on the quieter side of the district. Rents are lower than in central Dubai, so apartments are often shared by two or three working adults or by students from the nearby campuses.`,
       `Cleaning in DSO means dealing with dust from several directions. The desert to the south and the open land towards Academic City send sand onto balconies and into ground floor rooms, and the busy roads add a fine grey film to window sills. Many of the apartment buildings are five to fifteen years old, so bathrooms need regular descaling and kitchens with limited ventilation build up grease on the cabinet fronts and the extractor. Shared apartments are common near the university, and the villas in Cedre have gardens, pools and several bathrooms. Balconies facing the main roads need wiping every week to stay usable, and the light tiles used in most buildings show footprints quickly.`,
@@ -47,7 +47,7 @@ export const centralAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Al Barsha 1, 2, 3 and Al Barsha South for apartments near Mall of the Emirates and the large family villas. Flat prices by home size.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Al Barsha is one of the most varied districts in Dubai. Al Barsha 1, around Mall of the Emirates and the Sheikh Zayed Road end, is dense with mid rise apartment buildings offering studios and one to three bedroom apartments, many of them older and generously sized. Al Barsha 2 and Al Barsha 3 are quiet villa areas with large four to seven bedroom family villas, majlis rooms, gardens and high walls. Al Barsha South, towards Arjan and Motor City, adds newer apartment buildings. The mix of long term residents, families and professionals who work along Sheikh Zayed Road makes it one of our busiest areas.`,
       `The cleaning issues depend on where you live. In Al Barsha 1 the apartments face busy roads, so dust on sills and balconies is constant, and the older buildings have kitchens and bathrooms that need regular degreasing and descaling. In Al Barsha 2 and 3 the villas are large, with several bathrooms, a maid room, a majlis, a garden and often a pool, and the sand from the open land behind them blows across patios after every windy day. Many villa families host guests regularly and want the majlis and the guest bathrooms kept ready. Apartments in Al Barsha South are newer, and the main issue there is construction dust from the buildings still going up around them.`,
@@ -86,7 +86,7 @@ export const centralAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Jumeirah 1, 2, 3 and Umm Suqeim for beachside villas, compounds and low rise apartments. Flat prices by home size, salt haze handled.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Jumeirah and Umm Suqeim run along the coast from the edge of Downtown to the Burj Al Arab, taking in Jumeirah 1, 2 and 3, Umm Suqeim 1, 2 and 3 and the streets around Al Wasl Road and Jumeirah Beach Road. This is the original villa belt of Dubai. Most homes are detached villas on large plots with gardens, pools and staff quarters, from older three and four bedroom houses to new builds with six or seven bedrooms, alongside gated compounds of smaller villas and a growing number of low rise apartment buildings near La Mer, City Walk and Jumeirah Beach Road. Families who have lived here for years share the streets with newer arrivals.`,
       `Living by the sea sets the cleaning agenda. Salt air leaves a haze on windows, glass balustrades, outdoor furniture and pool fences within days, and humidity encourages mildew in bathrooms and around pool houses. Sand from the beach walks in on feet and paws, and the mature gardens drop leaves, petals and soil onto patios and terraces all year. Older villas have kitchens and bathrooms with fittings that need regular descaling, and the staff quarters, majlis rooms and multiple bathrooms mean a proper visit takes time. Families with dogs find sand and hair along the skirting and under the sofas within days, and the pool decks need sweeping before they can be mopped.`,
@@ -125,7 +125,7 @@ export const centralAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Mirdif for family villas, Uptown Mirdif, Shorooq, Ghoroob and Mirdif Hills apartments. Flat prices by home size, free parking.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Mirdif is a long established family suburb in the east of Dubai, between Airport Road and Sheikh Mohammed Bin Zayed Road and just south of the airport. Most homes are villas, from older three and four bedroom houses on the quiet streets near Mushrif Park to the larger five and six bedroom villas further in, along with the gated Uptown Mirdif community of townhouses and villas. Shorooq, Ghoroob and Mirdif Hills add apartments and townhouses with one to three bedrooms and a few four bedroom units, and City Centre Mirdif and Mirdif 35 are the local hubs. Families who want space and good schools have lived here for years.`,
       `Cleaning in Mirdif means dealing with age and dust. Many villas are fifteen to twenty five years old, with kitchens and bathrooms that need regular degreasing and descaling and with grout that has seen a lot of use. Gardens are mature, so leaves and soil land on patios and outdoor furniture daily. Dust from Airport Road and the open land to the south settles on sills and ground floor tiles, and the aircraft overhead do not help. Large families with children and pets are the norm, which adds crumbs, marks and hair. Many villas also have a separate majlis building or an outdoor seating area that is used every weekend and needs the same attention as the house.`,
@@ -164,7 +164,7 @@ export const centralAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Deira and Bur Dubai for apartments in Al Rigga, Al Karama, Al Mankhool and Oud Metha. Flat prices by size, cleaners arrive by metro.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt'],
     intro: [
       `Deira and Bur Dubai are the oldest parts of the city, facing each other across the Creek. Deira takes in Al Rigga, Al Muraqqabat, Port Saeed, Naif, Al Baraha, Hor Al Anz, Abu Hail and Al Garhoud, and Bur Dubai covers Al Karama, Al Mankhool, Oud Metha, Al Hamriya, Al Raffa, Al Fahidi, Al Jaddaf and Satwa. Homes here are almost all apartments in mid rise buildings, from compact studios to roomy two and three bedroom family apartments, many of them twenty or thirty years old with high ceilings and big kitchens. Shared apartments are common, and so are families who have lived in the same building for a decade.`,
       `Cleaning in the old city is about age and density. Kitchens in older buildings have years of grease on the extractor, the tiles and the cabinet fronts, bathrooms have fittings and grout that need regular descaling, and the humidity near the Creek leaves mildew in bathrooms and a film on glass. Dust from the busy streets settles on sills and balconies quickly, and the older lifts and stairwells mean carrying equipment takes longer. Many apartments are shared by several working adults, so the common areas take the most wear.`,

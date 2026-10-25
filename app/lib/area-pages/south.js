@@ -8,7 +8,7 @@ export const southAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Dubai South for Residential District apartments and Emaar South townhouses and villas. Flat prices by home size, no travel surcharge.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa', '5br-villa'],
     intro: [
       `Dubai South is the newest large district in the city, laid out around Al Maktoum International Airport and the old Expo site. Most residents live in the Residential District, where mid rise buildings such as MAG 5 Boulevard and The Pulse Residence sit close to the schools, the clinic and the community shops. Across Expo Road, Emaar South adds golf course villas and townhouses. Homes run from studios and one bedroom apartments up to three bedroom family apartments, with townhouses of three or four bedrooms and villas of four or five bedrooms in Emaar South and the Pulse townhouse clusters.`,
       `Because so much of the district is still being built, dust is the main cleaning problem. New handover homes arrive with a fine grey film inside cupboards, on top of wardrobes and along the window frames, and a normal wipe does not shift it. Open desert on three sides keeps adding sand to balconies and ground floor rooms whenever the wind picks up. Townhouses in The Pulse and Emaar South also have small gardens and covered parking bays that collect grit, and the pale tiles used in most of the newer buildings show every footprint.`,
@@ -47,7 +47,7 @@ export const southAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Expo City Dubai for Expo Village, Mangrove and Sky Residences apartments. Flat prices by apartment size, access arranged, no travel fee.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt'],
     intro: [
       `Expo City Dubai is the neighbourhood that grew out of the Expo 2020 site, and it is one of the few places in Dubai where you can walk to almost everything. The homes are all apartments. Expo Village, the low rise buildings that first housed Expo staff, offers one to four bedroom apartments around shaded courtyards, while the newer Mangrove Residences, Sky Residences and Sidr Residences bring taller buildings with one to three bedroom apartments and large balconies looking over Al Wasl Plaza, Terra and the parks. Residents tend to be families and professionals who work in the district or at the airport.`,
       `The cleaning issues here are those of a brand new, very green community on the edge of the desert. Freshly handed over apartments carry construction dust in places you do not see at first, such as the tops of kitchen units, inside the wardrobes and along the balcony door tracks. The landscaping is lovely but it means pollen and fine soil on balcony floors after the irrigation runs, and the wide glass fronts that make the apartments feel bright also show every smear. Pale stone and large format tiles in most units need careful mopping with the right product rather than a quick pass. Families with young children also find that crumbs and small toys end up in the gaps of the wide plank flooring used in some of the buildings.`,
@@ -87,7 +87,7 @@ export const southAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Jebel Ali Village villas and Jebel Ali Industrial Area apartments. Flat prices by home size, easy parking, no travel fee.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-villa', '4br-villa', '5br-villa'],
     intro: [
       `Jebel Ali is two very different places that share a name. Jebel Ali Village, on the Sheikh Zayed Road side near Ibn Battuta Mall, is a quiet villa community that Nakheel has rebuilt with large four and five bedroom family villas on wide plots, with a few of the older bungalows still standing nearby. Jebel Ali Industrial Area and the Free Zone, towards the port, are mostly workplaces, but they also hold a lot of staff accommodation and a scattering of apartment buildings where people who work at the port, the Free Zone or the airport live in studios, one bedroom and two bedroom apartments.`,
       `The cleaning problems follow the geography. In the Village, the villas have big gardens, driveways, maid rooms and multiple bathrooms, and the sand from the open land and the coast blows across patios and into ground floor rooms on windy days. Pools and outdoor seating areas gather grit and leaves. In the Industrial Area, the issue is fine dark dust from the roads and the port, which settles on window sills and balcony floors faster than anywhere else in the city, and older apartment kitchens that need degreasing more often than new ones. Many of the Village villas also have outdoor kitchens and barbecue areas that need a proper degrease after a weekend of guests.`,
@@ -126,7 +126,7 @@ export const southAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Al Furjan for Quortaj and Dubai Style villas, townhouses and the newer apartments. Flat prices by home size, same cleaner each visit.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Al Furjan sits between Discovery Gardens and Jebel Ali Village, just off Sheikh Mohammed Bin Zayed Road, and it has grown from a quiet villa community into one of the busiest residential areas in new Dubai. The original Nakheel villas and townhouses come in two styles, Quortaj and Dubai Style, with three to five bedrooms, private gardens and covered parking. Around them, a wave of apartment buildings from Azizi, Danube and other developers has added studios, one bedroom and two bedroom apartments, with a few three bedroom units, mostly along the main loop roads and near the Al Furjan Pavilion.`,
       `Living here means living with construction for a while longer. Dust from the building sites drifts into villas and apartments alike, settling on window sills, balcony floors and the tops of cupboards within days of a clean. Villa owners also deal with gardens that shed leaves and soil onto patios, outdoor furniture that needs wiping down and sand that blows in from the open plots nearby. In the apartment buildings, the main issues are new handover dust and kitchens with open layouts that spread cooking residue onto nearby surfaces.`,
@@ -165,7 +165,7 @@ export const southAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Discovery Gardens for studios, one and two bedroom apartments in the Mediterranean, Zen and Mogul clusters. Flat prices, same day slots.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt'],
     intro: [
       `Discovery Gardens is a large, low rise apartment community next to Ibn Battuta Mall, built by Nakheel in themed clusters with names like Mediterranean, Zen, Contemporary, Mogul, Cactus and Mesoamerican. Almost every home here is a studio, a one bedroom or a two bedroom apartment, with a small number of larger units in the newer buildings on the edges. It is one of the most affordable places to live in new Dubai, so the residents are a mix of young professionals, couples and small families, and many share apartments. The clusters are arranged around landscaped gardens and walkways, which is pleasant but means plenty of dust and pollen find their way inside through open balcony doors.`,
       `The buildings are now fifteen years old or more, and that shows in the cleaning. Bathrooms have older grout and fittings that need regular descaling, kitchens are compact with limited ventilation so grease builds up on cabinet fronts and the extractor, and the window frames and balconies collect dust from Sheikh Zayed Road and the open land towards Al Furjan. Humidity from the air conditioning in the summer leaves a film on mirrors and glass. Pets are common, which adds hair on floors and fabric to the list.`,

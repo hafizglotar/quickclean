@@ -202,17 +202,21 @@ ${keyFacts()}
 ## Hours
 ${hoursBlock()}
 
-## Pricing (${currency.code}, per visit, flat rate by property size)
+## Pricing (${currency.code}, per visit, flat rate by unit type)
+Basic: cleaning and housekeeping with laundry, linens and supplies provided by the owner.
+Standard: cleaning and laundry with our supplies, linens provided by the owner.
+Premium: the full service, with linens, laundry, supplies and amenities provided by us.
+
 ${priceMatrix()}
 
 Other services:
 ${priceTable
-  .filter((r) => !cleanTypes.some((t) => t.key === r.key || (t.key === 'move' && r.key === 'moveInOut')))
+  .filter((r) => !cleanTypes.some((t) => t.key === r.key))
   .map((r) => `- ${r.name} — ${r.from ? `from ${fmt(r.from)}` : 'custom quote'}`)
   .join('\n')}
 
-The instant price checker on the home page prices a home by bedrooms, bathrooms and
-clean type from this same table, so the figure it shows is never below the "from" price.
+The instant price checker on the home page prices a home by property type, bedrooms and
+plan from this same table, so the figure it shows always matches the published card.
 
 ## Services
 ${services.map(serviceSection).join('\n')}

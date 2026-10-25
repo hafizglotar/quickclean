@@ -4,11 +4,14 @@ import { useState } from 'react';
 import { CircleCheck } from './icons';
 
 const SERVICES = [
-  'Standard Clean',
-  'Deep Clean',
+  'Basic clean',
+  'Standard clean',
+  'Premium clean',
+  'Deep clean',
   'Move in / out',
   'Office / Commercial',
   'Carpet & Upholstery',
+  'Window & Glass',
 ];
 
 const EMPTY = { name: '', email: '', phone: '', service: '', area: '', notes: '' };

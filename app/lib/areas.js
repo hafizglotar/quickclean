@@ -31,7 +31,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House cleaning in Dubai Marina for tower apartments from studios to 3 BR. Vetted, insured cleaners, flat prices by apartment size, and tower access handled.',
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt'],
     intro: [
       `Dubai Marina is almost entirely high-rise living. Towers such as Marina Gate, Cayan Tower, Princess Tower, Marina Promenade, Park Island and the long run of buildings along Marina Walk hold tens of thousands of apartments, most of them studios, one-bedroom and two-bedroom units, with a smaller number of three-bedroom apartments, duplexes and penthouses on the higher floors. Many homes here are rented, a large share are furnished holiday lets, and the turnover between tenants and guests is constant. That is exactly the kind of place where a reliable, repeatable clean matters more than anywhere else in the city.`,
       `Quick Clean provides house cleaning services in Dubai Marina for residents, landlords and short-stay hosts. Our cleaners work from the same top-to-bottom checklist on every visit: kitchen counters, hob and appliance fronts, bathrooms descaled and sanitised, floors vacuumed and mopped, dusting of surfaces and skirting, bins emptied and beds made. Deep cleans go further into grout, extractor fans, inside the oven and fridge, balcony glass and the sliding-door tracks that collect fine sand after every windy day on the water.`,
@@ -71,7 +71,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House cleaning in Downtown Dubai for Boulevard towers, Old Town and Burj Khalifa district apartments. Flat prices by size, vetted cleaners, access arranged.',
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt'],
     intro: [
       `Downtown Dubai packs a huge amount of residential space into a small, busy district. Along Mohammed Bin Rashid Boulevard and around the Burj Khalifa you will find tower apartments in buildings such as Boulevard Central, South Ridge, 29 Boulevard, Burj Vista, Standpoint and the Opera District towers, while Old Town and Old Town Island offer lower-rise, Arabian-style buildings with larger floor plans, courtyards and more storage. Studios and one-bedroom apartments dominate the towers; two and three-bedroom apartments are common in Old Town and on the higher floors of the Boulevard buildings, and there is a steady population of serviced and short-stay apartments throughout.`,
       `Quick Clean provides house cleaning services in Downtown Dubai for owners, tenants and holiday-home operators. Every visit follows the same checklist: kitchen surfaces, hob and appliance fronts, bathrooms descaled and sanitised, floors vacuumed and mopped, dusting of furniture, ledges and skirting, bins emptied and beds made. Deep cleans add grout, inside the oven and fridge, cabinet fronts, extractor fans, interior glass and the window tracks that fill with fine dust from the constant construction and Boulevard traffic nearby.`,
@@ -112,7 +112,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House cleaning in JVC (Jumeirah Village Circle) for apartments, townhouses and villas. Flat prices by home size, vetted insured cleaners and same-day slots.',
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Jumeirah Village Circle, better known as JVC, is one of the fastest-growing family communities in Dubai and one of the most varied in its housing. The circular district between Al Khail Road and Hessa Street mixes mid-rise apartment buildings, long rows of townhouses and clusters of standalone villas, all set around parks and the central village areas. Apartments run from compact studios and one-bedroom units in the newer towers to spacious two and three-bedroom family apartments; townhouses are typically two to four bedrooms over two floors, and the villas go up to five bedrooms with gardens and private garages.`,
       `Quick Clean provides house cleaning services in JVC for all three property types. Apartment visits follow our standard checklist across the kitchen, bathrooms, bedrooms and living areas, with floors vacuumed and mopped and every surface dusted. Townhouse and villa cleans are planned room by room across the floors, including staircases, landings, the maid's room if used as storage, and the ground-floor areas that collect the most sand. Deep cleans add grout, inside appliances, cabinet fronts, extractor fans, window tracks and the glass that overlooks the garden or the community park.`,
@@ -152,7 +152,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House and office cleaning in Business Bay for canal-side towers, serviced apartments and workplaces. Flat prices by size and after-hours office cleaning.',
-    propertySizeKeys: ['studio-1br', '2br', '3br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt'],
     intro: [
       `Business Bay stretches along both banks of the Dubai Water Canal, just south of Downtown, and is a true mixed-use district: residential towers, serviced apartments, hotels and office buildings sit side by side, often in the same tower. Residential stock is dominated by studios and one-bedroom apartments in buildings such as the Executive Towers, DAMAC Towers by Paramount, Bay Square, Churchill Towers, Vera and the newer canal-front developments, with two and three-bedroom apartments on the higher floors and in the family-oriented towers. A large share of homes are furnished and let on short or medium terms, and a significant number of residents also work in the district.`,
       `Quick Clean provides house cleaning in Business Bay for residents, landlords and holiday-let operators, and after-hours office cleaning for the businesses that share these towers. Residential visits follow our standard checklist in the kitchen, bathrooms, bedrooms and living space, with floors vacuumed and mopped and surfaces dusted, and deep cleans add grout, inside appliances, extractor fans, interior glass and balcony doors. Office visits are built around your own checklist: workstations, meeting rooms, pantry, washrooms and reception, scheduled in the evening or early morning so your team never sees a cleaner at work.`,
@@ -192,7 +192,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House cleaning in Sharjah for apartments in Al Nahda, Al Majaz, Al Khan and Muwaileh and villas across the city. Flat prices by home size, insured cleaners.',
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Sharjah is home to a huge number of families who want a bigger home than the same budget buys in Dubai, and the housing reflects that. The apartment districts of Al Nahda, Al Taawun, Al Majaz, Al Khan, Al Qasimia and Abu Shagara are full of mid and high-rise buildings with generous two and three-bedroom apartments, many with maid's rooms and large kitchens, while Muwaileh, University City and the newer Aljada and Al Zahia developments add modern one to three-bedroom apartments and townhouses. Villa areas such as Al Falaj, Al Ramtha, Al Fisht, Sharjah Garden City and Al Rahmaniya hold three to six-bedroom family villas with gardens, majlis rooms and multiple bathrooms.`,
       `Quick Clean provides house cleaning services across Sharjah for apartments, townhouses and villas. Every visit covers the kitchen, bathrooms, bedrooms and living areas, with floors vacuumed and mopped and surfaces dusted, and larger homes are planned floor by floor so nothing is missed on landings, staircases, the majlis or the guest bathrooms. Deep cleans add grout, inside the oven and fridge, cabinet fronts, extractor fans, ceiling fans, window tracks and the balcony or courtyard surfaces that collect sand after every windy day.`,
@@ -232,7 +232,7 @@ const coreAreas = [
     updatedAt: '2026-10-25',
     metaDescription:
       'House cleaning in Ajman for Corniche and Al Nuaimiya apartments and villas in Al Rawda, Al Mowaihat and Al Zahra. Flat prices by home size, insured cleaners.',
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Ajman is the smallest emirate but a busy residential one, with a growing population of families and commuters who want space at an affordable price. The apartment districts of Al Nuaimiya, Al Rashidiya, Al Rumailah and Ajman Downtown are lined with mid and high-rise buildings offering roomy one, two and three-bedroom apartments, many with large kitchens and balconies, while the Corniche towers and Ajman One offer newer sea-facing apartments. Villa communities such as Al Rawda, Al Mowaihat, Al Zahra, Al Jurf, Al Helio and Al Yasmeen hold three to six-bedroom family villas with gardens, majlis rooms, driveways and several bathrooms.`,
       `Quick Clean provides house cleaning services across Ajman for apartments, townhouses and villas. Each visit covers the kitchen, bathrooms, bedrooms and living areas, with floors vacuumed and mopped, surfaces dusted, bins emptied and beds made, and multi-floor villas are planned floor by floor so staircases, landings, the majlis and guest bathrooms are all included. Deep cleans add grout, inside the oven and fridge, cabinet fronts, extractor fans, ceiling fans, window tracks and the balcony or courtyard surfaces that gather sand.`,

@@ -8,7 +8,7 @@ export const villaAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Arabian Ranches 1, 2 and 3 for villas and townhouses from Saheel to Sun. Flat prices by villa size, gate registration arranged.`,
-    propertySizeKeys: ['2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Arabian Ranches is one of the oldest and best known villa communities in Dubai, spread along Sheikh Mohammed Bin Zayed Road and Al Qudra Road in three phases. Ranches 1 holds the original villages such as Saheel, Al Reem, Alvorada, Mirador, Palmera, Savannah and Hattan, with homes from two bedroom townhouses in Al Reem and Palmera up to six and seven bedroom villas in Hattan and the Golf Homes along the Arabian Ranches Golf Club. Ranches 2 adds Lila, Palma, Rosa, Samara, Yasmin, Azalea, Camelia and Casa, and Ranches 3 brings newer townhouses in Sun, Joy, Spring, Ruba, Caya, June and Bliss. Almost everyone here is a family, and many have pets.`,
       `The cleaning issues are those of large villas on the edge of the desert. Sand is constant, blowing over garden walls and into ground floor rooms after every windy day, and it gathers on pool decks, patios and in the tracks of the sliding doors. Gardens are mature in the older villages, so leaves and soil end up on terraces and outdoor furniture. The villas have several bathrooms, large kitchens, maid rooms and staircases, and a weekly visit takes real time to do well. Pets add hair on floors and sofas, and children add marks on walls and crumbs under furniture.`,
@@ -47,7 +47,7 @@ export const villaAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Damac Hills and Damac Hills 2 for golf course apartments, townhouses and villas. Flat prices by home size, handover dust cleared.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Damac Hills is a large golf community along Hessa Street and Al Qudra Road, built around the Trump International Golf Club Dubai. It mixes apartment buildings such as Golf Town, Golf Vita, Golf Promenade, Loreto, Artesia, Carson and Golf Horizon with villa and townhouse clusters including Pelham, Veneto, Whitefield, Trinity, Silver Springs, Rochester, Picadilly Green, Brookfield, The Park Villas and Queens Meadow. Apartments run from studios to three bedrooms, townhouses from three to four bedrooms and villas up to six bedrooms, many backing onto the fairways. The further out Damac Hills 2, once called Akoya Oxygen, is a separate community that we also cover.`,
       `Dust and sand are the daily cleaning issues. The community sits on the desert edge, parts of it are still being built, and the wind carries sand over garden walls and onto balconies with every gust. Newly handed over homes carry construction dust inside cupboards and along the window tracks. Villa gardens, pools and outdoor seating need regular attention, and the golf course brings cut grass and soil onto patios and doormats. In the apartments, the balconies and the glass facing the course take the most work. Many apartments are rented furnished, so turnovers between tenants are common, and the pale tiles used throughout the community show every footprint.`,
@@ -86,7 +86,7 @@ export const villaAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Dubai Hills Estate for Park Heights and Mulberry apartments, Maple and Sidra townhouses and the golf villas. Flat prices by home size.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br', '6br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '4br-apt', '3br-villa', '4br-villa', '5br-villa', '6br-villa'],
     intro: [
       `Dubai Hills Estate is the large Emaar community between Al Khail Road and Umm Suqeim Road, built around an 18 hole golf course, Dubai Hills Park and Dubai Hills Mall. It has every kind of home. Apartment buildings such as Park Heights, Mulberry, Acacia, Park Point, Collective, Executive Residences, Golf Suites and Golfville offer studios and one to three bedroom apartments. Maple and Sidra are townhouse and villa neighbourhoods with three to five bedrooms, Club Villas and Golf Grove sit by the course, and Golf Place, Fairway Vistas and Parkway Vistas hold five to seven bedroom villas. Residents are mostly families and professionals who want to be close to Downtown without the density.`,
       `Cleaning in Dubai Hills means dealing with construction dust and a lot of glass. The community is still being completed, so dust from the building sites settles on balconies, window sills and the tops of cupboards within days. The apartments are bright with large windows that show every smear, and the kitchens are open plan. The villas have gardens, pools, several bathrooms and outdoor kitchens that need regular attention, and the pale stone floors used in many of them need the right products rather than a quick mop with whatever is under the sink. Families with pets find that hair gathers along the skirting and under the sofas within a week.`,
@@ -125,7 +125,7 @@ export const villaAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Mudon for Arabela, Naseem, Rahat and Al Salam homes and Mudon Views apartments. Flat prices by home size, gate access arranged.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br', '5br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa', '5br-villa'],
     intro: [
       `Mudon is a gated family community by Dubai Properties on Al Qudra Road, next to Arabian Ranches 2 and a short drive from Motor City. The homes are mostly townhouses and villas in Arabela, Naseem, Rahat and Al Salam, with three to five bedrooms, private gardens and covered parking, arranged around Mudon Central Park with its pool, gym and sports courts. Mudon Views adds one to three bedroom apartments at the edge of the community for people who want the parks without a garden to look after. Nearly everyone here is a family, and many have dogs.`,
       `The cleaning issues are those of a villa community on the desert edge. Sand blows in after every windy day and gathers on patios, in the tracks of the sliding doors and on the ground floor tiles. Gardens drop leaves and soil onto terraces and outdoor furniture. The townhouses have staircases, several bathrooms and open kitchens that spread cooking residue, and children and pets add crumbs, marks and hair. The newer handovers in Arabela 3 and Mudon Views still carry construction dust inside cupboards and along the window frames. The covered parking areas gather sand and leaves too, and the small gardens need the patio furniture wiped after every windy day.`,
@@ -164,7 +164,7 @@ export const villaAreas = [
     containedIn: 'Dubai',
     updatedAt: '2026-10-25',
     metaDescription: `House cleaning in Town Square Dubai for Zahra, Safi, Hayat and Rawda apartments and the townhouses. Flat prices by home size, handover dust cleared.`,
-    propertySizeKeys: ['studio-1br', '2br', '3br', '4br'],
+    propertySizeKeys: ['studio-1br', '2br-apt', '3br-apt', '3br-villa', '4br-villa'],
     intro: [
       `Town Square is the Nshama community on Al Qudra Road, a little further out than Arabian Ranches and Mudon, built around the large Town Square Park. It is one of the most affordable places in Dubai to rent or buy a new home, so it has filled quickly with young families and first time buyers. Apartment buildings such as Zahra, Safi, Hayat Boulevard, Rawda, Jenna, Una and Warda offer studios and one to three bedroom apartments, and the townhouse clusters of Zahra, Hayat, Safi, Noor and Naseem have three and four bedroom homes with small gardens and covered parking. Most residents are in their first or second home in Dubai, and many have a baby or a dog, or both.`,
       `Because the community is new and still growing, construction dust is the first thing new residents notice, settling inside cupboards, on top of wardrobes and along the window frames. Sand from the surrounding desert follows, blowing onto balconies and patios after every windy day. The townhouses have staircases, open kitchens and small gardens that need regular attention, and the apartments have balconies facing the park or the building sites. Children and pets are everywhere, which means crumbs, marks and hair. The light tiles used across the community show every footprint and need a proper mop rather than a sweep.`,

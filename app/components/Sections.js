@@ -168,8 +168,8 @@ export function Pricing() {
           </Link>
         </div>
         <p className="pricing-note reveal">
-          Every package is priced by property size, from a studio up to a 6 BR villa. Your exact
-          flat rate is shown before you confirm — always.
+          Every plan is priced by unit type, from a studio up to a 6 BR villa. Your exact flat
+          rate is shown before you confirm — always.
         </p>
       </div>
     </section>

@@ -6,6 +6,9 @@
    from this file, so the figures can never contradict each other.
    Change a price here and it changes everywhere.
 
+   Prices below are the owner's published plan card (2026-10-25):
+   three plans (Basic, Standard, Premium) priced flat by unit type.
+
    This file is imported by Node scripts as well as by Next, so it
    must stay dependency-free and use explicit ".js" import paths.
    ============================================================ */
@@ -16,51 +19,52 @@ export const currency = {
   format: (amount) => `AED ${amount}`,
 };
 
-/* Property sizes, smallest first. `bathroomsIncluded` is how many bathrooms
-   the matrix price already covers; the price checker adds a flat surcharge
-   for each one beyond that, so a bigger home never comes out cheaper than
-   the advertised "from" price. */
+/* Unit types, as printed on the plan card. Apartments and villas are priced
+   separately, so a 3 BR apartment and a 3 BR villa are different rows. */
 export const propertySizes = [
-  { key: 'studio-1br', label: 'Studio & 1 BR Apt', bedrooms: 1, bathroomsIncluded: 1 },
-  { key: '2br', label: '2 BR Apartment', bedrooms: 2, bathroomsIncluded: 2 },
-  { key: '3br', label: '3 BR Apartment', bedrooms: 3, bathroomsIncluded: 2 },
-  { key: '4br', label: '4 BR Villa', bedrooms: 4, bathroomsIncluded: 3 },
-  { key: '5br', label: '5 BR Villa', bedrooms: 5, bathroomsIncluded: 4 },
-  { key: '6br', label: '6 BR Villa', bedrooms: 6, bathroomsIncluded: 5 },
+  { key: 'studio-1br', label: 'Studio & 1 BR Apt', type: 'apartment', bedrooms: 1 },
+  { key: '2br-apt', label: '2 BR Apartment', type: 'apartment', bedrooms: 2 },
+  { key: '3br-apt', label: '3 BR Apartment', type: 'apartment', bedrooms: 3 },
+  { key: '4br-apt', label: '4 BR Apt or Penthouse', type: 'apartment', bedrooms: 4 },
+  { key: '3br-villa', label: '3 BR Villa', type: 'villa', bedrooms: 3 },
+  { key: '4br-villa', label: '4 BR Villa', type: 'villa', bedrooms: 4 },
+  { key: '5br-villa', label: '5 BR Villa', type: 'villa', bedrooms: 5 },
+  { key: '6br-villa', label: '6 BR Villa', type: 'villa', bedrooms: 6 },
 ];
 
-/* The four clean types sold by property size. `prices` is indexed against
-   `propertySizes`, so the arrays must stay the same length. The FIRST entry
-   of each row is that clean type's advertised "from" price. */
+export const propertyTypes = [
+  { key: 'apartment', label: 'Apartment' },
+  { key: 'villa', label: 'Villa' },
+];
+
+/* The three plans. `prices` is indexed against `propertySizes`, so the
+   arrays must stay the same length. The FIRST entry of each row is that
+   plan's advertised "from" price. */
 export const cleanTypes = [
   {
     key: 'basic',
     name: 'Basic',
     label: 'Basic clean',
-    prices: [99, 129, 159, 199, 239, 279],
-    extraBathroom: 20,
+    tagline: 'Cleaning & Housekeeping + Laundry',
+    provided: 'Provided by owner: linens & supplies',
+    prices: [200, 300, 400, 450, 500, 600, 700, 800],
   },
   {
     key: 'standard',
     name: 'Standard',
     label: 'Standard clean',
-    prices: [149, 189, 229, 279, 329, 379],
-    extraBathroom: 20,
+    tagline: 'Cleaning & Laundry + Supplies',
+    provided: 'Provided by owner: linens only',
+    prices: [300, 400, 500, 650, 700, 715, 800, 900],
     featured: true,
   },
   {
-    key: 'deep',
-    name: 'Deep',
-    label: 'Deep clean',
-    prices: [179, 229, 279, 339, 399, 459],
-    extraBathroom: 30,
-  },
-  {
-    key: 'move',
-    name: 'Move in / out',
-    label: 'Move in / move out clean',
-    prices: [189, 239, 289, 349, 409, 469],
-    extraBathroom: 30,
+    key: 'premium',
+    name: 'Premium',
+    label: 'Premium clean',
+    tagline: 'We provide the full service',
+    provided: 'Cleaning · Linens & laundry · Supplies & amenities',
+    prices: [350, 450, 550, 650, 650, 750, 850, 950],
   },
 ];
 
@@ -68,13 +72,15 @@ export function getCleanType(key) {
   return cleanTypes.find((t) => t.key === key) || null;
 }
 
-/* Advertised starting prices. Package prices are DERIVED from the matrix
-   above — never typed twice — and the per-item services are priced flat. */
+/* Advertised starting prices. Plan prices are DERIVED from the matrix
+   above — never typed twice. Services without a published rate are null
+   and show as "Custom quote" everywhere. */
 export const startingPrices = {
-  basic: getCleanType('basic').prices[0], // 99
-  standard: getCleanType('standard').prices[0], // 149
-  deep: getCleanType('deep').prices[0], // 179
-  moveInOut: getCleanType('move').prices[0], // 189
+  basic: getCleanType('basic').prices[0], // 200
+  standard: getCleanType('standard').prices[0], // 300
+  premium: getCleanType('premium').prices[0], // 350
+  deep: null, // TODO: set when a published rate exists
+  moveInOut: null, // TODO: set when a published rate exists
   carpetUpholstery: 89,
   windowGlass: 69,
   office: null, // custom quote
@@ -84,6 +90,7 @@ export const startingPrices = {
 export const priceTable = [
   { key: 'basic', name: 'Basic cleaning', from: startingPrices.basic },
   { key: 'standard', name: 'Standard cleaning', from: startingPrices.standard },
+  { key: 'premium', name: 'Premium cleaning', from: startingPrices.premium },
   { key: 'deep', name: 'Deep cleaning', from: startingPrices.deep },
   { key: 'moveInOut', name: 'Move in / move out cleaning', from: startingPrices.moveInOut },
   { key: 'carpetUpholstery', name: 'Carpet & upholstery cleaning', from: startingPrices.carpetUpholstery },
@@ -107,90 +114,106 @@ export function servicePrice(slug) {
   return key ? startingPrices[key] : null;
 }
 
-/** "From AED 99" / "Custom quote". */
+/** "From AED 200" / "Custom quote". */
 export function fromLabel(price) {
   return price ? `From ${currency.format(price)}` : 'Custom quote';
 }
 
+/** Bedroom range the matrix covers for a property type. */
+export function bedroomRange(propertyType) {
+  const beds = propertySizes.filter((s) => s.type === propertyType).map((s) => s.bedrooms);
+  return { min: Math.min(...beds), max: Math.max(...beds) };
+}
+
+/** The matrix row for a property type and bedroom count (clamped to the range). */
+export function sizeFor(propertyType = 'apartment', bedrooms = 1) {
+  const type = propertyTypes.some((t) => t.key === propertyType) ? propertyType : 'apartment';
+  const { min, max } = bedroomRange(type);
+  const beds = Math.min(Math.max(Math.round(Number(bedrooms) || min), min), max);
+  return propertySizes.find((s) => s.type === type && s.bedrooms === beds);
+}
+
 /**
- * The flat rate for a home. Looks the clean type up in the size matrix by
- * bedroom count (a studio counts as 1) and adds a surcharge for bathrooms
- * beyond the number that size already includes. Because it reads the same
- * matrix the pricing page prints, the instant price checker can never show
- * a figure below that clean type's advertised "from" price.
+ * The flat rate for a home: the plan's price for that unit type, read from
+ * the same matrix the pricing page prints, so the instant price checker can
+ * never show a figure that disagrees with the table.
  *
- * @param {{ bedrooms?: number, bathrooms?: number, cleanType?: string }} opts
- * @returns {number|null} price in AED, or null for an unknown clean type
+ * @param {{ propertyType?: 'apartment'|'villa', bedrooms?: number, cleanType?: string }} opts
+ * @returns {number|null} price in AED, or null for an unknown plan
  */
-export function flatRate({ bedrooms = 1, bathrooms = 1, cleanType = 'standard' } = {}) {
-  const type = getCleanType(cleanType);
-  if (!type) return null;
-  const beds = Math.round(Number(bedrooms) || 0);
-  const baths = Math.round(Number(bathrooms) || 0);
-  const index = Math.min(Math.max(beds, 1), propertySizes.length) - 1;
-  const size = propertySizes[index];
-  const extraBathrooms = Math.max(0, baths - size.bathroomsIncluded);
-  return type.prices[index] + extraBathrooms * type.extraBathroom;
+export function flatRate({ propertyType = 'apartment', bedrooms = 1, cleanType = 'standard' } = {}) {
+  const plan = getCleanType(cleanType);
+  if (!plan) return null;
+  const size = sizeFor(propertyType, bedrooms);
+  return plan.prices[propertySizes.indexOf(size)];
 }
 
 /* Handy aggregates for headlines and structured data. */
-export const lowestPackagePrice = Math.min(...cleanTypes.map((t) => t.prices[0])); // 99
+export const lowestPackagePrice = Math.min(...cleanTypes.map((t) => t.prices[0])); // 200
 export const lowestPrice = Math.min(
   ...Object.values(startingPrices).filter((p) => Number.isFinite(p))
 ); // 69
-export const highestPrice = Math.max(...cleanTypes.flatMap((t) => t.prices)); // 469
+export const highestPrice = Math.max(...cleanTypes.flatMap((t) => t.prices)); // 950
 
-/* Schema.org priceRange. The ceiling is rounded up to the next hundred so a
-   large villa with extra bathrooms still falls inside the advertised range. */
+/* Schema.org priceRange, with the ceiling rounded up to the next hundred. */
 export const PRICE_RANGE = `${currency.format(lowestPrice)} - ${currency.format(
   Math.ceil(highestPrice / 100) * 100
-)}`; // "AED 69 - AED 500"
+)}`; // "AED 69 - AED 1000"
 
-/* The three package cards shown on the home and pricing pages. Their prices
+/* The three plan cards shown on the home and pricing pages. Their prices
    come straight from the matrix so a card can never disagree with the table. */
 export const packages = [
   {
     key: 'basic',
-    desc: 'The essential clean that keeps an already-tidy home fresh.',
+    desc: 'Cleaning and housekeeping with the laundry done. You provide the linens and supplies.',
     feats: [
-      'Full standard clean, top to bottom',
-      'Kitchen & bathrooms detailed',
-      'Floors vacuumed & mopped',
-      'Dusting, surfaces & bins emptied',
+      'Full clean and housekeeping, top to bottom',
+      'Laundry washed, dried and folded',
+      'Kitchen and bathrooms detailed',
+      'Floors vacuumed and mopped',
+      'You provide linens and supplies',
       '100% Spotless Guarantee',
     ],
     cta: 'Book a basic clean',
   },
   {
     key: 'standard',
-    desc: 'Our most popular package — everything in Basic, in more detail.',
+    desc: 'Our most popular plan. Cleaning and laundry with every supply brought by us. You provide the linens only.',
     feats: [
       'Everything in Basic',
-      'We bring all supplies & equipment',
-      'Inside microwave & appliance fronts',
-      'Baseboards, doors & switch plates',
+      'We bring all cleaning supplies',
+      'Laundry included',
+      'You provide linens only',
       'Same trusted cleaner each visit',
       'Priority scheduling',
     ],
     cta: 'Book a standard clean',
   },
   {
-    key: 'deep',
-    desc: 'The full top-to-bottom reset for grime, grout and the spots a regular clean skips.',
+    key: 'premium',
+    desc: 'The full service. We bring the linens, do the laundry and restock supplies and amenities.',
     feats: [
       'Everything in Standard',
-      'Inside oven, fridge & cabinets',
-      'Tile & grout scrubbed',
-      'Vents, fans & light fixtures',
-      'Window sills, tracks & ledges',
-      'Ideal first clean or seasonal reset',
+      'Fresh linens provided and laundered',
+      'Supplies and amenities restocked',
+      'Nothing for you to provide',
+      'Inspection ready finish',
+      'Dedicated account manager',
     ],
-    cta: 'Book a deep clean',
+    cta: 'Book a premium clean',
   },
 ].map((p) => {
   const type = getCleanType(p.key);
-  return { ...p, name: type.name, prices: type.prices, from: type.prices[0], featured: !!type.featured };
+  return {
+    ...p,
+    name: type.name,
+    tagline: type.tagline,
+    provided: type.provided,
+    prices: type.prices,
+    from: type.prices[0],
+    featured: !!type.featured,
+  };
 });
 
-/* Extras listed under the packages, priced off the service catalogue. */
+/* Extras listed under the plans, priced off the service catalogue. */
 export const addOnSlugs = ['carpet-upholstery-cleaning', 'window-glass-cleaning'];

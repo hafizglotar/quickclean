@@ -35,7 +35,7 @@ export const serviceContent = {
     faqs: [
       {
         q:  `How much does residential cleaning cost in ${CITY}?`,
-        a: `Residential cleaning in Dubai starts at ${fmt(startingPrices.basic)} for a Basic clean and ${fmt(startingPrices.standard)} for our Standard package. The exact price depends on your home size and number of bathrooms. You see the flat rate before booking, and recurring plans can save up to 20% per visit.`,
+        a: `Residential cleaning in Dubai starts at ${fmt(startingPrices.basic)} for a Basic clean, ${fmt(startingPrices.standard)} for Standard and ${fmt(startingPrices.premium)} for Premium, for a studio or one bedroom apartment. Every unit type up to a six bedroom villa has its own flat rate, shown before booking, and recurring plans can save up to 20% per visit.`,
     },   
       {
         q: 'Can I get the same cleaner every time?',
@@ -51,7 +51,9 @@ export const serviceContent = {
   'deep-cleaning': {
     updatedAt: '2026-10-25',
     serviceType: 'Deep Cleaning',
-    metaDescription: `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price with a free re-clean guarantee.`,
+    metaDescription: startingPrices.deep
+      ? `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price with a free re-clean guarantee.`
+      : 'Deep cleaning in Dubai: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price confirmed before you book, with a free re-clean guarantee.',
     subhead:
        'Professional deep cleaning services in Dubai for homes that need a detailed top-to-bottom clean, including baseboards, grout, appliances, vents, and hard-to-reach areas.',
    intro: `Quick Clean provides professional deep cleaning services in Dubai for homes that need more than a standard clean. We tackle built-up grime, hard-to-reach areas, baseboards, grout, appliances, vents, and detailed surfaces. Deep cleaning is ideal before guests arrive, after a renovation, or as the first clean before starting a recurring service.`,
@@ -74,7 +76,9 @@ export const serviceContent = {
      },
       {
         q: `How much does deep cleaning cost in ${CITY}?`,
-        a: `Deep cleaning in Dubai starts at ${fmt(startingPrices.deep)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is shown before you book.`,
+        a: startingPrices.deep
+          ? `Deep cleaning in Dubai starts at ${fmt(startingPrices.deep)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and is shown before you book.`
+          : 'Deep cleaning in Dubai is quoted for your property based on its size and condition. Tell us the number of bedrooms and bathrooms and whether the home is furnished, and we confirm a flat price before you book.',
     },
       {
         q: 'How often should I schedule deep cleaning in Dubai?',
@@ -86,7 +90,9 @@ export const serviceContent = {
   'move-in-move-out-cleaning': {
     updatedAt: '2026-10-25',
     serviceType: 'Move In / Move Out Cleaning',
-    metaDescription: `Move-in and move-out cleaning in Dubai from ${fmt(startingPrices.moveInOut)}. Inspection-ready apartments and villas, inside cabinets and appliances, at a flat upfront price.`,
+    metaDescription: startingPrices.moveInOut
+      ? `Move-in and move-out cleaning in Dubai from ${fmt(startingPrices.moveInOut)}. Inspection-ready apartments and villas, inside cabinets and appliances, at a flat upfront price.`
+      : 'Move-in and move-out cleaning in Dubai for inspection-ready apartments and villas, inside cabinets and appliances, at a flat price confirmed before you book.',
     subhead:
       'Professional move-in and move-out cleaning in Dubai for apartments and villas, with detailed cleaning to help prepare your home for inspection, handover, or a fresh start.',
     intro: `Quick Clean provides professional move-in and move-out cleaning in Dubai for apartments and villas. We clean inside cabinets, drawers, appliances, closets, bathrooms, floors, and other areas commonly checked during inspections. It is ideal for tenants preparing to hand back a property, landlords getting a home ready for new tenants, or anyone moving into a freshly cleaned space.`,
@@ -113,7 +119,9 @@ export const serviceContent = {
      },
       {
         q: `How much does move-in and move-out cleaning cost in ${CITY}?`,
-        a: `Move-in and move-out cleaning in Dubai starts at ${fmt(startingPrices.moveInOut)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is confirmed before booking.`,
+        a: startingPrices.moveInOut
+          ? `Move-in and move-out cleaning in Dubai starts at ${fmt(startingPrices.moveInOut)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and is confirmed before booking.`
+          : 'Move-in and move-out cleaning in Dubai is quoted for your property. Tell us the unit type, the number of bedrooms and whether it is furnished or empty, and we confirm a flat price before you book.',
     },
     ],
   },

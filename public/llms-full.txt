@@ -25,28 +25,36 @@ canonical page on https://www.quickclean.ae. The short summary is at https://www
 - Saturday: 09:00 – 16:00
 - Sunday: Closed
 
-## Pricing (AED, per visit, flat rate by property size)
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+## Pricing (AED, per visit, flat rate by unit type)
+Basic: cleaning and housekeeping with laundry, linens and supplies provided by the owner.
+Standard: cleaning and laundry with our supplies, linens provided by the owner.
+Premium: the full service, with linens, laundry, supplies and amenities provided by us.
+
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Other services:
+- Deep cleaning — custom quote
+- Move in / move out cleaning — custom quote
 - Carpet & upholstery cleaning — from AED 89
 - Window & glass cleaning — from AED 69
 - Office & commercial cleaning — custom quote
 
-The instant price checker on the home page prices a home by bedrooms, bathrooms and
-clean type from this same table, so the figure it shows is never below the "from" price.
+The instant price checker on the home page prices a home by property type, bedrooms and
+plan from this same table, so the figure it shows always matches the published card.
 
 ## Services
 ### Residential Cleaning in Dubai
 URL: https://www.quickclean.ae/services/residential-cleaning
-Starting price: from AED 99
+Starting price: from AED 200
 Availability: Same-day & next-day slots
 Last updated: 2026-10-25
 
@@ -67,13 +75,13 @@ What's included:
 Ideal for: Busy households & families; Working professionals; Anyone who wants a reliable recurring clean
 
 FAQ:
-- How much does residential cleaning cost in Dubai? Residential cleaning in Dubai starts at AED 99 for a Basic clean and AED 149 for our Standard package. The exact price depends on your home size and number of bathrooms. You see the flat rate before booking, and recurring plans can save up to 20% per visit.
+- How much does residential cleaning cost in Dubai? Residential cleaning in Dubai starts at AED 200 for a Basic clean, AED 300 for Standard and AED 350 for Premium, for a studio or one bedroom apartment. Every unit type up to a six bedroom villa has its own flat rate, shown before booking, and recurring plans can save up to 20% per visit.
 - Can I get the same cleaner every time? Yes. For recurring residential cleaning in Dubai, we aim to send the same cleaner whenever possible, so they can become familiar with your home and preferences.
 - How often should I schedule a house cleaning in Dubai? Most households in Dubai choose bi-weekly residential cleaning. Homes with kids or pets often prefer weekly cleaning, while lighter-use homes may only need a monthly visit.
 
 ### Deep Cleaning in Dubai
 URL: https://www.quickclean.ae/services/deep-cleaning
-Starting price: from AED 179
+Starting price: custom quote
 Availability: Recommended 1–2 days ahead
 Last updated: 2026-10-25
 
@@ -95,12 +103,12 @@ Ideal for: First-time cleans; Spring cleaning & pre-holiday; Homes that haven’
 
 FAQ:
 - What is the difference between standard and deep cleaning in Dubai? Standard cleaning is designed to maintain an already tidy home, while deep cleaning in Dubai is more detailed and time-intensive. It targets built-up grime, baseboards, grout, vents, and areas behind or inside appliances.
-- How much does deep cleaning cost in Dubai? Deep cleaning in Dubai starts at AED 179 for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is shown before you book.
+- How much does deep cleaning cost in Dubai? Deep cleaning in Dubai is quoted for your property based on its size and condition. Tell us the number of bedrooms and bathrooms and whether the home is furnished, and we confirm a flat price before you book.
 - How often should I schedule deep cleaning in Dubai? Most homes benefit from deep cleaning in Dubai 2–4 times a year. You may also want a deep clean before guests arrive, after renovations, or as the first visit before starting regular residential cleaning.
 
 ### Move In / Move Out Cleaning in Dubai
 URL: https://www.quickclean.ae/services/move-in-move-out-cleaning
-Starting price: from AED 189
+Starting price: custom quote
 Availability: Book around your move date
 Last updated: 2026-10-25
 
@@ -123,7 +131,7 @@ Ideal for: Renters protecting a deposit; Landlords & property managers; Realtors
 FAQ:
 - Will move-out cleaning help me get my deposit back in Dubai? A thorough move-out cleaning in Dubai can help prepare the property for inspection by cleaning areas landlords commonly check, including appliances, cabinets, baseboards, bathrooms, and floors. The service is backed by our 100% Spotless Guarantee.
 - Does the home need to be empty for move-out cleaning in Dubai? An empty home allows our cleaners to reach more surfaces and deliver the best result. We can also clean partially furnished homes in Dubai, so let us know the property condition when you book.
-- How much does move-in and move-out cleaning cost in Dubai? Move-in and move-out cleaning in Dubai starts at AED 189 for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is confirmed before booking.
+- How much does move-in and move-out cleaning cost in Dubai? Move-in and move-out cleaning in Dubai is quoted for your property. Tell us the unit type, the number of bedrooms and whether it is furnished or empty, and we confirm a flat price before you book.
 
 ### Office & Commercial Cleaning in Dubai
 URL: https://www.quickclean.ae/services/office-commercial-cleaning
@@ -225,17 +233,17 @@ Parking is tight. Visitor bays in most towers are limited and often paid, and st
 Pricing in Dubai Marina follows our standard flat-rate matrix by apartment size, shown below, so a studio or one-bedroom apartment pays the entry rate and a three-bedroom apartment pays the three-bedroom rate, with no hourly meter. Same-day and next-day slots are usually available, early-morning and evening visits suit shift workers and holiday-let turnovers, and recurring weekly or bi-weekly plans get the same cleaner each time and save up to 20% per visit.
 
 Prices in Dubai Marina (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
 
 Services available in Dubai Marina:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -265,17 +273,17 @@ Parking is possible but not free. Most Boulevard towers have basement visitor pa
 Pricing for Downtown Dubai follows our flat-rate matrix by apartment size, listed below, so a one-bedroom Boulevard apartment and a three-bedroom Old Town apartment each have a clear price before you confirm. Same-day and next-day appointments are usually available, early and late slots suit residents who work in DIFC and the business district, and recurring plans give you the same cleaner on every visit at up to 20% less per clean.
 
 Prices in Downtown Dubai (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
 
 Services available in Downtown Dubai:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -305,18 +313,21 @@ One practical note for JVC residents: the community sits beside major roads and 
 Pricing in JVC follows our flat-rate matrix by home size, shown below, which covers everything from a studio apartment to a five-bedroom villa. Same-day and next-day slots are usually available, and because the community is central to our cleaners' routes, morning, afternoon and evening appointments are all easy to arrange. Recurring customers get the same cleaner each time and save up to 20% on every visit.
 
 Prices in JVC (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in JVC:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -346,16 +357,16 @@ Parking is limited and mostly paid. Visitor bays in the towers are scarce, and t
 Residential pricing in Business Bay follows our flat-rate matrix by apartment size, shown below, with studios and one-bedroom apartments at the entry rate. Office and commercial cleaning is quoted after a free walkthrough, based on the floor area, frequency and checklist, and comes back as a flat recurring rate. Same-day and next-day residential slots are usually available, and recurring customers get the same cleaner each visit at up to 20% less per clean.
 
 Prices in Business Bay (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
 
 Services available in Business Bay:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -385,19 +396,21 @@ Parking is generally easy outside the densest areas. Villa streets and most resi
 Pricing in Sharjah follows the same flat-rate matrix by home size that we use everywhere, from a studio apartment to a six-bedroom villa, shown below. There is no travel surcharge for Sharjah. Same-day and next-day slots are usually available, weekend appointments are popular with families, and recurring weekly or bi-weekly plans send the same cleaner each time and save up to 20% on every visit.
 
 Prices in Sharjah (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Sharjah:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -427,19 +440,21 @@ Parking is rarely a problem. Villa streets and most residential districts have f
 Pricing in Ajman follows the same flat-rate matrix by home size that we use everywhere, from a studio apartment to a six-bedroom villa, shown below, and there is no travel surcharge. Same-day and next-day slots are usually available, Saturday appointments suit families, and recurring weekly or bi-weekly plans send the same cleaner on every visit and save up to 20% per clean.
 
 Prices in Ajman (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Ajman:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -469,18 +484,19 @@ The right first visit for almost every home in Dubai South is a deep clean or a 
 Prices follow the same flat table we use across Dubai, shown below for the home sizes found in Dubai South, and there is no travel surcharge for the district. Same day slots are harder to promise here than in central Dubai because of the drive, but next day appointments are usually available, weekend mornings are popular with families, and recurring customers keep the same cleaner on every visit.
 
 Prices in Dubai South (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
 
 Services available in Dubai South:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -510,17 +526,17 @@ For a newly handed over apartment, book a move in clean or a deep clean first so
 Prices are the flat rates shown in the table below for the apartment sizes found in Expo City, with no travel surcharge for the district. Next day slots are usually available, early morning visits work well for people who commute to Jebel Ali or the airport, and on recurring plans the same cleaner comes each time so you do not have to explain the apartment twice.
 
 Prices in Expo City Dubai (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
 
 Services available in Expo City Dubai:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -550,18 +566,18 @@ For a villa in Jebel Ali Village that has just been handed over or has been empt
 Prices follow the flat table below for the home sizes found in Jebel Ali, from a studio near the Free Zone up to a five bedroom villa in the Village, with no travel surcharge. Next day slots are usually available, early morning and evening visits suit shift workers, and recurring customers keep the same cleaner on every visit.
 
 Prices in Jebel Ali (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
 
 Services available in Jebel Ali:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -591,19 +607,21 @@ For a newly handed over apartment or villa, book a move in clean or a deep clean
 Prices follow the flat table below, which covers every home size in Al Furjan from a studio to a six bedroom villa, with no travel surcharge. Same day and next day slots are usually available because the area is central to our routes, weekend mornings are popular with families, and recurring customers get the same cleaner on every visit. Villa owners often add carpet and sofa cleaning once a year, usually after the summer.
 
 Prices in Al Furjan (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Al Furjan:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -633,16 +651,16 @@ For an apartment you have just moved into, a move in clean is the right first vi
 Prices are the flat rates shown in the table below for studios and one, two and three bedroom apartments, with no surcharge for the area. Same day and next day slots are usually available because the community is close to our routes through Jebel Ali and the Marina, and recurring customers get the same cleaner on every visit.
 
 Prices in Discovery Gardens (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
 
 Services available in Discovery Gardens:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -672,19 +690,21 @@ The right first visit depends on where you live. A Green Community villa that ha
 Prices follow the flat table below, which covers every home size in DIP from a studio to a six bedroom villa, with no travel surcharge. Next day slots are usually available, early morning visits suit residents who commute to Jebel Ali or Dubai South, and recurring customers keep the same cleaner on every visit.
 
 Prices in Dubai Investment Park (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Dubai Investment Park:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -714,17 +734,17 @@ For an apartment you have just rented, book a move in clean first so the inside 
 Prices follow the flat table below for the apartment sizes found in JLT, with no surcharge for the area. Same day and next day slots are usually available because the district is central to our routes, early morning and evening visits suit people who work in the DMCC towers, and recurring customers keep the same cleaner on every visit.
 
 Prices in JLT (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
 
 Services available in JLT:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -754,19 +774,20 @@ For a holiday home, the right plan is a turnover clean after every stay, with a 
 Prices follow the flat table below, which covers every home size on Palm Jumeirah from a one bedroom apartment to a six bedroom villa, with no surcharge for the location. The largest Signature Villas are quoted after a quick call. Next day slots are usually available, turnover cleans are scheduled around check out times, and recurring customers keep the same cleaner on every visit.
 
 Prices in Palm Jumeirah (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Palm Jumeirah:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -796,19 +817,21 @@ For a newly rented apartment, a move in clean is the right first visit. For a Vi
 Prices follow the flat table below, which covers every home size in Sports City from a studio to a six bedroom villa, with no travel surcharge. Same day and next day slots are usually available, weekend mornings are busy with families so book those a few days ahead, and recurring customers get the same cleaner on every visit.
 
 Prices in Dubai Sports City (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Dubai Sports City:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -838,18 +861,19 @@ For most homes in Motor City, a Standard clean is the right first visit, with a 
 Prices follow the flat table below for the home sizes found in Motor City, from a studio in Uptown to a five bedroom villa in Green Community, with no travel surcharge. Same day and next day slots are usually available, weekend slots fill quickly with families so book those a few days ahead, and recurring customers keep the same cleaner on every visit.
 
 Prices in Motor City (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
 
 Services available in Motor City:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -879,18 +903,17 @@ For a villa that has been lived in for years, the right first visit is a deep cl
 Prices follow the flat table below for the villa and townhouse sizes found in Arabian Ranches, from a two bedroom townhouse to a six bedroom villa, with no travel surcharge. Larger homes are quoted after a quick call. Next day slots are usually available, weekday mornings are the quietest time, and recurring customers keep the same cleaner on every visit so they learn the house.
 
 Prices in Arabian Ranches (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Arabian Ranches:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -920,19 +943,21 @@ For a newly handed over villa or apartment, book a move in clean or a deep clean
 Prices follow the flat table below, which covers every home size in Damac Hills from a studio to a six bedroom villa, with no travel surcharge for either phase. Next day slots are usually available, weekend mornings fill up with families so book early, and recurring customers keep the same cleaner on every visit.
 
 Prices in Damac Hills (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Damac Hills:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -962,19 +987,21 @@ For a newly handed over home, the right first visit is a move in clean or a deep
 Prices follow the flat table below, which covers every home size in Dubai Hills from a studio to a six bedroom villa, with no surcharge for the area. Larger villas are quoted after a quick call. Same day and next day slots are usually available because the community is central to our routes, and recurring customers keep the same cleaner on every visit.
 
 Prices in Dubai Hills Estate (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Dubai Hills Estate:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1004,18 +1031,19 @@ For a townhouse that has been lived in for a few years, the right first visit is
 Prices follow the flat table below for the home sizes found in Mudon, from a one bedroom apartment in Mudon Views to a five bedroom villa, with no travel surcharge. Next day slots are usually available, weekday mornings while the children are at school are the most popular time, and recurring customers keep the same cleaner on every visit.
 
 Prices in Mudon (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
 
 Services available in Mudon:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1045,17 +1073,18 @@ For a newly handed over apartment or townhouse, the right first visit is a move 
 Prices follow the flat table below for the home sizes found in Town Square, from a studio to a four bedroom townhouse, with no travel surcharge. Next day slots are usually available, weekend mornings fill up with families so book a few days ahead, and recurring customers keep the same cleaner on every visit.
 
 Prices in Town Square (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
 
 Services available in Town Square:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1085,18 +1114,19 @@ For a newly rented apartment, a move in clean is the right first visit, because 
 Prices follow the flat table below for the home sizes found in Dubai Silicon Oasis, from a studio to a five bedroom villa, with no travel surcharge. Same day and next day slots are usually available, early morning visits suit people who commute to Downtown, and recurring customers keep the same cleaner on every visit.
 
 Prices in Dubai Silicon Oasis (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
 
 Services available in Dubai Silicon Oasis:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1126,19 +1156,21 @@ For an apartment in an older building, the right first visit is a deep clean to 
 Prices follow the flat table below, which covers every home size in Al Barsha from a studio to a six bedroom villa, with no surcharge. Larger villas are quoted after a quick call. Same day and next day slots are usually available because the district is central to our routes, and recurring customers keep the same cleaner on every visit.
 
 Prices in Al Barsha (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Al Barsha:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1168,19 +1200,20 @@ For a villa that has been lived in for years, the right first visit is a deep cl
 Prices follow the flat table below, which covers every home size along the coast from a one bedroom apartment to a six bedroom villa, with no surcharge. Larger villas are quoted after a quick call. Next day slots are usually available, weekday mornings are the quietest time, and recurring customers keep the same cleaner on every visit so they learn the house.
 
 Prices in Jumeirah and Umm Suqeim (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Jumeirah and Umm Suqeim:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1210,19 +1243,21 @@ For an older villa, the right first visit is a deep clean to reset the kitchen, 
 Prices follow the flat table below, which covers every home size in Mirdif from a one bedroom apartment to a six bedroom villa, with no travel surcharge. Same day and next day slots are usually available, weekday mornings while the children are at school are the most popular time, and recurring customers keep the same cleaner on every visit.
 
 Prices in Mirdif (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
-| 4 BR Villa | AED 199 | AED 279 | AED 339 | AED 349 |
-| 5 BR Villa | AED 239 | AED 329 | AED 399 | AED 409 |
-| 6 BR Villa | AED 279 | AED 379 | AED 459 | AED 469 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
+| 4 BR Apt or Penthouse | AED 450 | AED 650 | AED 650 |
+| 3 BR Villa | AED 500 | AED 700 | AED 650 |
+| 4 BR Villa | AED 600 | AED 715 | AED 750 |
+| 5 BR Villa | AED 700 | AED 800 | AED 850 |
+| 6 BR Villa | AED 800 | AED 900 | AED 950 |
 
 Services available in Mirdif:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1252,16 +1287,16 @@ For an apartment in an older building, the right first visit is a deep clean to 
 Prices follow the flat table below for the apartment sizes found in Deira and Bur Dubai, from a studio to a three bedroom apartment, with no surcharge for the area. Same day and next day slots are usually available because the old city is well connected by metro, early morning and evening visits suit shift workers, and recurring customers keep the same cleaner on every visit.
 
 Prices in Deira and Bur Dubai (AED, per visit, flat rate by property size):
-| Property size | Basic | Standard | Deep | Move in / out |
-|---|---|---|---|---|
-| Studio & 1 BR Apt | AED 99 | AED 149 | AED 179 | AED 189 |
-| 2 BR Apartment | AED 129 | AED 189 | AED 229 | AED 239 |
-| 3 BR Apartment | AED 159 | AED 229 | AED 279 | AED 289 |
+| Property size | Basic | Standard | Premium |
+|---|---|---|---|
+| Studio & 1 BR Apt | AED 200 | AED 300 | AED 350 |
+| 2 BR Apartment | AED 300 | AED 400 | AED 450 |
+| 3 BR Apartment | AED 400 | AED 500 | AED 550 |
 
 Services available in Deira and Bur Dubai:
-- Residential Cleaning — from AED 99 — https://www.quickclean.ae/services/residential-cleaning
-- Deep Cleaning — from AED 179 — https://www.quickclean.ae/services/deep-cleaning
-- Move In / Move Out Cleaning — from AED 189 — https://www.quickclean.ae/services/move-in-move-out-cleaning
+- Residential Cleaning — from AED 200 — https://www.quickclean.ae/services/residential-cleaning
+- Deep Cleaning — custom quote — https://www.quickclean.ae/services/deep-cleaning
+- Move In / Move Out Cleaning — custom quote — https://www.quickclean.ae/services/move-in-move-out-cleaning
 - Office & Commercial Cleaning — custom quote — https://www.quickclean.ae/services/office-commercial-cleaning
 - Carpet & Upholstery Cleaning — from AED 89 — https://www.quickclean.ae/services/carpet-upholstery-cleaning
 - Window & Glass Cleaning — from AED 69 — https://www.quickclean.ae/services/window-glass-cleaning
@@ -1279,7 +1314,7 @@ FAQ:
 - Are your cleaners insured and background-checked? Yes. Every Quick Clean pro is interviewed, background-checked, trained, and fully insured and bonded before they ever enter a home.
 - Do you bring your own supplies? Yes. We arrive with professional, eco-friendly products and equipment. Have a preferred product? Just leave it out and let us know.
 - How do I pay, and when? Securely online after the clean is done and you are happy. No cash needed, no payment up front, and no contracts.
-- How much does house cleaning cost with Quick Clean? Basic cleans start at AED 99, our Standard package from AED 149, deep cleans from AED 179, and move-in/move-out cleans from AED 189. You see your exact flat rate before you book — pricing depends on home size and the number of bathrooms.
+- How much does house cleaning cost with Quick Clean? Every plan is a flat rate by unit type. Basic starts at AED 200 for a studio or one bedroom apartment, Standard at AED 300 and Premium at AED 350, and the pricing page lists every unit type from a studio up to a six bedroom villa. Deep cleans and move in or move out cleans are quoted for your property before you book.
 - Which areas do you serve? Quick Clean serves Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.
 - How long does a house cleaning take? A standard clean usually takes about 1.5 to 3 hours, depending on the size and condition of your home. Deep cleans and move-in/move-out cleans take longer. You will get an estimated time when you book.
 - Can I book a same-day or next-day cleaning? Yes. Same-day and next-day appointments are often available. You can book online in about 60 seconds and choose the earliest time slot that works for you.
