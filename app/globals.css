@@ -328,6 +328,10 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .plan-price span { font-size: 1.15rem; font-weight: 700; vertical-align: baseline; color: var(--muted); margin-right: 7px; letter-spacing: -.01em; }
 .plan-price small { font-size: .95rem; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 4px; }
 .plan-featured .plan-price span { color: #b8d6d2; }
+.plan-tagline { color: var(--teal-700); font-weight: 700; font-size: .95rem; margin-bottom: 4px; }
+.plan-provided { color: var(--muted); font-size: .85rem; margin-bottom: 14px; }
+.plan-featured .plan-tagline { color: var(--teal-300); }
+.plan-featured .plan-provided { color: #b8d6d2; }
 .plan-desc { color: var(--slate); font-size: .96rem; margin-bottom: 22px; }
 .plan-feats { display: grid; gap: 12px; margin-bottom: 26px; flex: 1; }
 .plan-feats li { display: flex; align-items: flex-start; gap: 10px; color: var(--slate); font-size: .96rem; }

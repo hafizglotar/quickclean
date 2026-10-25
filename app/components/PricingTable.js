@@ -11,11 +11,11 @@ export function PricingMatrix({ sizes, caption }) {
     <div className="price-matrix-wrap">
       <table className="price-matrix">
         <caption className="sr-only">
-          {caption || `Cleaning prices by clean type and property size, in ${currency.code}`}
+          {caption || `Cleaning prices by plan and unit type, in ${currency.code}`}
         </caption>
         <thead>
           <tr>
-            <th scope="col">Property size</th>
+            <th scope="col">Unit type</th>
             {cleanTypes.map((t) => (
               <th scope="col" key={t.key} className={t.featured ? 'is-featured' : undefined}>
                 {t.name}
@@ -53,6 +53,8 @@ export function PricingCards({ compact = false }) {
         <article className={`plan${tier.featured ? ' plan-featured' : ''}`} key={tier.key}>
           {tier.featured && <span className="plan-tag">Most popular</span>}
           <h3>{tier.name}</h3>
+          <p className="plan-tagline">{tier.tagline}</p>
+          <p className="plan-provided">{tier.provided}</p>
           <div className="plan-price">
             <span>{currency.symbol}</span>
             {tier.from}
