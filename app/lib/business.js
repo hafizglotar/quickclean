@@ -120,11 +120,14 @@ export const trustLogos = [
 ];
 
 // `icon` is a key into SERVICE_ICONS in components/icons.js (real SVG icons, not emoji).
+// `title` is the short label for cards and navigation; `name` is the full
+// Title Case service name used in page titles, headings and schema.
 export const services = [
   {
     slug: 'residential-cleaning',
     icon: 'home',
     title: 'Residential Cleaning',
+    name: 'Residential Cleaning',
     desc: 'Reliable residential cleaning in Dubai for recurring or one-time visits that keep your home fresh, top to bottom.',
     price: servicePrice('residential-cleaning'),
   },
@@ -132,6 +135,7 @@ export const services = [
     slug: 'deep-cleaning',
     icon: 'sparkle',
     title: 'Deep Cleaning',
+    name: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
     price: servicePrice('deep-cleaning'),
   },
@@ -139,6 +143,7 @@ export const services = [
     slug: 'move-in-move-out-cleaning',
     icon: 'box',
     title: 'Move In / Move Out',
+    name: 'Move In / Move Out Cleaning',
     desc: 'Move-in and move-out cleaning in Dubai to help leave your apartment or villa spotless and inspection-ready.',
     price: servicePrice('move-in-move-out-cleaning'),
   },
@@ -146,6 +151,7 @@ export const services = [
     slug: 'office-commercial-cleaning',
     icon: 'building',
     title: 'Office & Commercial',
+    name: 'Office & Commercial Cleaning',
     desc: 'Professional office and commercial cleaning in Dubai with flexible after-hours service for a clean, healthy workspace.',
     price: servicePrice('office-commercial-cleaning'),
   },
@@ -153,6 +159,7 @@ export const services = [
     slug: 'carpet-upholstery-cleaning',
     icon: 'sofa',
     title: 'Carpet & Upholstery',
+    name: 'Carpet & Upholstery Cleaning',
     desc: 'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, and built-up dirt.',
     price: servicePrice('carpet-upholstery-cleaning'),
   },
@@ -160,6 +167,7 @@ export const services = [
     slug: 'window-glass-cleaning',
     icon: 'window',
     title: 'Window & Glass',
+    name: 'Window & Glass Cleaning',
     desc: 'Professional window and glass cleaning in Dubai for clear, streak-free results inside and out.',
     price: servicePrice('window-glass-cleaning'),
   },

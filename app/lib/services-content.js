@@ -15,6 +15,7 @@ const CITY = business.address.city; // "Dubai"
 export const serviceContent = {
   'residential-cleaning': {
     serviceType: 'Residential Cleaning',
+    metaDescription: `Reliable residential cleaning in Dubai from ${fmt(startingPrices.basic)}. Vetted, insured cleaners, flat upfront pricing and a 100% Spotless Guarantee. Book online in 60 seconds.`,
     subhead:
        'Professional residential cleaning services in Dubai for apartments, villas, and family homes, with reliable cleaners and detailed cleaning for kitchens, bathrooms, bedrooms, floors, and living areas.',
        intro: `Quick Clean provides reliable residential cleaning services in Dubai for apartments, villas, and family homes. Our vetted and insured cleaners follow a consistent top-to-bottom checklist covering kitchens, bathrooms, living areas, bedrooms, floors, and high-touch surfaces. Choose a one-time clean or a recurring weekly, bi-weekly, or monthly service based on your needs.`,
@@ -48,6 +49,7 @@ export const serviceContent = {
 
   'deep-cleaning': {
     serviceType: 'Deep Cleaning',
+    metaDescription: `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price with a free re-clean guarantee.`,
     subhead:
        'Professional deep cleaning services in Dubai for homes that need a detailed top-to-bottom clean, including baseboards, grout, appliances, vents, and hard-to-reach areas.',
    intro: `Quick Clean provides professional deep cleaning services in Dubai for homes that need more than a standard clean. We tackle built-up grime, hard-to-reach areas, baseboards, grout, appliances, vents, and detailed surfaces. Deep cleaning is ideal before guests arrive, after a renovation, or as the first clean before starting a recurring service.`,
@@ -81,6 +83,7 @@ export const serviceContent = {
 
   'move-in-move-out-cleaning': {
     serviceType: 'Move In / Move Out Cleaning',
+    metaDescription: `Move-in and move-out cleaning in Dubai from ${fmt(startingPrices.moveInOut)}. Inspection-ready apartments and villas, inside cabinets and appliances, at a flat upfront price.`,
     subhead:
       'Professional move-in and move-out cleaning in Dubai for apartments and villas, with detailed cleaning to help prepare your home for inspection, handover, or a fresh start.',
     intro: `Quick Clean provides professional move-in and move-out cleaning in Dubai for apartments and villas. We clean inside cabinets, drawers, appliances, closets, bathrooms, floors, and other areas commonly checked during inspections. It is ideal for tenants preparing to hand back a property, landlords getting a home ready for new tenants, or anyone moving into a freshly cleaned space.`,
@@ -114,6 +117,7 @@ export const serviceContent = {
 
   'office-commercial-cleaning': {
     serviceType: 'Commercial Cleaning',
+    metaDescription: 'After-hours office and commercial cleaning in Dubai on a custom recurring schedule. Vetted, insured cleaners and a flat quote after a free walkthrough.',
     subhead:
       'Professional office and commercial cleaning in Dubai with flexible after-hours service to keep workplaces clean, healthy, and ready for business.',
     intro: `Quick Clean provides professional office and commercial cleaning services in Dubai for offices, clinics, studios, retail spaces, and other workplaces. We offer flexible after-hours cleaning with vetted and insured cleaners, customized checklists, and recurring schedules that fit your business hours.`,
@@ -147,6 +151,7 @@ export const serviceContent = {
 
   'carpet-upholstery-cleaning': {
     serviceType: 'Carpet Cleaning',
+    metaDescription: `Carpet and upholstery cleaning in Dubai from ${fmt(startingPrices.carpetUpholstery)}. Hot-water extraction lifts stains, odours and allergens from carpets, rugs and sofas.`,
     subhead:
       'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, allergens, and built-up dirt from carpets, rugs, sofas, and chairs.',
     intro: `Quick Clean's carpet and upholstery cleaning uses hot-water extraction to pull out trapped dirt, allergens, and odors that vacuuming leaves behind. Carpets, rugs, sofas, and chairs come back fresher, brighter, and faster-drying — a healthier home without the rental-machine hassle.`,
@@ -180,6 +185,7 @@ export const serviceContent = {
 
   'window-glass-cleaning': {
     serviceType: 'Window Cleaning',
+    metaDescription: `Streak-free window and glass cleaning in Dubai from ${fmt(startingPrices.windowGlass)}, inside and out, sills and tracks included. Flat upfront pricing, guaranteed.`,
     subhead:
       'Streak-free window and glass cleaning, inside and out, so the natural light pours back in.',
     intro: `Quick Clean's window and glass cleaning leaves every pane crystal clear and streak-free. We clean interior and accessible exterior windows, glass doors, and mirrors, plus wipe down sills and tracks — an easy, affordable way to instantly brighten your whole space.`,
