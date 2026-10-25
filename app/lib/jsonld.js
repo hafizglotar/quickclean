@@ -17,10 +17,9 @@ import {
   reviews,
   faqs,
   getService,
-  pricingSizes,
-  pricingTiers,
-} from './business';
-import { getServiceContent } from './services-content';
+} from './business.js';
+import { cleanTypes, propertySizes } from './pricing.js';
+import { getServiceContent } from './services-content.js';
 
 const ORG_ID = `${SITE_URL}/#organization`;
 const SITE_ID = `${SITE_URL}/#website`;
@@ -353,14 +352,14 @@ export function homePageGraph() {
  *  engines can quote real prices rather than guessing from page text. */
 export function pricingPageGraph() {
   const url = `${SITE_URL}/pricing`;
-  const allPrices = pricingTiers.flatMap((t) => t.prices);
+  const allPrices = cleanTypes.flatMap((t) => t.prices);
 
-  const offers = pricingTiers.flatMap((tier) =>
+  const offers = cleanTypes.flatMap((tier) =>
     tier.prices.map((price, i) => ({
       '@type': 'Offer',
-      '@id': `${url}/#offer-${tier.slug}-${i + 1}`,
-      name: `${tier.name} clean — ${pricingSizes[i]}`,
-      description: tier.desc,
+      '@id': `${url}/#offer-${tier.key}-${i + 1}`,
+      name: `${tier.label} — ${propertySizes[i].label}`,
+      description: `${tier.label} for a ${propertySizes[i].label.toLowerCase()}, flat rate per visit.`,
       priceCurrency: currency.code,
       price,
       availability: 'https://schema.org/InStock',
@@ -369,7 +368,7 @@ export function pricingPageGraph() {
         '@type': 'UnitPriceSpecification',
         priceCurrency: currency.code,
         price,
-        unitText: pricingSizes[i],
+        unitText: propertySizes[i].label,
       },
     }))
   );
@@ -382,7 +381,7 @@ export function pricingPageGraph() {
         '@id': `${url}/#webpage`,
         url,
         name: `Cleaning Prices in ${business.address.city}, ${business.address.region}`,
-        description: `Flat cleaning prices by property size. Basic, Standard and Premium packages from ${currency.format(Math.min(...allPrices))}.`,
+        description: `Flat cleaning prices by property size. Basic, Standard, Deep and Move in / out cleans from ${currency.format(Math.min(...allPrices))}.`,
         isPartOf: { '@id': SITE_ID },
         breadcrumb: { '@id': `${url}/#breadcrumb` },
         inLanguage: 'en-AE',

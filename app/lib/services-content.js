@@ -5,7 +5,10 @@
    ============================================================ */
 
 
-import { business } from './business';
+import { business } from './business.js';
+import { currency, startingPrices } from './pricing.js';
+
+const fmt = currency.format;
 
 const CITY = business.address.city; // "Dubai"
 
@@ -30,7 +33,7 @@ export const serviceContent = {
     faqs: [
       {
         q:  `How much does residential cleaning cost in ${CITY}?`,
-        a: 'Residential cleaning in Dubai starts at AED 99. The exact price depends on your home size and cleaning needs. You see the flat rate before booking, and recurring plans can save up to 20% per visit.',
+        a: `Residential cleaning in Dubai starts at ${fmt(startingPrices.basic)} for a Basic clean and ${fmt(startingPrices.standard)} for our Standard package. The exact price depends on your home size and number of bathrooms. You see the flat rate before booking, and recurring plans can save up to 20% per visit.`,
     },   
       {
         q: 'Can I get the same cleaner every time?',
@@ -67,7 +70,7 @@ export const serviceContent = {
      },
       {
         q: `How much does deep cleaning cost in ${CITY}?`,
-        a: 'Deep cleaning in Dubai starts at AED 179. The exact flat rate depends on your home size and cleaning needs and is shown before you book.',
+        a: `Deep cleaning in Dubai starts at ${fmt(startingPrices.deep)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is shown before you book.`,
     },
       {
         q: 'How often should I schedule deep cleaning in Dubai?',
@@ -104,7 +107,7 @@ export const serviceContent = {
      },
       {
         q: `How much does move-in and move-out cleaning cost in ${CITY}?`,
-        a: 'Move-in and move-out cleaning in Dubai starts at AED 189. The exact flat rate depends on your home size and cleaning needs and is confirmed before booking.',
+        a: `Move-in and move-out cleaning in Dubai starts at ${fmt(startingPrices.moveInOut)} for a studio or one-bedroom apartment. The exact flat rate depends on your home size and number of bathrooms and is confirmed before booking.`,
     },
     ],
   },
@@ -170,7 +173,7 @@ export const serviceContent = {
       },
       {
         q: `How much does carpet cleaning cost in ${CITY}?`,
-        a: 'Carpet and upholstery cleaning starts at AED 89. Your flat rate depends on the number of rooms and pieces, and is confirmed before booking.',
+        a: `Carpet and upholstery cleaning starts at ${fmt(startingPrices.carpetUpholstery)}. Your flat rate depends on the number of rooms and pieces, and is confirmed before booking.`,
       },
     ],
   },
@@ -203,7 +206,7 @@ export const serviceContent = {
       },
       {
         q: `How much does window cleaning cost in ${CITY}?`,
-        a: 'Window and glass cleaning starts at AED 69, with your flat rate based on the number of windows and confirmed before booking.',
+        a: `Window and glass cleaning starts at ${fmt(startingPrices.windowGlass)}, with your flat rate based on the number of windows and confirmed before booking.`,
       },
     ],
   },

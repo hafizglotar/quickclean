@@ -12,6 +12,8 @@
    ============================================================ */
 
 
+import { currency, servicePrice, PRICE_RANGE, startingPrices } from './pricing.js';
+
 // IMPORTANT: set this to your real domain before launch (no trailing slash).
 export const SITE_URL = 'https://www.quickclean.ae';
 /* ---- Contact details ----
@@ -23,13 +25,8 @@ export const ADDRESS = 'Dubai, UAE';
 export const SERVICE_AREAS =
   'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
 
-// Currency — single switch for the whole site's pricing.
-// `code` is the ISO code used in structured data; `format` renders a bare amount.
-export const currency = {
-  code: 'AED',
-  symbol: 'AED',
-  format: (amount) => `AED ${amount}`,
-};
+// Currency and every price live in pricing.js — the single source of truth.
+export { currency };
 
 // "From AED 99" / "Custom quote" label for a service.
 export function fromLabel(service) {
@@ -89,7 +86,7 @@ export const business = {
     { days: ['Saturday'], opens: '09:00', closes: '16:00' },
   ],
 
-  priceRange: 'AED 69–189',
+  priceRange: PRICE_RANGE,
 
   rating: { value: 4.9, count: 2300, best: 5 },
 
@@ -126,42 +123,42 @@ export const services = [
     icon: 'home',
     title: 'Residential Cleaning',
     desc: 'Reliable residential cleaning in Dubai for recurring or one-time visits that keep your home fresh, top to bottom.',
-    price: 99,
+    price: servicePrice('residential-cleaning'),
   },
   {
     slug: 'deep-cleaning',
     icon: 'sparkle',
     title: 'Deep Cleaning',
     desc: 'Detailed deep cleaning in Dubai covering baseboards, grout, appliances, and hard-to-reach areas that often get missed.',
-    price: 179,
+    price: servicePrice('deep-cleaning'),
   },
   {
     slug: 'move-in-move-out-cleaning',
     icon: 'box',
     title: 'Move In / Move Out',
     desc: 'Move-in and move-out cleaning in Dubai to help leave your apartment or villa spotless and inspection-ready.',
-    price: 189
+    price: servicePrice('move-in-move-out-cleaning'),
   },
   {
     slug: 'office-commercial-cleaning',
     icon: 'building',
     title: 'Office & Commercial',
     desc: 'Professional office and commercial cleaning in Dubai with flexible after-hours service for a clean, healthy workspace.',
-    price: null,
+    price: servicePrice('office-commercial-cleaning'),
   },
   {
     slug: 'carpet-upholstery-cleaning',
     icon: 'sofa',
     title: 'Carpet & Upholstery',
     desc: 'Professional carpet and upholstery cleaning in Dubai that removes stains, odors, and built-up dirt.',
-    price: 89,
+    price: servicePrice('carpet-upholstery-cleaning'),
   },
   {
     slug: 'window-glass-cleaning',
     icon: 'window',
     title: 'Window & Glass',
     desc: 'Professional window and glass cleaning in Dubai for clear, streak-free results inside and out.',
-    price: 69,
+    price: servicePrice('window-glass-cleaning'),
   },
 ];
 
@@ -196,77 +193,8 @@ export const steps = [
 ];
 
 /* ---------------- Pricing ----------------
-   Three packages, each priced by property size. `prices` is indexed
-   against `pricingSizes` below, so both arrays must stay the same length.
-   Entry prices match the headline rates used across the site
-   (standard 99, deep 179, move-out 189) and scale up with size. */
-
-export const pricingSizes = [
-  'Studio & 1 BR Apt',
-  '2 BR Apartment',
-  '3 BR Apartment',
-  '4 BR Villa',
-  '5 BR Villa',
-  '6 BR Villa',
-];
-
-export const pricingTiers = [
-  {
-    name: 'Basic',
-    slug: 'basic',
-    desc: 'The essential clean that keeps an already-tidy home fresh.',
-    prices: [99, 129, 159, 199, 239, 279],
-    feats: [
-      'Full standard clean, top to bottom',
-      'Kitchen & bathrooms detailed',
-      'Floors vacuumed & mopped',
-      'Dusting, surfaces & bins emptied',
-      '100% Spotless Guarantee',
-    ],
-    cta: 'Book a basic clean',
-    featured: false,
-  },
-  {
-    name: 'Standard',
-    slug: 'standard',
-    desc: 'Our most popular package — everything in Basic, in more detail.',
-    prices: [149, 189, 229, 279, 329, 379],
-    feats: [
-      'Everything in Basic',
-      'We bring all supplies & equipment',
-      'Inside microwave & appliance fronts',
-      'Baseboards, doors & switch plates',
-      'Same trusted cleaner each visit',
-      'Priority scheduling',
-    ],
-    cta: 'Book a standard clean',
-    featured: true,
-  },
-  {
-    name: 'Premium',
-    slug: 'premium',
-    desc: 'The full detailed reset for deep cleans, move-outs and handovers.',
-    prices: [189, 239, 289, 349, 409, 469],
-    feats: [
-      'Everything in Standard',
-      'Inside oven, fridge & cabinets',
-      'Grout, vents & light fixtures',
-      'Interior windows & glass',
-      'Inspection-ready finish',
-      'Dedicated account manager',
-    ],
-    cta: 'Book a premium clean',
-    featured: false,
-  },
-];
-
-// Extras priced off the service catalogue above, so the numbers never drift.
-export const pricingAddOnSlugs = ['carpet-upholstery-cleaning', 'window-glass-cleaning'];
-
-// Lowest advertised price for a tier — used for "from" labels and schema.
-export function tierFrom(tier) {
-  return Math.min(...tier.prices);
-}
+   Sizes, clean types, package cards and the flat-rate function all live in
+   pricing.js so the numbers are defined exactly once. */
 
 export const reviews = [
   {
@@ -316,7 +244,7 @@ export const faqs = [
   },
   {
     q: 'How much does house cleaning cost with Quick Clean?',
-    a: 'Basic cleans start at AED 99, our Standard package is AED 149, deep cleans at AED 179, and move-in/move-out cleans at AED 189. You see your exact flat rate before you book — pricing depends on home size and location.',
+    a: `Basic cleans start at ${currency.format(startingPrices.basic)}, our Standard package from ${currency.format(startingPrices.standard)}, deep cleans from ${currency.format(startingPrices.deep)}, and move-in/move-out cleans from ${currency.format(startingPrices.moveInOut)}. You see your exact flat rate before you book — pricing depends on home size and the number of bathrooms.`,
   },
   {
     q: 'Which areas do you serve?',

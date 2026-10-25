@@ -1,28 +1,22 @@
 import Link from 'next/link';
-import {
-  currency,
-  getService,
-  pricingAddOnSlugs,
-  pricingSizes,
-  pricingTiers,
-  tierFrom,
-} from '../lib/business';
+import { getService } from '../lib/business';
+import { addOnSlugs, cleanTypes, currency, packages, propertySizes } from '../lib/pricing';
 import { ArrowRight, Check } from './icons';
 
-/* Full matrix: every package priced against every property size.
+/* Full matrix: every clean type priced against every property size.
    Scrolls horizontally on small screens rather than squashing. */
 export function PricingMatrix() {
   return (
     <div className="price-matrix-wrap">
       <table className="price-matrix">
         <caption className="sr-only">
-          Cleaning prices by package and property size, in {currency.code}
+          Cleaning prices by clean type and property size, in {currency.code}
         </caption>
         <thead>
           <tr>
             <th scope="col">Property size</th>
-            {pricingTiers.map((t) => (
-              <th scope="col" key={t.slug} className={t.featured ? 'is-featured' : undefined}>
+            {cleanTypes.map((t) => (
+              <th scope="col" key={t.key} className={t.featured ? 'is-featured' : undefined}>
                 {t.name}
                 {t.featured && <span className="matrix-tag">Most popular</span>}
               </th>
@@ -30,11 +24,11 @@ export function PricingMatrix() {
           </tr>
         </thead>
         <tbody>
-          {pricingSizes.map((size, i) => (
-            <tr key={size}>
-              <th scope="row">{size}</th>
-              {pricingTiers.map((t) => (
-                <td key={t.slug} className={t.featured ? 'is-featured' : undefined}>
+          {propertySizes.map((size, i) => (
+            <tr key={size.key}>
+              <th scope="row">{size.label}</th>
+              {cleanTypes.map((t) => (
+                <td key={t.key} className={t.featured ? 'is-featured' : undefined}>
                   {currency.format(t.prices[i])}
                 </td>
               ))}
@@ -51,13 +45,13 @@ export function PricingMatrix() {
 export function PricingCards({ compact = false }) {
   return (
     <div className="pricing-grid">
-      {pricingTiers.map((tier) => (
-        <article className={`plan${tier.featured ? ' plan-featured' : ''}`} key={tier.slug}>
+      {packages.map((tier) => (
+        <article className={`plan${tier.featured ? ' plan-featured' : ''}`} key={tier.key}>
           {tier.featured && <span className="plan-tag">Most popular</span>}
           <h3>{tier.name}</h3>
           <div className="plan-price">
             <span>{currency.symbol}</span>
-            {tierFrom(tier)}
+            {tier.from}
             <small>/ visit</small>
           </div>
           <p className="plan-desc">{tier.desc}</p>
@@ -85,7 +79,7 @@ export function PricingCards({ compact = false }) {
 
 /* Extras, priced straight off the service catalogue so they never drift. */
 export function PricingAddOns() {
-  const addOns = pricingAddOnSlugs.map(getService).filter(Boolean);
+  const addOns = addOnSlugs.map(getService).filter(Boolean);
   if (!addOns.length) return null;
 
   return (
