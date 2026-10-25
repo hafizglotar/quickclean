@@ -82,10 +82,10 @@ export const startingPrices = {
 
 /* The price table in the order the business talks about it. */
 export const priceTable = [
-  { key: 'basic', name: 'Basic clean', from: startingPrices.basic },
-  { key: 'standard', name: 'Standard clean', from: startingPrices.standard },
-  { key: 'deep', name: 'Deep clean', from: startingPrices.deep },
-  { key: 'moveInOut', name: 'Move in / move out clean', from: startingPrices.moveInOut },
+  { key: 'basic', name: 'Basic cleaning', from: startingPrices.basic },
+  { key: 'standard', name: 'Standard cleaning', from: startingPrices.standard },
+  { key: 'deep', name: 'Deep cleaning', from: startingPrices.deep },
+  { key: 'moveInOut', name: 'Move in / move out cleaning', from: startingPrices.moveInOut },
   { key: 'carpetUpholstery', name: 'Carpet & upholstery cleaning', from: startingPrices.carpetUpholstery },
   { key: 'windowGlass', name: 'Window & glass cleaning', from: startingPrices.windowGlass },
   { key: 'office', name: 'Office & commercial cleaning', from: null },

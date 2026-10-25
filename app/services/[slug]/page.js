@@ -58,7 +58,6 @@ export default async function ServicePage({ params }) {
   const content = getServiceContent(slug);
   if (!svc || !content) notFound();
 
-  const place = `${business.address.city}, ${business.address.region}`;
   const related = services.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
@@ -82,7 +81,7 @@ export default async function ServicePage({ params }) {
                 <ServiceIcon name={svc.icon} size={16} /> {content.serviceType}
               </span>
               <h1>
-                Professional {svc.name} Services in {place}
+                {svc.name} in {business.address.city}
               </h1>
               <p className="section-lead">{content.subhead}</p>
               <div className="subpage-hero-cta">
