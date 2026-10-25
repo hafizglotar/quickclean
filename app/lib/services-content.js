@@ -14,6 +14,7 @@ const CITY = business.address.city; // "Dubai"
 
 export const serviceContent = {
   'residential-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Residential Cleaning',
     metaDescription: `Reliable residential cleaning in Dubai from ${fmt(startingPrices.basic)}. Vetted, insured cleaners, flat upfront pricing and a 100% Spotless Guarantee. Book online in 60 seconds.`,
     subhead:
@@ -48,6 +49,7 @@ export const serviceContent = {
   },
 
   'deep-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Deep Cleaning',
     metaDescription: `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price with a free re-clean guarantee.`,
     subhead:
@@ -82,6 +84,7 @@ export const serviceContent = {
   },
 
   'move-in-move-out-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Move In / Move Out Cleaning',
     metaDescription: `Move-in and move-out cleaning in Dubai from ${fmt(startingPrices.moveInOut)}. Inspection-ready apartments and villas, inside cabinets and appliances, at a flat upfront price.`,
     subhead:
@@ -116,6 +119,7 @@ export const serviceContent = {
   },
 
   'office-commercial-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Commercial Cleaning',
     metaDescription: 'After-hours office and commercial cleaning in Dubai on a custom recurring schedule. Vetted, insured cleaners and a flat quote after a free walkthrough.',
     subhead:
@@ -150,6 +154,7 @@ export const serviceContent = {
   },
 
   'carpet-upholstery-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Carpet Cleaning',
     metaDescription: `Carpet and upholstery cleaning in Dubai from ${fmt(startingPrices.carpetUpholstery)}. Hot-water extraction lifts stains, odours and allergens from carpets, rugs and sofas.`,
     subhead:
@@ -184,6 +189,7 @@ export const serviceContent = {
   },
 
   'window-glass-cleaning': {
+    updatedAt: '2026-10-25',
     serviceType: 'Window Cleaning',
     metaDescription: `Streak-free window and glass cleaning in Dubai from ${fmt(startingPrices.windowGlass)}, inside and out, sills and tracks included. Flat upfront pricing, guaranteed.`,
     subhead:

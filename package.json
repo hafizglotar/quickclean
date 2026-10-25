@@ -2,10 +2,13 @@
   "name": "quick-clean",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Quick Clean — conversion-focused cleaning company website (Next.js, JavaScript, GSAP).",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-llms-full.mjs",
     "build": "next build",
+    "llms": "node scripts/build-llms-full.mjs",
     "start": "next start",
     "whatsapp:test": "node --env-file-if-exists=.env.local scripts/test-whatsapp.mjs"
   },

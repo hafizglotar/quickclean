@@ -1,35 +1,42 @@
 # Quick Clean
 
-> Quick Clean is a professional residential and commercial cleaning company serving Dubai, Sharjah and Ajman. We provide vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Customers book a clean online in about 60 seconds.
+> Quick Clean is a professional residential and commercial cleaning service offering vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Book a standard, deep, or move-out clean online in 60 seconds.
 
 This file helps AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, etc.)
-understand and accurately cite Quick Clean. Facts here match the website and structured data.
+understand and accurately cite Quick Clean. Facts here match the website and its
+structured data. The full text of every service and area page is in
+https://www.quickclean.ae/llms-full.txt.
 
 ## Key facts
 - Name: Quick Clean
 - Industry: House cleaning / maid service / commercial cleaning
+- Website: https://www.quickclean.ae
+- Phone: +971 58 933 1711
+- Email: info@quickclean.ae
+- Address: Dubai, United Arab Emirates
+- Service area: Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.
 - Guarantee: 100% Spotless Guarantee — free re-clean within 24 hours if you are not satisfied
-- Pricing model: flat, upfront, shown before booking — no hourly meters, no surprise fees, no contracts
+- Pricing model: flat, upfront, by property size — no hourly meters, no surprise fees, no contracts
 - Cleaners: interviewed, background-checked, trained, fully insured and bonded
 - Supplies: professional, eco-friendly products and equipment included
-- Booking: online in ~60 seconds; appointments often available same day
+- Booking: online in about 60 seconds; same-day and next-day slots often available
 - Payment: securely online after the clean, only when the customer is satisfied
 
 ## Services and starting prices
-- Residential cleaning — Basic clean from AED 99, Standard clean from AED 149
-- Deep cleaning — from AED 179
-- Move in / move out cleaning — from AED 189
-- Office & commercial cleaning — custom quote
+- Basic clean — from AED 99
+- Standard clean — from AED 149
+- Deep clean — from AED 179
+- Move in / move out clean — from AED 189
 - Carpet & upholstery cleaning — from AED 89
 - Window & glass cleaning — from AED 69
+- Office & commercial cleaning — custom quote
 
-## Service area
-Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.
+All cleans are a flat rate by property size; see the pricing page for the full table.
 
 ## Hours
-- Monday–Friday: 8:00 AM – 6:00 PM
-- Saturday: 9:00 AM – 4:00 PM
-- Sunday: closed
+- Monday – Friday: 08:00 – 18:00
+- Saturday: 09:00 – 16:00
+- Sunday: Closed
 
 ## Contact
 - Phone: +971 58 933 1711
@@ -38,19 +45,48 @@ Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Busin
 - Get a free quote: https://www.quickclean.ae/#quote
 
 ## Frequently asked questions
-- Do I need to be home during the clean? No — most customers provide secure access instructions and come home to a spotless space.
-- What if I am not satisfied? Tell us within 24 hours and we re-clean the area free (100% Spotless Guarantee).
-- Are cleaners insured and background-checked? Yes — every cleaner is background-checked, trained, insured, and bonded.
-- Do you bring supplies? Yes — eco-friendly professional products and equipment are included.
-- How and when do I pay? Securely online by credit or debit card after the clean, only when you are happy.
-- How much does cleaning cost? Basic from AED 99, Standard from AED 149, deep from AED 179, move in / out from AED 189, carpet & upholstery from AED 89, window & glass from AED 69; exact flat rate shown before booking.
-- How long does a house cleaning take? A standard clean takes about 1.5 to 3 hours; deep and move-out cleans take longer.
-- Can I book a same-day or next-day clean? Yes — same-day and next-day slots are often available, booked online in about 60 seconds.
-- What types of properties do you clean? Apartments, villas, townhouses, studios, offices, and commercial spaces.
-- What is the difference between a standard and deep clean? A standard clean maintains a tidy home; a deep clean adds baseboards, grout, vents, and inside/behind appliances.
-- How often should I clean? Most choose bi-weekly; weekly for homes with kids or pets; monthly for lighter homes. Recurring plans save up to 20%.
-- Are your products safe for kids and pets? Yes — professional, eco-friendly, non-toxic products.
-- Can I get the same cleaner every time? Yes, on recurring plans.
-- Can I reschedule or cancel? Yes — no contracts and no cancellation fees.
-- What if something is damaged? Quick Clean is fully insured and bonded; report within 24 hours and we make it right.
-- Do you offer office or commercial cleaning? Yes — custom after-hours recurring plans; request a free walkthrough.
+- Do I need to be home during the clean? No. Most customers give us secure access instructions and come home to a spotless space. You are welcome to be there if you prefer.
+- What if I am not happy with the clean? Just let us know within 24 hours and we will send someone back to re-clean the area free. That is our 100% Spotless Guarantee.
+- Are your cleaners insured and background-checked? Yes. Every Quick Clean pro is interviewed, background-checked, trained, and fully insured and bonded before they ever enter a home.
+- Do you bring your own supplies? Yes. We arrive with professional, eco-friendly products and equipment. Have a preferred product? Just leave it out and let us know.
+- How do I pay, and when? Securely online after the clean is done and you are happy. No cash needed, no payment up front, and no contracts.
+- How much does house cleaning cost with Quick Clean? Basic cleans start at AED 99, our Standard package from AED 149, deep cleans from AED 179, and move-in/move-out cleans from AED 189. You see your exact flat rate before you book — pricing depends on home size and the number of bathrooms.
+- Which areas do you serve? Quick Clean serves Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.
+- How long does a house cleaning take? A standard clean usually takes about 1.5 to 3 hours, depending on the size and condition of your home. Deep cleans and move-in/move-out cleans take longer. You will get an estimated time when you book.
+- Can I book a same-day or next-day cleaning? Yes. Same-day and next-day appointments are often available. You can book online in about 60 seconds and choose the earliest time slot that works for you.
+- What types of properties do you clean? We clean apartments, villas, townhouses, and studios, as well as offices and commercial spaces. The same 100% Spotless Guarantee applies to every property type and size.
+- What is included in a standard cleaning? A standard clean covers your kitchen, bathrooms, bedrooms, and living areas — dusting, vacuuming, mopping, wiping surfaces and counters, emptying bins, and tidying. Extras like inside the oven or baseboards can be added as a deep clean.
+- What is the difference between a standard clean and a deep clean? A standard clean maintains an already-tidy home. A deep clean is more thorough and adds baseboards, grout, vents, and inside or behind appliances. Many customers start with a deep clean, then switch to recurring standard cleans.
+- How often should I schedule a cleaning? Most households choose bi-weekly cleaning. Homes with kids or pets often prefer weekly, while lighter homes do well with monthly visits. Recurring plans save up to 20% per visit.
+- Are your cleaning products safe for children and pets? Yes. We use professional, eco-friendly, non-toxic products that are safe around children and pets. If you prefer specific products, just leave them out and let us know.
+- Can I request the same cleaner every time? Yes. On recurring plans we send the same vetted cleaner who already knows your home and your preferences.
+- What payment methods do you accept? You pay securely online by credit or debit card after the clean is finished and you are happy with it. No cash is needed and no payment is taken up front.
+- Can I reschedule or cancel my cleaning? Yes. You can reschedule or cancel anytime from your booking confirmation. There are no contracts and no cancellation fees — we just appreciate a little notice when possible.
+- What happens if something is damaged during the clean? Quick Clean is fully insured and bonded. In the rare event something is damaged, let us know within 24 hours and we will make it right.
+- Do you offer office or commercial cleaning? Yes. We provide after-hours office and commercial cleaning on a custom recurring schedule. Request a free walkthrough and we will send you a flat quote.
+
+## Pages
+### Main pages
+- [Home](https://www.quickclean.ae/)
+- [Pricing](https://www.quickclean.ae/pricing)
+- [All services](https://www.quickclean.ae/services)
+- [About](https://www.quickclean.ae/about)
+- [Contact](https://www.quickclean.ae/contact)
+
+### Service pages
+- [Residential Cleaning in Dubai](https://www.quickclean.ae/services/residential-cleaning)
+- [Deep Cleaning in Dubai](https://www.quickclean.ae/services/deep-cleaning)
+- [Move In / Move Out Cleaning in Dubai](https://www.quickclean.ae/services/move-in-move-out-cleaning)
+- [Office & Commercial Cleaning in Dubai](https://www.quickclean.ae/services/office-commercial-cleaning)
+- [Carpet & Upholstery Cleaning in Dubai](https://www.quickclean.ae/services/carpet-upholstery-cleaning)
+- [Window & Glass Cleaning in Dubai](https://www.quickclean.ae/services/window-glass-cleaning)
+
+### Area pages
+- [House Cleaning Services in Dubai Marina](https://www.quickclean.ae/cleaning-services-dubai-marina)
+- [House Cleaning Services in Downtown Dubai](https://www.quickclean.ae/cleaning-services-downtown-dubai)
+- [House Cleaning Services in JVC](https://www.quickclean.ae/cleaning-services-jvc)
+- [House Cleaning Services in Business Bay](https://www.quickclean.ae/cleaning-services-business-bay)
+- [House Cleaning Services in Sharjah](https://www.quickclean.ae/cleaning-services-sharjah)
+- [House Cleaning Services in Ajman](https://www.quickclean.ae/cleaning-services-ajman)
+
+- [Full site content for AI assistants](https://www.quickclean.ae/llms-full.txt)

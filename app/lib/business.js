@@ -137,6 +137,18 @@ export function hoursRows() {
 // Social / profile URLs that are real, for schema.org sameAs.
 export const sameAs = Object.values(business.social).filter((u) => u && !isPlaceholder(u));
 
+/* ---------------- Page timestamps ----------------
+   Feeds <lastmod> in sitemap.xml. Bump the date when you change a page's
+   content; service and area pages carry their own `updatedAt` in
+   services-content.js and areas.js. */
+export const pageUpdatedAt = {
+  home: '2026-10-25',
+  pricing: '2026-10-25',
+  services: '2026-10-25',
+  about: '2026-10-25',
+  contact: '2026-10-25',
+};
+
 /* ---------------- Content data (shared by UI + schema) ---------------- */
 
 // Ratings, stats, client logos and testimonials live in social-proof.js.
