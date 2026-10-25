@@ -21,7 +21,6 @@ export const SITE_URL = 'https://www.quickclean.ae';
    node updates with them. PHONE is written for display; the tel: href is
    derived from it below by stripping the spaces. */
 export const PHONE = '+971 58 933 1711';
-export const ADDRESS = 'Dubai, UAE';
 export const SERVICE_AREAS =
   'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
 
@@ -72,6 +71,10 @@ export const business = {
   // Used for LocalBusiness geo (helps Google Maps / local + GEO geographic ranking).
   geo: { latitude: 25.2048, longitude: 55.2708 },
 
+  // TODO: paste the "Embed a map" iframe src from Google Maps (Share → Embed a
+  // map). The contact page shows a placeholder panel until this is real.
+  map: { embedUrl: 'TODO_GOOGLE_MAPS_EMBED_URL' },
+
   // Emirates served — drives the LocalBusiness areaServed and the footer.
   // Individual communities (Dubai Marina, JVC, ...) live in lib/areas.js.
   areaServed: ['Dubai', 'Sharjah', 'Ajman'],
@@ -95,6 +98,40 @@ export const business = {
 /** True for a value that is still a TODO placeholder (never emit these). */
 export function isPlaceholder(value) {
   return typeof value === 'string' && /TODO/.test(value);
+}
+
+/** Google Business Profile URL, or null while it is still the TODO placeholder. */
+export const googleBusinessProfileUrl = isPlaceholder(business.social.googleBusinessProfile)
+  ? null
+  : business.social.googleBusinessProfile;
+
+/** One-line postal address for the footer, contact page and map links.
+ *  The street is included only once its TODO placeholder has been replaced. */
+export function formatAddress() {
+  const a = business.address;
+  return [a.street && !isPlaceholder(a.street) ? a.street : null, a.city, a.regionName]
+    .filter(Boolean)
+    .join(', ');
+}
+
+/** Google Maps search link for the address (works before the embed exists). */
+export function mapsSearchUrl() {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${business.legalName}, ${formatAddress()}`
+  )}`;
+}
+
+const WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+/** Opening hours as display rows, e.g. { days: 'Monday – Friday', hours: '08:00 – 18:00' },
+ *  followed by a "Closed" row for any day not covered. */
+export function hoursRows() {
+  const rows = business.openingHours.map((o) => ({
+    days: o.days.length === 1 ? o.days[0] : `${o.days[0]} – ${o.days[o.days.length - 1]}`,
+    hours: `${o.opens} – ${o.closes}`,
+  }));
+  const closed = WEEK.filter((d) => !business.openingHours.some((o) => o.days.includes(d)));
+  return [...rows, ...closed.map((d) => ({ days: d, hours: 'Closed' }))];
 }
 
 // Social / profile URLs that are real, for schema.org sameAs.

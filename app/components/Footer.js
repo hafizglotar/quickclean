@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ADDRESS, business } from '../lib/business';
+import { business, formatAddress, hoursRows } from '../lib/business';
 import { hasReviews, rating } from '../lib/social-proof';
 import { Logo, Stars } from './icons';
 
@@ -19,7 +19,11 @@ export default function Footer() {
               {rating.count.toLocaleString()}+ customers
             </div>
           )}
-          <address className="footer-address">{ADDRESS}</address>
+          <address className="footer-address">
+            {business.legalName}
+            <br />
+            {formatAddress()}
+          </address>
         </div>
 
         <div className="footer-col">
@@ -53,6 +57,13 @@ export default function Footer() {
           <h4>Get in touch</h4>
           <a href={`tel:${business.telephone}`}>{business.telephoneDisplay}</a>
           <a href={`mailto:${business.email}`}>{business.email}</a>
+          <div className="footer-hours" aria-label="Opening hours">
+            {hoursRows().map((r) => (
+              <span key={r.days}>
+                {r.days}: {r.hours}
+              </span>
+            ))}
+          </div>
           <a href="#quote" className="btn btn-primary btn-sm">
             Get a free quote
           </a>
