@@ -2,14 +2,14 @@
 
 > Quick Clean is a professional residential and commercial cleaning service offering vetted, insured cleaners, flat upfront pricing, and a 100% satisfaction guarantee. Book a standard, deep, or move-out clean online in 60 seconds.
 
-Generated from the website's data files on 2026-10-25. Every section links to its
+Generated from the website's data files on 2026-11-13. Every section links to its
 canonical page on https://www.quickclean.ae. The short summary is at https://www.quickclean.ae/llms.txt.
 
 ## Business facts
 - Name: Quick Clean
 - Industry: House cleaning / maid service / commercial cleaning
 - Website: https://www.quickclean.ae
-- Phone: +971 58 933 1711
+- Phone: +971 54 758 5760
 - Email: info@quickclean.ae
 - Address: Dubai, United Arab Emirates
 - Service area: Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.

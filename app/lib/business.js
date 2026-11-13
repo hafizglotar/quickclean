@@ -20,7 +20,7 @@ export const SITE_URL = 'https://www.quickclean.ae';
    Edit here and every header, footer, tel: link, contact card and schema
    node updates with them. PHONE is written for display; the tel: href is
    derived from it below by stripping the spaces. */
-export const PHONE = '+971 58 933 1711';
+export const PHONE = '+971 54 758 5760';
 export const SERVICE_AREAS =
   'Dubai, Sharjah, and Ajman — including Dubai Marina, Downtown Dubai, JVC, Business Bay, and surrounding communities.';
 
