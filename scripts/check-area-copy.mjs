@@ -12,14 +12,13 @@
    It also reports meta description length (target under 155) and
    body word count (target 550 to 750) as warnings.
 
-   The six original areas were written before these rules; their
-   hits are reported but do not fail the check unless you pass
-   --strict-all.
+   Every area is checked strictly.
    ============================================================ */
 
 import { areas, areaWordCount } from '../app/lib/areas.js';
 
-const LEGACY = new Set(['dubai-marina', 'downtown-dubai', 'jvc', 'business-bay', 'sharjah', 'ajman']);
+// Every area follows the rules now; the six original pages were rewritten on 2026-11-21.
+const LEGACY = new Set();
 const strictAll = process.argv.includes('--strict-all');
 const ASCII_FORBIDDEN = new Set(['-', '/', '&', ';', ':', '(', ')', '[', ']', '{', '}']);
 

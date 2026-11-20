@@ -197,4 +197,44 @@ export const villaAreas = [
     ],
     nearby: ['mudon', 'arabian-ranches', 'damac-hills', 'dubai-sports-city'],
   },
+  {
+    slug: 'emirates-hills',
+    name: 'Emirates Hills',
+    containedIn: 'Dubai',
+    updatedAt: '2026-11-21',
+    metaDescription: `Villa cleaning in Emirates Hills for large family homes around the Montgomerie golf course. Team cleans, flat prices and gate access arranged.`,
+    propertySizeKeys: ['4br-villa', '5br-villa', '6br-villa'],
+    intro: [
+      `Emirates Hills is one of the quietest and most private places to live in Dubai. It is a gated community of large villas built around the Montgomerie golf course, next to The Meadows, The Springs and The Lakes. There are no apartments here. Every home is a villa on its own plot, and most have six bedrooms or more, with several living rooms, a big kitchen, staff rooms, a garden and a pool. Many were designed by their owners, so no two houses are the same.`,
+      `A house of this size takes real work to keep clean. There are many bathrooms, wide marble floors, tall windows and long staircases. Fine dust settles on high ledges, chandeliers and the tops of doors where it is hard to reach. Sand comes in from the garden and the terraces, and glass doors facing the golf course or the lake show every mark. Natural stone, wood and special finishes are common, and each needs the right product.`,
+      `Quick Clean cleans villas across Emirates Hills. We send a team, not one person, and we work floor by floor and room by room. Each visit covers the kitchens, the bathrooms, the bedrooms and the living rooms, with the floors vacuumed and mopped and every surface dusted. We use a gentle cleaner on marble and stone and soft cloths on polished wood and glossy surfaces. Tell us about any finish that needs special care and we will follow your instructions.`,
+      `A deep clean goes further. We scrub the grout, clean inside the ovens and fridges, wipe the cabinet fronts, dust the fans, vents and light fittings and clear the window and door tracks. We can also include the terraces, the outdoor seating, the garage and the staff rooms when you ask for them. Many owners book a deep clean before guests arrive, after a party or when they return from a long trip.`,
+      `Access is through the security gates. Visitors must be approved by the resident, so please tell the gate we are coming or give us the details to pass on. Once inside, there is space to park at the villa, which makes it easy to bring machines for carpet and sofa cleaning. If you have house staff, we are happy to work alongside them and take on the heavier jobs they do not have time for.`,
+      `How often to book depends on how the house is run. Homes with full time staff often book us once a month or once a season for the deep work, such as the high ledges, the grout, the kitchens and the windows. Homes without staff usually book a regular clean once or twice a week. Carpets, rugs, sofas and majlis seating are worth cleaning every few months, and we can do them on the same visit. If the house has been closed up over the summer, book a deep clean a day or two before you come back, so the dust is gone and the rooms are aired before the family arrives.`,
+      `Prices are the flat rates in the table below, set by the number of bedrooms. If your villa has more than six bedrooms or you want outdoor areas included, tell us and we will confirm a fixed price before you book. Next day visits are usually available. On a recurring plan the same team comes each time, so they learn the house and how you like it kept.`,
+    ],
+    faqs: [
+      {
+        q: `How much does villa cleaning cost in Emirates Hills?`,
+        a: `It is a flat rate by the number of bedrooms, shown in the table on this page. For a villa with more than six bedrooms we confirm a fixed price with you before you book.`,
+      },
+      {
+        q: `How many cleaners do you send to a large villa?`,
+        a: `We send a team sized to the house so the clean is finished in one visit. Tell us the number of bedrooms, bathrooms and floors when you book.`,
+      },
+      {
+        q: `How do your cleaners get through the gate?`,
+        a: `Visitors to Emirates Hills must be approved by the resident. Let security know we are coming, or give us the details they need, and the team will arrive at the agreed time.`,
+      },
+      {
+        q: `Are your products safe on marble and natural stone?`,
+        a: `Yes. We use a gentle neutral cleaner on marble and stone and soft cloths on polished surfaces. If a finish needs a product of your own, leave it out and tell us.`,
+      },
+      {
+        q: `Can you work alongside our house staff?`,
+        a: `Yes. Many homes here have staff, and we often take on the deep cleaning and the heavier jobs while they keep up the daily routine.`,
+      },
+    ],
+    nearby: ['jlt', 'dubai-marina', 'al-barsha', 'dubai-hills'],
+  },
 ];
