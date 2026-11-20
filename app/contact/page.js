@@ -13,8 +13,7 @@ import {
   googleBusinessProfileUrl,
   hoursRows,
   mapsSearchUrl,
-  SITE_URL,
-} from '../lib/business';
+  SITE_URL, shareImages } from '../lib/business';
 import { contactPageGraph } from '../lib/jsonld';
 import JsonLd from '../components/seo/JsonLd';
 
@@ -32,7 +31,11 @@ export const metadata = {
     description,
     url: `${SITE_URL}/contact`,
     type: 'website',
+    locale: 'en-AE',
+    siteName: business.name,
+    images: shareImages,
   },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 export default function ContactPage() {

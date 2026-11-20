@@ -770,6 +770,13 @@ export function relatedGuides(guide, limit = 3) {
   return [...shared, ...rest].slice(0, limit);
 }
 
+/** Three guides for the area page at position `index` in the areas list.
+ *  The window slides by one per area, so links are spread evenly. */
+export function guidesForArea(index, count = 3) {
+  const start = ((index % guides.length) + guides.length) % guides.length;
+  return Array.from({ length: count }, (_, k) => guides[(start + k) % guides.length]);
+}
+
 export function guidesUpdatedAt() {
   return guides.map((g) => g.updatedAt).sort().at(-1);
 }

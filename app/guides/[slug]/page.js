@@ -9,8 +9,9 @@ import QuoteSection from '../../components/QuoteSection';
 import GuideCards from '../../components/GuideCards';
 import JsonLd from '../../components/seo/JsonLd';
 import { ArrowRight } from '../../components/icons';
-import { business, services, SITE_URL } from '../../lib/business';
+import { brandedTitle, business, services, shareImages, SITE_URL } from '../../lib/business';
 import { GUIDES_PATH, guides, getGuide, guidePath, relatedGuides } from '../../lib/guides';
+import AreasServed from '../../components/AreasServed';
 import { guidePageGraph } from '../../lib/jsonld';
 
 export const dynamicParams = false;
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
   const guide = getGuide(slug);
   if (!guide) return {};
   const url = `${SITE_URL}${guidePath(slug)}`;
-  const title = `${guide.title} | ${business.name}`;
+  const title = brandedTitle(guide.title);
   return {
     title: { absolute: title },
     description: guide.metaDescription,
@@ -37,8 +38,9 @@ export async function generateMetadata({ params }) {
       locale: 'en-AE',
       siteName: business.name,
       modifiedTime: guide.updatedAt,
+      images: shareImages,
     },
-    twitter: { card: 'summary_large_image', title, description: guide.metaDescription },
+    twitter: { card: 'summary_large_image', title, description: guide.metaDescription, images: shareImages },
   };
 }
 
@@ -148,10 +150,11 @@ export default async function GuidePage({ params }) {
               <span className="kicker">Keep reading</span>
               <h2>More Cleaning Guides</h2>
             </div>
-            <GuideCards list={relatedGuides(guide)} />
+            <GuideCards list={relatedGuides(guide, guides.length)} />
           </div>
         </section>
 
+        <AreasServed />
         <QuoteSection />
       </main>
       <Footer />

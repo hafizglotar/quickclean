@@ -300,6 +300,21 @@ export function nearbyAreas(area) {
   return (area?.nearby || []).map(getArea).filter(Boolean);
 }
 
+/** Nearby areas followed by the next few areas in list order. The second
+ *  group rotates page by page, so every area is linked from several others
+ *  and none depends on the hub page alone. */
+export function linkedAreas(area, extra = 4) {
+  const near = nearbyAreas(area);
+  const seen = new Set([area.slug, ...near.map((a) => a.slug)]);
+  const start = areas.findIndex((a) => a.slug === area.slug);
+  const more = [];
+  for (let k = 1; k < areas.length && more.length < extra; k += 1) {
+    const next = areas[(start + k) % areas.length];
+    if (!seen.has(next.slug)) more.push(next);
+  }
+  return [...near, ...more];
+}
+
 /* Grouping for the /areas hub page. */
 export const areaRegions = [
   { name: 'Dubai Marina and the coast', slugs: ['dubai-marina', 'jlt', 'palm-jumeirah', 'jumeirah'] },

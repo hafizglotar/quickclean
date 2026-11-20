@@ -504,6 +504,7 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .guide-prose li::marker { color: var(--teal-700); }
 .guide-meta { color: var(--slate); font-size: .92rem; margin-top: 14px; }
 .guide-card h3 { font-size: 1.12rem; line-height: 1.3; }
+.guides-all { margin-top: 28px; text-align: center; }
 .chip { background: var(--bg-mint); color: var(--teal-700); font-weight: 600; font-size: .9rem; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--teal-300); }
 
 .related { background: var(--bg-soft); }

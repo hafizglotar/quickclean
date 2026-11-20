@@ -9,7 +9,7 @@ import GoogleReviews from '../components/GoogleReviews';
 import { AreaChips } from '../components/AreasServed';
 import { Reviews, Stats, WhyUs } from '../components/Sections';
 import { ArrowRight, Check } from '../components/icons';
-import { business, SITE_URL } from '../lib/business';
+import { business, SITE_URL, shareImages } from '../lib/business';
 import { aboutPageGraph } from '../lib/jsonld';
 import JsonLd from '../components/seo/JsonLd';
 
@@ -28,7 +28,11 @@ export const metadata = {
     description,
     url: `${SITE_URL}/about`,
     type: 'website',
+    locale: 'en-AE',
+    siteName: business.name,
+    images: shareImages,
   },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 const values = [

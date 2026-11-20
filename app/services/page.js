@@ -6,19 +6,20 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import ServiceCard from '../components/ServiceCard';
 import QuoteSection from '../components/QuoteSection';
 import { WhyUs } from '../components/Sections';
-import { business, services, SITE_URL } from '../lib/business';
+import { business, services, SITE_URL, shareImages } from '../lib/business';
 import { servicesIndexGraph } from '../lib/jsonld';
 import JsonLd from '../components/seo/JsonLd';
 import { ArrowRight } from '../components/icons';
 
 const title = `Cleaning Services in ${business.address.city}, ${business.address.region}`;
-const description = `Explore every cleaning service from Quick Clean in ${business.address.city}: residential, deep, move-out, office, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
+const description = `Every cleaning service from Quick Clean in ${business.address.city}: residential, deep, move out, office, carpet and window cleaning, at flat upfront prices.`;
 
 export const metadata = {
   title,
   description,
   alternates: { canonical: '/services' },
-  openGraph: { title: `${title} | ${business.name}`, description, url: `${SITE_URL}/services`, type: 'website' },
+  openGraph: { title: `${title} | ${business.name}`, description, url: `${SITE_URL}/services`, type: 'website', locale: 'en-AE', siteName: business.name, images: shareImages },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 export default function ServicesIndex() {

@@ -24,7 +24,7 @@ const GA_ID = 'G-B8VTY7HQFH';
 
 const title = `House Cleaning Services in Dubai | Quick Clean`;
 const description =
-  'Professional house cleaning service in Dubai. Book residential, deep, move-in/move-out and commercial cleaning with upfront pricing and a satisfaction guarantee.';
+  'Professional house cleaning in Dubai. Book residential, deep, move out and office cleaning with flat upfront prices and a satisfaction guarantee.';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -96,7 +96,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+    <html lang="en-AE" className={`${jakarta.variable} ${inter.variable}`}>
       <body>
         <JsonLd data={fullGraph()} />
         {children}

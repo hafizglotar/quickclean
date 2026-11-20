@@ -7,7 +7,7 @@ import QuoteSection from '../components/QuoteSection';
 import { Faq, HowItWorks } from '../components/Sections';
 import { PricingAddOns, PricingCards, PricingMatrix } from '../components/PricingTable';
 import { ArrowRight, Check } from '../components/icons';
-import { business, currency, SITE_URL } from '../lib/business';
+import { business, currency, shareImages, SITE_URL } from '../lib/business';
 import { lowestPackagePrice } from '../lib/pricing';
 import { pricingPageGraph } from '../lib/jsonld';
 import JsonLd from '../components/seo/JsonLd';
@@ -16,9 +16,9 @@ const place = `${business.address.city}, ${business.address.region}`;
 const lowest = lowestPackagePrice;
 
 const title = `Cleaning Prices in ${place} From ${currency.format(lowest)}`;
-const description = `Flat cleaning prices from ${business.name}, by unit type. Basic, Standard and Premium plans from ${currency.format(
+const description = `Flat cleaning prices in Dubai by unit type. Basic, Standard and Premium plans from ${currency.format(
   lowest
-)} per visit, from studio apartments up to 6 bedroom villas. No hourly rates, no surprise fees.`;
+)} per visit, from studios to 6 bedroom villas. No hourly rates.`;
 
 export const metadata = {
   title,
@@ -29,7 +29,11 @@ export const metadata = {
     description,
     url: `${SITE_URL}/pricing`,
     type: 'website',
+    locale: 'en-AE',
+    siteName: business.name,
+    images: shareImages,
   },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 export default function PricingPage() {

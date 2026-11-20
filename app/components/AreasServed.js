@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AREAS_HUB_PATH, areaPath, areas, featuredAreas, nearbyAreas } from '../lib/areas';
+import { AREAS_HUB_PATH, areaPath, areas, featuredAreas, linkedAreas } from '../lib/areas';
 
 /* Chips linking to a list of area pages. With no `list` it shows the featured
    areas plus a link to the hub page that lists every area. */
@@ -29,7 +29,7 @@ export function AreaChips({ list, exclude, showAll = true }) {
    area's nearby communities; on service pages it shows the featured areas.
    Both end with a link to the /areas hub. */
 export default function AreasServed({ area, kicker = 'Where we work', title }) {
-  const list = area ? nearbyAreas(area) : featuredAreas();
+  const list = area ? linkedAreas(area) : featuredAreas();
   const heading =
     title || (area ? `Other Areas Near ${area.name}` : 'House Cleaning Services Across Dubai, Sharjah and Ajman');
   return (

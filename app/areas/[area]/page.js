@@ -11,10 +11,12 @@ import JsonLd from '../../components/seo/JsonLd';
 import { PricingMatrix } from '../../components/PricingTable';
 import { WhyUs, HowItWorks } from '../../components/Sections';
 import { ArrowRight, Check } from '../../components/icons';
-import { business, services, SITE_URL } from '../../lib/business';
+import { brandedTitle, business, services, shareImages, SITE_URL } from '../../lib/business';
 import { AREAS_HUB_PATH, areas, areaDisplayName, areaPath, getArea } from '../../lib/areas';
 import { currency, lowestPackagePrice } from '../../lib/pricing';
 import { areaPageGraph } from '../../lib/jsonld';
+import GuideCards from '../../components/GuideCards';
+import { guidesForArea } from '../../lib/guides';
 
 /* Public URL is /cleaning-services-<area>; next.config.mjs rewrites it here
    and redirects the bare /areas/<area> path to the public one. */
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }) {
   if (!area) return {};
 
   const url = `${SITE_URL}${areaPath(slug)}`;
-  const title = `House Cleaning Services in ${area.name} | ${business.name}`;
+  const title = brandedTitle(`House Cleaning Services in ${area.name}`);
   const description = area.metaDescription;
 
   return {
@@ -45,11 +47,13 @@ export async function generateMetadata({ params }) {
       type: 'website',
       locale: 'en-AE',
       siteName: business.name,
+      images: shareImages,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: shareImages,
     },
   };
 }
@@ -178,6 +182,17 @@ export default async function AreaPage({ params }) {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Guides, rotated by area so every guide is linked from several area pages */}
+        <section className="section services">
+          <div className="container">
+            <div className="section-head reveal">
+              <span className="kicker">Guides</span>
+              <h2>Cleaning Guides for {area.name} Residents</h2>
+            </div>
+            <GuideCards list={guidesForArea(areas.indexOf(area))} />
           </div>
         </section>
 

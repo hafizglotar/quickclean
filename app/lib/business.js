@@ -320,3 +320,23 @@ export const faqs = [
     a: 'Yes. We provide after-hours office and commercial cleaning on a custom recurring schedule. Request a free walkthrough and we will send you a flat quote.',
   },
 ];
+
+/* ---------------- Page metadata helpers ---------------- */
+
+/** The site share card (app/opengraph-image.js). A page that sets its own
+ *  `openGraph` replaces the inherited one, image included, so every such page
+ *  must pass this back in or it is shared with no preview image. */
+export const SHARE_IMAGE = {
+  url: `${SITE_URL}/opengraph-image`,
+  width: 1200,
+  height: 630,
+  alt: `${business.name}, house cleaning services in ${business.address.city}`,
+};
+export const shareImages = [SHARE_IMAGE];
+
+/** "<title> | Quick Clean" while that fits in 60 characters, otherwise the
+ *  bare title, so long page names are not cut off in search results. */
+export function brandedTitle(title) {
+  const full = `${title} | ${business.name}`;
+  return full.length <= 60 ? full : title;
+}

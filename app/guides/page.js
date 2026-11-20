@@ -6,8 +6,9 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import QuoteSection from '../components/QuoteSection';
 import GuideCards from '../components/GuideCards';
 import JsonLd from '../components/seo/JsonLd';
-import { business, SITE_URL } from '../lib/business';
+import { business, shareImages, SITE_URL } from '../lib/business';
 import { GUIDES_PATH, guides } from '../lib/guides';
+import AreasServed from '../components/AreasServed';
 import { guidesIndexGraph } from '../lib/jsonld';
 
 const url = `${SITE_URL}${GUIDES_PATH}`;
@@ -19,8 +20,8 @@ export const metadata = {
   title,
   description,
   alternates: { canonical: url },
-  openGraph: { title: `${title} | ${business.name}`, description, url, type: 'website', locale: 'en-AE', siteName: business.name },
-  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description },
+  openGraph: { title: `${title} | ${business.name}`, description, url, type: 'website', locale: 'en-AE', siteName: business.name, images: shareImages },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 export default function GuidesHubPage() {
@@ -55,6 +56,7 @@ export default function GuidesHubPage() {
           </div>
         </section>
 
+        <AreasServed />
         <QuoteSection />
       </main>
       <Footer />

@@ -8,7 +8,7 @@ import JsonLd from '../components/seo/JsonLd';
 import { AreaChips } from '../components/AreasServed';
 import { WhyUs } from '../components/Sections';
 import { ArrowRight, Check } from '../components/icons';
-import { business, SITE_URL } from '../lib/business';
+import { business, shareImages, SITE_URL } from '../lib/business';
 import { AREAS_HUB_PATH, areas, areasByRegion } from '../lib/areas';
 import { currency, lowestPackagePrice } from '../lib/pricing';
 import { areasIndexGraph } from '../lib/jsonld';
@@ -21,8 +21,8 @@ export const metadata = {
   title,
   description,
   alternates: { canonical: url },
-  openGraph: { title: `${title} | ${business.name}`, description, url, type: 'website', locale: 'en-AE', siteName: business.name },
-  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description },
+  openGraph: { title: `${title} | ${business.name}`, description, url, type: 'website', locale: 'en-AE', siteName: business.name, images: shareImages },
+  twitter: { card: 'summary_large_image', title: `${title} | ${business.name}`, description, images: shareImages },
 };
 
 export default function AreasHubPage() {

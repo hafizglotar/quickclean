@@ -52,8 +52,8 @@ export const serviceContent = {
     updatedAt: '2026-10-25',
     serviceType: 'Deep Cleaning',
     metaDescription: startingPrices.deep
-      ? `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price with a free re-clean guarantee.`
-      : 'Deep cleaning in Dubai: baseboards, grout, appliances and vents, by vetted, insured cleaners at a flat price confirmed before you book, with a free re-clean guarantee.',
+      ? `Deep cleaning in Dubai from ${fmt(startingPrices.deep)}: grout, baseboards, appliances and vents, by vetted, insured cleaners, with a free re-clean guarantee.`
+      : 'Deep cleaning in Dubai: grout, baseboards, appliances and vents, by vetted, insured cleaners. Flat price confirmed before you book, free re-clean guarantee.',
     subhead:
        'Professional deep cleaning services in Dubai for homes that need a detailed top-to-bottom clean, including baseboards, grout, appliances, vents, and hard-to-reach areas.',
    intro: `Quick Clean provides professional deep cleaning services in Dubai for homes that need more than a standard clean. We tackle built-up grime, hard-to-reach areas, baseboards, grout, appliances, vents, and detailed surfaces. Deep cleaning is ideal before guests arrive, after a renovation, or as the first clean before starting a recurring service.`,
