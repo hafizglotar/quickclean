@@ -6,6 +6,7 @@ import Animations from '../../components/Animations';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
+import GuideCards from '../../components/GuideCards';
 import GoogleReviews from '../../components/GoogleReviews';
 import AreasServed from '../../components/AreasServed';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
@@ -14,6 +15,7 @@ import { business, services, getService, currency, SITE_URL } from '../../lib/bu
 import { getServiceContent } from '../../lib/services-content';
 import { servicePageGraph } from '../../lib/jsonld';
 import JsonLd from '../../components/seo/JsonLd';
+import { guidesForService } from '../../lib/guides';
 
 // Pre-render one static page per service at build time.
 export function generateStaticParams() {
@@ -59,6 +61,7 @@ export default async function ServicePage({ params }) {
   if (!svc || !content) notFound();
 
   const related = services.filter((s) => s.slug !== slug).slice(0, 3);
+  const guideList = guidesForService(slug).slice(0, 3);
 
   return (
     <>
@@ -187,6 +190,19 @@ export default async function ServicePage({ params }) {
             </div>
           </div>
         </section>
+
+        {/* Guides that cover this service */}
+        {guideList.length > 0 && (
+          <section className="section services">
+            <div className="container">
+              <div className="section-head reveal">
+                <span className="kicker">Guides</span>
+                <h2>Guides About {svc.name}</h2>
+              </div>
+              <GuideCards list={guideList} />
+            </div>
+          </section>
+        )}
 
         {/* Related services */}
         <section className="section services related">

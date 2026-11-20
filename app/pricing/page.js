@@ -15,10 +15,10 @@ import JsonLd from '../components/seo/JsonLd';
 const place = `${business.address.city}, ${business.address.region}`;
 const lowest = lowestPackagePrice;
 
-const title = `Cleaning Prices in ${place} — From ${currency.format(lowest)}`;
+const title = `Cleaning Prices in ${place} From ${currency.format(lowest)}`;
 const description = `Flat cleaning prices from ${business.name}, by unit type. Basic, Standard and Premium plans from ${currency.format(
   lowest
-)} per visit — studio apartments up to 6 bedroom villas. No hourly rates, no surprise fees.`;
+)} per visit, from studio apartments up to 6 bedroom villas. No hourly rates, no surprise fees.`;
 
 export const metadata = {
   title,
@@ -50,7 +50,7 @@ export default function PricingPage() {
             <span className="kicker">Simple pricing</span>
             <h1>{title}</h1>
             <p className="section-lead">
-              Every clean is a flat rate based on the size of your home — never an hourly meter.
+              Every clean is a flat rate based on the size of your home, never an hourly meter.
               You see the full price before you book, and it is the price you pay.
             </p>
             <ul className="hero-trust">

@@ -8,6 +8,7 @@ import { ArrowRight, ChevronDown, Logo, Phone, ServiceIcon } from './icons';
 
 const NAV = [
   { href: '/pricing', label: 'Pricing' },
+  { href: '/guides', label: 'Guides' },
   { href: '/about', label: 'About' },
   // Only link to reviews once a real reviews section exists.
   ...(hasReviews ? [{ href: '/#reviews', label: 'Reviews' }] : []),

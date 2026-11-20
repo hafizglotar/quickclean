@@ -74,6 +74,7 @@ All cleans are a flat rate by property size; see the pricing page for the full t
 - [About](https://www.quickclean.ae/about)
 - [Contact](https://www.quickclean.ae/contact)
 - [Areas we serve](https://www.quickclean.ae/areas)
+- [Cleaning guides](https://www.quickclean.ae/guides)
 
 ### Service pages
 - [Residential Cleaning in Dubai](https://www.quickclean.ae/services/residential-cleaning)
@@ -110,5 +111,15 @@ All cleans are a flat rate by property size; see the pricing page for the full t
 - [House Cleaning Services in Jumeirah and Umm Suqeim](https://www.quickclean.ae/cleaning-services-jumeirah)
 - [House Cleaning Services in Mirdif](https://www.quickclean.ae/cleaning-services-mirdif)
 - [House Cleaning Services in Deira and Bur Dubai](https://www.quickclean.ae/cleaning-services-deira-bur-dubai)
+
+### Guides
+- [How Much Does House Cleaning Cost in Dubai](https://www.quickclean.ae/guides/house-cleaning-cost-dubai)
+- [Deep Cleaning vs Regular Cleaning and Which One You Need](https://www.quickclean.ae/guides/deep-cleaning-vs-regular-cleaning)
+- [Move Out Cleaning Checklist for Dubai Tenants](https://www.quickclean.ae/guides/move-out-cleaning-checklist-dubai)
+- [How Often Should You Clean Your Home in Dubai](https://www.quickclean.ae/guides/how-often-to-clean-your-home-in-dubai)
+- [Holiday Home Turnover Cleaning Checklist for Dubai Hosts](https://www.quickclean.ae/guides/holiday-home-turnover-cleaning-dubai)
+- [Hourly Maid Service or Flat Rate Cleaning in Dubai](https://www.quickclean.ae/guides/hourly-maid-vs-flat-rate-cleaning-dubai)
+- [How to Prepare Your Home for a Professional Cleaner](https://www.quickclean.ae/guides/how-to-prepare-for-a-cleaning-visit)
+- [How to Clean Your Home After a Sandstorm in Dubai](https://www.quickclean.ae/guides/cleaning-after-a-sandstorm-dubai)
 
 - [Full site content for AI assistants](https://www.quickclean.ae/llms-full.txt)

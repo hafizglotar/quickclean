@@ -497,6 +497,13 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .prose { max-width: 780px; }
 .prose p { color: var(--slate); line-height: 1.75; }
 .prose p + p { margin-top: 18px; }
+.guide-prose section + section { margin-top: 40px; }
+.guide-prose h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; }
+.guide-prose ul { list-style: disc; margin: 16px 0 0; padding-left: 22px; color: var(--slate); line-height: 1.7; }
+.guide-prose li + li { margin-top: 8px; }
+.guide-prose li::marker { color: var(--teal-700); }
+.guide-meta { color: var(--slate); font-size: .92rem; margin-top: 14px; }
+.guide-card h3 { font-size: 1.12rem; line-height: 1.3; }
 .chip { background: var(--bg-mint); color: var(--teal-700); font-weight: 600; font-size: .9rem; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--teal-300); }
 
 .related { background: var(--bg-soft); }

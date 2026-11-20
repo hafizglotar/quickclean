@@ -12,7 +12,7 @@ import JsonLd from '../components/seo/JsonLd';
 import { ArrowRight } from '../components/icons';
 
 const title = `Cleaning Services in ${business.address.city}, ${business.address.region}`;
-const description = `Explore every cleaning service from Quick Clean in ${business.address.city} — residential, deep, move-out, office, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
+const description = `Explore every cleaning service from Quick Clean in ${business.address.city}: residential, deep, move-out, office, carpet, and window cleaning. Vetted pros, flat pricing, 100% satisfaction guarantee.`;
 
 export const metadata = {
   title,

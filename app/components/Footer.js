@@ -61,6 +61,7 @@ export default function Footer() {
           <h4>Company</h4>
           <Link href="/about">About us</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/guides">Cleaning guides</Link>
           <Link href="/contact">Contact</Link>
           {hasReviews && <Link href="/#reviews">Reviews</Link>}
           <Link href="/#faq">FAQ</Link>

@@ -24,6 +24,7 @@ import {
 import { cleanTypes, currency, priceTable, propertySizes } from '../app/lib/pricing.js';
 import { getServiceContent } from '../app/lib/services-content.js';
 import { AREAS_HUB_PATH, areas, areaPath } from '../app/lib/areas.js';
+import { GUIDES_PATH, guides, guidePath } from '../app/lib/guides.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_DIR = path.join(ROOT, 'public');
@@ -31,6 +32,7 @@ const OUT_DIR = path.join(ROOT, 'public');
 const fmt = currency.format;
 const serviceUrl = (slug) => `${SITE_URL}/services/${slug}`;
 const areaUrl = (slug) => `${SITE_URL}${areaPath(slug)}`;
+const guideUrl = (slug) => `${SITE_URL}${guidePath(slug)}`;
 const today = new Date().toISOString().slice(0, 10);
 
 /* ---------------- Shared blocks ---------------- */
@@ -88,6 +90,7 @@ function pagesBlock() {
     `- [About](${SITE_URL}/about)`,
     `- [Contact](${SITE_URL}/contact)`,
     `- [Areas we serve](${SITE_URL}${AREAS_HUB_PATH})`,
+    `- [Cleaning guides](${SITE_URL}${GUIDES_PATH})`,
   ];
   const svc = services.map((s) => `- [${s.name || s.title} in Dubai](${serviceUrl(s.slug)})`);
   const loc = areas.map((a) => `- [House Cleaning Services in ${a.name}](${areaUrl(a.slug)})`);
@@ -100,6 +103,9 @@ function pagesBlock() {
     '',
     '### Area pages',
     ...loc,
+    '',
+    '### Guides',
+    ...guides.map((g) => `- [${g.title}](${guideUrl(g.slug)})`),
   ].join('\n');
 }
 
@@ -188,6 +194,23 @@ ${faqBlock(a.faqs)}
 `;
 }
 
+function guideSection(g) {
+  const body = g.sections
+    .map((s) => [`#### ${s.h}`, ...s.p, ...(s.list ? [s.list.map((i) => `- ${i}`).join('\n')] : [])].join('\n\n'))
+    .join('\n\n');
+  return `### ${g.title}
+URL: ${guideUrl(g.slug)}
+Last updated: ${g.updatedAt}
+
+Short answer: ${g.answer}
+
+${body}
+
+FAQ:
+${faqBlock(g.faqs)}
+`;
+}
+
 function buildFull() {
   return `# ${business.name} — full site content
 
@@ -222,6 +245,8 @@ plan from this same table, so the figure it shows always matches the published c
 ${services.map(serviceSection).join('\n')}
 ## Areas we serve
 ${areas.map(areaSection).join('\n')}
+## Guides
+${guides.map(guideSection).join('\n')}
 ## General FAQ
 ${faqBlock(faqs)}
 

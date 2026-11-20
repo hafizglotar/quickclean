@@ -1,6 +1,7 @@
 import { SITE_URL, services, pageUpdatedAt } from './lib/business';
 import { getServiceContent } from './lib/services-content';
 import { AREAS_HUB_PATH, areas, areaPath, areasUpdatedAt } from './lib/areas';
+import { GUIDES_PATH, guides, guidePath, guidesUpdatedAt } from './lib/guides';
 
 /* Generates /sitemap.xml.
    lastModified comes from the `updatedAt` fields in the data files rather
@@ -16,6 +17,7 @@ export default function sitemap() {
     { url: `${SITE_URL}/about`, lastModified: date(pageUpdatedAt.about), changeFrequency: 'yearly', priority: 0.6 },
     { url: `${SITE_URL}/contact`, lastModified: date(pageUpdatedAt.contact), changeFrequency: 'yearly', priority: 0.7 },
     { url: `${SITE_URL}${AREAS_HUB_PATH}`, lastModified: date(areasUpdatedAt()), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}${GUIDES_PATH}`, lastModified: date(guidesUpdatedAt()), changeFrequency: 'monthly', priority: 0.7 },
     ...services.map((s) => ({
       url: `${SITE_URL}/services/${s.slug}`,
       lastModified: date(getServiceContent(s.slug)?.updatedAt || pageUpdatedAt.services),
@@ -27,6 +29,12 @@ export default function sitemap() {
       lastModified: date(a.updatedAt),
       changeFrequency: 'monthly',
       priority: 0.8,
+    })),
+    ...guides.map((g) => ({
+      url: `${SITE_URL}${guidePath(g.slug)}`,
+      lastModified: date(g.updatedAt),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     })),
   ];
 }

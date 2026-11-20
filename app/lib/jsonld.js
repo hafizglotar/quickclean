@@ -28,6 +28,7 @@ import {
 import { cleanTypes, lowestPackagePrice, packages, propertySizes } from './pricing.js';
 import { getServiceContent } from './services-content.js';
 import { AREAS_HUB_PATH, areaPath, areas, getArea } from './areas.js';
+import { GUIDES_PATH, getGuide, guidePath, guides } from './guides.js';
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const BUSINESS_ID = `${SITE_URL}/#business`;
@@ -462,6 +463,89 @@ export function areasIndexGraph() {
           position: i + 1,
           name: `House Cleaning Services in ${a.name}`,
           url: `${SITE_URL}${areaPath(a.slug)}`,
+        })),
+      },
+    ],
+  };
+}
+
+/* ---------------- Guides ---------------- */
+
+/** Article + FAQPage for one guide. The publisher and author are the
+ *  organization; no person is named because the guides carry no byline. */
+export function guidePageGraph(slug) {
+  const guide = getGuide(slug);
+  if (!guide) return null;
+  const url = `${SITE_URL}${guidePath(slug)}`;
+  const hub = `${SITE_URL}${GUIDES_PATH}`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${url}/#article`,
+        headline: guide.title,
+        description: guide.metaDescription,
+        abstract: guide.answer,
+        url,
+        mainEntityOfPage: { '@id': `${url}/#webpage` },
+        datePublished: guide.publishedAt || guide.updatedAt,
+        dateModified: guide.updatedAt,
+        author: { '@id': ORG_ID },
+        publisher: { '@id': ORG_ID },
+        image: OG_IMAGE,
+        inLanguage: 'en-AE',
+        articleSection: guide.sections.map((s) => s.h),
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: guide.title,
+        description: guide.metaDescription,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': BUSINESS_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-AE',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Guides', url: hub },
+        { name: guide.short, url },
+      ]),
+      faqPage(`${url}/#faq`, guide.faqs),
+    ],
+  };
+}
+
+export function guidesIndexGraph() {
+  const url = `${SITE_URL}${GUIDES_PATH}`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${url}/#webpage`,
+        url,
+        name: 'Cleaning Guides for Dubai Homes',
+        description: `Guides from ${business.name} on cleaning costs, checklists and schedules for homes in Dubai.`,
+        isPartOf: { '@id': SITE_ID },
+        about: { '@id': BUSINESS_ID },
+        breadcrumb: { '@id': `${url}/#breadcrumb` },
+        inLanguage: 'en-AE',
+      },
+      breadcrumbList(`${url}/#breadcrumb`, [
+        { name: 'Home', url: SITE_URL },
+        { name: 'Guides', url },
+      ]),
+      {
+        '@type': 'ItemList',
+        '@id': `${url}/#list`,
+        itemListElement: guides.map((g, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: g.title,
+          url: `${SITE_URL}${guidePath(g.slug)}`,
         })),
       },
     ],
