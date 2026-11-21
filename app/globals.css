@@ -497,6 +497,10 @@ p, blockquote, .section-lead { text-wrap: pretty; }
 .prose { max-width: 780px; }
 .prose p { color: var(--slate); line-height: 1.75; }
 .prose p + p { margin-top: 18px; }
+.prose a { color: var(--teal-700); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { text-decoration: none; }
+.prose .quick-answer { font-size: 1.08rem; color: var(--ink, inherit); border-left: 3px solid var(--teal-700); padding-left: 16px; }
+.extras-faq-title { font-size: 1.2rem; letter-spacing: -.02em; margin: 36px 0 16px; }
 .guide-prose section + section { margin-top: 40px; }
 .guide-prose h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; }
 .guide-prose ul { list-style: disc; margin: 16px 0 0; padding-left: 22px; color: var(--slate); line-height: 1.7; }

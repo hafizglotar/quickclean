@@ -7,6 +7,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import ServiceCard from '../../components/ServiceCard';
 import QuoteSection from '../../components/QuoteSection';
 import GuideCards from '../../components/GuideCards';
+import ServiceExtras from '../../components/ServiceExtras';
 import GoogleReviews from '../../components/GoogleReviews';
 import AreasServed from '../../components/AreasServed';
 import { WhyUs, HowItWorks, Reviews } from '../../components/Sections';
@@ -190,6 +191,9 @@ export default async function ServicePage({ params }) {
             </div>
           </div>
         </section>
+
+        {/* Additive semantic section: quick answer, entity links, extra questions */}
+        <ServiceExtras slug={slug} name={svc.name} />
 
         {/* Guides that cover this service */}
         {guideList.length > 0 && (
