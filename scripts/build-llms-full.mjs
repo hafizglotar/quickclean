@@ -25,6 +25,7 @@ import { cleanTypes, currency, priceTable, propertySizes } from '../app/lib/pric
 import { getServiceContent } from '../app/lib/services-content.js';
 import { AREAS_HUB_PATH, areas, areaPath } from '../app/lib/areas.js';
 import { GUIDES_PATH, guides, guidePath } from '../app/lib/guides.js';
+import { getServiceExtras, partsToText } from '../app/lib/service-extras.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_DIR = path.join(ROOT, 'public');
@@ -170,7 +171,13 @@ Ideal for: ${c.idealFor.join('; ')}
 
 FAQ:
 ${faqBlock(c.faqs)}
-`;
+${serviceExtrasBlock(s.slug)}`;
+}
+
+function serviceExtrasBlock(slug) {
+  const x = getServiceExtras(slug);
+  if (!x) return '';
+  return `\nQuick answer: ${x.quickAnswer}\n\n${x.context.map(partsToText).join('\n\n')}\n\nMore questions:\n${faqBlock(x.faqs)}\n`;
 }
 
 function areaSection(a) {
