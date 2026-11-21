@@ -12,6 +12,7 @@ import { ArrowRight } from '../../components/icons';
 import { brandedTitle, business, services, shareImages, SITE_URL } from '../../lib/business';
 import { GUIDES_PATH, guides, getGuide, guidePath, relatedGuides } from '../../lib/guides';
 import AreasServed from '../../components/AreasServed';
+import NextSteps from '../../components/NextSteps';
 import { guidePageGraph } from '../../lib/jsonld';
 
 export const dynamicParams = false;
@@ -154,6 +155,7 @@ export default async function GuidePage({ params }) {
           </div>
         </section>
 
+        <NextSteps />
         <AreasServed />
         <QuoteSection />
       </main>

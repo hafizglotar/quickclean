@@ -16,6 +16,7 @@ import { AREAS_HUB_PATH, areas, areaDisplayName, areaPath, getArea } from '../..
 import { currency, lowestPackagePrice } from '../../lib/pricing';
 import { areaPageGraph } from '../../lib/jsonld';
 import GuideCards from '../../components/GuideCards';
+import NextSteps from '../../components/NextSteps';
 import { guidesForArea } from '../../lib/guides';
 
 /* Public URL is /cleaning-services-<area>; next.config.mjs rewrites it here
@@ -196,6 +197,7 @@ export default async function AreaPage({ params }) {
           </div>
         </section>
 
+        <NextSteps areaName={area.name} />
         <QuoteSection />
         <AreasServed area={area} kicker="Nearby" />
       </main>
